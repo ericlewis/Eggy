@@ -26,15 +26,19 @@ struct ContentView : View {
     store.isRunning ? store.rawTimeRemaining : store.rawCookTime
   }
   
+  var donenessPercent: Double {
+    Rescale(from: (56.0, 85.0), to: (1.0, 0.0)).rescale(store.doneness)
+  }
+  
   var body: some View {
     NavigationView {
       VStack {
         ZStack {
-          Egg()
+          Egg(opacity: donenessPercent)
             .opacity(0.6)
-          Egg()
+          Egg(opacity: donenessPercent)
             .mask(CakeView(timeRemaining, store.rawCookTime))
-        }
+        }.tapAction(store.toggleRunning)
         if !store.isRunning {
           OptionSliders()
         } else {
@@ -116,16 +120,42 @@ struct OptionSliders : View {
   @State var showingSizePicker = false
   @State var showingDonenessPicker = false
   
+  // TODO: reuse or move this
   var tempLabelText: String {
-    Measurement(value: store.temp, unit: UnitTemperature.fahrenheit).description
+    let x = Measurement(value: store.temp, unit: UnitTemperature.fahrenheit)
+    let n = NumberFormatter()
+    n.maximumFractionDigits = 0
+    let m = MeasurementFormatter()
+    m.numberFormatter = n
+    return m.string(from: x)
   }
   
   func sizeSheet() -> ActionSheet {
-    ActionSheet(title: Text("Size"), message: nil, buttons: [Alert.Button.default(Text("test")), .cancel()])
+    func setSize(_ size: Size) {
+      store.size = size
+    }
+    
+    return ActionSheet(title: Text("Size"), message: nil, buttons: [
+      .default(Text("Peewee")) { setSize(1.61) },
+      .default(Text("Small")) { setSize(1.86) },
+      .default(Text("Medium")) { setSize(2.12) },
+      .default(Text("Large")) { setSize(2.37) },
+      .default(Text("Extra Large")) { setSize(2.6) },
+      .cancel(),
+    ])
   }
   
   func donenessSheet() -> ActionSheet {
-    ActionSheet(title: Text("Consistency"), message: nil, buttons: [Alert.Button.default(Text("test")), .cancel()])
+    func setDone(_ done: Doneness) {
+      store.doneness = done
+    }
+    i
+    return ActionSheet(title: Text("Consistency"), message: nil, buttons: [
+      .default(Text("Runny")) { setDone(60) },
+      .default(Text("Soft")) { setDone(71) },
+      .default(Text("Hard")) { setDone(80) },
+      .cancel(),
+    ])
   }
   
   var body: some View {

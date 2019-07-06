@@ -9,6 +9,7 @@
 import SwiftUI
 
 struct Egg : View {
+  var opacity: Double = 1
   private let scale = CGFloat(0.90)
   private let yolkScale = CGFloat(0.7)
   
@@ -22,11 +23,10 @@ struct Egg : View {
         Circle()
           .fill(Color.yellow)
           .frame(width: geometry.size.width * self.scale * self.yolkScale, height: geometry.size.height * self.scale * self.yolkScale)
-          .brightness(0.09)
         Circle()
-          .fill(Color.yellow)
-          .frame(width: geometry.size.width * self.scale * self.yolkScale * self.yolkScale, height: geometry.size.height * self.scale * self.yolkScale * self.yolkScale)
-          .opacity(1)
+          .fill(RadialGradient(gradient: Gradient(colors: [.yellow, .orange]), center: .center, startRadius: 1, endRadius: (geometry.size.width * self.scale * self.yolkScale) / 2))
+          .frame(width: geometry.size.width * self.scale * self.yolkScale, height: geometry.size.height * self.scale * self.yolkScale)
+          .opacity(self.opacity)
       }
       .aspectRatio(1, contentMode: .fit)
     }
@@ -36,7 +36,11 @@ struct Egg : View {
 #if DEBUG
 struct Egg_Previews : PreviewProvider {
     static var previews: some View {
+      Group {
         Egg()
+        Egg(opacity: 0.5)
+        Egg(opacity: 0.0)
+      }
     }
 }
 #endif
