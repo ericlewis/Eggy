@@ -9,9 +9,14 @@
 import SwiftUI
 
 struct SliderContainer<SliderView : View> : View {
+    
+    // MARK: Types
+    
     typealias Action = () -> Void
     typealias TappedLabel = Action
     typealias TappedInfo = Action?
+    
+    // MARK: Public Properties
     
     var label: String
     var leadingLabel: String
@@ -20,7 +25,11 @@ struct SliderContainer<SliderView : View> : View {
     var tappedInfo: (() -> Void)?
     var sliderProvider: () -> SliderView
     
-    @EnvironmentObject var store: EggManager
+    // MARK: Private Properties
+    
+    @EnvironmentObject private var store: EggManager
+    
+    // MARK: Initializer
     
     init(_ label: String,
          leadingLabel: String,
@@ -35,6 +44,8 @@ struct SliderContainer<SliderView : View> : View {
         self.tappedInfo = tappedInfo
         self.sliderProvider = sliderProvider
     }
+    
+    // MARK: Render
     
     var body: some View {
         VStack(alignment: .trailing) {

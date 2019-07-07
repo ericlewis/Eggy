@@ -9,8 +9,13 @@
 import SwiftUI
 
 struct SettingsView : View {
+    
+    //MARK: Private Properties
+    
     @EnvironmentObject private var settings: SettingsManager
     @State private var idk = false
+    
+    // MARK: Render
     
     var body: some View {
         NavigationView {
@@ -51,6 +56,8 @@ struct SettingsView : View {
         }
     }
 }
+
+// MARK: Previews
 
 #if DEBUG
 struct SettingsView_Previews : PreviewProvider {

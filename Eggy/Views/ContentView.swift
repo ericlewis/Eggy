@@ -9,7 +9,12 @@
 import SwiftUI
 
 struct ContentView : View {
-    @EnvironmentObject var store: EggManager
+    
+    // MARK: Private Properties
+    
+    @EnvironmentObject private var store: EggManager
+    
+    // MARK: Render
     
     var body: some View {
         VStack {
@@ -27,6 +32,8 @@ struct ContentView : View {
         .animation(.basic())
     }
 }
+
+// MARK: Previews
 
 #if DEBUG
 struct ContentView_Previews : PreviewProvider {

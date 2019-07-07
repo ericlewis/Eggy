@@ -10,8 +10,13 @@ import SwiftUI
 import Combine
 
 struct RootView : View {
+    
+    // MARK: Private Properties
+    
     @EnvironmentObject var store: EggManager
-        
+    
+    // MARK: Render
+    
     var body: some View {
         NavigationView {
             ContentView()
@@ -23,6 +28,8 @@ struct RootView : View {
             .foregroundColor(.orange)
     }
 }
+
+// MARK: Previews
 
 #if DEBUG
 struct RootView_Previews : PreviewProvider {
