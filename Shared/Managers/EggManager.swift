@@ -15,6 +15,7 @@ let userDefaults = UserDefaults(suiteName: "group.eel.eggs")!
 
 class EggManager : EasyBindableObject, FormattersProtocol, EggStateProtocol, CookTimeProtocol, LocalNotificationsProtocol, ViewModelProtocol, BoilingPointManagerProtocolDelegate, EggDefaultsProtocol {
     
+    var ticker = Timer.publish(every: 1.0, tolerance: 0.1, on: .main, in: .common).autoconnect()
     
     // MARK: Static Properties
     
@@ -57,11 +58,11 @@ class EggManager : EasyBindableObject, FormattersProtocol, EggStateProtocol, Coo
     
     func stopped(needsConfirm: Bool) {
         if needsConfirm {
-            feedback.impact(intensity: 0.5) {
+            feedback.buzz(type: .lightImpact) {
                 self.confirmResetTimer = true
             }
         } else {
-            feedback.notice(type: .error) {
+            feedback.buzz(type: .success) {
                 self.confirmResetTimer = false
                 self.deleteNotifications()
             }
@@ -69,7 +70,7 @@ class EggManager : EasyBindableObject, FormattersProtocol, EggStateProtocol, Coo
     }
     
     func started() {
-        feedback.notice(type: .success, action: createNotifications)
+        feedback.buzz(type: .success, action: createNotifications)
     }
     
     

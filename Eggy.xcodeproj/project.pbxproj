@@ -34,6 +34,24 @@
 		6873BCED22D1CD3E0005BCCC /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6873BCEC22D1CD3E0005BCCC /* SettingsView.swift */; };
 		6873BCF022D2344E0005BCCC /* SettingsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6873BCEF22D2344E0005BCCC /* SettingsManager.swift */; };
 		6873BCF122D2344E0005BCCC /* SettingsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6873BCEF22D2344E0005BCCC /* SettingsManager.swift */; };
+		6887B0D322D28A69002BAB31 /* Defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C57F3B22D26AB300A7E964 /* Defaults.swift */; };
+		6887B0D422D28A69002BAB31 /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C57F3D22D270A500A7E964 /* Enums.swift */; };
+		6887B0D522D28A69002BAB31 /* AnyTransition+Transitions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C57F3422D2669500A7E964 /* AnyTransition+Transitions.swift */; };
+		6887B0D622D28A69002BAB31 /* BindableObject+Easy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C57F2822D25C6600A7E964 /* BindableObject+Easy.swift */; };
+		6887B0D722D28A69002BAB31 /* EggManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68979C4322D101E600FCC4EB /* EggManager.swift */; };
+		6887B0D822D28A69002BAB31 /* FeedbackManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C57F1E22D2502600A7E964 /* FeedbackManager.swift */; };
+		6887B0D922D28A69002BAB31 /* CookTimeProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C57F1C22D24ABF00A7E964 /* CookTimeProtocol.swift */; };
+		6887B0DA22D28A69002BAB31 /* EggProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 683C526A22D27CE500CE63C4 /* EggProtocol.swift */; };
+		6887B0DB22D28A69002BAB31 /* EggStateProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 683C526822D27CC600CE63C4 /* EggStateProtocol.swift */; };
+		6887B0DC22D28A69002BAB31 /* FormattersProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C57F2422D2593A00A7E964 /* FormattersProtocol.swift */; };
+		6887B0DD22D28A69002BAB31 /* LocalNotificationsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 683C526422D27B3E00CE63C4 /* LocalNotificationsProtocol.swift */; };
+		6887B0DE22D28A69002BAB31 /* TimerActionsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 683C526622D27B6500CE63C4 /* TimerActionsProtocol.swift */; };
+		6887B0DF22D28A69002BAB31 /* ViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C57F2022D254DD00A7E964 /* ViewModelProtocol.swift */; };
+		6887B0E022D28CBE002BAB31 /* Slider+Doneness.swift in Sources */ = {isa = PBXBuildFile; fileRef = 683C526C22D2845C00CE63C4 /* Slider+Doneness.swift */; };
+		6887B0E122D28CBE002BAB31 /* Slider+Size.swift in Sources */ = {isa = PBXBuildFile; fileRef = 683C526E22D2860E00CE63C4 /* Slider+Size.swift */; };
+		6887B0E222D28CBE002BAB31 /* Slider+Temperature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 683C527022D2864200CE63C4 /* Slider+Temperature.swift */; };
+		6887B0E322D28D27002BAB31 /* EggStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C57F3822D26A7B00A7E964 /* EggStack.swift */; };
+		6887B0E422D28E6B002BAB31 /* Alerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C57F3622D2693E00A7E964 /* Alerts.swift */; };
 		68979C4022D1004F00FCC4EB /* EggView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68979C3F22D1004F00FCC4EB /* EggView.swift */; };
 		68979C4222D1007500FCC4EB /* TimeInterval+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68979C4122D1007500FCC4EB /* TimeInterval+Helpers.swift */; };
 		68979C4422D101E600FCC4EB /* EggManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68979C4322D101E600FCC4EB /* EggManager.swift */; };
@@ -240,6 +258,7 @@
 			children = (
 				68C57F3622D2693E00A7E964 /* Alerts.swift */,
 				6873BCC022D1AEC80005BCCC /* CakeView.swift */,
+				68C57F3822D26A7B00A7E964 /* EggStack.swift */,
 				68979C3F22D1004F00FCC4EB /* EggView.swift */,
 				68C57F2C22D2649B00A7E964 /* NavigationBar+Buttons.swift */,
 				68C57F3022D2651300A7E964 /* ProjectedEndLabel.swift */,
@@ -265,7 +284,6 @@
 			isa = PBXGroup;
 			children = (
 				68C57F3222D2664400A7E964 /* ContentView.swift */,
-				68C57F3822D26A7B00A7E964 /* EggStack.swift */,
 				68C57F2A22D2642A00A7E964 /* OptionSliders.swift */,
 				68D2042F22D04A530080B937 /* RootView.swift */,
 				6873BCEC22D1CD3E0005BCCC /* SettingsView.swift */,
@@ -682,16 +700,34 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6887B0DC22D28A69002BAB31 /* FormattersProtocol.swift in Sources */,
+				6887B0D822D28A69002BAB31 /* FeedbackManager.swift in Sources */,
 				6873BCC222D1AEC80005BCCC /* CakeView.swift in Sources */,
+				6887B0E322D28D27002BAB31 /* EggStack.swift in Sources */,
 				6873BCA322D1AA170005BCCC /* HostingController.swift in Sources */,
+				6887B0DF22D28A69002BAB31 /* ViewModelProtocol.swift in Sources */,
 				6873BCB922D1AB680005BCCC /* Burritos+UserDefault.swift in Sources */,
+				6887B0D522D28A69002BAB31 /* AnyTransition+Transitions.swift in Sources */,
+				6887B0DA22D28A69002BAB31 /* EggProtocol.swift in Sources */,
 				6873BCA122D1AA170005BCCC /* ContentView.swift in Sources */,
 				6873BCBA22D1AB730005BCCC /* Double+Helpers.swift in Sources */,
+				6887B0DE22D28A69002BAB31 /* TimerActionsProtocol.swift in Sources */,
+				6887B0D722D28A69002BAB31 /* EggManager.swift in Sources */,
 				6873BCB722D1AA330005BCCC /* EggView.swift in Sources */,
+				6887B0E222D28CBE002BAB31 /* Slider+Temperature.swift in Sources */,
+				6887B0E022D28CBE002BAB31 /* Slider+Doneness.swift in Sources */,
 				6873BCEA22D1C7F70005BCCC /* BoilingPointManager.swift in Sources */,
 				6873BCA522D1AA170005BCCC /* ExtensionDelegate.swift in Sources */,
 				6873BCF122D2344E0005BCCC /* SettingsManager.swift in Sources */,
 				6873BCBB22D1AB7D0005BCCC /* TimeInterval+Helpers.swift in Sources */,
+				6887B0E122D28CBE002BAB31 /* Slider+Size.swift in Sources */,
+				6887B0D422D28A69002BAB31 /* Enums.swift in Sources */,
+				6887B0DB22D28A69002BAB31 /* EggStateProtocol.swift in Sources */,
+				6887B0DD22D28A69002BAB31 /* LocalNotificationsProtocol.swift in Sources */,
+				6887B0D922D28A69002BAB31 /* CookTimeProtocol.swift in Sources */,
+				6887B0D322D28A69002BAB31 /* Defaults.swift in Sources */,
+				6887B0E422D28E6B002BAB31 /* Alerts.swift in Sources */,
+				6887B0D622D28A69002BAB31 /* BindableObject+Easy.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

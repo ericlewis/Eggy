@@ -11,7 +11,12 @@ import Foundation
 public extension TimeInterval {
   func stringFromTimeInterval() -> String {
     
-    let time = max(0, NSInteger(self))
+    // watchOS hack: Guard ourselves against overflows
+    if self >= Double(Int.max) {
+        return "00:00"
+    }
+    
+    let time = max(0, Int(self))
     
     let seconds = time % 60
     let minutes = (time / 60) % 60

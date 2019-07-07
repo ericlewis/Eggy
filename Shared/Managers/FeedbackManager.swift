@@ -8,19 +8,36 @@
 
 import SwiftUI
 
-protocol FeedbackManagerProtocol {
-    var select: UISelectionFeedbackGenerator {get}
-    var impact: UIImpactFeedbackGenerator {get}
-    var notice: UINotificationFeedbackGenerator {get}
+enum FeedbackType {
+    case select
+    case impact
+    case lightImpact
+    case success
+    case failure
 }
 
 protocol FeedbackManagerActionsProtocol {
     typealias Action = (() -> Void)?
     
-    func select(action: Action)
-    func impact(action: Action)
-    func impact(intensity: CGFloat, action: Action)
-    func notice(type: UINotificationFeedbackGenerator.FeedbackType, action: Action)
+    func buzz(type: FeedbackType)
+    func buzz(type: FeedbackType, action: Action)
+}
+
+#if os(watchOS)
+struct FeedbackManager : FeedbackManagerActionsProtocol {
+    func buzz(type: FeedbackType, action: Self.Action) {
+        action?()
+    }
+    
+    func buzz(type: FeedbackType) {
+        buzz(type: type, action: nil)
+    }
+}
+#else
+protocol FeedbackManagerProtocol {
+    var select: UISelectionFeedbackGenerator {get}
+    var impact: UIImpactFeedbackGenerator {get}
+    var notice: UINotificationFeedbackGenerator {get}
 }
 
 struct FeedbackManager : FeedbackManagerProtocol, FeedbackManagerActionsProtocol {
@@ -29,27 +46,36 @@ struct FeedbackManager : FeedbackManagerProtocol, FeedbackManagerActionsProtocol
     var impact = UIImpactFeedbackGenerator(style: .heavy)
     var notice = UINotificationFeedbackGenerator()
     
-    func select(action: Action) {
-        select.selectionChanged()
-        action?()
-        select.prepare()
+    
+    func buzz(type: FeedbackType) {
+        buzz(type: type, action: nil)
     }
     
-    func impact(action: Action) {
-        impact.impactOccurred()
+    func buzz(type: FeedbackType, action: Self.Action) {
+        switch type {
+        case .select:
+            select.selectionChanged()
+        case .success:
+            notice.notificationOccurred(.success)
+        case .failure:
+            notice.notificationOccurred(.error)
+        case .impact:
+            impact.impactOccurred()
+        case .lightImpact:
+            impact.impactOccurred(withIntensity: 0.5)
+        }
+        
         action?()
-        impact.prepare()
-    }
-    
-    func impact(intensity: CGFloat, action: Action) {
-        impact.impactOccurred(withIntensity: intensity)
-        action?()
-        impact.prepare()
-    }
-    
-    func notice(type: UINotificationFeedbackGenerator.FeedbackType, action: Action) {
-        notice.notificationOccurred(type)
-        action?()
-        notice.prepare()
+        
+        switch type {
+        case .success, .failure:
+            notice.prepare()
+        case .impact, .lightImpact:
+            impact.prepare()
+        case .select:
+            select.prepare()
+        }
+        
     }
 }
+#endif

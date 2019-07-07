@@ -11,8 +11,6 @@ import SwiftUI
 struct ContentView : View {
     @EnvironmentObject var store: EggManager
     
-    var ticker = Timer.publish(every: 1.0, tolerance: 0.1, on: .main, in: .common).autoconnect()
-    
     var body: some View {
         VStack {
             EggStack()
@@ -20,7 +18,7 @@ struct ContentView : View {
             if !store.isRunning {
                 OptionSliders()
                     .transition(.opacity)
-                    .onReceive(ticker, perform: store.changed)
+                    .onReceive(store.ticker, perform: store.changed)
             } else {
                 ProjectedEndLabel()
                     .transition(.moveAndFade)
