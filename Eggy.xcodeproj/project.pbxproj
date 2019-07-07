@@ -24,6 +24,11 @@
 		6873BCC222D1AEC80005BCCC /* CakeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6873BCC022D1AEC80005BCCC /* CakeView.swift */; };
 		6873BCC422D1C1EF0005BCCC /* EggManager+Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6873BCC322D1C1EF0005BCCC /* EggManager+Notifications.swift */; };
 		6873BCC522D1C1EF0005BCCC /* EggManager+Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6873BCC322D1C1EF0005BCCC /* EggManager+Notifications.swift */; };
+		6873BCE922D1C7F70005BCCC /* EggManager+Altimeter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6873BCE822D1C7F70005BCCC /* EggManager+Altimeter.swift */; };
+		6873BCEA22D1C7F70005BCCC /* EggManager+Altimeter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6873BCE822D1C7F70005BCCC /* EggManager+Altimeter.swift */; };
+		6873BCED22D1CD3E0005BCCC /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6873BCEC22D1CD3E0005BCCC /* SettingsView.swift */; };
+		6873BCF022D2344E0005BCCC /* SettingsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6873BCEF22D2344E0005BCCC /* SettingsManager.swift */; };
+		6873BCF122D2344E0005BCCC /* SettingsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6873BCEF22D2344E0005BCCC /* SettingsManager.swift */; };
 		68979C4022D1004F00FCC4EB /* EggView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68979C3F22D1004F00FCC4EB /* EggView.swift */; };
 		68979C4222D1007500FCC4EB /* TimeInterval+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68979C4122D1007500FCC4EB /* TimeInterval+Helpers.swift */; };
 		68979C4422D101E600FCC4EB /* EggManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68979C4322D101E600FCC4EB /* EggManager.swift */; };
@@ -133,6 +138,9 @@
 		6873BCBC22D1ABB40005BCCC /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS6.0.sdk/System/Library/Frameworks/UserNotifications.framework; sourceTree = DEVELOPER_DIR; };
 		6873BCC022D1AEC80005BCCC /* CakeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CakeView.swift; sourceTree = "<group>"; };
 		6873BCC322D1C1EF0005BCCC /* EggManager+Notifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EggManager+Notifications.swift"; sourceTree = "<group>"; };
+		6873BCE822D1C7F70005BCCC /* EggManager+Altimeter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EggManager+Altimeter.swift"; sourceTree = "<group>"; };
+		6873BCEC22D1CD3E0005BCCC /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		6873BCEF22D2344E0005BCCC /* SettingsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsManager.swift; sourceTree = "<group>"; };
 		68979C3F22D1004F00FCC4EB /* EggView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EggView.swift; sourceTree = "<group>"; };
 		68979C4122D1007500FCC4EB /* TimeInterval+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TimeInterval+Helpers.swift"; sourceTree = "<group>"; };
 		68979C4322D101E600FCC4EB /* EggManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EggManager.swift; sourceTree = "<group>"; };
@@ -255,21 +263,24 @@
 		68D2042A22D04A530080B937 /* Eggy */ = {
 			isa = PBXGroup;
 			children = (
-				6873BC5A22D1A6460005BCCC /* Eggy.entitlements */,
 				68D2042B22D04A530080B937 /* AppDelegate.swift */,
-				68D2042D22D04A530080B937 /* SceneDelegate.swift */,
-				68D2042F22D04A530080B937 /* RootView.swift */,
+				68D2043122D04A580080B937 /* Assets.xcassets */,
 				6873BCC022D1AEC80005BCCC /* CakeView.swift */,
 				68979C4522D107C800FCC4EB /* Double+Helpers.swift */,
-				68979C4722D1136400FCC4EB /* UserDefault.swift */,
 				68979C4322D101E600FCC4EB /* EggManager.swift */,
+				6873BCE822D1C7F70005BCCC /* EggManager+Altimeter.swift */,
 				6873BCC322D1C1EF0005BCCC /* EggManager+Notifications.swift */,
 				68979C3F22D1004F00FCC4EB /* EggView.swift */,
-				68D2043122D04A580080B937 /* Assets.xcassets */,
-				68979C4122D1007500FCC4EB /* TimeInterval+Helpers.swift */,
-				68D2043622D04A580080B937 /* LaunchScreen.storyboard */,
+				6873BC5A22D1A6460005BCCC /* Eggy.entitlements */,
 				68D2043922D04A580080B937 /* Info.plist */,
+				68D2043622D04A580080B937 /* LaunchScreen.storyboard */,
 				68D2043322D04A580080B937 /* Preview Content */,
+				68D2042F22D04A530080B937 /* RootView.swift */,
+				68D2042D22D04A530080B937 /* SceneDelegate.swift */,
+				6873BCEF22D2344E0005BCCC /* SettingsManager.swift */,
+				6873BCEC22D1CD3E0005BCCC /* SettingsView.swift */,
+				68979C4122D1007500FCC4EB /* TimeInterval+Helpers.swift */,
+				68979C4722D1136400FCC4EB /* UserDefault.swift */,
 			);
 			path = Eggy;
 			sourceTree = "<group>";
@@ -528,7 +539,9 @@
 				6873BCA122D1AA170005BCCC /* ContentView.swift in Sources */,
 				6873BCBA22D1AB730005BCCC /* Double+Helpers.swift in Sources */,
 				6873BCB722D1AA330005BCCC /* EggView.swift in Sources */,
+				6873BCEA22D1C7F70005BCCC /* EggManager+Altimeter.swift in Sources */,
 				6873BCA522D1AA170005BCCC /* ExtensionDelegate.swift in Sources */,
+				6873BCF122D2344E0005BCCC /* SettingsManager.swift in Sources */,
 				6873BCBB22D1AB7D0005BCCC /* TimeInterval+Helpers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -538,13 +551,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				68979C4822D1136400FCC4EB /* UserDefault.swift in Sources */,
+				6873BCF022D2344E0005BCCC /* SettingsManager.swift in Sources */,
 				68D2042C22D04A530080B937 /* AppDelegate.swift in Sources */,
 				68D2042E22D04A530080B937 /* SceneDelegate.swift in Sources */,
 				68979C4222D1007500FCC4EB /* TimeInterval+Helpers.swift in Sources */,
+				6873BCE922D1C7F70005BCCC /* EggManager+Altimeter.swift in Sources */,
 				6873BCC122D1AEC80005BCCC /* CakeView.swift in Sources */,
 				68979C4422D101E600FCC4EB /* EggManager.swift in Sources */,
 				6873BCC422D1C1EF0005BCCC /* EggManager+Notifications.swift in Sources */,
 				68979C4622D107C800FCC4EB /* Double+Helpers.swift in Sources */,
+				6873BCED22D1CD3E0005BCCC /* SettingsView.swift in Sources */,
 				68D2043022D04A530080B937 /* RootView.swift in Sources */,
 				68979C4022D1004F00FCC4EB /* EggView.swift in Sources */,
 			);
@@ -854,6 +870,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = ericlewis.Eggy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_UIKITFORMAC = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -876,6 +893,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = ericlewis.Eggy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_UIKITFORMAC = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

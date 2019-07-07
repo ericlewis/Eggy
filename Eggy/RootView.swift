@@ -11,7 +11,7 @@ import Combine
 
 struct ContentView : View {
   @EnvironmentObject var store: EggManager
-  
+
   var ticker = Timer.publish(every: 1.0, tolerance: 0.1, on: .main, in: .common).autoconnect()
   
   var title: String {
@@ -83,31 +83,10 @@ struct ContentView : View {
   }
 }
 
-struct SettingsButton : View {
-  var body: some View {
-    PresentationLink(destination: Settings()) {
-      Image(systemName: "slider.horizontal.3")
-        .imageScale(.large)
-    }
-  }
-}
-
-struct Settings : View {
-  var body: some View {
-    NavigationView {
-      Form {
-        Section {
-          Text("PlaceHolder")
-        }
-      }
-      .navigationBarTitle("Settings")
-    }
-  }
-}
-
 struct OptionSliders : View {
   @EnvironmentObject var store: EggManager
-  
+  @EnvironmentObject var settings: SettingsManager
+
   @State var showingSizePicker = false
   @State var showingDonenessPicker = false
   @State var showingTempSheet = false
@@ -118,7 +97,7 @@ struct OptionSliders : View {
     let n = NumberFormatter()
     n.maximumFractionDigits = 0
     let m = MeasurementFormatter()
-    if store.prefersCelcius {
+    if settings.prefersCelcius {
       m.locale = .init(identifier: "en_GB")
     } else {
       m.locale = .autoupdatingCurrent
@@ -162,7 +141,7 @@ struct OptionSliders : View {
   func tempSheet() -> ActionSheet {
     func setDisplay(_ prefersCelcius: Bool) {
       self.store.select.selectionChanged()
-      store.prefersCelcius = prefersCelcius
+      settings.prefersCelcius = prefersCelcius
       self.store.select.prepare()
     }
     

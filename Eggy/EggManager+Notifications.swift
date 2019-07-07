@@ -10,6 +10,7 @@ import UserNotifications
 
 extension EggManager {
   func createNotification() {
+    // TODO: offset the permission time
     UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge]) { _, _ in
       self.createDoneNotice()
       
@@ -19,6 +20,41 @@ extension EggManager {
     }
   }
   
+#if os(tvOS)
+  func createWarningNotice() {
+    let content = UNMutableNotificationContent()
+    // TODO: localize me
+    content.badge = 1
+    
+    let trigger = UNTimeIntervalNotificationTrigger(timeInterval: self.rawCookTime - 30, repeats: false)
+    
+    let request = UNNotificationRequest(identifier: "timer2", content: content, trigger: trigger)
+    
+    UNUserNotificationCenter.current().add(request, withCompletionHandler: { (error) in
+      if let error = error {
+        print("Unable to Create Notice")
+        print("\(error), \(error.localizedDescription)")
+      }
+    })
+  }
+  
+  func createDoneNotice() {
+    let content = UNMutableNotificationContent()
+    // TODO: localize me
+    content.badge = 1
+    
+    let trigger = UNTimeIntervalNotificationTrigger(timeInterval: self.rawCookTime, repeats: false)
+    
+    let request = UNNotificationRequest(identifier: "timer", content: content, trigger: trigger)
+    
+    UNUserNotificationCenter.current().add(request, withCompletionHandler: { (error) in
+      if let error = error {
+        print("Unable to Create Notice")
+        print("\(error), \(error.localizedDescription)")
+      }
+    })
+  }
+#else
   func createWarningNotice() {
     let content = UNMutableNotificationContent()
     // TODO: localize me
@@ -28,7 +64,7 @@ extension EggManager {
     content.badge = 1
     content.userInfo = ["identifier": "timer2"]
     
-    let trigger = UNTimeIntervalNotificationTrigger(timeInterval: self.rawCookTime, repeats: false)
+    let trigger = UNTimeIntervalNotificationTrigger(timeInterval: self.rawCookTime - 30, repeats: false)
     
     let request = UNNotificationRequest(identifier: "timer2", content: content, trigger: trigger)
     
@@ -60,6 +96,7 @@ extension EggManager {
       }
     })
   }
+#endif
   
   func deleteNotification() {
     UNUserNotificationCenter.current().removePendingNotificationRequests(withIdentifiers: ["timer", "timer2"])

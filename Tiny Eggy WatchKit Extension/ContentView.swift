@@ -8,7 +8,6 @@
 
 import SwiftUI
 import Combine
-import CoreMotion
 
 enum EditingState {
   case size
@@ -53,8 +52,12 @@ struct ContentView : View {
       }
       .tapAction(advance))
     case .doneness:
+      #if os(tvOS)
+      return AnyView(EmptyView())
+      #else
       return AnyView(Slider(value: $store.doneness, from: 56, through: 85)
-       .padding(.horizontal).digitalCrownRotation($store.doneness, from: 56, through: 85, by: 1.0, sensitivity: .medium, isContinuous: false, isHapticFeedbackEnabled: true))
+        .padding(.horizontal).digitalCrownRotation($store.doneness, from: 56, through: 85, by: 1.0, sensitivity: .medium, isContinuous: false, isHapticFeedbackEnabled: true))
+      #endif
     default:
       return AnyView(Picker("", selection: $store.temp) {
         Text("Fridge").tag(37.0)
@@ -150,7 +153,10 @@ struct ContentView : View {
 }
 
 class EggManager : BindableObject {
+  #if canImport(CoreMotion)
   lazy var altimeter = CMAltimeter()
+  #endif
+  
   lazy var dateFormatter = DateFormatter()
   
   lazy var didChange = PassthroughSubject<Void, Never>()
@@ -221,25 +227,6 @@ extension EggManager {
     
   }
 }
-
-extension EggManager {
-  func startAltimeter() {
-    if CMAltimeter.isRelativeAltitudeAvailable() {
-      altimeter.startRelativeAltitudeUpdates(to: .main) { data, err in
-        if let rawPressure = data?.pressure.doubleValue {
-          let pressure = Measurement(value: rawPressure, unit: UnitPressure.kilopascals).converted(to: .inchesOfMercury).value
-          
-          let res = Measurement(value: 49.161 * log(pressure) + 44, unit: UnitTemperature.fahrenheit).converted(to: .celsius).value
-          self.boilingPoint = res
-        }
-        
-        self.altimeter.stopRelativeAltitudeUpdates()
-      }
-    }
-  }
-  
-}
-
 
 extension EggManager {
   var rawCookTime: Double {

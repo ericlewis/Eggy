@@ -42,8 +42,6 @@ class EggManager : BindableObject {
   @UserDefault("isRunning", defaultValue: false, userDefaults: userDefaults) var isRunning: Bool {didSet {changed()}}
   
   @UserDefault("endDate", defaultValue: Date(), userDefaults: userDefaults) var endDate: Date {didSet {changed()}}
-  
-  @UserDefault("prefersCelcius", defaultValue: false, userDefaults: userDefaults) var prefersCelcius: Bool {didSet {changed()}}
 
   var timerComplete = false {didSet{changed()}}
   var needsConfirmStop = false {didSet{changed()}}
@@ -133,24 +131,6 @@ extension EggManager {
     let weight = Measurement(value: s, unit: UnitMass.ounces).converted(to: .grams).value
     
     return pow(weight, 2/3) * heatCoeff * log(yolkWhiteRatio * (eggTemp - b) / (d - b))
-  }
-  
-}
-
-extension EggManager {
-  func startAltimeter() {
-    if CMAltimeter.isRelativeAltitudeAvailable() {
-      altimeter.startRelativeAltitudeUpdates(to: .main) { data, err in
-        if let rawPressure = data?.pressure.doubleValue {
-          let pressure = Measurement(value: rawPressure, unit: UnitPressure.kilopascals).converted(to: .inchesOfMercury).value
-          
-          let res = Measurement(value: 49.161 * log(pressure) + 44, unit: UnitTemperature.fahrenheit).converted(to: .celsius).value
-          self.boilingPoint = res
-        }
-        
-        self.altimeter.stopRelativeAltitudeUpdates()
-      }
-    }
   }
   
 }

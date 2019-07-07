@@ -24,7 +24,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
                                             localizedSubtitle: nil,
                                             icon: UIApplicationShortcutIcon(type: .play))
     application.shortcutItems = [startItem]
-    
+    application.applicationIconBadgeNumber = 0
+
     return true
   }
 
