@@ -33,13 +33,20 @@ struct EditingView : View {
             return AnyView(
                 SizeSlider(action: selectionChanged)
                 .tapAction(advance)
+                    .digitalCrownRotation($store.doneness,
+                                          from: store.eggDefaults.donenessRange.lowerBound,
+                                          through: store.eggDefaults.donenessRange.upperBound,
+                                          by: 1.0,
+                                          sensitivity: .medium,
+                                          isContinuous: false,
+                                          isHapticFeedbackEnabled: true)
             )
         case .doneness:
             return AnyView(
                 DonenessSlider(action: selectionChanged)
                     .digitalCrownRotation($store.doneness,
-                                          from: 56,
-                                          through: 85,
+                                          from: store.eggDefaults.donenessRange.lowerBound,
+                                          through: store.eggDefaults.donenessRange.upperBound,
                                           by: 1.0,
                                           sensitivity: .medium,
                                           isContinuous: false,
@@ -47,7 +54,13 @@ struct EditingView : View {
             )
         default:
             return AnyView(TemperatureSlider(action: selectionChanged)
-                .tapAction(advance)
+                .digitalCrownRotation($store.doneness,
+                                      from: store.eggDefaults.donenessRange.lowerBound,
+                                      through: store.eggDefaults.donenessRange.upperBound,
+                                      by: 1.0,
+                                      sensitivity: .medium,
+                                      isContinuous: false,
+                                      isHapticFeedbackEnabled: true)
             )
         }
     }
