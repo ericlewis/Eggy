@@ -33,9 +33,9 @@ struct EditingView : View {
             return AnyView(
                 SizeSlider(action: selectionChanged)
                 .tapAction(advance)
-                    .digitalCrownRotation($store.doneness,
-                                          from: store.eggDefaults.donenessRange.lowerBound,
-                                          through: store.eggDefaults.donenessRange.upperBound,
+                    .digitalCrownRotation($store.size,
+                                          from: store.eggDefaults.sizeRange.lowerBound,
+                                          through: store.eggDefaults.sizeRange.upperBound,
                                           by: 1.0,
                                           sensitivity: .medium,
                                           isContinuous: false,
@@ -54,9 +54,9 @@ struct EditingView : View {
             )
         default:
             return AnyView(TemperatureSlider(action: selectionChanged)
-                .digitalCrownRotation($store.doneness,
-                                      from: store.eggDefaults.donenessRange.lowerBound,
-                                      through: store.eggDefaults.donenessRange.upperBound,
+                .digitalCrownRotation($store.temp,
+                                      from: store.eggDefaults.tempRange.lowerBound,
+                                      through: store.eggDefaults.tempRange.upperBound,
                                       by: 1.0,
                                       sensitivity: .medium,
                                       isContinuous: false,
