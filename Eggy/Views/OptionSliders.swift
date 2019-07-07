@@ -18,7 +18,7 @@ struct OptionSliders : View {
 
     func sizeSheet() -> ActionSheet {
         func setSize(_ size: EggSize) {
-            self.store.feedback.select {
+            self.store.feedback.buzz(type: .select) {
                 self.store.size = size.rawValue
             }
         }
@@ -35,7 +35,7 @@ struct OptionSliders : View {
     
     func donenessSheet() -> ActionSheet {
         func setDone(_ done: EggDoneness) {
-            self.store.feedback.select {
+            self.store.feedback.buzz(type: .select) {
                 self.store.doneness = done.rawValue
             }
             
@@ -51,7 +51,7 @@ struct OptionSliders : View {
     
     func tempSheet() -> ActionSheet {
         func setDisplay(_ prefersCelcius: Bool) {
-            self.store.feedback.select {
+            self.store.feedback.buzz(type: .select) {
                 self.settings.prefersCelcius = prefersCelcius
             }
         }
@@ -64,25 +64,25 @@ struct OptionSliders : View {
     }
     
     func toggleTempSheet() {
-        store.feedback.select {
+        store.feedback.buzz(type: .select) {
             self.$showingTempSheet.value.toggle()
         }
     }
     
     func toggleSizeSheet() {
-        store.feedback.select {
+        store.feedback.buzz(type: .select) {
             self.$showingSizePicker.value.toggle()
         }
     }
     
     func toggleDonenessSheet() {
-        store.feedback.select {
+        store.feedback.buzz(type: .select) {
             self.$showingDonenessPicker.value.toggle()
         }
     }
     
     func didSelect() {
-        store.feedback.select(action: {})
+        store.feedback.buzz(type: .select)
     }
     
     var body: some View {
