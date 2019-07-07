@@ -25,7 +25,7 @@ struct RootView : View {
                 .navigationBarItems(leading: SettingsButton(), trailing: StartStopButton())
         }
         .navigationViewStyle(.stack)
-            .foregroundColor(.orange)
+            .foregroundColor(.yellow)
     }
 }
 
