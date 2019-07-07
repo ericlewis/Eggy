@@ -8,23 +8,23 @@
 
 import CoreMotion
 
-protocol AlitmeterProtocolDelegate {
+protocol BoilingPointManagerProtocolDelegate {
     func changed(boilingPoint: BoilingPoint)
 }
 
-protocol AltimeterProtocol: class {
+protocol BoilingPointManagerProtocol: class {
     var altimeter: CMAltimeter {get}
-    func startAltimeter()
+    func startUpdates()
     
-    var delegate: AlitmeterProtocolDelegate? {get set}
+    var delegate: BoilingPointManagerProtocolDelegate? {get set}
 }
 
-class Altimeter : AltimeterProtocol {
-    lazy var altimeter = CMAltimeter()
+class BoilingPointManager : BoilingPointManagerProtocol {
+    internal lazy var altimeter = CMAltimeter()
     
-    var delegate: AlitmeterProtocolDelegate?
+    var delegate: BoilingPointManagerProtocolDelegate?
 
-    func startAltimeter() {
+    func startUpdates() {
         if CMAltimeter.isRelativeAltitudeAvailable() {
             altimeter.startRelativeAltitudeUpdates(to: .main) { data, err in
                 if let rawPressure = data?.pressure.doubleValue {

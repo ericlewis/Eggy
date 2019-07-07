@@ -8,16 +8,19 @@
 
 import Foundation
 
-protocol ViewModelProtocol : RawProtocol {
+protocol ViewModelProtocol : EggStateProtocol, FormattersProtocol {
+    var navBarTitleString: String {get}
     var endDateString: String {get}
     var cookTimeString: String {get}
-    
-    var isFinished: Bool {get}
 }
 
-extension ViewModelProtocol where Self: EggManager {
+extension ViewModelProtocol {
+    var navBarTitleString: String {
+        isRunning ? "\(cookTimeString) remaining" : "Cook for \(cookTimeString)"
+    }
+    
     var endDateString: String {
-        dateFormatter.string(from: endDate)
+        Self.dateFormatter.string(from: endDate)
     }
     
     var cookTimeString: String {
@@ -26,9 +29,5 @@ extension ViewModelProtocol where Self: EggManager {
         } else {
             return rawCookTime.stringFromTimeInterval()
         }
-    }
-    
-    var isFinished: Bool {
-        endDate <= Date()
     }
 }

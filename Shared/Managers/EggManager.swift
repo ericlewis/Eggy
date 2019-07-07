@@ -10,14 +10,11 @@ import SwiftUI
 import Combine
 import CoreMotion
 
-typealias Temperature = Double
-typealias Size = Double
-typealias Doneness = Double
-typealias BoilingPoint = Double
-
+// TODO: put this somewhere
 let userDefaults = UserDefaults(suiteName: "group.eel.eggs")!
 
-class EggManager : EasyBindableObject, FormattersProtocol, EggProtocol, CalculateProtocol, ActionsProtocol, NotificationsProtocol, ViewModelProtocol, AlitmeterProtocolDelegate {
+class EggManager : EasyBindableObject, FormattersProtocol, EggStateProtocol, CookTimeProtocol, LocalNotificationsProtocol, ViewModelProtocol, BoilingPointManagerProtocolDelegate, EggDefaultsProtocol {
+
     
     // MARK: Static Properties
     
@@ -26,11 +23,9 @@ class EggManager : EasyBindableObject, FormattersProtocol, EggProtocol, Calculat
     // MARK: Managers
     
     lazy var feedback = FeedbackManager()
-
-    var timerComplete = false {didSet{changed()}}
     
     // TODO: navigation store?
-    var needsConfirmStop = false {didSet{changed()}}
+    var confirmResetTimer = false {didSet{changed()}}
     
     // MARK: Initialization
     
@@ -38,35 +33,51 @@ class EggManager : EasyBindableObject, FormattersProtocol, EggProtocol, Calculat
         super.init()
         
         setupFormatters()
-        setupAltimeter()
+        setupBoilingPointManager()
     }
-    
-    // MARK: Formatters Protocol
-    lazy var dateFormatter = DateFormatter()
-    lazy var numberFormatter: NumberFormatter = NumberFormatter()
-
     
     // MARK: Egg Protocol
     
-    @UserDefault("temp", defaultValue: 37.0, userDefaults: userDefaults) var temp: Temperature {didSet{changed()}}
-    @UserDefault("doneness", defaultValue: 56.0, userDefaults: userDefaults) var doneness: Doneness
+    @UserDefault("temp", defaultValue: EggManager.eggDefaults.temp, userDefaults: userDefaults) var temp: Temperature {didSet{changed()}}
+    @UserDefault("doneness", defaultValue: EggManager.eggDefaults.doneness, userDefaults: userDefaults) var doneness: Doneness
         {didSet {changed()}}
-    @UserDefault("size", defaultValue: 1.87, userDefaults: userDefaults) var size: Size
+    @UserDefault("size", defaultValue: EggManager.eggDefaults.size, userDefaults: userDefaults) var size: Size
         {didSet {changed()}}
-    @UserDefault("boilingPoint", defaultValue: 100.0, userDefaults: userDefaults) var boilingPoint: BoilingPoint
+    @UserDefault("boilingPoint", defaultValue: EggManager.eggDefaults.boilingPoint, userDefaults: userDefaults) var boilingPoint: BoilingPoint
         {didSet {changed()}}
+    
+    // MARK: Egg State Protocol
+    
     @UserDefault("isRunning", defaultValue: false, userDefaults: userDefaults) var isRunning: Bool {didSet {changed()}}
     @UserDefault("endDate", defaultValue: Date(), userDefaults: userDefaults) var endDate: Date {didSet {changed()}}
     
-    // MARK: Alitmeter Protocol
-    lazy var altimeter = Altimeter()
-
-    func setupAltimeter() {
-        altimeter.delegate = self
-        altimeter.startAltimeter()
+    func stopped(needsConfirm: Bool) {
+        if needsConfirm {
+            feedback.impact(intensity: 0.5) {
+                self.confirmResetTimer = true
+            }
+        } else {
+            feedback.notice(type: .error) {
+                self.confirmResetTimer = false
+                self.deleteNotifications()
+            }
+        }
     }
     
-    // MARK: Alitmeter Delegate
+    func started() {
+        feedback.notice(type: .success, action: createNotifications)
+    }
+    
+    
+    // MARK: Boiling Point Protocol
+    lazy var boilingPointManager = BoilingPointManager()
+
+    func setupBoilingPointManager() {
+        boilingPointManager.delegate = self
+        boilingPointManager.startUpdates()
+    }
+    
+    // MARK: Boiling Point Delegate
     
     func changed(boilingPoint: BoilingPoint) {
         self.boilingPoint = boilingPoint

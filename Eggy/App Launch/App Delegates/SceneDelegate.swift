@@ -23,10 +23,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     if let windowScene = scene as? UIWindowScene {
         let window = UIWindow(windowScene: windowScene)
         window.rootViewController = UIHostingController(rootView:
-          ContentView()
+          RootView()
             .environmentObject(EggManager.shared)
             .environmentObject(SettingsManager.shared)
-            .foregroundColor(.orange)
       )
         self.window = window
         window.makeKeyAndVisible()

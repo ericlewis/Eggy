@@ -8,11 +8,11 @@
 
 import Foundation
 
-protocol CalculateProtocol {
+protocol CookTimeProtocol {
     static func calculateCookTime(t: Double, d: Double, s: Double, b: Double) -> Double
 }
 
-extension CalculateProtocol {
+extension CookTimeProtocol {
     static func calculateCookTime(t: Double, d: Double, s: Double, b: Double) -> Double {
         let heatCoeff = 31.0
         let yolkWhiteRatio = 0.86

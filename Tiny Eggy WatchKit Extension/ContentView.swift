@@ -181,7 +181,6 @@ class EggManager : BindableObject {
   
   @UserDefault("prefersCelcius", defaultValue: false) var prefersCelcius: Bool {didSet {changed()}}
   
-  var timerComplete = false {didSet{changed()}}
   var needsConfirmStop = false {didSet{changed()}}
   
   var isFinished: Bool {
@@ -200,7 +199,7 @@ class EggManager : BindableObject {
     dateFormatter.dateStyle = .none
     dateFormatter.timeStyle = .short
     
-    startAltimeter()
+    startUpdates()
   }
 }
 
@@ -237,7 +236,6 @@ extension EggManager {
     let remaining = max(0.0, endDate.timeIntervalSinceReferenceDate - Date().timeIntervalSinceReferenceDate)
     
     if remaining == 0.0 && isRunning {
-      timerComplete = true
       stop()
     }
     

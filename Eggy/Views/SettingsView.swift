@@ -8,18 +8,6 @@
 
 import SwiftUI
 
-struct SettingsButton : View {
-  @EnvironmentObject var settings: SettingsManager
-
-  var body: some View {
-    PresentationLink(destination: SettingsView()
-    .environmentObject(settings)) {
-      Image(systemName: "slider.horizontal.3")
-        .imageScale(.large)
-    }
-  }
-}
-
 struct SettingsView : View {
   @EnvironmentObject var settings: SettingsManager
   @State var idk = false
