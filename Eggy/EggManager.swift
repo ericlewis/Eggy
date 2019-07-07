@@ -18,10 +18,15 @@ typealias BoilingPoint = Double
 class EggManager : BindableObject {
   lazy var altimeter = CMAltimeter()
   lazy var dateFormatter = DateFormatter()
+  lazy var select = UISelectionFeedbackGenerator()
+  lazy var feedback = UIImpactFeedbackGenerator(style: .heavy)
+  lazy var feedbackNoti = UINotificationFeedbackGenerator()
   lazy var didChange = PassthroughSubject<Void, Never>()
   
   @UserDefault("temp", defaultValue: 37.0) var temp: Temperature
-    {didSet {changed()}}
+    {didSet {
+      changed()
+    }}
   
   @UserDefault("doneness", defaultValue: 56.0) var doneness: Doneness
     {didSet {changed()}}
@@ -35,6 +40,8 @@ class EggManager : BindableObject {
   @UserDefault("isRunning", defaultValue: false) var isRunning: Bool {didSet {changed()}}
   
   @UserDefault("endDate", defaultValue: Date()) var endDate: Date {didSet {changed()}}
+  
+  var needsConfirmStop = false {didSet{changed()}}
   
   var isFinished: Bool {
     endDate <= Date()
@@ -64,11 +71,24 @@ extension EggManager {
   }
   
   func stop() {
+    feedbackNoti.notificationOccurred(.error)
+    deleteNotification()
+    needsConfirmStop = false
     isRunning = false
+    feedbackNoti.prepare()
   }
   
   func toggleRunning() {
-    isRunning ? stop() : start()
+
+    if isRunning {
+      needsConfirmStop = true
+      feedback.impactOccurred()
+    } else {
+      start()
+      feedbackNoti.notificationOccurred(.success)
+    }
+    
+    feedback.prepare()
   }
 }
 
