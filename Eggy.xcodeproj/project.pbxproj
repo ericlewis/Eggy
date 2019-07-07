@@ -14,10 +14,10 @@
 		683C526D22D2845C00CE63C4 /* Slider+Doneness.swift in Sources */ = {isa = PBXBuildFile; fileRef = 683C526C22D2845C00CE63C4 /* Slider+Doneness.swift */; };
 		683C526F22D2860E00CE63C4 /* Slider+Size.swift in Sources */ = {isa = PBXBuildFile; fileRef = 683C526E22D2860E00CE63C4 /* Slider+Size.swift */; };
 		683C527122D2864200CE63C4 /* Slider+Temperature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 683C527022D2864200CE63C4 /* Slider+Temperature.swift */; };
-		6873BC8D22D1AA120005BCCC /* Tiny Eggy WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 6873BC8C22D1AA110005BCCC /* Tiny Eggy WatchKit App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		6873BC8D22D1AA120005BCCC /* Tiny Eggy App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 6873BC8C22D1AA110005BCCC /* Tiny Eggy App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		6873BC9322D1AA120005BCCC /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6873BC9122D1AA120005BCCC /* Interface.storyboard */; };
 		6873BC9522D1AA160005BCCC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6873BC9422D1AA160005BCCC /* Assets.xcassets */; };
-		6873BC9C22D1AA170005BCCC /* Tiny Eggy WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 6873BC9B22D1AA160005BCCC /* Tiny Eggy WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		6873BC9C22D1AA170005BCCC /* Tiny Eggy Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 6873BC9B22D1AA160005BCCC /* Tiny Eggy Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		6873BCA122D1AA170005BCCC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6873BCA022D1AA170005BCCC /* ContentView.swift */; };
 		6873BCA322D1AA170005BCCC /* HostingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6873BCA222D1AA170005BCCC /* HostingController.swift */; };
 		6873BCA522D1AA170005BCCC /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6873BCA422D1AA170005BCCC /* ExtensionDelegate.swift */; };
@@ -145,7 +145,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				6873BC9C22D1AA170005BCCC /* Tiny Eggy WatchKit Extension.appex in Embed App Extensions */,
+				6873BC9C22D1AA170005BCCC /* Tiny Eggy Extension.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -156,7 +156,7 @@
 			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
 			dstSubfolderSpec = 16;
 			files = (
-				6873BC8D22D1AA120005BCCC /* Tiny Eggy WatchKit App.app in Embed Watch Content */,
+				6873BC8D22D1AA120005BCCC /* Tiny Eggy App.app in Embed Watch Content */,
 			);
 			name = "Embed Watch Content";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -174,11 +174,11 @@
 		6873BC4322D1A13E0005BCCC /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
 		6873BC5A22D1A6460005BCCC /* Eggy.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Eggy.entitlements; sourceTree = "<group>"; };
 		6873BC8922D1AA110005BCCC /* Tiny Eggy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tiny Eggy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		6873BC8C22D1AA110005BCCC /* Tiny Eggy WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tiny Eggy WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6873BC8C22D1AA110005BCCC /* Tiny Eggy App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tiny Eggy App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6873BC9222D1AA120005BCCC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
 		6873BC9422D1AA160005BCCC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6873BC9622D1AA160005BCCC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		6873BC9B22D1AA160005BCCC /* Tiny Eggy WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Tiny Eggy WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6873BC9B22D1AA160005BCCC /* Tiny Eggy Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Tiny Eggy Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6873BCA022D1AA170005BCCC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		6873BCA222D1AA170005BCCC /* HostingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostingController.swift; sourceTree = "<group>"; };
 		6873BCA422D1AA170005BCCC /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
@@ -361,35 +361,24 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		6873BC9022D1AA120005BCCC /* Tiny Eggy WatchKit App */ = {
+		6873BC9022D1AA120005BCCC /* Tiny Eggy */ = {
 			isa = PBXGroup;
 			children = (
 				6873BC9122D1AA120005BCCC /* Interface.storyboard */,
 				6873BC9422D1AA160005BCCC /* Assets.xcassets */,
 				6873BC9622D1AA160005BCCC /* Info.plist */,
 			);
-			path = "Tiny Eggy WatchKit App";
+			path = "Tiny Eggy";
 			sourceTree = "<group>";
 		};
-		6873BC9F22D1AA170005BCCC /* Tiny Eggy WatchKit Extension */ = {
+		6873BC9F22D1AA170005BCCC /* Tiny Eggy Extension */ = {
 			isa = PBXGroup;
 			children = (
+				6887B0F022D29D31002BAB31 /* App Launch */,
+				6887B0EF22D29D15002BAB31 /* Resources */,
 				6887B0E522D29251002BAB31 /* Views */,
-				6873BCA222D1AA170005BCCC /* HostingController.swift */,
-				6873BCA422D1AA170005BCCC /* ExtensionDelegate.swift */,
-				6873BCA622D1AA190005BCCC /* Assets.xcassets */,
-				6873BCAB22D1AA190005BCCC /* Info.plist */,
-				6873BCA822D1AA190005BCCC /* Preview Content */,
 			);
-			path = "Tiny Eggy WatchKit Extension";
-			sourceTree = "<group>";
-		};
-		6873BCA822D1AA190005BCCC /* Preview Content */ = {
-			isa = PBXGroup;
-			children = (
-				6873BCA922D1AA190005BCCC /* Preview Assets.xcassets */,
-			);
-			path = "Preview Content";
+			path = "Tiny Eggy Extension";
 			sourceTree = "<group>";
 		};
 		6887B0E522D29251002BAB31 /* Views */ = {
@@ -401,6 +390,25 @@
 				6887B0ED22D29CAE002BAB31 /* RootView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		6887B0EF22D29D15002BAB31 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				6873BCA922D1AA190005BCCC /* Preview Assets.xcassets */,
+				6873BCA622D1AA190005BCCC /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		6887B0F022D29D31002BAB31 /* App Launch */ = {
+			isa = PBXGroup;
+			children = (
+				6873BCA222D1AA170005BCCC /* HostingController.swift */,
+				6873BCA422D1AA170005BCCC /* ExtensionDelegate.swift */,
+				6873BCAB22D1AA190005BCCC /* Info.plist */,
+			);
+			path = "App Launch";
 			sourceTree = "<group>";
 		};
 		68C57F1922D2477200A7E964 /* Resources */ = {
@@ -442,8 +450,8 @@
 				68D2042A22D04A530080B937 /* Eggy */,
 				68D2044122D04A580080B937 /* EggyTests */,
 				68D2044C22D04A580080B937 /* EggyUITests */,
-				6873BC9022D1AA120005BCCC /* Tiny Eggy WatchKit App */,
-				6873BC9F22D1AA170005BCCC /* Tiny Eggy WatchKit Extension */,
+				6873BC9022D1AA120005BCCC /* Tiny Eggy */,
+				6873BC9F22D1AA170005BCCC /* Tiny Eggy Extension */,
 				6873BC4222D1A13E0005BCCC /* Frameworks */,
 				68D2042922D04A530080B937 /* Products */,
 			);
@@ -456,8 +464,8 @@
 				68D2043E22D04A580080B937 /* EggyTests.xctest */,
 				68D2044922D04A580080B937 /* EggyUITests.xctest */,
 				6873BC8922D1AA110005BCCC /* Tiny Eggy.app */,
-				6873BC8C22D1AA110005BCCC /* Tiny Eggy WatchKit App.app */,
-				6873BC9B22D1AA160005BCCC /* Tiny Eggy WatchKit Extension.appex */,
+				6873BC8C22D1AA110005BCCC /* Tiny Eggy App.app */,
+				6873BC9B22D1AA160005BCCC /* Tiny Eggy Extension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -520,9 +528,9 @@
 			productReference = 6873BC8922D1AA110005BCCC /* Tiny Eggy.app */;
 			productType = "com.apple.product-type.application.watchapp2-container";
 		};
-		6873BC8B22D1AA110005BCCC /* Tiny Eggy WatchKit App */ = {
+		6873BC8B22D1AA110005BCCC /* Tiny Eggy App */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 6873BCB022D1AA190005BCCC /* Build configuration list for PBXNativeTarget "Tiny Eggy WatchKit App" */;
+			buildConfigurationList = 6873BCB022D1AA190005BCCC /* Build configuration list for PBXNativeTarget "Tiny Eggy App" */;
 			buildPhases = (
 				6873BC8A22D1AA110005BCCC /* Resources */,
 				6873BCAF22D1AA190005BCCC /* Embed App Extensions */,
@@ -532,14 +540,14 @@
 			dependencies = (
 				6873BC9E22D1AA170005BCCC /* PBXTargetDependency */,
 			);
-			name = "Tiny Eggy WatchKit App";
+			name = "Tiny Eggy App";
 			productName = "Tiny Eggy WatchKit App";
-			productReference = 6873BC8C22D1AA110005BCCC /* Tiny Eggy WatchKit App.app */;
+			productReference = 6873BC8C22D1AA110005BCCC /* Tiny Eggy App.app */;
 			productType = "com.apple.product-type.application.watchapp2";
 		};
-		6873BC9A22D1AA160005BCCC /* Tiny Eggy WatchKit Extension */ = {
+		6873BC9A22D1AA160005BCCC /* Tiny Eggy Extension */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 6873BCAC22D1AA190005BCCC /* Build configuration list for PBXNativeTarget "Tiny Eggy WatchKit Extension" */;
+			buildConfigurationList = 6873BCAC22D1AA190005BCCC /* Build configuration list for PBXNativeTarget "Tiny Eggy Extension" */;
 			buildPhases = (
 				6873BC9722D1AA160005BCCC /* Sources */,
 				6873BC9822D1AA160005BCCC /* Frameworks */,
@@ -549,9 +557,9 @@
 			);
 			dependencies = (
 			);
-			name = "Tiny Eggy WatchKit Extension";
+			name = "Tiny Eggy Extension";
 			productName = "Tiny Eggy WatchKit Extension";
-			productReference = 6873BC9B22D1AA160005BCCC /* Tiny Eggy WatchKit Extension.appex */;
+			productReference = 6873BC9B22D1AA160005BCCC /* Tiny Eggy Extension.appex */;
 			productType = "com.apple.product-type.watchkit2-extension";
 		};
 		68D2042722D04A530080B937 /* Eggy */ = {
@@ -658,8 +666,8 @@
 				68D2043D22D04A580080B937 /* EggyTests */,
 				68D2044822D04A580080B937 /* EggyUITests */,
 				6873BC8822D1AA110005BCCC /* Tiny Eggy */,
-				6873BC8B22D1AA110005BCCC /* Tiny Eggy WatchKit App */,
-				6873BC9A22D1AA160005BCCC /* Tiny Eggy WatchKit Extension */,
+				6873BC8B22D1AA110005BCCC /* Tiny Eggy App */,
+				6873BC9A22D1AA160005BCCC /* Tiny Eggy Extension */,
 			);
 		};
 /* End PBXProject section */
@@ -819,12 +827,12 @@
 /* Begin PBXTargetDependency section */
 		6873BC8F22D1AA120005BCCC /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 6873BC8B22D1AA110005BCCC /* Tiny Eggy WatchKit App */;
+			target = 6873BC8B22D1AA110005BCCC /* Tiny Eggy App */;
 			targetProxy = 6873BC8E22D1AA120005BCCC /* PBXContainerItemProxy */;
 		};
 		6873BC9E22D1AA170005BCCC /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 6873BC9A22D1AA160005BCCC /* Tiny Eggy WatchKit Extension */;
+			target = 6873BC9A22D1AA160005BCCC /* Tiny Eggy Extension */;
 			targetProxy = 6873BC9D22D1AA170005BCCC /* PBXContainerItemProxy */;
 		};
 		68D2044022D04A580080B937 /* PBXTargetDependency */ = {
@@ -864,10 +872,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"Tiny Eggy WatchKit Extension\"/Preview\\ Content";
+				DEVELOPMENT_ASSET_PATHS = "\"Tiny Eggy Extension\"/Resources";
 				DEVELOPMENT_TEAM = F9PGNEMEHU;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = "Tiny Eggy WatchKit Extension/Info.plist";
+				INFOPLIST_FILE = "Tiny Eggy Extension/App Launch/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -888,10 +896,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"Tiny Eggy WatchKit Extension\"/Preview\\ Content";
+				DEVELOPMENT_ASSET_PATHS = "\"Tiny Eggy Extension\"/Resources";
 				DEVELOPMENT_TEAM = F9PGNEMEHU;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = "Tiny Eggy WatchKit Extension/Info.plist";
+				INFOPLIST_FILE = "Tiny Eggy Extension/App Launch/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -915,7 +923,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = F9PGNEMEHU;
 				IBSC_MODULE = Tiny_Eggy_WatchKit_Extension;
-				INFOPLIST_FILE = "Tiny Eggy WatchKit App/Info.plist";
+				INFOPLIST_FILE = "Tiny Eggy/Info.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = "ericlewis.Tiny-Eggy.watchkitapp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
@@ -934,7 +942,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = F9PGNEMEHU;
 				IBSC_MODULE = Tiny_Eggy_WatchKit_Extension;
-				INFOPLIST_FILE = "Tiny Eggy WatchKit App/Info.plist";
+				INFOPLIST_FILE = "Tiny Eggy/Info.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = "ericlewis.Tiny-Eggy.watchkitapp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
@@ -1216,7 +1224,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		6873BCAC22D1AA190005BCCC /* Build configuration list for PBXNativeTarget "Tiny Eggy WatchKit Extension" */ = {
+		6873BCAC22D1AA190005BCCC /* Build configuration list for PBXNativeTarget "Tiny Eggy Extension" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				6873BCAD22D1AA190005BCCC /* Debug */,
@@ -1225,7 +1233,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		6873BCB022D1AA190005BCCC /* Build configuration list for PBXNativeTarget "Tiny Eggy WatchKit App" */ = {
+		6873BCB022D1AA190005BCCC /* Build configuration list for PBXNativeTarget "Tiny Eggy App" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				6873BCB122D1AA190005BCCC /* Debug */,

@@ -14,7 +14,7 @@
 			<key>orderHint</key>
 			<integer>4</integer>
 		</dict>
-		<key>Tiny Eggy WatchKit App.xcscheme_^#shared#^_</key>
+		<key>Tiny Eggy App.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>1</integer>
@@ -33,6 +33,19 @@
 		<dict>
 			<key>orderHint</key>
 			<integer>2</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>6873BC8822D1AA110005BCCC</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>6873BC8B22D1AA110005BCCC</key>
+		<dict>
+			<key>primary</key>
+			<true/>
 		</dict>
 	</dict>
 </dict>
