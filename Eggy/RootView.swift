@@ -76,10 +76,10 @@ struct ContentView : View {
         }
       }
       .presentation($store.needsConfirmStop, alert: alert)
-      .animation(.basic())
+        .animation(.basic())
         .navigationBarTitle(title)
         .navigationBarItems(leading: SettingsButton(), trailing: StartStopButton())
-    }
+    }.navigationViewStyle(.stack)
   }
 }
 
@@ -102,43 +102,6 @@ struct Settings : View {
       }
       .navigationBarTitle("Settings")
     }
-  }
-}
-
-public struct CakeView: View {
-  var remaining: TimeInterval;
-  let duration: TimeInterval;
-  
-  public init(_ remaining: TimeInterval, _ duration: TimeInterval) {
-    self.remaining = remaining
-    self.duration = duration
-  }
-  
-  public var body: some View {
-    GeometryReader { geometry in
-      Path { path in
-        let width: CGFloat = min(geometry.size.width, geometry.size.height)
-        let height = width
-        let middle = width / 2.0
-        path.move(
-          to: CGPoint(
-            x: middle,
-            y: height * 0.5
-          )
-        )
-        let middlePoint = CGPoint(
-          x: middle,
-          y: height * 0.5
-        )
-        let rawProgress =  self.remaining/self.duration;
-        let progress = rawProgress < 0.000 ? 0.0 : (self.remaining/self.duration) * 100.0
-        path.addArc(center: middlePoint, radius: width, startAngle: .degrees(-90), endAngle: .degrees(-90 + (3.6 * progress)), clockwise: false)
-        path.addLine(to: middlePoint)
-        path.closeSubpath()
-      }
-      .fill(Color.white)
-        .aspectRatio(1, contentMode: .fit)
-    }.padding(.all, 1)
   }
 }
 
@@ -222,7 +185,7 @@ struct OptionSliders : View {
                         self.store.select.selectionChanged()
                         self.$showingTempSheet.value.toggle()
                         self.store.select.prepare()
-
+                        
         }
         .presentation($showingTempSheet, actionSheet: tempSheet)
         Divider()
@@ -351,7 +314,7 @@ struct SliderControl : View {
       .padding(.top, 0)
     }
     .padding(.horizontal)
-    .padding(.vertical, 5)
+      .padding(.vertical, 5)
   }
 }
 

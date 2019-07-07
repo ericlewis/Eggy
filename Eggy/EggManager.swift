@@ -124,48 +124,6 @@ extension EggManager {
 }
 
 extension EggManager {
-  func createNotification() {
-    let startTime = CACurrentMediaTime()
-    
-    UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge]) { _, _ in
-      let endTime = CACurrentMediaTime() - startTime
-      
-      let restartAction = UNNotificationAction(
-        identifier: "restart",
-        title: "Restart",
-        options: [])
-      let categoryIdentifier = "timer.category.action";
-      // TODO: localize?
-      let category = UNNotificationCategory(identifier: categoryIdentifier, actions: [restartAction], intentIdentifiers: [], hiddenPreviewsBodyPlaceholder: "A timer has finished!", options: [])
-      UNUserNotificationCenter.current().setNotificationCategories([category])
-      
-      let content = UNMutableNotificationContent()
-      // TODO: localize me
-      content.title = "Timer is done"
-      content.body = self.cookTime
-      content.sound = .default
-      content.categoryIdentifier = categoryIdentifier
-      content.userInfo = ["identifier": "timer"]
-      
-      let trigger = UNTimeIntervalNotificationTrigger(timeInterval: self.rawCookTime + endTime, repeats: false)
-      
-      let request = UNNotificationRequest(identifier: "timer", content: content, trigger: trigger)
-      
-      UNUserNotificationCenter.current().add(request, withCompletionHandler: { (error) in
-        if let error = error {
-          print("Unable to Create Notice")
-          print("\(error), \(error.localizedDescription)")
-        }
-      })
-    }
-  }
-  
-  func deleteNotification() {
-    UNUserNotificationCenter.current().removePendingNotificationRequests(withIdentifiers: ["timer"])
-  }
-}
-
-extension EggManager {
   static func calculateCookTime(t: Double, d: Double, s: Double, b: Double) -> Double {
     let heatCoeff = 31.0
     let yolkWhiteRatio = 0.86
