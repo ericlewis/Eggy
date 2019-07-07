@@ -24,8 +24,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let window = UIWindow(windowScene: windowScene)
         window.rootViewController = UIHostingController(rootView:
           ContentView()
-            .environmentObject(EggManager())
-            .environmentObject(SettingsManager())
+            .environmentObject(EggManager.shared)
+            .environmentObject(SettingsManager.shared)
             .foregroundColor(.orange)
       )
         self.window = window
@@ -63,7 +63,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
   }
 
   func windowScene(_ windowScene: UIWindowScene, performActionFor shortcutItem: UIApplicationShortcutItem, completionHandler: @escaping (Bool) -> Void) {
-    let manager = EggManager()
+    let manager = EggManager.shared
     manager.start()
     completionHandler(true)
   }

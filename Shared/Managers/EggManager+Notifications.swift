@@ -8,54 +8,27 @@
 
 import UserNotifications
 
-extension EggManager {
-  func createNotification() {
+protocol NotificationsProtocol {
+    func createNotifications()
+    func deleteNotifications()
+    
+    func createWarningNotification()
+    func createDoneNotification()
+}
+
+extension NotificationsProtocol where Self: EggManager {
+  func createNotifications() {
     // TODO: offset the permission time
     UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge]) { _, _ in
-      self.createDoneNotice()
+      self.createDoneNotification()
       
       if self.rawCookTime > 60 {
-        self.createWarningNotice()
+        self.createWarningNotification()
       }
     }
   }
   
-#if os(tvOS)
-  func createWarningNotice() {
-    let content = UNMutableNotificationContent()
-    // TODO: localize me
-    content.badge = 1
-    
-    let trigger = UNTimeIntervalNotificationTrigger(timeInterval: self.rawCookTime - 30, repeats: false)
-    
-    let request = UNNotificationRequest(identifier: "timer2", content: content, trigger: trigger)
-    
-    UNUserNotificationCenter.current().add(request, withCompletionHandler: { (error) in
-      if let error = error {
-        print("Unable to Create Notice")
-        print("\(error), \(error.localizedDescription)")
-      }
-    })
-  }
-  
-  func createDoneNotice() {
-    let content = UNMutableNotificationContent()
-    // TODO: localize me
-    content.badge = 1
-    
-    let trigger = UNTimeIntervalNotificationTrigger(timeInterval: self.rawCookTime, repeats: false)
-    
-    let request = UNNotificationRequest(identifier: "timer", content: content, trigger: trigger)
-    
-    UNUserNotificationCenter.current().add(request, withCompletionHandler: { (error) in
-      if let error = error {
-        print("Unable to Create Notice")
-        print("\(error), \(error.localizedDescription)")
-      }
-    })
-  }
-#else
-  func createWarningNotice() {
+  func createWarningNotification() {
     let content = UNMutableNotificationContent()
     // TODO: localize me
     content.title = "Your egg will be ready in 30 seconds!"
@@ -76,7 +49,7 @@ extension EggManager {
     })
   }
   
-  func createDoneNotice() {
+  func createDoneNotification() {
     let content = UNMutableNotificationContent()
     // TODO: localize me
     content.title = "Your egg is done!"
@@ -96,9 +69,8 @@ extension EggManager {
       }
     })
   }
-#endif
   
-  func deleteNotification() {
+  func deleteNotifications() {
     UNUserNotificationCenter.current().removePendingNotificationRequests(withIdentifiers: ["timer", "timer2"])
   }
 }

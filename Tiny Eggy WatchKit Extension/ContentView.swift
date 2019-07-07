@@ -16,7 +16,7 @@ enum EditingState {
 }
 
 struct ContentView : View {
-  @ObjectBinding var store = EggManager()
+  @ObjectBinding var store = EggManager.shared
   @State var editing = false {
     didSet {
       if editing == false {
