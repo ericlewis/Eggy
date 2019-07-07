@@ -21,6 +21,9 @@ struct EditingView : View {
     
     // MARK: Actions
     
+    func selectionChanged() {
+        // no-op for now
+    }
     
     // MARK: Render
     
@@ -28,18 +31,12 @@ struct EditingView : View {
         switch editingState {
         case .size:
             return AnyView(
-                Picker("", selection: $store.size) {
-                    Text("Small").tag(1.86)
-                    Text("Medium").tag(2.12)
-                    Text("Large").tag(2.37)
-                    Text("Extra Large").tag(2.6)
-                }
+                SizeSlider(action: selectionChanged)
                 .tapAction(advance)
             )
         case .doneness:
             return AnyView(
-                DonenessSlider(action: {})
-                    .padding(.horizontal)
+                DonenessSlider(action: selectionChanged)
                     .digitalCrownRotation($store.doneness,
                                           from: 56,
                                           through: 85,
@@ -49,11 +46,7 @@ struct EditingView : View {
                                           isHapticFeedbackEnabled: true)
             )
         default:
-            return AnyView(
-                Picker("", selection: $store.temp) {
-                    Text("Fridge").tag(37.0)
-                    Text("Room").tag(73.0)
-                }
+            return AnyView(TemperatureSlider(action: selectionChanged)
                 .tapAction(advance)
             )
         }

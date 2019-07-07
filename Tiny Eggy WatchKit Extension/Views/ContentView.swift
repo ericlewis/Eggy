@@ -60,6 +60,7 @@ struct ContentView : View {
                 .tapAction(tappedEgg)
             if editing {
                 EditingView(editingState: $editingState, editing: $editing, advance: advance)
+                    .padding(.horizontal)
                     .transition(.slide)
                     .padding(.all, 0)
             }
@@ -94,9 +95,9 @@ struct ContentView : View {
         case .doneness:
             return store.doneness.donenessString
         case .temperature:
-            return "Temperature"
+            return store.temperatureString
         case .size:
-            return "Size"
+            return store.size.sizeString
         }
     }
     

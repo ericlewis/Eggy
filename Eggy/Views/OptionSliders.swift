@@ -15,12 +15,7 @@ struct OptionSliders : View {
     @State private var showingSizePicker = false
     @State private var showingDonenessPicker = false
     @State private var showingTempSheet = false
-    
-    var tempLabelText: String {
-        let x = Measurement(value: store.temp, unit: UnitTemperature.fahrenheit)
-        return store.formatMeasurement(measurement: x, digits: 0)
-    }
-    
+
     func sizeSheet() -> ActionSheet {
         func setSize(_ size: EggSize) {
             self.store.feedback.select {
@@ -92,7 +87,7 @@ struct OptionSliders : View {
     
     var body: some View {
         VStack {
-            SliderContainer(tempLabelText,
+            SliderContainer(store.temperatureString,
                             leadingLabel: "Fridge",
                             trailingLabel: "Room", tappedLabel: toggleTempSheet, tappedInfo: nil) {
                                 TemperatureSlider(action: self.didSelect)

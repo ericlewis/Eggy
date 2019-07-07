@@ -12,6 +12,7 @@ protocol ViewModelProtocol : EggStateProtocol, FormattersProtocol {
     var navBarTitleString: String {get}
     var endDateString: String {get}
     var cookTimeString: String {get}
+    var temperatureString: String {get}
 }
 
 extension ViewModelProtocol {
@@ -29,5 +30,10 @@ extension ViewModelProtocol {
         } else {
             return rawCookTime.stringFromTimeInterval()
         }
+    }
+    
+    var temperatureString: String {
+        let x = Measurement(value: temp, unit: UnitTemperature.fahrenheit)
+        return formatMeasurement(measurement: x, digits: 0)
     }
 }
