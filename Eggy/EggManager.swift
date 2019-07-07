@@ -41,8 +41,11 @@ class EggManager : BindableObject {
   
   @UserDefault("endDate", defaultValue: Date()) var endDate: Date {didSet {changed()}}
   
+  @UserDefault("prefersCelcius", defaultValue: false) var prefersCelcius: Bool {didSet {changed()}}
+
+  var timerComplete = false {didSet{changed()}}
   var needsConfirmStop = false {didSet{changed()}}
-  
+
   var isFinished: Bool {
     endDate <= Date()
   }
@@ -72,6 +75,7 @@ extension EggManager {
   
   func stop() {
     feedbackNoti.notificationOccurred(.error)
+    endDate = .distantFuture
     deleteNotification()
     needsConfirmStop = false
     isRunning = false
@@ -98,7 +102,14 @@ extension EggManager {
   }
   
   var rawTimeRemaining: Double {
-    max(0.0, endDate.timeIntervalSinceReferenceDate - Date().timeIntervalSinceReferenceDate)
+    let remaining = max(0.0, endDate.timeIntervalSinceReferenceDate - Date().timeIntervalSinceReferenceDate)
+    
+    if remaining == 0.0 && isRunning {
+      timerComplete = true
+      stop()
+    }
+    
+    return remaining
   }
   
   var cookTime: String {

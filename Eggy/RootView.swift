@@ -15,6 +15,10 @@ struct ContentView : View {
   var ticker = Timer.publish(every: 1.0, tolerance: 0.1, on: .main, in: .common).autoconnect()
   
   var title: String {
+    if store.isFinished {
+      return "Timer Finished"
+    }
+    
     if store.isRunning {
       return store.cookTime + " remaining"
     }
@@ -31,7 +35,7 @@ struct ContentView : View {
   }
   
   func alert() -> Alert {
-    Alert(title: Text("Are you sure?"), message: Text("This will reset the timer"), primaryButton: .default(Text("Stop Timer")) {
+    Alert(title: Text("Are you sure?"), message: Text("This will reset the timer"), primaryButton: .destructive(Text("Stop Timer")) {
       self.store.stop()
       }, secondaryButton: .cancel())
   }
@@ -59,22 +63,22 @@ struct ContentView : View {
           .tapAction(store.toggleRunning)
           .scaleEffect(sizePercent)
           .animation(.spring())
+          .presentation($store.timerComplete, alert: {Alert(title: Text("Timer Complete!"))})
         if !store.isRunning {
           OptionSliders()
-            .transition(AnyTransition.slide.combined(with: .opacity))
+            .transition(.opacity)
+            .onReceive(ticker) {
+              self.store.changed()
+          }
         } else {
           ProjectedEnd()
             .transition(AnyTransition.move(edge: .bottom).combined(with: .opacity))
         }
       }
-      .animation(.fluidSpring())
-        .padding()
+      .presentation($store.needsConfirmStop, alert: alert)
+      .animation(.basic())
         .navigationBarTitle(title)
         .navigationBarItems(leading: SettingsButton(), trailing: StartStopButton())
-    }
-    .presentation($store.needsConfirmStop, alert: alert)
-      .onReceive(ticker) {
-        self.store.changed()
     }
   }
 }
@@ -84,7 +88,6 @@ struct SettingsButton : View {
     PresentationLink(destination: Settings()) {
       Image(systemName: "slider.horizontal.3")
         .imageScale(.large)
-        .foregroundColor(.yellow)
     }
   }
 }
@@ -144,6 +147,7 @@ struct OptionSliders : View {
   
   @State var showingSizePicker = false
   @State var showingDonenessPicker = false
+  @State var showingTempSheet = false
   
   // TODO: reuse or move this
   var tempLabelText: String {
@@ -151,6 +155,11 @@ struct OptionSliders : View {
     let n = NumberFormatter()
     n.maximumFractionDigits = 0
     let m = MeasurementFormatter()
+    if store.prefersCelcius {
+      m.locale = .init(identifier: "en_GB")
+    } else {
+      m.locale = .autoupdatingCurrent
+    }
     m.numberFormatter = n
     return m.string(from: x)
   }
@@ -162,7 +171,7 @@ struct OptionSliders : View {
       self.store.select.prepare()
     }
     
-    return ActionSheet(title: Text("Size"), message: nil, buttons: [
+    return ActionSheet(title: Text("Egg Size"), message: nil, buttons: [
       .default(Text("Peewee")) { setSize(1.61) },
       .default(Text("Small")) { setSize(1.86) },
       .default(Text("Medium")) { setSize(2.12) },
@@ -179,10 +188,24 @@ struct OptionSliders : View {
       self.store.select.prepare()
     }
     
-    return ActionSheet(title: Text("Consistency"), message: nil, buttons: [
+    return ActionSheet(title: Text("Desired Consistency"), message: nil, buttons: [
       .default(Text("Runny")) { setDone(60) },
       .default(Text("Soft")) { setDone(71) },
       .default(Text("Hard")) { setDone(80) },
+      .cancel(),
+    ])
+  }
+  
+  func tempSheet() -> ActionSheet {
+    func setDisplay(_ prefersCelcius: Bool) {
+      self.store.select.selectionChanged()
+      store.prefersCelcius = prefersCelcius
+      self.store.select.prepare()
+    }
+    
+    return ActionSheet(title: Text("Temperature Display"), message: nil, buttons: [
+      .default(Text("Fahrenheit")) { setDisplay(false) },
+      .default(Text("Celcius")) { setDisplay(true) },
       .cancel(),
     ])
   }
@@ -195,24 +218,35 @@ struct OptionSliders : View {
                       trailingLabel: "Room",
                       from: 37,
                       through: 73,
-                      value: $store.temp) {}
-          .padding(.top)
+                      value: $store.temp) {
+                        self.store.select.selectionChanged()
+                        self.$showingTempSheet.value.toggle()
+                        self.store.select.prepare()
+
+        }
+        .presentation($showingTempSheet, actionSheet: tempSheet)
+        Divider()
         SliderControl(store.size.sizeString,
                       leadingLabel: "Small",
                       trailingLabel: "Large",
                       from: 1.37,
                       through: 2.8,
                       value: $store.size) {
+                        self.store.select.selectionChanged()
                         self.$showingSizePicker.value.toggle()
+                        self.store.select.prepare()
         }
         .presentation($showingSizePicker, actionSheet: sizeSheet)
+        Divider()
         SliderControl(store.doneness.donenessString,
                       leadingLabel: "Runny",
                       trailingLabel: "Hard",
                       from: 56,
                       through: 85,
                       value: $store.doneness) {
+                        self.store.select.selectionChanged()
                         self.$showingDonenessPicker.value.toggle()
+                        self.store.select.prepare()
         }
         .presentation($showingDonenessPicker, actionSheet: donenessSheet)
       }
@@ -238,7 +272,6 @@ struct StartStopButton : View {
           .bold()
         Image(systemName: timerImage)
       }
-      .foregroundColor(.yellow)
     }
   }
 }
@@ -251,7 +284,6 @@ struct ProjectedEnd : View {
       Image(systemName: "bell.fill")
         .font(.title)
         .imageScale(.small)
-        .foregroundColor(.orange)
       Text(store.endDateString)
         .color(.secondary)
         .font(.title)
@@ -318,7 +350,8 @@ struct SliderControl : View {
       }
       .padding(.top, 0)
     }
-    .padding(.bottom)
+    .padding(.horizontal)
+    .padding(.vertical, 5)
   }
 }
 
