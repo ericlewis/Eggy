@@ -14,12 +14,12 @@ import CoreMotion
 let userDefaults = UserDefaults(suiteName: "group.eel.eggs")!
 
 class EggManager : EasyBindableObject, FormattersProtocol, EggStateProtocol, CookTimeProtocol, LocalNotificationsProtocol, ViewModelProtocol, BoilingPointManagerProtocolDelegate, EggDefaultsProtocol {
-
+    
     
     // MARK: Static Properties
     
     static var shared = EggManager()
-
+    
     // MARK: Managers
     
     lazy var feedback = FeedbackManager()
@@ -39,16 +39,20 @@ class EggManager : EasyBindableObject, FormattersProtocol, EggStateProtocol, Coo
     // MARK: Egg Protocol
     
     @UserDefault("temp", defaultValue: EggManager.eggDefaults.temp, userDefaults: userDefaults) var temp: Temperature {didSet{changed()}}
+    
     @UserDefault("doneness", defaultValue: EggManager.eggDefaults.doneness, userDefaults: userDefaults) var doneness: Doneness
         {didSet {changed()}}
+    
     @UserDefault("size", defaultValue: EggManager.eggDefaults.size, userDefaults: userDefaults) var size: Size
         {didSet {changed()}}
+    
     @UserDefault("boilingPoint", defaultValue: EggManager.eggDefaults.boilingPoint, userDefaults: userDefaults) var boilingPoint: BoilingPoint
         {didSet {changed()}}
     
     // MARK: Egg State Protocol
     
     @UserDefault("isRunning", defaultValue: false, userDefaults: userDefaults) var isRunning: Bool {didSet {changed()}}
+    
     @UserDefault("endDate", defaultValue: Date(), userDefaults: userDefaults) var endDate: Date {didSet {changed()}}
     
     func stopped(needsConfirm: Bool) {
@@ -71,7 +75,7 @@ class EggManager : EasyBindableObject, FormattersProtocol, EggStateProtocol, Coo
     
     // MARK: Boiling Point Protocol
     lazy var boilingPointManager = BoilingPointManager()
-
+    
     func setupBoilingPointManager() {
         boilingPointManager.delegate = self
         boilingPointManager.startUpdates()

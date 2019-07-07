@@ -11,6 +11,9 @@
 		683C526722D27B6500CE63C4 /* TimerActionsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 683C526622D27B6500CE63C4 /* TimerActionsProtocol.swift */; };
 		683C526922D27CC600CE63C4 /* EggStateProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 683C526822D27CC600CE63C4 /* EggStateProtocol.swift */; };
 		683C526B22D27CE500CE63C4 /* EggProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 683C526A22D27CE500CE63C4 /* EggProtocol.swift */; };
+		683C526D22D2845C00CE63C4 /* Slider+Doneness.swift in Sources */ = {isa = PBXBuildFile; fileRef = 683C526C22D2845C00CE63C4 /* Slider+Doneness.swift */; };
+		683C526F22D2860E00CE63C4 /* Slider+Size.swift in Sources */ = {isa = PBXBuildFile; fileRef = 683C526E22D2860E00CE63C4 /* Slider+Size.swift */; };
+		683C527122D2864200CE63C4 /* Slider+Temperature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 683C527022D2864200CE63C4 /* Slider+Temperature.swift */; };
 		6873BC8D22D1AA120005BCCC /* Tiny Eggy WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 6873BC8C22D1AA110005BCCC /* Tiny Eggy WatchKit App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		6873BC9322D1AA120005BCCC /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6873BC9122D1AA120005BCCC /* Interface.storyboard */; };
 		6873BC9522D1AA160005BCCC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6873BC9422D1AA160005BCCC /* Assets.xcassets */; };
@@ -43,7 +46,7 @@
 		68C57F2922D25C6600A7E964 /* BindableObject+Easy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C57F2822D25C6600A7E964 /* BindableObject+Easy.swift */; };
 		68C57F2B22D2642A00A7E964 /* OptionSliders.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C57F2A22D2642A00A7E964 /* OptionSliders.swift */; };
 		68C57F2D22D2649B00A7E964 /* NavigationBar+Buttons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C57F2C22D2649B00A7E964 /* NavigationBar+Buttons.swift */; };
-		68C57F2F22D264E300A7E964 /* SliderControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C57F2E22D264E300A7E964 /* SliderControl.swift */; };
+		68C57F2F22D264E300A7E964 /* SliderContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C57F2E22D264E300A7E964 /* SliderContainer.swift */; };
 		68C57F3122D2651300A7E964 /* ProjectedEndLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C57F3022D2651300A7E964 /* ProjectedEndLabel.swift */; };
 		68C57F3322D2664400A7E964 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C57F3222D2664400A7E964 /* ContentView.swift */; };
 		68C57F3522D2669500A7E964 /* AnyTransition+Transitions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C57F3422D2669500A7E964 /* AnyTransition+Transitions.swift */; };
@@ -142,6 +145,9 @@
 		683C526622D27B6500CE63C4 /* TimerActionsProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerActionsProtocol.swift; sourceTree = "<group>"; };
 		683C526822D27CC600CE63C4 /* EggStateProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EggStateProtocol.swift; sourceTree = "<group>"; };
 		683C526A22D27CE500CE63C4 /* EggProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EggProtocol.swift; sourceTree = "<group>"; };
+		683C526C22D2845C00CE63C4 /* Slider+Doneness.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Slider+Doneness.swift"; sourceTree = "<group>"; };
+		683C526E22D2860E00CE63C4 /* Slider+Size.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Slider+Size.swift"; sourceTree = "<group>"; };
+		683C527022D2864200CE63C4 /* Slider+Temperature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Slider+Temperature.swift"; sourceTree = "<group>"; };
 		6873BC4322D1A13E0005BCCC /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
 		6873BC5A22D1A6460005BCCC /* Eggy.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Eggy.entitlements; sourceTree = "<group>"; };
 		6873BC8922D1AA110005BCCC /* Tiny Eggy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tiny Eggy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -173,7 +179,7 @@
 		68C57F2822D25C6600A7E964 /* BindableObject+Easy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BindableObject+Easy.swift"; sourceTree = "<group>"; };
 		68C57F2A22D2642A00A7E964 /* OptionSliders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionSliders.swift; sourceTree = "<group>"; };
 		68C57F2C22D2649B00A7E964 /* NavigationBar+Buttons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NavigationBar+Buttons.swift"; sourceTree = "<group>"; };
-		68C57F2E22D264E300A7E964 /* SliderControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderControl.swift; sourceTree = "<group>"; };
+		68C57F2E22D264E300A7E964 /* SliderContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderContainer.swift; sourceTree = "<group>"; };
 		68C57F3022D2651300A7E964 /* ProjectedEndLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectedEndLabel.swift; sourceTree = "<group>"; };
 		68C57F3222D2664400A7E964 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		68C57F3422D2669500A7E964 /* AnyTransition+Transitions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AnyTransition+Transitions.swift"; sourceTree = "<group>"; };
@@ -237,6 +243,9 @@
 				68979C3F22D1004F00FCC4EB /* EggView.swift */,
 				68C57F2C22D2649B00A7E964 /* NavigationBar+Buttons.swift */,
 				68C57F3022D2651300A7E964 /* ProjectedEndLabel.swift */,
+				683C526C22D2845C00CE63C4 /* Slider+Doneness.swift */,
+				683C526E22D2860E00CE63C4 /* Slider+Size.swift */,
+				683C527022D2864200CE63C4 /* Slider+Temperature.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -256,11 +265,11 @@
 			isa = PBXGroup;
 			children = (
 				68C57F3222D2664400A7E964 /* ContentView.swift */,
+				68C57F3822D26A7B00A7E964 /* EggStack.swift */,
 				68C57F2A22D2642A00A7E964 /* OptionSliders.swift */,
 				68D2042F22D04A530080B937 /* RootView.swift */,
 				6873BCEC22D1CD3E0005BCCC /* SettingsView.swift */,
-				68C57F2E22D264E300A7E964 /* SliderControl.swift */,
-				68C57F3822D26A7B00A7E964 /* EggStack.swift */,
+				68C57F2E22D264E300A7E964 /* SliderContainer.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -702,9 +711,10 @@
 				68979C4222D1007500FCC4EB /* TimeInterval+Helpers.swift in Sources */,
 				6873BCE922D1C7F70005BCCC /* BoilingPointManager.swift in Sources */,
 				68C57F3322D2664400A7E964 /* ContentView.swift in Sources */,
-				68C57F2F22D264E300A7E964 /* SliderControl.swift in Sources */,
+				68C57F2F22D264E300A7E964 /* SliderContainer.swift in Sources */,
 				68C57F2522D2593A00A7E964 /* FormattersProtocol.swift in Sources */,
 				68C57F3122D2651300A7E964 /* ProjectedEndLabel.swift in Sources */,
+				683C527122D2864200CE63C4 /* Slider+Temperature.swift in Sources */,
 				68C57F3E22D270A500A7E964 /* Enums.swift in Sources */,
 				6873BCC122D1AEC80005BCCC /* CakeView.swift in Sources */,
 				68C57F2922D25C6600A7E964 /* BindableObject+Easy.swift in Sources */,
@@ -719,7 +729,9 @@
 				68979C4022D1004F00FCC4EB /* EggView.swift in Sources */,
 				68C57F3722D2693E00A7E964 /* Alerts.swift in Sources */,
 				68C57F3C22D26AB300A7E964 /* Defaults.swift in Sources */,
+				683C526D22D2845C00CE63C4 /* Slider+Doneness.swift in Sources */,
 				68C57F3922D26A7B00A7E964 /* EggStack.swift in Sources */,
+				683C526F22D2860E00CE63C4 /* Slider+Size.swift in Sources */,
 				68C57F2B22D2642A00A7E964 /* OptionSliders.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -11,18 +11,16 @@ import Combine
 
 struct RootView : View {
     @EnvironmentObject var store: EggManager
-
-    @Environment(\.sizeCategory) var sizeClass: ContentSizeCategory
-    
+        
     var body: some View {
         NavigationView {
             ContentView()
                 .presentation($store.confirmResetTimer, alert: Alert.confirmResetAlert(reset: store.stop))
-            .navigationBarTitle(store.navBarTitleString)
-            .navigationBarItems(leading: SettingsButton(), trailing: StartStopButton())
+                .navigationBarTitle(store.navBarTitleString)
+                .navigationBarItems(leading: SettingsButton(), trailing: StartStopButton())
         }
         .navigationViewStyle(.stack)
-        .foregroundColor(.orange)
+            .foregroundColor(.orange)
     }
 }
 

@@ -1,5 +1,5 @@
 //
-//  SliderControl.swift
+//  SliderContainer.swift
 //  Eggy
 //
 //  Created by Eric Lewis on 7/7/19.
@@ -8,32 +8,32 @@
 
 import SwiftUI
 
-struct SliderControl : View {
+struct SliderContainer<SliderView : View> : View {
+    typealias Action = () -> Void
+    typealias TappedLabel = Action
+    typealias TappedInfo = Action?
+    
     var label: String
-    var from: Double
-    var through: Double
     var leadingLabel: String
     var trailingLabel: String
     var tappedLabel: () -> Void
     var tappedInfo: (() -> Void)?
+    var sliderProvider: () -> SliderView
     
-    @Binding var value: Double
     @EnvironmentObject var store: EggManager
     
     init(_ label: String,
          leadingLabel: String,
          trailingLabel: String,
-         from: Double,
-         through: Double,
-         value: Binding<Double>,
-         tappedLabel: @escaping () -> Void) {
+         tappedLabel: @escaping TappedLabel,
+         tappedInfo: TappedInfo,
+         sliderProvider: @escaping () -> SliderView) {
         self.label = label
         self.leadingLabel = leadingLabel
         self.trailingLabel = trailingLabel
-        self.from = from
-        self.through = through
         self.tappedLabel = tappedLabel
-        $value = value
+        self.tappedInfo = tappedInfo
+        self.sliderProvider = sliderProvider
     }
     
     var body: some View {
@@ -48,9 +48,7 @@ struct SliderControl : View {
                     .color(.secondary)
             }
             .padding(.vertical, 0)
-            Slider(value: $value, from: from, through: through, onEditingChanged: { _ in
-                self.store.feedback.select(action: nil)
-            })
+            sliderProvider()
             HStack {
                 Text(label)
                     .font(.headline)

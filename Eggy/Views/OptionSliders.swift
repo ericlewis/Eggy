@@ -68,47 +68,50 @@ struct OptionSliders : View {
         ])
     }
     
+    func toggleTempSheet() {
+        store.feedback.select {
+            self.$showingTempSheet.value.toggle()
+        }
+    }
+    
+    func toggleSizeSheet() {
+        store.feedback.select {
+            self.$showingSizePicker.value.toggle()
+        }
+    }
+    
+    func toggleDonenessSheet() {
+        store.feedback.select {
+            self.$showingDonenessPicker.value.toggle()
+        }
+    }
+    
+    func didSelect() {
+        store.feedback.select(action: {})
+    }
+    
     var body: some View {
-        Group {
-            VStack {
-                SliderControl(tempLabelText,
-                              leadingLabel: "Fridge",
-                              trailingLabel: "Room",
-                              from: store.eggDefaults.tempRange.lowerBound,
-                              through: store.eggDefaults.tempRange.upperBound,
-                              value: $store.temp) {
-                                self.store.feedback.select {
-                                    self.$showingTempSheet.value.toggle()
-                                }
-                }
-                .presentation($showingTempSheet, actionSheet: tempSheet)
-                Divider()
-                SliderControl(store.size.sizeString,
-                              leadingLabel: "Small",
-                              trailingLabel: "Large",
-                              from: store.eggDefaults.sizeRange.lowerBound,
-                              through: store.eggDefaults.sizeRange.upperBound,
-                              value: $store.size) {
-                                self.store.feedback.select {
-                                    self.$showingSizePicker.value.toggle()
-                                }
-                                
-                }
-                .presentation($showingSizePicker, actionSheet: sizeSheet)
-                Divider()
-                SliderControl(store.doneness.donenessString,
-                              leadingLabel: "Runny",
-                              trailingLabel: "Hard",
-                              from: store.eggDefaults.donenessRange.lowerBound,
-                              through: store.eggDefaults.donenessRange.upperBound,
-                              value: $store.doneness) {
-                                self.store.feedback.select {
-                                    self.$showingDonenessPicker.value.toggle()
-                                }
-                                
-                }
-                .presentation($showingDonenessPicker, actionSheet: donenessSheet)
+        VStack {
+            SliderContainer(tempLabelText,
+                            leadingLabel: "Fridge",
+                            trailingLabel: "Room", tappedLabel: toggleTempSheet, tappedInfo: nil) {
+                                TemperatureSlider(action: self.didSelect)
             }
+            .presentation($showingTempSheet, actionSheet: tempSheet)
+            Divider()
+            SliderContainer(store.size.sizeString,
+                            leadingLabel: "Small",
+                            trailingLabel: "Large", tappedLabel: toggleSizeSheet, tappedInfo: nil) {
+                                SizeSlider(action: self.didSelect)
+            }
+            .presentation($showingSizePicker, actionSheet: sizeSheet)
+            Divider()
+            SliderContainer(store.doneness.donenessString,
+                            leadingLabel: "Runny",
+                            trailingLabel: "Hard", tappedLabel: toggleDonenessSheet, tappedInfo: nil) {
+                                DonenessSlider(action: self.didSelect)
+            }
+            .presentation($showingDonenessPicker, actionSheet: donenessSheet)
         }
     }
 }
