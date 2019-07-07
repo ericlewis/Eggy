@@ -54,6 +54,8 @@
 		6887B0E422D28E6B002BAB31 /* Alerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C57F3622D2693E00A7E964 /* Alerts.swift */; };
 		6887B0E722D29263002BAB31 /* NewTimerButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6887B0E622D29263002BAB31 /* NewTimerButton.swift */; };
 		6887B0E922D29375002BAB31 /* EditingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6887B0E822D29375002BAB31 /* EditingView.swift */; };
+		6887B0EB22D297D5002BAB31 /* ActionSheets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6887B0EA22D297D5002BAB31 /* ActionSheets.swift */; };
+		6887B0EC22D297D5002BAB31 /* ActionSheets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6887B0EA22D297D5002BAB31 /* ActionSheets.swift */; };
 		68979C4022D1004F00FCC4EB /* EggView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68979C3F22D1004F00FCC4EB /* EggView.swift */; };
 		68979C4222D1007500FCC4EB /* TimeInterval+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68979C4122D1007500FCC4EB /* TimeInterval+Helpers.swift */; };
 		68979C4422D101E600FCC4EB /* EggManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68979C4322D101E600FCC4EB /* EggManager.swift */; };
@@ -189,6 +191,7 @@
 		6873BCEF22D2344E0005BCCC /* SettingsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsManager.swift; sourceTree = "<group>"; };
 		6887B0E622D29263002BAB31 /* NewTimerButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTimerButton.swift; sourceTree = "<group>"; };
 		6887B0E822D29375002BAB31 /* EditingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditingView.swift; sourceTree = "<group>"; };
+		6887B0EA22D297D5002BAB31 /* ActionSheets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionSheets.swift; sourceTree = "<group>"; };
 		68979C3F22D1004F00FCC4EB /* EggView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EggView.swift; sourceTree = "<group>"; };
 		68979C4122D1007500FCC4EB /* TimeInterval+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TimeInterval+Helpers.swift"; sourceTree = "<group>"; };
 		68979C4322D101E600FCC4EB /* EggManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EggManager.swift; sourceTree = "<group>"; };
@@ -260,6 +263,7 @@
 		683E4BD722D2465C001EC738 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				6887B0EA22D297D5002BAB31 /* ActionSheets.swift */,
 				68C57F3622D2693E00A7E964 /* Alerts.swift */,
 				6873BCC022D1AEC80005BCCC /* CakeView.swift */,
 				68C57F3822D26A7B00A7E964 /* EggStack.swift */,
@@ -717,6 +721,7 @@
 				6887B0DC22D28A69002BAB31 /* FormattersProtocol.swift in Sources */,
 				6887B0D822D28A69002BAB31 /* FeedbackManager.swift in Sources */,
 				6873BCC222D1AEC80005BCCC /* CakeView.swift in Sources */,
+				6887B0EC22D297D5002BAB31 /* ActionSheets.swift in Sources */,
 				6887B0E322D28D27002BAB31 /* EggStack.swift in Sources */,
 				6873BCA322D1AA170005BCCC /* HostingController.swift in Sources */,
 				6887B0DF22D28A69002BAB31 /* ViewModelProtocol.swift in Sources */,
@@ -777,6 +782,7 @@
 				68979C4622D107C800FCC4EB /* Double+Helpers.swift in Sources */,
 				6873BCED22D1CD3E0005BCCC /* SettingsView.swift in Sources */,
 				683C526922D27CC600CE63C4 /* EggStateProtocol.swift in Sources */,
+				6887B0EB22D297D5002BAB31 /* ActionSheets.swift in Sources */,
 				68D2043022D04A530080B937 /* RootView.swift in Sources */,
 				68979C4022D1004F00FCC4EB /* EggView.swift in Sources */,
 				68C57F3722D2693E00A7E964 /* Alerts.swift in Sources */,

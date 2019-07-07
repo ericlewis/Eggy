@@ -1,0 +1,45 @@
+//
+//  ActionSheets.swift
+//  Eggy
+//
+//  Created by Eric Lewis on 7/7/19.
+//  Copyright © 2019 Eric Lewis, Inc. All rights reserved.
+//
+
+import SwiftUI
+
+extension ActionSheet {
+    static func sizeSheet(action: @escaping (EggSize) -> Void) -> () -> ActionSheet {
+    {
+        ActionSheet(title: Text("Egg Size"), message: nil, buttons: [
+            .default(Text("Peewee")) { action(.peewee) },
+            .default(Text("Small")) { action(.small) },
+            .default(Text("Medium")) { action(.medium) },
+            .default(Text("Large")) { action(.large) },
+            .default(Text("Extra Large")) { action(.xlarge) },
+            .cancel(),
+        ])
+        }
+    }
+    
+    static func donenessSheet(action: @escaping (EggDoneness) -> Void) -> () -> ActionSheet {
+    {
+        ActionSheet(title: Text("Desired Consistency"), message: nil, buttons: [
+            .default(Text("Runny")) { action(.runny) },
+            .default(Text("Soft")) { action(.soft) },
+            .default(Text("Hard")) { action(.hard) },
+            .cancel(),
+        ])
+        }
+    }
+    
+    static func tempSheet(action: @escaping (Bool) -> Void) -> () -> ActionSheet {
+    {
+        ActionSheet(title: Text("Temperature Display"), message: nil, buttons: [
+            .default(Text("Fahrenheit")) { action(false) },
+            .default(Text("Celcius")) { action(true) },
+            .cancel(),
+        ])
+        }
+    }
+}
