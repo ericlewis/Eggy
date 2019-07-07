@@ -15,6 +15,8 @@ typealias Size = Double
 typealias Doneness = Double
 typealias BoilingPoint = Double
 
+let userDefaults = UserDefaults(suiteName: "group.eel.eggs")!
+
 class EggManager : BindableObject {
   lazy var altimeter = CMAltimeter()
   lazy var dateFormatter = DateFormatter()
@@ -23,25 +25,25 @@ class EggManager : BindableObject {
   lazy var feedbackNoti = UINotificationFeedbackGenerator()
   lazy var didChange = PassthroughSubject<Void, Never>()
   
-  @UserDefault("temp", defaultValue: 37.0) var temp: Temperature
+  @UserDefault("temp", defaultValue: 37.0, userDefaults: userDefaults) var temp: Temperature
     {didSet {
       changed()
     }}
   
-  @UserDefault("doneness", defaultValue: 56.0) var doneness: Doneness
+  @UserDefault("doneness", defaultValue: 56.0, userDefaults: userDefaults) var doneness: Doneness
     {didSet {changed()}}
   
-  @UserDefault("size", defaultValue: 1.87) var size: Size
+  @UserDefault("size", defaultValue: 1.87, userDefaults: userDefaults) var size: Size
     {didSet {changed()}}
   
-  @UserDefault("boilingPoint", defaultValue: 100.0) var boilingPoint: BoilingPoint
+  @UserDefault("boilingPoint", defaultValue: 100.0, userDefaults: userDefaults) var boilingPoint: BoilingPoint
     {didSet {changed()}}
   
-  @UserDefault("isRunning", defaultValue: false) var isRunning: Bool {didSet {changed()}}
+  @UserDefault("isRunning", defaultValue: false, userDefaults: userDefaults) var isRunning: Bool {didSet {changed()}}
   
-  @UserDefault("endDate", defaultValue: Date()) var endDate: Date {didSet {changed()}}
+  @UserDefault("endDate", defaultValue: Date(), userDefaults: userDefaults) var endDate: Date {didSet {changed()}}
   
-  @UserDefault("prefersCelcius", defaultValue: false) var prefersCelcius: Bool {didSet {changed()}}
+  @UserDefault("prefersCelcius", defaultValue: false, userDefaults: userDefaults) var prefersCelcius: Bool {didSet {changed()}}
 
   var timerComplete = false {didSet{changed()}}
   var needsConfirmStop = false {didSet{changed()}}

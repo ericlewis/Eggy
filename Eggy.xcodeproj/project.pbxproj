@@ -39,7 +39,22 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		6873BC4F22D1A13E0005BCCC /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		6873BC4322D1A13E0005BCCC /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
+		6873BC5A22D1A6460005BCCC /* Eggy.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Eggy.entitlements; sourceTree = "<group>"; };
 		68979C3F22D1004F00FCC4EB /* EggView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EggView.swift; sourceTree = "<group>"; };
 		68979C4122D1007500FCC4EB /* TimeInterval+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TimeInterval+Helpers.swift"; sourceTree = "<group>"; };
 		68979C4322D101E600FCC4EB /* EggManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EggManager.swift; sourceTree = "<group>"; };
@@ -86,12 +101,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6873BC4222D1A13E0005BCCC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6873BC4322D1A13E0005BCCC /* NotificationCenter.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		68D2041F22D04A530080B937 = {
 			isa = PBXGroup;
 			children = (
 				68D2042A22D04A530080B937 /* Eggy */,
 				68D2044122D04A580080B937 /* EggyTests */,
 				68D2044C22D04A580080B937 /* EggyUITests */,
+				6873BC4222D1A13E0005BCCC /* Frameworks */,
 				68D2042922D04A530080B937 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -109,6 +133,7 @@
 		68D2042A22D04A530080B937 /* Eggy */ = {
 			isa = PBXGroup;
 			children = (
+				6873BC5A22D1A6460005BCCC /* Eggy.entitlements */,
 				68D2042B22D04A530080B937 /* AppDelegate.swift */,
 				68D2042D22D04A530080B937 /* SceneDelegate.swift */,
 				68D2042F22D04A530080B937 /* RootView.swift */,
@@ -161,6 +186,7 @@
 				68D2042422D04A530080B937 /* Sources */,
 				68D2042522D04A530080B937 /* Frameworks */,
 				68D2042622D04A530080B937 /* Resources */,
+				6873BC4F22D1A13E0005BCCC /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
@@ -453,7 +479,9 @@
 		68D2045322D04A580080B937 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Eggy/Eggy.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "Eggy/Preview\\ Content";
 				DEVELOPMENT_TEAM = F9PGNEMEHU;
@@ -473,7 +501,9 @@
 		68D2045422D04A580080B937 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Eggy/Eggy.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "Eggy/Preview\\ Content";
 				DEVELOPMENT_TEAM = F9PGNEMEHU;
