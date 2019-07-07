@@ -9,8 +9,8 @@
 import SwiftUI
 
 struct SettingsView : View {
-    @EnvironmentObject var settings: SettingsManager
-    @State var idk = false
+    @EnvironmentObject private var settings: SettingsManager
+    @State private var idk = false
     
     var body: some View {
         NavigationView {

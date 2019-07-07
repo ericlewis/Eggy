@@ -8,6 +8,12 @@
 
 import Foundation
 
+enum EditingState {
+    case size
+    case doneness
+    case temperature
+}
+
 enum EggSize: Size {
     case peewee = 1.61
     case small = 1.86

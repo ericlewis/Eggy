@@ -9,12 +9,12 @@
 import SwiftUI
 
 struct OptionSliders : View {
-    @EnvironmentObject var store: EggManager
-    @EnvironmentObject var settings: SettingsManager
+    @EnvironmentObject private var store: EggManager
+    @EnvironmentObject private var settings: SettingsManager
     
-    @State var showingSizePicker = false
-    @State var showingDonenessPicker = false
-    @State var showingTempSheet = false
+    @State private var showingSizePicker = false
+    @State private var showingDonenessPicker = false
+    @State private var showingTempSheet = false
     
     var tempLabelText: String {
         let x = Measurement(value: store.temp, unit: UnitTemperature.fahrenheit)
