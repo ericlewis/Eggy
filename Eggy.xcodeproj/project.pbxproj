@@ -83,8 +83,6 @@
 		68D2043222D04A580080B937 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 68D2043122D04A580080B937 /* Assets.xcassets */; };
 		68D2043522D04A580080B937 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 68D2043422D04A580080B937 /* Preview Assets.xcassets */; };
 		68D2043822D04A580080B937 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68D2043622D04A580080B937 /* LaunchScreen.storyboard */; };
-		68D2044322D04A580080B937 /* EggyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68D2044222D04A580080B937 /* EggyTests.swift */; };
-		68D2044E22D04A580080B937 /* EggyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68D2044D22D04A580080B937 /* EggyUITests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -101,20 +99,6 @@
 			proxyType = 1;
 			remoteGlobalIDString = 6873BC9A22D1AA160005BCCC;
 			remoteInfo = "Tiny Eggy WatchKit Extension";
-		};
-		68D2043F22D04A580080B937 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 68D2042022D04A530080B937 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 68D2042722D04A530080B937;
-			remoteInfo = Eggy;
-		};
-		68D2044A22D04A580080B937 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 68D2042022D04A530080B937 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 68D2042722D04A530080B937;
-			remoteInfo = Eggy;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -222,12 +206,6 @@
 		68D2043422D04A580080B937 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		68D2043722D04A580080B937 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		68D2043922D04A580080B937 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		68D2043E22D04A580080B937 /* EggyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EggyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		68D2044222D04A580080B937 /* EggyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EggyTests.swift; sourceTree = "<group>"; };
-		68D2044422D04A580080B937 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		68D2044922D04A580080B937 /* EggyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EggyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		68D2044D22D04A580080B937 /* EggyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EggyUITests.swift; sourceTree = "<group>"; };
-		68D2044F22D04A580080B937 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -239,20 +217,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		68D2042522D04A530080B937 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		68D2043B22D04A580080B937 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		68D2044622D04A580080B937 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -448,8 +412,6 @@
 			children = (
 				683E4BDE22D246F7001EC738 /* Shared */,
 				68D2042A22D04A530080B937 /* Eggy */,
-				68D2044122D04A580080B937 /* EggyTests */,
-				68D2044C22D04A580080B937 /* EggyUITests */,
 				6873BC9022D1AA120005BCCC /* Tiny Eggy */,
 				6873BC9F22D1AA170005BCCC /* Tiny Eggy Extension */,
 				6873BC4222D1A13E0005BCCC /* Frameworks */,
@@ -461,8 +423,6 @@
 			isa = PBXGroup;
 			children = (
 				68D2042822D04A530080B937 /* Eggy.app */,
-				68D2043E22D04A580080B937 /* EggyTests.xctest */,
-				68D2044922D04A580080B937 /* EggyUITests.xctest */,
 				6873BC8922D1AA110005BCCC /* Tiny Eggy.app */,
 				6873BC8C22D1AA110005BCCC /* Tiny Eggy App.app */,
 				6873BC9B22D1AA160005BCCC /* Tiny Eggy Extension.appex */,
@@ -479,24 +439,6 @@
 				683E4BD922D2468C001EC738 /* Views */,
 			);
 			path = Eggy;
-			sourceTree = "<group>";
-		};
-		68D2044122D04A580080B937 /* EggyTests */ = {
-			isa = PBXGroup;
-			children = (
-				68D2044222D04A580080B937 /* EggyTests.swift */,
-				68D2044422D04A580080B937 /* Info.plist */,
-			);
-			path = EggyTests;
-			sourceTree = "<group>";
-		};
-		68D2044C22D04A580080B937 /* EggyUITests */ = {
-			isa = PBXGroup;
-			children = (
-				68D2044D22D04A580080B937 /* EggyUITests.swift */,
-				68D2044F22D04A580080B937 /* Info.plist */,
-			);
-			path = EggyUITests;
 			sourceTree = "<group>";
 		};
 		68D6EE8E22D2480900B67DB5 /* Supporting Files */ = {
@@ -581,42 +523,6 @@
 			productReference = 68D2042822D04A530080B937 /* Eggy.app */;
 			productType = "com.apple.product-type.application";
 		};
-		68D2043D22D04A580080B937 /* EggyTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 68D2045522D04A580080B937 /* Build configuration list for PBXNativeTarget "EggyTests" */;
-			buildPhases = (
-				68D2043A22D04A580080B937 /* Sources */,
-				68D2043B22D04A580080B937 /* Frameworks */,
-				68D2043C22D04A580080B937 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				68D2044022D04A580080B937 /* PBXTargetDependency */,
-			);
-			name = EggyTests;
-			productName = EggyTests;
-			productReference = 68D2043E22D04A580080B937 /* EggyTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		68D2044822D04A580080B937 /* EggyUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 68D2045822D04A580080B937 /* Build configuration list for PBXNativeTarget "EggyUITests" */;
-			buildPhases = (
-				68D2044522D04A580080B937 /* Sources */,
-				68D2044622D04A580080B937 /* Frameworks */,
-				68D2044722D04A580080B937 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				68D2044B22D04A580080B937 /* PBXTargetDependency */,
-			);
-			name = EggyUITests;
-			productName = EggyUITests;
-			productReference = 68D2044922D04A580080B937 /* EggyUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -639,14 +545,6 @@
 					68D2042722D04A530080B937 = {
 						CreatedOnToolsVersion = 11.0;
 					};
-					68D2043D22D04A580080B937 = {
-						CreatedOnToolsVersion = 11.0;
-						TestTargetID = 68D2042722D04A530080B937;
-					};
-					68D2044822D04A580080B937 = {
-						CreatedOnToolsVersion = 11.0;
-						TestTargetID = 68D2042722D04A530080B937;
-					};
 				};
 			};
 			buildConfigurationList = 68D2042322D04A530080B937 /* Build configuration list for PBXProject "Eggy" */;
@@ -663,8 +561,6 @@
 			projectRoot = "";
 			targets = (
 				68D2042722D04A530080B937 /* Eggy */,
-				68D2043D22D04A580080B937 /* EggyTests */,
-				68D2044822D04A580080B937 /* EggyUITests */,
 				6873BC8822D1AA110005BCCC /* Tiny Eggy */,
 				6873BC8B22D1AA110005BCCC /* Tiny Eggy App */,
 				6873BC9A22D1AA160005BCCC /* Tiny Eggy Extension */,
@@ -705,20 +601,6 @@
 				68D2043822D04A580080B937 /* LaunchScreen.storyboard in Resources */,
 				68D2043522D04A580080B937 /* Preview Assets.xcassets in Resources */,
 				68D2043222D04A580080B937 /* Assets.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		68D2043C22D04A580080B937 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		68D2044722D04A580080B937 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -806,22 +688,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		68D2043A22D04A580080B937 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				68D2044322D04A580080B937 /* EggyTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		68D2044522D04A580080B937 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				68D2044E22D04A580080B937 /* EggyUITests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -834,16 +700,6 @@
 			isa = PBXTargetDependency;
 			target = 6873BC9A22D1AA160005BCCC /* Tiny Eggy Extension */;
 			targetProxy = 6873BC9D22D1AA170005BCCC /* PBXContainerItemProxy */;
-		};
-		68D2044022D04A580080B937 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 68D2042722D04A530080B937 /* Eggy */;
-			targetProxy = 68D2043F22D04A580080B937 /* PBXContainerItemProxy */;
-		};
-		68D2044B22D04A580080B937 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 68D2042722D04A530080B937 /* Eggy */;
-			targetProxy = 68D2044A22D04A580080B937 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -1139,88 +995,6 @@
 			};
 			name = Release;
 		};
-		68D2045622D04A580080B937 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = F9PGNEMEHU;
-				INFOPLIST_FILE = EggyTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = ericlewis.EggyTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Eggy.app/Eggy";
-			};
-			name = Debug;
-		};
-		68D2045722D04A580080B937 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = F9PGNEMEHU;
-				INFOPLIST_FILE = EggyTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = ericlewis.EggyTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Eggy.app/Eggy";
-			};
-			name = Release;
-		};
-		68D2045922D04A580080B937 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = F9PGNEMEHU;
-				INFOPLIST_FILE = EggyUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = ericlewis.EggyUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = Eggy;
-			};
-			name = Debug;
-		};
-		68D2045A22D04A580080B937 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = F9PGNEMEHU;
-				INFOPLIST_FILE = EggyUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = ericlewis.EggyUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = Eggy;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1265,24 +1039,6 @@
 			buildConfigurations = (
 				68D2045322D04A580080B937 /* Debug */,
 				68D2045422D04A580080B937 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		68D2045522D04A580080B937 /* Build configuration list for PBXNativeTarget "EggyTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				68D2045622D04A580080B937 /* Debug */,
-				68D2045722D04A580080B937 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		68D2045822D04A580080B937 /* Build configuration list for PBXNativeTarget "EggyUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				68D2045922D04A580080B937 /* Debug */,
-				68D2045A22D04A580080B937 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
