@@ -10,9 +10,8 @@ import WatchKit
 import Foundation
 import SwiftUI
 
-class HostingController : WKHostingController<AnyView> {
-    override var body: AnyView {
-        AnyView(ContentView()
-            .environmentObject(EggManager.shared))
+class HostingController : WKHostingController<RootView> {
+    override var body: RootView {
+        RootView()
     }
 }
