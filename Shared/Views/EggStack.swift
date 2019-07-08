@@ -12,7 +12,7 @@ struct EggStack : View {
   @EnvironmentObject var store: EggManager
   
   var sizePercent: Length {
-    store.isRunning ? 1.0 : Length(Rescale(from: (1.37, 2.8), to: (0.90, 1.1)).rescale(store.size))
+    store.isRunning ? 1.0 : Length(Rescale(from: (1.37, 2.8), to: (0.90, 1.0)).rescale(store.size))
   }
   
   var timeRemaining: Double {
