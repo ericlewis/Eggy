@@ -57,6 +57,10 @@
 		6887B0EB22D297D5002BAB31 /* ActionSheets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6887B0EA22D297D5002BAB31 /* ActionSheets.swift */; };
 		6887B0EC22D297D5002BAB31 /* ActionSheets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6887B0EA22D297D5002BAB31 /* ActionSheets.swift */; };
 		6887B0EE22D29CAE002BAB31 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6887B0ED22D29CAE002BAB31 /* RootView.swift */; };
+		6887B10922D3A3F8002BAB31 /* Icon-60@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6887B10722D3A3F8002BAB31 /* Icon-60@2x.png */; };
+		6887B10A22D3A3F8002BAB31 /* Icon-60@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6887B10822D3A3F8002BAB31 /* Icon-60@3x.png */; };
+		6887B10D22D3A411002BAB31 /* Icon-60-Dark@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6887B10B22D3A411002BAB31 /* Icon-60-Dark@2x.png */; };
+		6887B10E22D3A411002BAB31 /* Icon-60-Dark@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6887B10C22D3A411002BAB31 /* Icon-60-Dark@3x.png */; };
 		68979C4022D1004F00FCC4EB /* EggView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68979C3F22D1004F00FCC4EB /* EggView.swift */; };
 		68979C4222D1007500FCC4EB /* TimeInterval+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68979C4122D1007500FCC4EB /* TimeInterval+Helpers.swift */; };
 		68979C4422D101E600FCC4EB /* EggManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68979C4322D101E600FCC4EB /* EggManager.swift */; };
@@ -180,6 +184,10 @@
 		6887B0E822D29375002BAB31 /* EditingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditingView.swift; sourceTree = "<group>"; };
 		6887B0EA22D297D5002BAB31 /* ActionSheets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionSheets.swift; sourceTree = "<group>"; };
 		6887B0ED22D29CAE002BAB31 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
+		6887B10722D3A3F8002BAB31 /* Icon-60@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-60@2x.png"; sourceTree = "<group>"; };
+		6887B10822D3A3F8002BAB31 /* Icon-60@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-60@3x.png"; sourceTree = "<group>"; };
+		6887B10B22D3A411002BAB31 /* Icon-60-Dark@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-60-Dark@2x.png"; sourceTree = "<group>"; };
+		6887B10C22D3A411002BAB31 /* Icon-60-Dark@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-60-Dark@3x.png"; sourceTree = "<group>"; };
 		68979C3F22D1004F00FCC4EB /* EggView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EggView.swift; sourceTree = "<group>"; };
 		68979C4122D1007500FCC4EB /* TimeInterval+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TimeInterval+Helpers.swift"; sourceTree = "<group>"; };
 		68979C4322D101E600FCC4EB /* EggManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EggManager.swift; sourceTree = "<group>"; };
@@ -378,9 +386,21 @@
 			path = "App Launch";
 			sourceTree = "<group>";
 		};
+		6887B10F22D3A4F7002BAB31 /* Icons */ = {
+			isa = PBXGroup;
+			children = (
+				6887B10722D3A3F8002BAB31 /* Icon-60@2x.png */,
+				6887B10822D3A3F8002BAB31 /* Icon-60@3x.png */,
+				6887B10B22D3A411002BAB31 /* Icon-60-Dark@2x.png */,
+				6887B10C22D3A411002BAB31 /* Icon-60-Dark@3x.png */,
+			);
+			path = Icons;
+			sourceTree = "<group>";
+		};
 		68C57F1922D2477200A7E964 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				6887B10F22D3A4F7002BAB31 /* Icons */,
 				68D2043422D04A580080B937 /* Preview Assets.xcassets */,
 				68D2043122D04A580080B937 /* Assets.xcassets */,
 			);
@@ -603,8 +623,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				68D2043822D04A580080B937 /* LaunchScreen.storyboard in Resources */,
+				6887B10D22D3A411002BAB31 /* Icon-60-Dark@2x.png in Resources */,
+				6887B10E22D3A411002BAB31 /* Icon-60-Dark@3x.png in Resources */,
+				6887B10A22D3A3F8002BAB31 /* Icon-60@3x.png in Resources */,
 				68D2043522D04A580080B937 /* Preview Assets.xcassets in Resources */,
 				68D2043222D04A580080B937 /* Assets.xcassets in Resources */,
+				6887B10922D3A3F8002BAB31 /* Icon-60@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

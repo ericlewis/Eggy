@@ -15,7 +15,8 @@ protocol BoilingPointManagerProtocolDelegate {
 protocol BoilingPointManagerProtocol: class {
     var altimeter: CMAltimeter {get}
     func startUpdates()
-    
+    func stopUpdates()
+
     var delegate: BoilingPointManagerProtocolDelegate? {get set}
 }
 
@@ -33,9 +34,11 @@ class BoilingPointManager : BoilingPointManagerProtocol {
                     let res = Measurement(value: 49.161 * log(pressure) + 44, unit: UnitTemperature.fahrenheit).converted(to: .celsius).value
                     self.delegate?.changed(boilingPoint: res)
                 }
-                
-                self.altimeter.stopRelativeAltitudeUpdates()
             }
         }
+    }
+    
+    func stopUpdates() {
+        altimeter.stopRelativeAltitudeUpdates()
     }
 }

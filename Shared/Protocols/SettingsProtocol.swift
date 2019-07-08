@@ -9,9 +9,10 @@
 import Foundation
 
 protocol SettingsProtocol : class {
-  var prefersGrams: Bool {get set}
-  var prefersCelcius: Bool {get set}
-  var preventAutoLock: Bool {get set}
-  var thirtySecondWarning: Bool {get set}
-  var disableAltimeter: Bool {get set}
+    var prefersGrams: Bool {get set}
+    var prefersCelcius: Bool {get set}
+    var preventAutoLock: Bool {get set}
+    var thirtySecondWarning: Bool {get set}
+    var enableAltimeter: Bool {get set}
+    var appIconIsDark: Bool {get set}
 }

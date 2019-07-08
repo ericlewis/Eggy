@@ -31,7 +31,10 @@ class EggManager : EasyBindableObject, FormattersProtocol, EggStateProtocol, Coo
         super.init()
       
         setupFormatters()
-        setupBoilingPointManager()
+        
+        if SettingsManager.shared.enableAltimeter {
+            setupBoilingPointManager()
+        }
     }
     
     // MARK: Egg Protocol
