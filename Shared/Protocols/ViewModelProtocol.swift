@@ -17,7 +17,11 @@ protocol ViewModelProtocol : EggStateProtocol, FormattersProtocol {
 
 extension ViewModelProtocol {
     var navBarTitleString: String {
-        isRunning ? "\(cookTimeString) remaining" : "Cook for \(cookTimeString)"
+        if isFinished && isRunning {
+          return "Egg Finished"
+        }
+      
+        return isRunning ? "\(cookTimeString) remaining" : "Cook for \(cookTimeString)"
     }
     
     var endDateString: String {

@@ -75,7 +75,6 @@ struct OptionSliders : View {
                                 TemperatureSlider(action: self.didSelect)
             }
             .presentation($showingTempSheet, actionSheet: ActionSheet.tempSheet(action: setTemp))
-            Divider()
             SliderContainer(store.size.sizeString,
                             leadingLabel: "Small",
                             trailingLabel: "Large",
@@ -84,7 +83,6 @@ struct OptionSliders : View {
                                 SizeSlider(action: self.didSelect)
             }
             .presentation($showingSizePicker, actionSheet: ActionSheet.sizeSheet(action: setSize))
-            Divider()
             SliderContainer(store.doneness.donenessString,
                             leadingLabel: "Runny",
                             trailingLabel: "Hard",

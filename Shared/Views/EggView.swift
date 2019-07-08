@@ -10,6 +10,8 @@ import SwiftUI
 
 struct Egg : View {
   var opacity: Double = 1
+  var remaining: Double = 1
+  var duration: Double = 1
   var showShadow = true
   private let scale = CGFloat(0.90)
   private let yolkScale = CGFloat(0.7)
@@ -17,16 +19,14 @@ struct Egg : View {
   var body: some View {
     return GeometryReader { geometry in
       ZStack {
-        if self.showShadow {
-          Circle()
-            .fill(Color.white)
-            .frame(width: geometry.size.width * self.scale, height: geometry.size.height * self.scale)
-            .shadow(radius: 10)
-        } else {
-          Circle()
-            .fill(Color.white)
-            .frame(width: geometry.size.width * self.scale, height: geometry.size.height * self.scale)
-        }
+        Circle()
+          .fill(Color.secondary)
+          .frame(width: geometry.size.width * self.scale, height: geometry.size.height * self.scale)
+          .shadow(radius: 10)
+        Circle()
+          .fill(Color.white)
+          .frame(width: geometry.size.width * self.scale, height: geometry.size.height * self.scale)
+          .mask(CakeView(self.remaining, self.duration))
         Circle()
           .fill(Color.yellow)
           .frame(width: geometry.size.width * self.scale * self.yolkScale, height: geometry.size.height * self.scale * self.yolkScale)

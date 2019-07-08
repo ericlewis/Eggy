@@ -9,37 +9,36 @@
 import SwiftUI
 
 struct EggStack : View {
-    @EnvironmentObject var store: EggManager
-    
-    var sizePercent: Length {
-        store.isRunning ? 1.0 : Length(Rescale(from: (1.37, 2.8), to: (0.92, 1.0)).rescale(store.size))
+  @EnvironmentObject var store: EggManager
+  
+  var sizePercent: Length {
+    store.isRunning ? 1.0 : Length(Rescale(from: (1.37, 2.8), to: (0.90, 1.1)).rescale(store.size))
+  }
+  
+  var timeRemaining: Double {
+    store.isRunning && !store.isFinished ? store.rawTimeRemaining : store.rawCookTime
+  }
+  
+  var donenessPercent: Double {
+    Rescale(from: (56.0, 85.0), to: (1.0, 0.0)).rescale(store.doneness)
+  }
+  
+  var body: some View {
+    ZStack {
+      Egg(opacity: donenessPercent, remaining: timeRemaining, duration: store.rawCookTime)
     }
-    
-    var timeRemaining: Double {
-        store.isRunning ? store.rawTimeRemaining : store.rawCookTime
-    }
-    
-    var donenessPercent: Double {
-        Rescale(from: (56.0, 85.0), to: (1.0, 0.0)).rescale(store.doneness)
-    }
-    
-    var body: some View {
-        ZStack {
-            Egg(opacity: donenessPercent)
-                .opacity(0.5)
-            Egg(opacity: donenessPercent, showShadow: false)
-                .mask(CakeView(timeRemaining, store.rawCookTime))
-        }
-        .scaleEffect(sizePercent)
-        .transition(.moveDownAndScale)
-        .animation(.spring())
-    }
+    .scaleEffect(sizePercent)
+      .transition(.moveDownAndScale)
+      .animation(.spring())
+  }
 }
+
+// CakeView(timeRemaining, store.rawCookTime)
 
 #if DEBUG
 struct EggStack_Previews : PreviewProvider {
-    static var previews: some View {
-        EggStack()
-    }
+  static var previews: some View {
+    EggStack()
+  }
 }
 #endif

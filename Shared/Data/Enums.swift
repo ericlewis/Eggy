@@ -8,6 +8,12 @@
 
 import Foundation
 
+enum TimerState {
+  case running
+  case finished
+  case none
+}
+
 enum EditingState {
     case size
     case doneness

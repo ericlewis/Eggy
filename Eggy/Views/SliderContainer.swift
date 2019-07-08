@@ -75,6 +75,6 @@ struct SliderContainer<SliderView : View> : View {
             .padding(.top, 0)
         }
         .padding(.horizontal)
-            .padding(.vertical, 5)
+        .padding(.bottom)
     }
 }
