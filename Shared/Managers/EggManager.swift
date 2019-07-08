@@ -12,8 +12,6 @@ import CoreMotion
 
 class EggManager : EasyBindableObject, FormattersProtocol, EggStateProtocol, CookTimeProtocol, LocalNotificationsProtocol, ViewModelProtocol, BoilingPointManagerProtocolDelegate, EggDefaultsProtocol {
     
-    lazy var ticker = Timer.publish(every: 1.0, tolerance: 0.1, on: .main, in: .common).autoconnect()
-    
     // MARK: Static Properties
     
     static var shared = EggManager()

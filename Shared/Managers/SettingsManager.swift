@@ -46,6 +46,5 @@ class SettingsManager : EasyBindableObject, SettingsProtocol, SettingsDefaultsPr
         preventAutoLock = SettingsManager.settingsDefaults.preventAutoLock
         thirtySecondWarning = SettingsManager.settingsDefaults.thirtySecondWarning
         enableAltimeter = SettingsManager.settingsDefaults.enableAltimeter
-        appIconIsDark = SettingsManager.settingsDefaults.appIconIsDark
     }
 }

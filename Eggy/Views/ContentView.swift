@@ -9,13 +9,13 @@
 import SwiftUI
 
 struct ContentView : View {
-    
+    var ticker = Timer.publish(every: 1.0, tolerance: 0.1, on: .main, in: .common).autoconnect()
+
     // MARK: Private Properties
     
     @EnvironmentObject private var store: EggManager
     
     // MARK: Render
-    
     
     enum DragState {
         
@@ -45,7 +45,6 @@ struct ContentView : View {
         dragState.isActive ? 0.0 : 1.0
     }
     
-    
     @GestureState var dragState = DragState.inactive
     
     var body: some View {
@@ -62,7 +61,7 @@ struct ContentView : View {
                 OptionSliders()
                     .opacity(dragOpacity)
                     .transition(.opacity)
-                    .onReceive(store.ticker, perform: {
+                    .onReceive(ticker, perform: {
                         if self.store.isRunning {
                             self.store.changed()
                         }
