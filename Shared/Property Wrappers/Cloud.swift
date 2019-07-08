@@ -54,25 +54,25 @@ public struct Cloud<Value : PropertyListValue> {
   let key: String
   let defaultValue: Value
   
-  #if os(watchOS)
+//  #if os(watchOS)
   var userDefaults: UserDefaults
-  #else
-  var userDefaults: NSUbiquitousKeyValueStore
-  #endif
+//  #else
+//  var userDefaults: NSUbiquitousKeyValueStore
+//  #endif
   
-  #if os(watchOS)
+//  #if os(watchOS)
   public init(_ key: String, defaultValue: Value, userDefaults: UserDefaults = .standard) {
     self.key = key
     self.defaultValue = defaultValue
     self.userDefaults = userDefaults
   }
-  #else
-  public init(_ key: String, defaultValue: Value, userDefaults: NSUbiquitousKeyValueStore = .default) {
-    self.key = key
-    self.defaultValue = defaultValue
-    self.userDefaults = userDefaults
-  }
-  #endif
+//  #else
+//  public init(_ key: String, defaultValue: Value, userDefaults: NSUbiquitousKeyValueStore = .default) {
+//    self.key = key
+//    self.defaultValue = defaultValue
+//    self.userDefaults = userDefaults
+//  }
+//  #endif
   
   public var wrappedValue: Value {
     get {

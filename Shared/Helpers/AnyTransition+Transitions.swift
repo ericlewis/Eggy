@@ -12,4 +12,8 @@ extension AnyTransition {
     static var moveAndFade: AnyTransition {
         AnyTransition.move(edge: .bottom).combined(with: .opacity)
     }
+  
+  static var moveDownAndScale: AnyTransition {
+      AnyTransition.move(edge: .bottom).combined(with: .scale())
+    }
 }

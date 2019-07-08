@@ -31,7 +31,7 @@ struct EggStack : View {
                 .mask(CakeView(timeRemaining, store.rawCookTime))
         }
         .scaleEffect(sizePercent)
-        .transition(.scale())
+        .transition(.moveDownAndScale)
         .animation(.spring())
     }
 }

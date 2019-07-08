@@ -32,7 +32,6 @@ extension EggStateProtocol {
     }
     
     func stop() {
-        endDate = .distantFuture
         stopped(needsConfirm: false)
         isRunning = false
     }
