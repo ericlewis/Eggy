@@ -74,7 +74,7 @@ struct ContentView : View {
                 NewTimerButton(editing: $editing)
             }
         }
-        .onReceive(store.ticker, perform: store.didChange.send)
+        .onReceive(store.ticker, perform: store.changed)
             .animation(.basic())
             .navigationBarTitle(navTitle)
             .presentation($store.confirmResetTimer, alert: Alert.confirmResetAlert(reset: store.stop))

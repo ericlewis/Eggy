@@ -23,7 +23,11 @@ struct ContentView : View {
             if !store.isRunning {
                 OptionSliders()
                     .transition(.opacity)
-                    .onReceive(store.ticker, perform: store.changed)
+                  .onReceive(store.ticker, perform: {
+                    if self.store.isRunning {
+                      self.store.changed()
+                    }
+                  })
             } else {
                 ProjectedEndLabel()
                     .transition(.moveAndFade)

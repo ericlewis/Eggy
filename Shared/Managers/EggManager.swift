@@ -12,7 +12,7 @@ import CoreMotion
 
 class EggManager : EasyBindableObject, FormattersProtocol, EggStateProtocol, CookTimeProtocol, LocalNotificationsProtocol, ViewModelProtocol, BoilingPointManagerProtocolDelegate, EggDefaultsProtocol {
     
-    var ticker = Timer.publish(every: 1.0, tolerance: 0.1, on: .main, in: .common).autoconnect()
+    lazy var ticker = Timer.publish(every: 1.0, tolerance: 0.1, on: .main, in: .common).autoconnect()
     
     // MARK: Static Properties
     
@@ -29,7 +29,7 @@ class EggManager : EasyBindableObject, FormattersProtocol, EggStateProtocol, Coo
     
     override init() {
         super.init()
-        
+      
         setupFormatters()
         setupBoilingPointManager()
     }

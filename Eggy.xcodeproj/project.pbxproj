@@ -24,7 +24,7 @@
 		6873BCA722D1AA190005BCCC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6873BCA622D1AA190005BCCC /* Assets.xcassets */; };
 		6873BCAA22D1AA190005BCCC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6873BCA922D1AA190005BCCC /* Preview Assets.xcassets */; };
 		6873BCB722D1AA330005BCCC /* EggView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68979C3F22D1004F00FCC4EB /* EggView.swift */; };
-		6873BCB922D1AB680005BCCC /* Burritos+Cloud.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68979C4722D1136400FCC4EB /* Burritos+Cloud.swift */; };
+		6873BCB922D1AB680005BCCC /* Cloud.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68979C4722D1136400FCC4EB /* Cloud.swift */; };
 		6873BCBA22D1AB730005BCCC /* Double+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68979C4522D107C800FCC4EB /* Double+Helpers.swift */; };
 		6873BCBB22D1AB7D0005BCCC /* TimeInterval+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68979C4122D1007500FCC4EB /* TimeInterval+Helpers.swift */; };
 		6873BCC122D1AEC80005BCCC /* CakeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6873BCC022D1AEC80005BCCC /* CakeView.swift */; };
@@ -61,7 +61,7 @@
 		68979C4222D1007500FCC4EB /* TimeInterval+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68979C4122D1007500FCC4EB /* TimeInterval+Helpers.swift */; };
 		68979C4422D101E600FCC4EB /* EggManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68979C4322D101E600FCC4EB /* EggManager.swift */; };
 		68979C4622D107C800FCC4EB /* Double+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68979C4522D107C800FCC4EB /* Double+Helpers.swift */; };
-		68979C4822D1136400FCC4EB /* Burritos+Cloud.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68979C4722D1136400FCC4EB /* Burritos+Cloud.swift */; };
+		68979C4822D1136400FCC4EB /* Cloud.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68979C4722D1136400FCC4EB /* Cloud.swift */; };
 		68C57F1D22D24ABF00A7E964 /* CookTimeProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C57F1C22D24ABF00A7E964 /* CookTimeProtocol.swift */; };
 		68C57F1F22D2502600A7E964 /* FeedbackManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C57F1E22D2502600A7E964 /* FeedbackManager.swift */; };
 		68C57F2122D254DD00A7E964 /* ViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C57F2022D254DD00A7E964 /* ViewModelProtocol.swift */; };
@@ -182,7 +182,7 @@
 		68979C4122D1007500FCC4EB /* TimeInterval+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TimeInterval+Helpers.swift"; sourceTree = "<group>"; };
 		68979C4322D101E600FCC4EB /* EggManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EggManager.swift; sourceTree = "<group>"; };
 		68979C4522D107C800FCC4EB /* Double+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Helpers.swift"; sourceTree = "<group>"; };
-		68979C4722D1136400FCC4EB /* Burritos+Cloud.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Burritos+Cloud.swift"; sourceTree = "<group>"; };
+		68979C4722D1136400FCC4EB /* Cloud.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cloud.swift; sourceTree = "<group>"; };
 		68C57F1C22D24ABF00A7E964 /* CookTimeProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CookTimeProtocol.swift; sourceTree = "<group>"; };
 		68C57F1E22D2502600A7E964 /* FeedbackManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackManager.swift; sourceTree = "<group>"; };
 		68C57F2022D254DD00A7E964 /* ViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelProtocol.swift; sourceTree = "<group>"; };
@@ -277,12 +277,12 @@
 			path = Helpers;
 			sourceTree = "<group>";
 		};
-		683E4BDB22D246A7001EC738 /* 3rd Party */ = {
+		683E4BDB22D246A7001EC738 /* Property Wrappers */ = {
 			isa = PBXGroup;
 			children = (
-				68979C4722D1136400FCC4EB /* Burritos+Cloud.swift */,
+				68979C4722D1136400FCC4EB /* Cloud.swift */,
 			);
-			path = "3rd Party";
+			path = "Property Wrappers";
 			sourceTree = "<group>";
 		};
 		683E4BDC22D246C7001EC738 /* App Delegates */ = {
@@ -297,10 +297,10 @@
 		683E4BDE22D246F7001EC738 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
-				683E4BDB22D246A7001EC738 /* 3rd Party */,
 				68C57F3A22D26A9F00A7E964 /* Data */,
 				683E4BDA22D24696001EC738 /* Helpers */,
 				683E4BD822D2466B001EC738 /* Managers */,
+				683E4BDB22D246A7001EC738 /* Property Wrappers */,
 				68C57F3F22D274B400A7E964 /* Protocols */,
 				683E4BD722D2465C001EC738 /* Views */,
 			);
@@ -618,7 +618,7 @@
 				6887B0E322D28D27002BAB31 /* EggStack.swift in Sources */,
 				6873BCA322D1AA170005BCCC /* HostingController.swift in Sources */,
 				6887B0DF22D28A69002BAB31 /* ViewModelProtocol.swift in Sources */,
-				6873BCB922D1AB680005BCCC /* Burritos+Cloud.swift in Sources */,
+				6873BCB922D1AB680005BCCC /* Cloud.swift in Sources */,
 				6887B0EE22D29CAE002BAB31 /* RootView.swift in Sources */,
 				6887B0D522D28A69002BAB31 /* AnyTransition+Transitions.swift in Sources */,
 				6887B0DA22D28A69002BAB31 /* EggProtocol.swift in Sources */,
@@ -654,7 +654,7 @@
 				68C57F1D22D24ABF00A7E964 /* CookTimeProtocol.swift in Sources */,
 				683C526722D27B6500CE63C4 /* TimerActionsProtocol.swift in Sources */,
 				683C526522D27B3E00CE63C4 /* LocalNotificationsProtocol.swift in Sources */,
-				68979C4822D1136400FCC4EB /* Burritos+Cloud.swift in Sources */,
+				68979C4822D1136400FCC4EB /* Cloud.swift in Sources */,
 				6873BCF022D2344E0005BCCC /* SettingsManager.swift in Sources */,
 				68D2042C22D04A530080B937 /* AppDelegate.swift in Sources */,
 				683C526B22D27CE500CE63C4 /* EggProtocol.swift in Sources */,
