@@ -22,7 +22,7 @@ extension LocalNotificationsProtocol {
         UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge]) { _, _ in
             self.createDoneNotification()
             
-            if self.rawCookTime > 60 {
+            if self.rawCookTime > 60 && SettingsManager.shared.thirtySecondWarning {
                 self.createWarningNotification()
             }
         }
