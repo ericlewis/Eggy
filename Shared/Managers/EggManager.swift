@@ -10,9 +10,6 @@ import SwiftUI
 import Combine
 import CoreMotion
 
-// TODO: put this somewhere
-let userDefaults = UserDefaults(suiteName: "group.eel.eggs")!
-
 class EggManager : EasyBindableObject, FormattersProtocol, EggStateProtocol, CookTimeProtocol, LocalNotificationsProtocol, ViewModelProtocol, BoilingPointManagerProtocolDelegate, EggDefaultsProtocol {
     
     var ticker = Timer.publish(every: 1.0, tolerance: 0.1, on: .main, in: .common).autoconnect()
@@ -39,22 +36,22 @@ class EggManager : EasyBindableObject, FormattersProtocol, EggStateProtocol, Coo
     
     // MARK: Egg Protocol
     
-    @UserDefault("temp", defaultValue: EggManager.eggDefaults.temp, userDefaults: userDefaults) var temp: Temperature {didSet{changed()}}
+    @Cloud("temp", defaultValue: EggManager.eggDefaults.temp) var temp: Temperature {didSet{changed()}}
     
-    @UserDefault("doneness", defaultValue: EggManager.eggDefaults.doneness, userDefaults: userDefaults) var doneness: Doneness
+    @Cloud("doneness", defaultValue: EggManager.eggDefaults.doneness) var doneness: Doneness
         {didSet {changed()}}
     
-    @UserDefault("size", defaultValue: EggManager.eggDefaults.size, userDefaults: userDefaults) var size: Size
+    @Cloud("size", defaultValue: EggManager.eggDefaults.size) var size: Size
         {didSet {changed()}}
     
-    @UserDefault("boilingPoint", defaultValue: EggManager.eggDefaults.boilingPoint, userDefaults: userDefaults) var boilingPoint: BoilingPoint
+    @Cloud("boilingPoint", defaultValue: EggManager.eggDefaults.boilingPoint) var boilingPoint: BoilingPoint
         {didSet {changed()}}
     
     // MARK: Egg State Protocol
     
-    @UserDefault("isRunning", defaultValue: false, userDefaults: userDefaults) var isRunning: Bool {didSet {changed()}}
+    @Cloud("isRunning", defaultValue: false) var isRunning: Bool {didSet {changed()}}
     
-    @UserDefault("endDate", defaultValue: Date(), userDefaults: userDefaults) var endDate: Date {didSet {changed()}}
+    @Cloud("endDate", defaultValue: Date()) var endDate: Date {didSet {changed()}}
     
     func stopped(needsConfirm: Bool) {
         if needsConfirm {

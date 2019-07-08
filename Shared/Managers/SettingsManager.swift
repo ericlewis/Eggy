@@ -12,11 +12,11 @@ import Combine
 class SettingsManager : EasyBindableObject {
   static let shared = SettingsManager()
     
-  @UserDefault("prefersCelcius", defaultValue: Locale.current.usesMetricSystem, userDefaults: userDefaults) var prefersCelcius: Bool {didSet {changed()}}
+  @Cloud("prefersCelcius", defaultValue: Locale.current.usesMetricSystem) var prefersCelcius: Bool {didSet {changed()}}
   
-  @UserDefault("preventAutoLock", defaultValue: false, userDefaults: userDefaults) var preventAutoLock: Bool {didSet {changed()}}
+  @Cloud("preventAutoLock", defaultValue: false) var preventAutoLock: Bool {didSet {changed()}}
   
-  @UserDefault("thirtySecondWarning", defaultValue: true, userDefaults: userDefaults) var thirtySecondWarning: Bool {didSet {changed()}}
+  @Cloud("thirtySecondWarning", defaultValue: true) var thirtySecondWarning: Bool {didSet {changed()}}
   
-  @UserDefault("disableAltimeter", defaultValue: false, userDefaults: userDefaults) var disableAltimeter: Bool {didSet {changed()}}
+  @Cloud("disableAltimeter", defaultValue: false) var disableAltimeter: Bool {didSet {changed()}}
 }

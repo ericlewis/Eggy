@@ -15,18 +15,64 @@ import Foundation
 /// ```
 ///
 /// [Apple documentation on UserDefaults](https://developer.apple.com/documentation/foundation/userdefaults)
-@available(iOS 2.0, OSX 10.0, tvOS 9.0, watchOS 2.0, *)
+//@available(iOS 2.0, OSX 10.0, tvOS 9.0, watchOS 2.0, *)
+//@propertyWrapper
+//public struct UserDefault<Value: PropertyListValue> {
+//  let key: String
+//  let defaultValue: Value
+//  var userDefaults: UserDefaults
+//
+//  public init(_ key: String, defaultValue: Value, userDefaults: UserDefaults = .standard) {
+//    self.key = key
+//    self.defaultValue = defaultValue
+//    self.userDefaults = userDefaults
+//  }
+//
+//  public var wrappedValue: Value {
+//    get {
+//      return userDefaults.object(forKey: key) as? Value ?? defaultValue
+//    }
+//    set {
+//      userDefaults.set(newValue, forKey: key)
+//    }
+//  }
+//}
+
+/// A type safe property wrapper to set and get values from NSUbiquitousKeyValueStore with support for defaults values.
+///
+/// Usage:
+/// ```
+/// @Cloud("has_seen_app_introduction", defaultValue: false)
+/// static var hasSeenAppIntroduction: Bool
+/// ```
+///
+/// [Apple documentation on NSUbiquitousKeyValueStore](https://developer.apple.com/documentation/foundation/NSUbiquitousKeyValueStore)
+/// [Apple documentation on NSUbiquitousKeyValueStore](https://developer.apple.com/documentation/foundation/NSUbiquitousKeyValueStore)
+@available(iOS 5.0, OSX 10.7, tvOS 9.0, *)
 @propertyWrapper
-public struct UserDefault<Value: PropertyListValue> {
+public struct Cloud<Value : PropertyListValue> {
   let key: String
   let defaultValue: Value
-  var userDefaults: UserDefaults
   
+  #if os(watchOS)
+  var userDefaults: UserDefaults
+  #else
+  var userDefaults: NSUbiquitousKeyValueStore
+  #endif
+  
+  #if os(watchOS)
   public init(_ key: String, defaultValue: Value, userDefaults: UserDefaults = .standard) {
     self.key = key
     self.defaultValue = defaultValue
     self.userDefaults = userDefaults
   }
+  #else
+  public init(_ key: String, defaultValue: Value, userDefaults: NSUbiquitousKeyValueStore = .default) {
+    self.key = key
+    self.defaultValue = defaultValue
+    self.userDefaults = userDefaults
+  }
+  #endif
   
   public var wrappedValue: Value {
     get {
@@ -38,7 +84,7 @@ public struct UserDefault<Value: PropertyListValue> {
   }
 }
 
-/// A type than can be stored in `UserDefaults`.
+/// A type than can be stored in `UserDefaults` & `NSUbiquitousKeyValueStore`.
 ///
 /// - From UserDefaults;
 /// The value parameter can be only property list objects: NSData, NSString, NSNumber, NSDate, NSArray, or NSDictionary.

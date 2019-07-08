@@ -12,7 +12,7 @@ struct EggStack : View {
     @EnvironmentObject var store: EggManager
     
     var sizePercent: Length {
-        store.isRunning ? 1.0 : Length(Rescale(from: (1.37, 2.8), to: (0.8, 1.0)).rescale(store.size))
+        store.isRunning ? 1.0 : Length(Rescale(from: (1.37, 2.8), to: (0.9, 1.0)).rescale(store.size))
     }
     
     var timeRemaining: Double {
@@ -30,8 +30,9 @@ struct EggStack : View {
             Egg(opacity: donenessPercent, showShadow: false)
                 .mask(CakeView(timeRemaining, store.rawCookTime))
         }
+        .scaleEffect(sizePercent)
+        .transition(.scale())
         .animation(.spring())
-            .scaleEffect(sizePercent)
     }
 }
 
