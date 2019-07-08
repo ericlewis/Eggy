@@ -15,4 +15,6 @@ protocol SettingsProtocol : class {
     var thirtySecondWarning: Bool {get set}
     var enableAltimeter: Bool {get set}
     var appIconIsDark: Bool {get set}
+    
+    func reset()
 }

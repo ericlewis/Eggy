@@ -8,22 +8,50 @@
 
 import Foundation
 
+protocol SettingsDefaultsProtocol : SettingsProtocol {
+    static var settingsDefaults: SettingsDefaults {get}
+    var settingsDefaults: SettingsDefaults {get}
+}
+
+class SettingsDefaults : SettingsDefaultsProtocol {
+    var prefersGrams = Locale.current.usesMetricSystem
+    var prefersCelcius = Locale.current.usesMetricSystem
+    var preventAutoLock = false
+    var thirtySecondWarning = true
+    var enableAltimeter = true
+    var appIconIsDark = false
+    
+    func reset() {}
+}
+
+extension SettingsDefaultsProtocol {
+    static var settingsDefaults: SettingsDefaults {
+        SettingsDefaults()
+    }
+    
+    var settingsDefaults: SettingsDefaults {
+        SettingsDefaults()
+    }
+}
+
 protocol EggDefaultsProtocol : EggProtocol {
     static var eggDefaults: EggDefaults {get}
     var eggDefaults: EggDefaults {get}
 }
 
 struct EggDefaults : EggProtocol {
-    var temp: Temperature = 37
+    var temp: Temperature = 40
     var tempRange = Range<Double>.temperature
     
-    var doneness: Doneness = 56
+    var doneness: Doneness = EggDoneness.hard.rawValue
     var donenessRange = Range<Double>.doneness
 
-    var size: Size = 1.87
+    var size: Size = EggSize.large.rawValue
     var sizeRange = Range<Double>.size
 
     var boilingPoint: BoilingPoint = 100
+    
+    func reset() {}
 }
 
 extension Range {

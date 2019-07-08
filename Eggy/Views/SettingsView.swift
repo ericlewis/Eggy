@@ -12,7 +12,9 @@ struct SettingsView : View {
     
     //MARK: Private Properties
     
+    @EnvironmentObject private var store: EggManager
     @EnvironmentObject private var settings: SettingsManager
+    
     @State private var idk = false
     
     // MARK: Render
@@ -44,18 +46,17 @@ struct SettingsView : View {
                     Button("Help & FAQ", action: {})
                     Button("Share Eggy", action: {})
                     Button("Rate Eggy", action: {})
-                    Button("Give Feedback", action: {})
                 }
                 Section {
                     HStack {
                         Text("Version")
                         Spacer()
-                        Text("idk")
+                        Text(Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String ?? "None")
                     }
                 }
                 Section {
-                    Button("Reset Timer Defaults", action: {})
-                    Button("Reset All Settings", action: {})
+                    Button("Reset Egg", action: store.reset)
+                    Button("Reset Settings", action: settings.reset)
                 }
             }.listStyle(.grouped)
                 .navigationBarTitle("Settings")

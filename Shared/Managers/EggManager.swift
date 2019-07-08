@@ -73,8 +73,15 @@ class EggManager : EasyBindableObject, FormattersProtocol, EggStateProtocol, Coo
         feedback.buzz(type: .success, action: createNotifications)
     }
     
+    func reset() {
+        temp = eggDefaults.temp
+        doneness = eggDefaults.doneness
+        size = eggDefaults.size
+        boilingPoint = eggDefaults.boilingPoint
+    }
     
     // MARK: Boiling Point Protocol
+    
     lazy var boilingPointManager = BoilingPointManager()
     
     func setupBoilingPointManager() {

@@ -32,10 +32,12 @@ struct StartStopButton : View {
 
 struct SettingsButton : View {
     @EnvironmentObject var settings: SettingsManager
+    @EnvironmentObject var store: EggManager
     
     var body: some View {
         PresentationLink(destination: SettingsView()
-            .environmentObject(settings)) {
+            .environmentObject(settings)
+            .environmentObject(store)) {
                 Image(systemName: "slider.horizontal.3")
                     .imageScale(.large)
         }
