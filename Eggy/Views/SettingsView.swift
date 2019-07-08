@@ -21,11 +21,17 @@ struct SettingsView : View {
         NavigationView {
             List {
                 Section {
-                    Toggle("Prefers Grams", isOn: $settings.prefersGrams)
-                    Toggle("Prefers Celcius", isOn: $settings.prefersCelcius)
                     Toggle("Prevent Auto-Lock", isOn: $settings.preventAutoLock)
                     Toggle("30 Second Warning", isOn: $settings.thirtySecondWarning)
                     Toggle("Auto-update Boiling Point", isOn: $settings.enableAltimeter)
+                    Picker("Weight Display", selection: $settings.prefersGrams) {
+                        Text("Ounces (oz)").tag(false)
+                        Text("Grams (g)").tag(true)
+                    }
+                    Picker("Temperature Display", selection: $settings.prefersCelcius) {
+                        Text("Fahrenheit (°F)").tag(false)
+                        Text("Celcius (°C)").tag(true)
+                    }
                     if UIApplication.shared.supportsAlternateIcons {
                         Picker("App Icon", selection: $settings.appIconIsDark) {
                             Text("Light").tag(false)

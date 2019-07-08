@@ -36,8 +36,8 @@ extension ActionSheet {
     static func tempSheet(action: @escaping (Bool) -> Void) -> () -> ActionSheet {
     {
         ActionSheet(title: Text("Temperature Display"), message: nil, buttons: [
-            .default(Text("Fahrenheit")) { action(false) },
-            .default(Text("Celcius")) { action(true) },
+            .default(Text("Fahrenheit (°F)")) { action(false) },
+            .default(Text("Celcius (°C)")) { action(true) },
             .cancel(),
         ])
         }
