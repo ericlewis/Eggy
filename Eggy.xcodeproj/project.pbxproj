@@ -62,6 +62,8 @@
 		68979C4422D101E600FCC4EB /* EggManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68979C4322D101E600FCC4EB /* EggManager.swift */; };
 		68979C4622D107C800FCC4EB /* Double+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68979C4522D107C800FCC4EB /* Double+Helpers.swift */; };
 		68979C4822D1136400FCC4EB /* Cloud.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68979C4722D1136400FCC4EB /* Cloud.swift */; };
+		689B1E0622D30A6400A768C2 /* SettingsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 689B1E0522D30A6400A768C2 /* SettingsProtocol.swift */; };
+		689B1E0722D30A6400A768C2 /* SettingsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 689B1E0522D30A6400A768C2 /* SettingsProtocol.swift */; };
 		68C57F1D22D24ABF00A7E964 /* CookTimeProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C57F1C22D24ABF00A7E964 /* CookTimeProtocol.swift */; };
 		68C57F1F22D2502600A7E964 /* FeedbackManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C57F1E22D2502600A7E964 /* FeedbackManager.swift */; };
 		68C57F2122D254DD00A7E964 /* ViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C57F2022D254DD00A7E964 /* ViewModelProtocol.swift */; };
@@ -183,6 +185,7 @@
 		68979C4322D101E600FCC4EB /* EggManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EggManager.swift; sourceTree = "<group>"; };
 		68979C4522D107C800FCC4EB /* Double+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Helpers.swift"; sourceTree = "<group>"; };
 		68979C4722D1136400FCC4EB /* Cloud.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cloud.swift; sourceTree = "<group>"; };
+		689B1E0522D30A6400A768C2 /* SettingsProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsProtocol.swift; sourceTree = "<group>"; };
 		68C57F1C22D24ABF00A7E964 /* CookTimeProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CookTimeProtocol.swift; sourceTree = "<group>"; };
 		68C57F1E22D2502600A7E964 /* FeedbackManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackManager.swift; sourceTree = "<group>"; };
 		68C57F2022D254DD00A7E964 /* ViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelProtocol.swift; sourceTree = "<group>"; };
@@ -401,6 +404,7 @@
 				683C526822D27CC600CE63C4 /* EggStateProtocol.swift */,
 				68C57F2422D2593A00A7E964 /* FormattersProtocol.swift */,
 				683C526422D27B3E00CE63C4 /* LocalNotificationsProtocol.swift */,
+				689B1E0522D30A6400A768C2 /* SettingsProtocol.swift */,
 				683C526622D27B6500CE63C4 /* TimerActionsProtocol.swift */,
 				68C57F2022D254DD00A7E964 /* ViewModelProtocol.swift */,
 			);
@@ -632,6 +636,7 @@
 				6887B0E022D28CBE002BAB31 /* Slider+Doneness.swift in Sources */,
 				6873BCEA22D1C7F70005BCCC /* BoilingPointManager.swift in Sources */,
 				6873BCA522D1AA170005BCCC /* ExtensionDelegate.swift in Sources */,
+				689B1E0722D30A6400A768C2 /* SettingsProtocol.swift in Sources */,
 				6887B0E722D29263002BAB31 /* NewTimerButton.swift in Sources */,
 				6873BCF122D2344E0005BCCC /* SettingsManager.swift in Sources */,
 				6873BCBB22D1AB7D0005BCCC /* TimeInterval+Helpers.swift in Sources */,
@@ -674,6 +679,7 @@
 				68C57F3522D2669500A7E964 /* AnyTransition+Transitions.swift in Sources */,
 				68979C4422D101E600FCC4EB /* EggManager.swift in Sources */,
 				68979C4622D107C800FCC4EB /* Double+Helpers.swift in Sources */,
+				689B1E0622D30A6400A768C2 /* SettingsProtocol.swift in Sources */,
 				6873BCED22D1CD3E0005BCCC /* SettingsView.swift in Sources */,
 				683C526922D27CC600CE63C4 /* EggStateProtocol.swift in Sources */,
 				6887B0EB22D297D5002BAB31 /* ActionSheets.swift in Sources */,

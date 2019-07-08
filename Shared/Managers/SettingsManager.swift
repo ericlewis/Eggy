@@ -9,9 +9,11 @@
 import SwiftUI
 import Combine
 
-class SettingsManager : EasyBindableObject {
+class SettingsManager : EasyBindableObject, SettingsProtocol {
   static let shared = SettingsManager()
-    
+  
+  @Cloud("prefersGrams", defaultValue: Locale.current.usesMetricSystem) var prefersGrams: Bool {didSet {changed()}}
+
   @Cloud("prefersCelcius", defaultValue: Locale.current.usesMetricSystem) var prefersCelcius: Bool {didSet {changed()}}
   
   @Cloud("preventAutoLock", defaultValue: false) var preventAutoLock: Bool {didSet {changed()}}

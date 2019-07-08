@@ -20,7 +20,7 @@ struct Egg : View {
     return GeometryReader { geometry in
       ZStack {
         Circle()
-          .fill(Color.secondary)
+          .fill(Color.init(white: 0.9))
           .frame(width: geometry.size.width * self.scale, height: geometry.size.height * self.scale)
           .shadow(radius: 10)
         Circle()

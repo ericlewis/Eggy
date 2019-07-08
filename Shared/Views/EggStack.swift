@@ -16,7 +16,7 @@ struct EggStack : View {
   }
   
   var timeRemaining: Double {
-    store.isRunning && !store.isFinished ? store.rawTimeRemaining : store.rawCookTime
+    store.isRunning ? store.rawTimeRemaining : store.rawCookTime
   }
   
   var donenessPercent: Double {

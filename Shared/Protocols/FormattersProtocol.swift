@@ -46,7 +46,7 @@ extension FormattersProtocol {
     func formatMeasurement<T: Unit>(measurement: Measurement<T>, digits: Int) -> String {
         Self.numberFormatter.maximumFractionDigits = digits
         Self.measurementFormatter.numberFormatter = Self.numberFormatter
-
+        Self.measurementFormatter.unitStyle = .medium
         if SettingsManager.shared.prefersCelcius {
             Self.measurementFormatter.locale = .init(identifier: "en_GB")
         } else {

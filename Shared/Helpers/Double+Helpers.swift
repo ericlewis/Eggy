@@ -49,7 +49,14 @@ extension Double {
       sizeString = "Extra Large"
     }
     
-    return String(format: "\(sizeString) (%.2foz)", self)
+    let formatter = MeasurementFormatter()
+    formatter.unitOptions = .providedUnit
+    formatter.numberFormatter.maximumFractionDigits = 2
+    formatter.unitStyle = .medium
+    
+    let s = formatter.string(from: Measurement(value: self, unit: UnitMass.ounces).converted(to: SettingsManager.shared.prefersGrams ? .grams : .ounces))
+    
+    return String(format: "\(sizeString) (\(s))")
   }
   
   var donenessString: String {
