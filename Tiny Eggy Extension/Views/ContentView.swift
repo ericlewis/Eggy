@@ -52,27 +52,68 @@ struct ContentView : View {
         }
     }
     
+    // MARK: Drag Gesture
+    
+    enum DragState {
+        
+        case inactive
+        case dragging(translation: CGSize)
+        
+        var translation: CGSize {
+            switch self {
+            case .inactive:
+                return .zero
+            case .dragging(let translation):
+                return translation
+            }
+        }
+        
+        var isActive: Bool {
+            switch self {
+            case .inactive:
+                return false
+            case .dragging:
+                return true
+            }
+        }
+    }
+    
+    var dragOpacity: Double {
+        dragState.isActive ? 0.0 : 1.0
+    }
+    
+    @GestureState var dragState = DragState.inactive
+
+    
     // MARK: Render
     
     var body: some View {
-        VStack {
-            EggStack()
+        let dragGesture = DragGesture()
+            .updating($dragState) { (value, state, transaction) in
+                state = .dragging(translation: value.translation)
+        }
+        return VStack {
+            EggStack(x: dragState.translation.width, y: dragState.translation.height, isDragging: dragState.isActive)
                 .tapAction(tappedEgg)
-            if editing {
-                EditingView(editingState: $editingState, editing: $editing, advance: advance)
-                    .padding(.horizontal)
-                    .transition(.slide)
-                    .padding(.all, 0)
-            }
-            if store.isRunning && !editing {
-                Text(store.cookTimeString)
-                    .padding(.all, 0)
-                    .font(.largeTitle)
-                    .animation(.none)
-            }
-            if !store.isRunning && !editing {
-                NewTimerButton(editing: $editing)
-            }
+                .gesture(dragGesture)
+
+            Group {
+                if editing {
+                    EditingView(editingState: $editingState, editing: $editing, advance: advance)
+                        .padding(.horizontal)
+                        .transition(.slide)
+                        .padding(.all, 0)
+                }
+                if store.isRunning && !editing {
+                    Text(store.cookTimeString)
+                        .padding(.all, 0)
+                        .font(.largeTitle)
+                        .animation(.none)
+                }
+                if !store.isRunning && !editing {
+                    NewTimerButton(editing: $editing)
+                }
+            }.opacity(dragOpacity)
         }
         .onReceive(store.ticker, perform: store.changed)
             .animation(.basic())
