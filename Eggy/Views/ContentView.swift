@@ -55,7 +55,7 @@ struct ContentView : View, TimerProtocol {
             EggStack(x: dragState.translation.width, y: dragState.translation.height, isDragging: dragState.isActive)
                 .tapAction(store.toggleRunning)
                 .gesture(dragGesture)
-            
+                .presentation($store.confirmResetTimer, actionSheet: ActionSheet.confirmResetTimer(action: store.stop))
             if !store.isRunning {
                 OptionSliders()
                     .opacity(dragOpacity)

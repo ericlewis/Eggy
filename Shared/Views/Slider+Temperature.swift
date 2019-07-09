@@ -13,7 +13,7 @@ struct TemperatureSlider : View, SliderProtocol {
     @EnvironmentObject var store: EggManager
     
     var body: some View {
-        Slider(value: $store.temp, from: store.eggDefaults.tempRange.lowerBound, through: store.eggDefaults.tempRange.upperBound, onEditingChanged: { _ in
+        SliderControl(value: $store.temp, from: store.eggDefaults.tempRange.lowerBound, through: store.eggDefaults.tempRange.upperBound, onEditingChanged: { _ in
             self.action()
         })
     }

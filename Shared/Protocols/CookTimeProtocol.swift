@@ -9,11 +9,11 @@
 import Foundation
 
 protocol CookTimeProtocol {
-    static func calculateCookTime(t: Double, d: Double, s: Double, b: Double) -> TimeInterval
+    static func calculateCookTime(t: Double, d: Doneness, s: Double, b: Double) -> TimeInterval
 }
 
 extension CookTimeProtocol {
-    static func calculateCookTime(t: Double, d: Double, s: Double, b: Double) -> TimeInterval {
+    static func calculateCookTime(t: Double, d: Doneness, s: Double, b: Double) -> TimeInterval {
         let heatCoeff = 31.0
         let yolkWhiteRatio = 0.86
         

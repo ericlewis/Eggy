@@ -13,7 +13,7 @@ struct DonenessSlider : View, SliderProtocol {
     @EnvironmentObject var store: EggManager
     
     var body: some View {
-        Slider(value: $store.doneness, from: store.eggDefaults.donenessRange.lowerBound, through: store.eggDefaults.donenessRange.upperBound, onEditingChanged: { _ in
+        SliderControl(value: $store.doneness, from: store.eggDefaults.donenessRange.lowerBound, through: store.eggDefaults.donenessRange.upperBound, onEditingChanged: { _ in
             self.action()
         })
     }

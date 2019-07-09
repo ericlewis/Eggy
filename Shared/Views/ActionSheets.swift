@@ -9,6 +9,15 @@
 import SwiftUI
 
 extension ActionSheet {
+    static func confirmResetTimer(action: @escaping () -> Void) -> () -> ActionSheet {
+    {
+        ActionSheet(title: Text("Do you want to stop the timer?"), message: nil, buttons: [
+            .destructive(Text("Stop Timer"), onTrigger: action),
+            .cancel(),
+        ])
+        }
+    }
+    
     static func sizeSheet(action: @escaping (EggSize) -> Void) -> () -> ActionSheet {
     {
         ActionSheet(title: Text("Egg Size"), message: nil, buttons: [

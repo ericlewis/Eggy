@@ -118,7 +118,7 @@ struct ContentView : View, TimerProtocol {
         .onReceive(ticker, perform: store.changed)
             .animation(.basic())
             .navigationBarTitle(navTitle)
-            .presentation($store.confirmResetTimer, alert: Alert.confirmResetAlert(reset: store.stop))
+            .presentation($store.confirmResetTimer, alert: Alert.confirmResetTimer(action: store.stop))
     }
     
     // MARK: View Model

@@ -20,7 +20,6 @@ struct RootView : View {
     var body: some View {
         NavigationView {
             ContentView()
-                .presentation($store.confirmResetTimer, alert: Alert.confirmResetAlert(reset: store.stop))
                 .navigationBarTitle(store.navBarTitleString)
                 .navigationBarItems(leading: SettingsButton(), trailing: StartStopButton())
         }
