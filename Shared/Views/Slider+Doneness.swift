@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-struct DonenessSlider : View {
+struct DonenessSlider : View, SliderProtocol {
     var action: () -> Void
     @EnvironmentObject var store: EggManager
     

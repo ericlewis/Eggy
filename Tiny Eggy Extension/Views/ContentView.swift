@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-struct ContentView : View {
+struct ContentView : View, TimerProtocol {
     
     // MARK: Private Properties
     
@@ -115,7 +115,7 @@ struct ContentView : View {
                 }
             }.opacity(dragOpacity)
         }
-        .onReceive(store.ticker, perform: store.changed)
+        .onReceive(ticker, perform: store.changed)
             .animation(.basic())
             .navigationBarTitle(navTitle)
             .presentation($store.confirmResetTimer, alert: Alert.confirmResetAlert(reset: store.stop))

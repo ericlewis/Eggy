@@ -8,12 +8,14 @@
 
 import SwiftUI
 
-struct EggStack : View {
-    @EnvironmentObject var store: EggManager
-    var x: CGFloat
-    var y: CGFloat
-    var isDragging: Bool
-    
+protocol EggStackViewModelProtocol {
+    var store: EggManager {get}
+    var sizePercent: Length {get}
+    var timeRemaining: Double {get}
+    var donenessPercent: Double {get}
+}
+
+extension EggStackViewModelProtocol {
     var sizePercent: Length {
         store.isRunning ? 1.0 : Length(Rescale(from: (1.37, 2.8), to: (0.90, 1.0)).rescale(store.size))
     }
@@ -25,7 +27,15 @@ struct EggStack : View {
     var donenessPercent: Double {
         Rescale(from: (56.0, 85.0), to: (1.0, 0.0)).rescale(store.doneness)
     }
-    
+}
+
+struct EggStack : View, EggStackViewModelProtocol {
+    @EnvironmentObject var store: EggManager
+
+    var x: CGFloat
+    var y: CGFloat
+    var isDragging: Bool
+
     var body: some View {
         ZStack {
             Egg(opacity: donenessPercent, remaining: timeRemaining, duration: store.rawCookTime, x: x, y: y, isDragging: isDragging)

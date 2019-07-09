@@ -8,8 +8,7 @@
 
 import SwiftUI
 
-struct ContentView : View {
-    var ticker = Timer.publish(every: 1.0, tolerance: 0.1, on: .main, in: .common).autoconnect()
+struct ContentView : View, TimerProtocol {
 
     // MARK: Private Properties
     

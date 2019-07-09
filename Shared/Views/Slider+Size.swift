@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-struct SizeSlider : View {
+struct SizeSlider : View, SliderProtocol {
     var action: () -> Void
     @EnvironmentObject var store: EggManager
     

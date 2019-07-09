@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-struct TemperatureSlider : View {
+struct TemperatureSlider : View, SliderProtocol {
     var action: () -> Void
     @EnvironmentObject var store: EggManager
     
