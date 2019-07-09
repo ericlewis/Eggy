@@ -9,7 +9,7 @@
 import SwiftUI
 
 struct StartStopButton : View {
-    @EnvironmentObject var store: EggManager
+    @EnvironmentObject private var store: EggManager
     
     var timerLabel: String {
         store.isRunning ? "Stop" : "Start"
@@ -30,16 +30,28 @@ struct StartStopButton : View {
     }
 }
 
-struct SettingsButton : View {
-    @EnvironmentObject var settings: SettingsManager
-    @EnvironmentObject var store: EggManager
+struct SettingsButton : View, NavigationProtocol {
+    @EnvironmentObject internal var navigation: NavigationManager
     
+    private func toggleSettings() {
+        navigation.showSettings.toggle()
+    }
+
     var body: some View {
-        PresentationLink(destination: SettingsView()
-            .environmentObject(settings)
-            .environmentObject(store)) {
+        Button(action: toggleSettings) {
                 Image(systemName: "slider.horizontal.3")
                     .imageScale(.large)
+        }
+    }
+}
+
+struct DoneButton : View {
+    var action: () -> Void
+    var body: some View {
+        Button(action: action) {
+            Text("Done")
+                .color(.yellow)
+                .bold()
         }
     }
 }

@@ -9,13 +9,22 @@
 import SwiftUI
 import Combine
 
-struct RootView : View {
+struct RootView : View, NavigationProtocol  {
     
     // MARK: Private Properties
     
+    @EnvironmentObject internal var navigation: NavigationManager
     @EnvironmentObject var store: EggManager
     
     // MARK: Render
+    
+    var settingsModal: Modal? {
+        func dismiss() {
+            navigation.showSettings = false
+        }
+        
+        return navigation.showSettings ? Modal.settings(onDismiss: dismiss) : nil
+    }
     
     var body: some View {
         NavigationView {
@@ -24,7 +33,8 @@ struct RootView : View {
                 .navigationBarItems(leading: SettingsButton(), trailing: StartStopButton())
         }
         .navigationViewStyle(.stack)
-            .foregroundColor(.yellow)
+        .foregroundColor(.yellow)
+        .presentation(settingsModal)
     }
 }
 

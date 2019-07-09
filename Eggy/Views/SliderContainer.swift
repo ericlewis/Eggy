@@ -8,6 +8,19 @@
 
 import SwiftUI
 
+extension Text {
+    func sliderContainerValueStyle() -> some View {
+        return self.font(.headline)
+            .color(.primary)
+            .animation(.none)
+    }
+    
+    func sliderContainerLabelStyle() -> some View {
+        return self.font(.caption)
+            .color(.secondary)
+    }
+}
+
 struct SliderContainer<SliderView : View> : View {
     
     // MARK: Types
@@ -51,25 +64,19 @@ struct SliderContainer<SliderView : View> : View {
         VStack(alignment: .trailing) {
             HStack {
                 Text(leadingLabel)
-                    .font(.caption)
-                    .color(.secondary)
+                    .sliderContainerLabelStyle()
                 Spacer()
                 Text(trailingLabel)
-                    .font(.caption)
-                    .color(.secondary)
+                    .sliderContainerLabelStyle()
             }
             .padding(.vertical, 0)
             sliderProvider()
             HStack {
                 Text(label)
-                    .font(.headline)
-                    .color(.primary)
+                    .sliderContainerValueStyle()
                     .tapAction(tappedLabel)
-                    .animation(.none)
                 if tappedInfo != nil {
-                    Button(action: tappedInfo!, label: {
-                        Image(systemName: "questionmark.circle")
-                    })
+                    InfoButton(action: tappedInfo!)
                 }
             }
             .padding(.top, 0)

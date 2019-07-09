@@ -13,8 +13,7 @@ struct RootView : View {
     // MARK: Render
     
     var body: some View {
-        ContentView()
-            .environmentObject(EggManager.shared)
+        ContentView().linkStores()
     }
 }
 
