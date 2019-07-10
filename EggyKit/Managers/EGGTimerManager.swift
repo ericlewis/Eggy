@@ -11,6 +11,26 @@ public protocol EGGTimerManagerProtocol : EGGTimerProtocol, EGGTimerActions {
     var delegate: EGGTimerManagerProtocolDelegate? {get set}
 }
 
+@propertyWrapper
+public struct TimerState {
+    private static var key = "kTimerState"
+    
+    public var wrappedValue: EGGTimerState
+    
+    public init(_ initialValue: EGGTimerState = .stopped) {
+        wrappedValue = initialValue
+    }
+    
+    public var value: EGGTimerState {
+        get {
+            EGGTimerState.init(rawValue: UserDefaults.standard.integer(forKey: TimerState.key)) ?? .stopped
+        }
+        set {
+            UserDefaults.standard.set(newValue.rawValue, forKey: TimerState.key)
+        }
+    }
+}
+
 public class EGGTimerManager : EGGTimerManagerProtocol, EGGBoilingPointManagerDelegate {
     
     // MARK: Public Properties
@@ -19,6 +39,7 @@ public class EGGTimerManager : EGGTimerManagerProtocol, EGGBoilingPointManagerDe
     
     public var timer: Timer?
     
+    @TimerState()
     public var state: EGGTimerState {
         didSet {
             switch state {
@@ -48,11 +69,11 @@ public class EGGTimerManager : EGGTimerManagerProtocol, EGGBoilingPointManagerDe
                 boilingPointManager: EGGBoilingPointManager = EGGBoilingPointManager(),
                 notification: EGGLocalNotification? = nil,
                 timer: Timer? = nil) {
-        self.state = state
         self.egg = egg
         self.notificationScheduler = notificationScheduler
         self.boilingPointManager = boilingPointManager
         self.timer = timer ?? Timer.init(timeInterval: EGGTimerManager.interval, repeats: true, block: tick)
+        self.state = state
         boilingPointManager.delegate = self
     }
 

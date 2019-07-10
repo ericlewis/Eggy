@@ -50,54 +50,10 @@
 		688637CF22D556A80083E104 /* RandomEggFactCyclerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 688637CE22D556A80083E104 /* RandomEggFactCyclerView.swift */; };
 		688637D122D55D450083E104 /* RandomFactManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 688637D022D55D450083E104 /* RandomFactManager.swift */; };
 		688637D222D55D450083E104 /* RandomFactManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 688637D022D55D450083E104 /* RandomFactManager.swift */; };
-		688637E122D629E30083E104 /* EggyKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 688637D822D629E30083E104 /* EggyKit.framework */; };
-		688637E822D629E30083E104 /* EGGLocalNotificationSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 688637E722D629E30083E104 /* EGGLocalNotificationSpec.swift */; };
-		688637EA22D629E30083E104 /* EggyKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 688637DA22D629E30083E104 /* EggyKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		688637ED22D629E30083E104 /* EggyKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 688637D822D629E30083E104 /* EggyKit.framework */; };
-		688637EE22D629E30083E104 /* EggyKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 688637D822D629E30083E104 /* EggyKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		688637FF22D62A040083E104 /* EGGTimerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 688637F622D62A030083E104 /* EGGTimerManager.swift */; };
-		6886380022D62A040083E104 /* EGGEggProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 688637F722D62A030083E104 /* EGGEggProperties.swift */; };
-		6886380122D62A040083E104 /* EGGCookTimeCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 688637F822D62A030083E104 /* EGGCookTimeCalculator.swift */; };
-		6886380222D62A040083E104 /* EGGEgg.swift in Sources */ = {isa = PBXBuildFile; fileRef = 688637F922D62A030083E104 /* EGGEgg.swift */; };
-		6886380322D62A040083E104 /* EGGTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 688637FA22D62A030083E104 /* EGGTimer.swift */; };
-		6886380422D62A040083E104 /* EGGEggPropertyDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 688637FB22D62A030083E104 /* EGGEggPropertyDefaults.swift */; };
-		6886380622D62A040083E104 /* EGGLocalNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 688637FD22D62A040083E104 /* EGGLocalNotification.swift */; };
-		6886380722D62A040083E104 /* EGGBoilingPointManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 688637FE22D62A040083E104 /* EGGBoilingPointManager.swift */; };
-		6886381B22D62B4F0083E104 /* FakeUNUserNotificationCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6886381A22D62B4F0083E104 /* FakeUNUserNotificationCenter.swift */; };
-		6886381E22D62FBE0083E104 /* EGGUNUserNotificationCenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6886381C22D62FBE0083E104 /* EGGUNUserNotificationCenterProtocol.swift */; };
-		6886382322D63B800083E104 /* EGGNotificationScheduler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6886382222D63B800083E104 /* EGGNotificationScheduler.swift */; };
-		6886382522D63D610083E104 /* EGGSettingsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6886382422D63D610083E104 /* EGGSettingsProtocol.swift */; };
-		6886382622D645F40083E104 /* Cloud.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68979C4722D1136400FCC4EB /* Cloud.swift */; };
-		6886382822D64DCA0083E104 /* EGGSettingsProtocolSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6886382722D64DCA0083E104 /* EGGSettingsProtocolSpec.swift */; };
-		6886382A22D656120083E104 /* EGGSettingsProtocol+Wrappers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6886382922D656120083E104 /* EGGSettingsProtocol+Wrappers.swift */; };
-		6886382C22D656420083E104 /* EGGEggProperties+Wrappers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6886382B22D656420083E104 /* EGGEggProperties+Wrappers.swift */; };
-		6886382E22D657F60083E104 /* EGGCookTimeCalculatorSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6886382D22D657F60083E104 /* EGGCookTimeCalculatorSpec.swift */; };
-		6886383022D65AF70083E104 /* EGGRandomEggFactsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6886382F22D65AF70083E104 /* EGGRandomEggFactsManager.swift */; };
-		6886383322D65B2A0083E104 /* BindableObject+Easy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C57F2822D25C6600A7E964 /* BindableObject+Easy.swift */; };
-		6886383522D65B880083E104 /* EGGRandomEggFactGeneratorSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6886383422D65B880083E104 /* EGGRandomEggFactGeneratorSpec.swift */; };
-		6886383A22D660720083E104 /* EGGCMAltimeterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6886383922D660720083E104 /* EGGCMAltimeterProtocol.swift */; };
-		6886383C22D6623D0083E104 /* FakeCMAltimeter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6886383B22D6623D0083E104 /* FakeCMAltimeter.swift */; };
-		6886383E22D663A80083E104 /* EGGBoilingPointManagerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6886383D22D663A80083E104 /* EGGBoilingPointManagerSpec.swift */; };
-		6886383F22D668040083E104 /* EGGFeedbackManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 688637FC22D62A030083E104 /* EGGFeedbackManager.swift */; };
-		6886386A22D6695B0083E104 /* EggyKit__watchOS_.h in Headers */ = {isa = PBXBuildFile; fileRef = 6886386822D6695B0083E104 /* EggyKit__watchOS_.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		6886386D22D6695B0083E104 /* EggyKit__watchOS_.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6886386622D6695B0083E104 /* EggyKit__watchOS_.framework */; };
-		6886386E22D6695B0083E104 /* EggyKit__watchOS_.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6886386622D6695B0083E104 /* EggyKit__watchOS_.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		6886387222D6696E0083E104 /* EGGBoilingPointManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 688637FE22D62A040083E104 /* EGGBoilingPointManager.swift */; };
-		6886387322D6696E0083E104 /* EGGFeedbackManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 688637FC22D62A030083E104 /* EGGFeedbackManager.swift */; };
-		6886387422D6696E0083E104 /* EGGRandomEggFactsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6886382F22D65AF70083E104 /* EGGRandomEggFactsManager.swift */; };
-		6886387522D6696E0083E104 /* EGGTimerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 688637F622D62A030083E104 /* EGGTimerManager.swift */; };
-		6886387622D6696E0083E104 /* EGGCMAltimeterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6886383922D660720083E104 /* EGGCMAltimeterProtocol.swift */; };
-		6886387722D6696E0083E104 /* EGGCookTimeCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 688637F822D62A030083E104 /* EGGCookTimeCalculator.swift */; };
-		6886387822D6696E0083E104 /* EGGEgg.swift in Sources */ = {isa = PBXBuildFile; fileRef = 688637F922D62A030083E104 /* EGGEgg.swift */; };
-		6886387922D6696E0083E104 /* EGGEggProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 688637F722D62A030083E104 /* EGGEggProperties.swift */; };
-		6886387A22D6696E0083E104 /* EGGEggProperties+Wrappers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6886382B22D656420083E104 /* EGGEggProperties+Wrappers.swift */; };
-		6886387B22D6696E0083E104 /* EGGEggPropertyDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 688637FB22D62A030083E104 /* EGGEggPropertyDefaults.swift */; };
-		6886387C22D6696E0083E104 /* EGGLocalNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 688637FD22D62A040083E104 /* EGGLocalNotification.swift */; };
-		6886387D22D6696E0083E104 /* EGGSettingsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6886382422D63D610083E104 /* EGGSettingsProtocol.swift */; };
-		6886387E22D6696E0083E104 /* EGGSettingsProtocol+Wrappers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6886382922D656120083E104 /* EGGSettingsProtocol+Wrappers.swift */; };
-		6886387F22D6696E0083E104 /* EGGTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 688637FA22D62A030083E104 /* EGGTimer.swift */; };
-		6886388022D6696E0083E104 /* EGGUNUserNotificationCenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6886381C22D62FBE0083E104 /* EGGUNUserNotificationCenterProtocol.swift */; };
-		6886388122D6696E0083E104 /* EGGNotificationScheduler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6886382222D63B800083E104 /* EGGNotificationScheduler.swift */; };
+		6886390D22D67E780083E104 /* EggyKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 688638AE22D67D120083E104 /* EggyKit.framework */; };
+		6886390E22D67E780083E104 /* EggyKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 688638AE22D67D120083E104 /* EggyKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		6886390F22D67EA70083E104 /* EggyKit__watchOS_.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6886390C22D67E5A0083E104 /* EggyKit__watchOS_.framework */; };
+		6886391022D67EA70083E104 /* EggyKit__watchOS_.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6886390C22D67E5A0083E104 /* EggyKit__watchOS_.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		6887B0D322D28A69002BAB31 /* Defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C57F3B22D26AB300A7E964 /* Defaults.swift */; };
 		6887B0D422D28A69002BAB31 /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C57F3D22D270A500A7E964 /* Enums.swift */; };
 		6887B0D522D28A69002BAB31 /* AnyTransition+Transitions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C57F3422D2669500A7E964 /* AnyTransition+Transitions.swift */; };
@@ -170,32 +126,25 @@
 			remoteGlobalIDString = 6873BC9A22D1AA160005BCCC;
 			remoteInfo = "Tiny Eggy WatchKit Extension";
 		};
-		688637E222D629E30083E104 /* PBXContainerItemProxy */ = {
+		688638AD22D67D120083E104 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 68D2042022D04A530080B937 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 688637D722D629E30083E104;
+			containerPortal = 688638A822D67D110083E104 /* EggyKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 6886388E22D67D100083E104;
 			remoteInfo = EggyKit;
 		};
-		688637E422D629E30083E104 /* PBXContainerItemProxy */ = {
+		688638AF22D67D120083E104 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 68D2042022D04A530080B937 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 68D2042722D04A530080B937;
-			remoteInfo = Eggy;
+			containerPortal = 688638A822D67D110083E104 /* EggyKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 6886389722D67D110083E104;
+			remoteInfo = EggyKitTests;
 		};
-		688637EB22D629E30083E104 /* PBXContainerItemProxy */ = {
+		6886390B22D67E5A0083E104 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 68D2042022D04A530080B937 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 688637D722D629E30083E104;
-			remoteInfo = EggyKit;
-		};
-		6886386B22D6695B0083E104 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 68D2042022D04A530080B937 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 6886386522D6695B0083E104;
+			containerPortal = 688638A822D67D110083E104 /* EggyKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 688638E922D67DC60083E104;
 			remoteInfo = "EggyKit (watchOS)";
 		};
 /* End PBXContainerItemProxy section */
@@ -249,7 +198,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				688637EE22D629E30083E104 /* EggyKit.framework in Embed Frameworks */,
+				6886390E22D67E780083E104 /* EggyKit.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -260,7 +209,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				6886386E22D6695B0083E104 /* EggyKit__watchOS_.framework in Embed Frameworks */,
+				6886391022D67EA70083E104 /* EggyKit__watchOS_.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -303,37 +252,7 @@
 		688637CB22D554D90083E104 /* Modals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Modals.swift; sourceTree = "<group>"; };
 		688637CE22D556A80083E104 /* RandomEggFactCyclerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomEggFactCyclerView.swift; sourceTree = "<group>"; };
 		688637D022D55D450083E104 /* RandomFactManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomFactManager.swift; sourceTree = "<group>"; };
-		688637D822D629E30083E104 /* EggyKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = EggyKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		688637DA22D629E30083E104 /* EggyKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EggyKit.h; sourceTree = "<group>"; };
-		688637DB22D629E30083E104 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		688637E022D629E30083E104 /* EggyKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EggyKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		688637E722D629E30083E104 /* EGGLocalNotificationSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EGGLocalNotificationSpec.swift; sourceTree = "<group>"; };
-		688637E922D629E30083E104 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		688637F622D62A030083E104 /* EGGTimerManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EGGTimerManager.swift; sourceTree = "<group>"; };
-		688637F722D62A030083E104 /* EGGEggProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EGGEggProperties.swift; sourceTree = "<group>"; };
-		688637F822D62A030083E104 /* EGGCookTimeCalculator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EGGCookTimeCalculator.swift; sourceTree = "<group>"; };
-		688637F922D62A030083E104 /* EGGEgg.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EGGEgg.swift; sourceTree = "<group>"; };
-		688637FA22D62A030083E104 /* EGGTimer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EGGTimer.swift; sourceTree = "<group>"; };
-		688637FB22D62A030083E104 /* EGGEggPropertyDefaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EGGEggPropertyDefaults.swift; sourceTree = "<group>"; };
-		688637FC22D62A030083E104 /* EGGFeedbackManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EGGFeedbackManager.swift; sourceTree = "<group>"; };
-		688637FD22D62A040083E104 /* EGGLocalNotification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EGGLocalNotification.swift; sourceTree = "<group>"; };
-		688637FE22D62A040083E104 /* EGGBoilingPointManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EGGBoilingPointManager.swift; sourceTree = "<group>"; };
-		6886381A22D62B4F0083E104 /* FakeUNUserNotificationCenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeUNUserNotificationCenter.swift; sourceTree = "<group>"; };
-		6886381C22D62FBE0083E104 /* EGGUNUserNotificationCenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EGGUNUserNotificationCenterProtocol.swift; sourceTree = "<group>"; };
-		6886382222D63B800083E104 /* EGGNotificationScheduler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EGGNotificationScheduler.swift; sourceTree = "<group>"; };
-		6886382422D63D610083E104 /* EGGSettingsProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EGGSettingsProtocol.swift; sourceTree = "<group>"; };
-		6886382722D64DCA0083E104 /* EGGSettingsProtocolSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EGGSettingsProtocolSpec.swift; sourceTree = "<group>"; };
-		6886382922D656120083E104 /* EGGSettingsProtocol+Wrappers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EGGSettingsProtocol+Wrappers.swift"; sourceTree = "<group>"; };
-		6886382B22D656420083E104 /* EGGEggProperties+Wrappers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EGGEggProperties+Wrappers.swift"; sourceTree = "<group>"; };
-		6886382D22D657F60083E104 /* EGGCookTimeCalculatorSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EGGCookTimeCalculatorSpec.swift; sourceTree = "<group>"; };
-		6886382F22D65AF70083E104 /* EGGRandomEggFactsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EGGRandomEggFactsManager.swift; sourceTree = "<group>"; };
-		6886383422D65B880083E104 /* EGGRandomEggFactGeneratorSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EGGRandomEggFactGeneratorSpec.swift; sourceTree = "<group>"; };
-		6886383922D660720083E104 /* EGGCMAltimeterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EGGCMAltimeterProtocol.swift; sourceTree = "<group>"; };
-		6886383B22D6623D0083E104 /* FakeCMAltimeter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeCMAltimeter.swift; sourceTree = "<group>"; };
-		6886383D22D663A80083E104 /* EGGBoilingPointManagerSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EGGBoilingPointManagerSpec.swift; sourceTree = "<group>"; };
-		6886386622D6695B0083E104 /* EggyKit__watchOS_.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = EggyKit__watchOS_.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		6886386822D6695B0083E104 /* EggyKit__watchOS_.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EggyKit__watchOS_.h; sourceTree = "<group>"; };
-		6886386922D6695B0083E104 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		688638A822D67D110083E104 /* EggyKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = EggyKit.xcodeproj; path = ../EggyKit/EggyKit.xcodeproj; sourceTree = "<group>"; };
 		6887B0E622D29263002BAB31 /* NewTimerButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTimerButton.swift; sourceTree = "<group>"; };
 		6887B0E822D29375002BAB31 /* EditingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditingView.swift; sourceTree = "<group>"; };
 		6887B0EA22D297D5002BAB31 /* ActionSheets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionSheets.swift; sourceTree = "<group>"; };
@@ -378,29 +297,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6886386D22D6695B0083E104 /* EggyKit__watchOS_.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		688637D522D629E30083E104 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		688637DD22D629E30083E104 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				688637E122D629E30083E104 /* EggyKit.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		6886386322D6695B0083E104 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				6886390F22D67EA70083E104 /* EggyKit__watchOS_.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -408,7 +305,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				688637ED22D629E30083E104 /* EggyKit.framework in Frameworks */,
+				6886390D22D67E780083E104 /* EggyKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -540,93 +437,14 @@
 			path = "Tiny Eggy Extension";
 			sourceTree = "<group>";
 		};
-		688637D922D629E30083E104 /* EggyKit */ = {
+		688638A922D67D110083E104 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				6886383622D65D1C0083E104 /* Managers */,
-				6886383722D65D320083E104 /* Protocols */,
-				6886383822D65D4F0083E104 /* Schedulers */,
-				688637DA22D629E30083E104 /* EggyKit.h */,
-				688637DB22D629E30083E104 /* Info.plist */,
+				688638AE22D67D120083E104 /* EggyKit.framework */,
+				688638B022D67D120083E104 /* EggyKitTests.xctest */,
+				6886390C22D67E5A0083E104 /* EggyKit__watchOS_.framework */,
 			);
-			path = EggyKit;
-			sourceTree = "<group>";
-		};
-		688637E622D629E30083E104 /* EggyKitTests */ = {
-			isa = PBXGroup;
-			children = (
-				6886382022D63A290083E104 /* Mocks */,
-				6886382122D63A360083E104 /* Specs */,
-				688637E922D629E30083E104 /* Info.plist */,
-			);
-			path = EggyKitTests;
-			sourceTree = "<group>";
-		};
-		6886382022D63A290083E104 /* Mocks */ = {
-			isa = PBXGroup;
-			children = (
-				6886381A22D62B4F0083E104 /* FakeUNUserNotificationCenter.swift */,
-				6886383B22D6623D0083E104 /* FakeCMAltimeter.swift */,
-			);
-			path = Mocks;
-			sourceTree = "<group>";
-		};
-		6886382122D63A360083E104 /* Specs */ = {
-			isa = PBXGroup;
-			children = (
-				6886383D22D663A80083E104 /* EGGBoilingPointManagerSpec.swift */,
-				6886382D22D657F60083E104 /* EGGCookTimeCalculatorSpec.swift */,
-				688637E722D629E30083E104 /* EGGLocalNotificationSpec.swift */,
-				6886383422D65B880083E104 /* EGGRandomEggFactGeneratorSpec.swift */,
-				6886382722D64DCA0083E104 /* EGGSettingsProtocolSpec.swift */,
-			);
-			path = Specs;
-			sourceTree = "<group>";
-		};
-		6886383622D65D1C0083E104 /* Managers */ = {
-			isa = PBXGroup;
-			children = (
-				688637FE22D62A040083E104 /* EGGBoilingPointManager.swift */,
-				688637FC22D62A030083E104 /* EGGFeedbackManager.swift */,
-				6886382F22D65AF70083E104 /* EGGRandomEggFactsManager.swift */,
-				688637F622D62A030083E104 /* EGGTimerManager.swift */,
-			);
-			path = Managers;
-			sourceTree = "<group>";
-		};
-		6886383722D65D320083E104 /* Protocols */ = {
-			isa = PBXGroup;
-			children = (
-				6886383922D660720083E104 /* EGGCMAltimeterProtocol.swift */,
-				688637F822D62A030083E104 /* EGGCookTimeCalculator.swift */,
-				688637F922D62A030083E104 /* EGGEgg.swift */,
-				688637F722D62A030083E104 /* EGGEggProperties.swift */,
-				6886382B22D656420083E104 /* EGGEggProperties+Wrappers.swift */,
-				688637FB22D62A030083E104 /* EGGEggPropertyDefaults.swift */,
-				688637FD22D62A040083E104 /* EGGLocalNotification.swift */,
-				6886382422D63D610083E104 /* EGGSettingsProtocol.swift */,
-				6886382922D656120083E104 /* EGGSettingsProtocol+Wrappers.swift */,
-				688637FA22D62A030083E104 /* EGGTimer.swift */,
-				6886381C22D62FBE0083E104 /* EGGUNUserNotificationCenterProtocol.swift */,
-			);
-			path = Protocols;
-			sourceTree = "<group>";
-		};
-		6886383822D65D4F0083E104 /* Schedulers */ = {
-			isa = PBXGroup;
-			children = (
-				6886382222D63B800083E104 /* EGGNotificationScheduler.swift */,
-			);
-			path = Schedulers;
-			sourceTree = "<group>";
-		};
-		6886386722D6695B0083E104 /* EggyKit (watchOS) */ = {
-			isa = PBXGroup;
-			children = (
-				6886386822D6695B0083E104 /* EggyKit__watchOS_.h */,
-				6886386922D6695B0083E104 /* Info.plist */,
-			);
-			path = "EggyKit (watchOS)";
+			name = Products;
 			sourceTree = "<group>";
 		};
 		6887B0E522D29251002BAB31 /* Views */ = {
@@ -710,10 +528,8 @@
 		68D2041F22D04A530080B937 = {
 			isa = PBXGroup;
 			children = (
+				688638A822D67D110083E104 /* EggyKit.xcodeproj */,
 				68D2042A22D04A530080B937 /* Eggy */,
-				688637D922D629E30083E104 /* EggyKit */,
-				6886386722D6695B0083E104 /* EggyKit (watchOS) */,
-				688637E622D629E30083E104 /* EggyKitTests */,
 				6873BC4222D1A13E0005BCCC /* Frameworks */,
 				68D2042922D04A530080B937 /* Products */,
 				683E4BDE22D246F7001EC738 /* Shared */,
@@ -729,9 +545,6 @@
 				6873BC8922D1AA110005BCCC /* Tiny Eggy.app */,
 				6873BC8C22D1AA110005BCCC /* Tiny Eggy App.app */,
 				6873BC9B22D1AA160005BCCC /* Tiny Eggy Extension.appex */,
-				688637D822D629E30083E104 /* EggyKit.framework */,
-				688637E022D629E30083E104 /* EggyKitTests.xctest */,
-				6886386622D6695B0083E104 /* EggyKit__watchOS_.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -757,25 +570,6 @@
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
-
-/* Begin PBXHeadersBuildPhase section */
-		688637D322D629E30083E104 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				688637EA22D629E30083E104 /* EggyKit.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		6886386122D6695B0083E104 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				6886386A22D6695B0083E104 /* EggyKit__watchOS_.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		6873BC8822D1AA110005BCCC /* Tiny Eggy */ = {
@@ -824,67 +618,11 @@
 			buildRules = (
 			);
 			dependencies = (
-				6886386C22D6695B0083E104 /* PBXTargetDependency */,
 			);
 			name = "Tiny Eggy Extension";
 			productName = "Tiny Eggy WatchKit Extension";
 			productReference = 6873BC9B22D1AA160005BCCC /* Tiny Eggy Extension.appex */;
 			productType = "com.apple.product-type.watchkit2-extension";
-		};
-		688637D722D629E30083E104 /* EggyKit */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 688637EF22D629E30083E104 /* Build configuration list for PBXNativeTarget "EggyKit" */;
-			buildPhases = (
-				688637D322D629E30083E104 /* Headers */,
-				688637D422D629E30083E104 /* Sources */,
-				688637D522D629E30083E104 /* Frameworks */,
-				688637D622D629E30083E104 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = EggyKit;
-			productName = EggyKit;
-			productReference = 688637D822D629E30083E104 /* EggyKit.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		688637DF22D629E30083E104 /* EggyKitTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 688637F322D629E30083E104 /* Build configuration list for PBXNativeTarget "EggyKitTests" */;
-			buildPhases = (
-				688637DC22D629E30083E104 /* Sources */,
-				688637DD22D629E30083E104 /* Frameworks */,
-				688637DE22D629E30083E104 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				688637E322D629E30083E104 /* PBXTargetDependency */,
-				688637E522D629E30083E104 /* PBXTargetDependency */,
-			);
-			name = EggyKitTests;
-			productName = EggyKitTests;
-			productReference = 688637E022D629E30083E104 /* EggyKitTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		6886386522D6695B0083E104 /* EggyKit (watchOS) */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 6886386F22D6695B0083E104 /* Build configuration list for PBXNativeTarget "EggyKit (watchOS)" */;
-			buildPhases = (
-				6886386122D6695B0083E104 /* Headers */,
-				6886386222D6695B0083E104 /* Sources */,
-				6886386322D6695B0083E104 /* Frameworks */,
-				6886386422D6695B0083E104 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "EggyKit (watchOS)";
-			productName = "EggyKit (watchOS)";
-			productReference = 6886386622D6695B0083E104 /* EggyKit__watchOS_.framework */;
-			productType = "com.apple.product-type.framework";
 		};
 		68D2042722D04A530080B937 /* Eggy */ = {
 			isa = PBXNativeTarget;
@@ -900,7 +638,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				688637EC22D629E30083E104 /* PBXTargetDependency */,
 			);
 			name = Eggy;
 			productName = Eggy;
@@ -926,17 +663,6 @@
 					6873BC9A22D1AA160005BCCC = {
 						CreatedOnToolsVersion = 11.0;
 					};
-					688637D722D629E30083E104 = {
-						CreatedOnToolsVersion = 11.0;
-						LastSwiftMigration = 1100;
-					};
-					688637DF22D629E30083E104 = {
-						CreatedOnToolsVersion = 11.0;
-						TestTargetID = 68D2042722D04A530080B937;
-					};
-					6886386522D6695B0083E104 = {
-						CreatedOnToolsVersion = 11.0;
-					};
 					68D2042722D04A530080B937 = {
 						CreatedOnToolsVersion = 11.0;
 					};
@@ -953,18 +679,45 @@
 			mainGroup = 68D2041F22D04A530080B937;
 			productRefGroup = 68D2042922D04A530080B937 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 688638A922D67D110083E104 /* Products */;
+					ProjectRef = 688638A822D67D110083E104 /* EggyKit.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				68D2042722D04A530080B937 /* Eggy */,
 				6873BC8822D1AA110005BCCC /* Tiny Eggy */,
 				6873BC8B22D1AA110005BCCC /* Tiny Eggy App */,
 				6873BC9A22D1AA160005BCCC /* Tiny Eggy Extension */,
-				688637D722D629E30083E104 /* EggyKit */,
-				688637DF22D629E30083E104 /* EggyKitTests */,
-				6886386522D6695B0083E104 /* EggyKit (watchOS) */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		688638AE22D67D120083E104 /* EggyKit.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = EggyKit.framework;
+			remoteRef = 688638AD22D67D120083E104 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		688638B022D67D120083E104 /* EggyKitTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = EggyKitTests.xctest;
+			remoteRef = 688638AF22D67D120083E104 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		6886390C22D67E5A0083E104 /* EggyKit__watchOS_.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = EggyKit__watchOS_.framework;
+			remoteRef = 6886390B22D67E5A0083E104 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		6873BC8722D1AA110005BCCC /* Resources */ = {
@@ -989,27 +742,6 @@
 			files = (
 				6873BCAA22D1AA190005BCCC /* Preview Assets.xcassets in Resources */,
 				6873BCA722D1AA190005BCCC /* Assets.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		688637D622D629E30083E104 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		688637DE22D629E30083E104 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		6886386422D6695B0083E104 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1077,68 +809,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		688637D422D629E30083E104 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				6886380122D62A040083E104 /* EGGCookTimeCalculator.swift in Sources */,
-				6886382622D645F40083E104 /* Cloud.swift in Sources */,
-				6886382A22D656120083E104 /* EGGSettingsProtocol+Wrappers.swift in Sources */,
-				6886382322D63B800083E104 /* EGGNotificationScheduler.swift in Sources */,
-				6886383022D65AF70083E104 /* EGGRandomEggFactsManager.swift in Sources */,
-				6886380222D62A040083E104 /* EGGEgg.swift in Sources */,
-				6886383F22D668040083E104 /* EGGFeedbackManager.swift in Sources */,
-				6886380622D62A040083E104 /* EGGLocalNotification.swift in Sources */,
-				6886383322D65B2A0083E104 /* BindableObject+Easy.swift in Sources */,
-				6886380022D62A040083E104 /* EGGEggProperties.swift in Sources */,
-				6886380322D62A040083E104 /* EGGTimer.swift in Sources */,
-				6886382522D63D610083E104 /* EGGSettingsProtocol.swift in Sources */,
-				6886383A22D660720083E104 /* EGGCMAltimeterProtocol.swift in Sources */,
-				6886381E22D62FBE0083E104 /* EGGUNUserNotificationCenterProtocol.swift in Sources */,
-				6886380422D62A040083E104 /* EGGEggPropertyDefaults.swift in Sources */,
-				6886380722D62A040083E104 /* EGGBoilingPointManager.swift in Sources */,
-				6886382C22D656420083E104 /* EGGEggProperties+Wrappers.swift in Sources */,
-				688637FF22D62A040083E104 /* EGGTimerManager.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		688637DC22D629E30083E104 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				6886383522D65B880083E104 /* EGGRandomEggFactGeneratorSpec.swift in Sources */,
-				6886382822D64DCA0083E104 /* EGGSettingsProtocolSpec.swift in Sources */,
-				6886382E22D657F60083E104 /* EGGCookTimeCalculatorSpec.swift in Sources */,
-				6886383E22D663A80083E104 /* EGGBoilingPointManagerSpec.swift in Sources */,
-				6886381B22D62B4F0083E104 /* FakeUNUserNotificationCenter.swift in Sources */,
-				688637E822D629E30083E104 /* EGGLocalNotificationSpec.swift in Sources */,
-				6886383C22D6623D0083E104 /* FakeCMAltimeter.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		6886386222D6695B0083E104 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				6886387A22D6696E0083E104 /* EGGEggProperties+Wrappers.swift in Sources */,
-				6886387822D6696E0083E104 /* EGGEgg.swift in Sources */,
-				6886388122D6696E0083E104 /* EGGNotificationScheduler.swift in Sources */,
-				6886387722D6696E0083E104 /* EGGCookTimeCalculator.swift in Sources */,
-				6886387F22D6696E0083E104 /* EGGTimer.swift in Sources */,
-				6886387622D6696E0083E104 /* EGGCMAltimeterProtocol.swift in Sources */,
-				6886387B22D6696E0083E104 /* EGGEggPropertyDefaults.swift in Sources */,
-				6886387C22D6696E0083E104 /* EGGLocalNotification.swift in Sources */,
-				6886387D22D6696E0083E104 /* EGGSettingsProtocol.swift in Sources */,
-				6886387E22D6696E0083E104 /* EGGSettingsProtocol+Wrappers.swift in Sources */,
-				6886387422D6696E0083E104 /* EGGRandomEggFactsManager.swift in Sources */,
-				6886388022D6696E0083E104 /* EGGUNUserNotificationCenterProtocol.swift in Sources */,
-				6886387922D6696E0083E104 /* EGGEggProperties.swift in Sources */,
-				6886387322D6696E0083E104 /* EGGFeedbackManager.swift in Sources */,
-				6886387222D6696E0083E104 /* EGGBoilingPointManager.swift in Sources */,
-				6886387522D6696E0083E104 /* EGGTimerManager.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		68D2042422D04A530080B937 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1203,26 +873,6 @@
 			isa = PBXTargetDependency;
 			target = 6873BC9A22D1AA160005BCCC /* Tiny Eggy Extension */;
 			targetProxy = 6873BC9D22D1AA170005BCCC /* PBXContainerItemProxy */;
-		};
-		688637E322D629E30083E104 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 688637D722D629E30083E104 /* EggyKit */;
-			targetProxy = 688637E222D629E30083E104 /* PBXContainerItemProxy */;
-		};
-		688637E522D629E30083E104 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 68D2042722D04A530080B937 /* Eggy */;
-			targetProxy = 688637E422D629E30083E104 /* PBXContainerItemProxy */;
-		};
-		688637EC22D629E30083E104 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 688637D722D629E30083E104 /* EggyKit */;
-			targetProxy = 688637EB22D629E30083E104 /* PBXContainerItemProxy */;
-		};
-		6886386C22D6695B0083E104 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 6886386522D6695B0083E104 /* EggyKit (watchOS) */;
-			targetProxy = 6886386B22D6695B0083E104 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -1355,163 +1005,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "ericlewis.Tiny-Eggy";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-			};
-			name = Release;
-		};
-		688637F022D629E30083E104 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = F9PGNEMEHU;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = EggyKit/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = ericlewis.EggyKit;
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		688637F122D629E30083E104 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = F9PGNEMEHU;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = EggyKit/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = ericlewis.EggyKit;
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		688637F422D629E30083E104 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = F9PGNEMEHU;
-				INFOPLIST_FILE = EggyKitTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = ericlewis.EggyKitTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Eggy.app/Eggy";
-			};
-			name = Debug;
-		};
-		688637F522D629E30083E104 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = F9PGNEMEHU;
-				INFOPLIST_FILE = EggyKitTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = ericlewis.EggyKitTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Eggy.app/Eggy";
-			};
-			name = Release;
-		};
-		6886387022D6695B0083E104 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				APPLICATION_EXTENSION_API_ONLY = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = F9PGNEMEHU;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "EggyKit (watchOS)/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "ericlewis.EggyKit--watchOS-";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = watchos;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 4;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-				WATCHOS_DEPLOYMENT_TARGET = 6.0;
-			};
-			name = Debug;
-		};
-		6886387122D6695B0083E104 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				APPLICATION_EXTENSION_API_ONLY = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = F9PGNEMEHU;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "EggyKit (watchOS)/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "ericlewis.EggyKit--watchOS-";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = watchos;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 4;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-				WATCHOS_DEPLOYMENT_TARGET = 6.0;
 			};
 			name = Release;
 		};
@@ -1701,33 +1194,6 @@
 			buildConfigurations = (
 				6873BCB522D1AA190005BCCC /* Debug */,
 				6873BCB622D1AA190005BCCC /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		688637EF22D629E30083E104 /* Build configuration list for PBXNativeTarget "EggyKit" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				688637F022D629E30083E104 /* Debug */,
-				688637F122D629E30083E104 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		688637F322D629E30083E104 /* Build configuration list for PBXNativeTarget "EggyKitTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				688637F422D629E30083E104 /* Debug */,
-				688637F522D629E30083E104 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		6886386F22D6695B0083E104 /* Build configuration list for PBXNativeTarget "EggyKit (watchOS)" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				6886387022D6695B0083E104 /* Debug */,
-				6886387122D6695B0083E104 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

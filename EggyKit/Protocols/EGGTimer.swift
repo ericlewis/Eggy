@@ -1,9 +1,9 @@
 
 import Foundation
 
-public enum EGGTimerState {
+public enum EGGTimerState: Int {
+    case stopped = 0
     case running
-    case stopped
     case finished
 }
 
