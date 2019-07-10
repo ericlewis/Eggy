@@ -51,7 +51,7 @@ class EGGEggThirtySecondsRemainingNotificationTests: XCTestCase {
         createdNotificationRequest = fakeUserNotificationCenter.capturedAddRequest
     }
     
-    func hasCorrectContent() {
+    func testHasCorrectContent() {
         XCTAssert(subject.title == "Your egg will be done in 30 seconds!")
         XCTAssert(subject.message == nil)
     }
@@ -83,7 +83,7 @@ class EGGFinishedNotificationTests: XCTestCase {
         createdNotificationRequest = fakeUserNotificationCenter.capturedAddRequest
     }
 
-    func hasCorrectContent() {
+    func testHasCorrectContent() {
         XCTAssert(subject.title == "Your egg is done!")
         XCTAssert(subject.message == nil)
     }
