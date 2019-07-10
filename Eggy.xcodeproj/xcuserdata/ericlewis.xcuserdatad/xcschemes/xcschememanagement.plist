@@ -7,7 +7,17 @@
 		<key>Eggy.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
+		<key>EggyKit.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
 			<integer>1</integer>
+		</dict>
+		<key>EggyWatchKit.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>3</integer>
 		</dict>
 		<key>Rotten Eggy.xcscheme_^#shared#^_</key>
 		<dict>
@@ -43,6 +53,21 @@
 			<true/>
 		</dict>
 		<key>6873BC8B22D1AA110005BCCC</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>688637D722D629E30083E104</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>688637DF22D629E30083E104</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>68D2042722D04A530080B937</key>
 		<dict>
 			<key>primary</key>
 			<true/>
