@@ -15,11 +15,13 @@ class FakeCMAltimeter: EGGCMAltimeterProtocol {
     
     var capturedStartRelativeAltitudeUpdates: Bool
     var capturedStopRelativeAltitudeUpdates: Bool
-    
+    var firedEvent: Bool
+
     init(isRelativeAltitudeAvailable: Bool) {
         self.isRelativeAltitudeAvailable = isRelativeAltitudeAvailable
         capturedStopRelativeAltitudeUpdates = false
         capturedStartRelativeAltitudeUpdates = false
+        firedEvent = false
     }
     
     
@@ -29,6 +31,9 @@ class FakeCMAltimeter: EGGCMAltimeterProtocol {
     
     func startRelativeAltitudeUpdates(to queue: OperationQueue, withHandler handler: @escaping CMAltitudeHandler) {
         capturedStartRelativeAltitudeUpdates = true
+        if isRelativeAltitudeAvailable {
+            handler(nil, nil)
+        }
     }
     
     func stopRelativeAltitudeUpdates() {

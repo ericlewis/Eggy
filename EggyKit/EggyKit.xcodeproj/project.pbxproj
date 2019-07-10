@@ -55,6 +55,7 @@
 		6886390822D67E2D0083E104 /* BindableObject+Easy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6886390622D67E2C0083E104 /* BindableObject+Easy.swift */; };
 		68EB00C822D6A32000738F84 /* FakeEGGLocalNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68EB00C722D6A32000738F84 /* FakeEGGLocalNotification.swift */; };
 		68EB00CA22D6A54A00738F84 /* EGGNotificationSchedulerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68EB00C922D6A54A00738F84 /* EGGNotificationSchedulerSpec.swift */; };
+		68EB00CC22D6AC4900738F84 /* EGGEggSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68EB00CB22D6AC4900738F84 /* EGGEggSpec.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -102,6 +103,7 @@
 		6886390622D67E2C0083E104 /* BindableObject+Easy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "BindableObject+Easy.swift"; sourceTree = "<group>"; };
 		68EB00C722D6A32000738F84 /* FakeEGGLocalNotification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeEGGLocalNotification.swift; sourceTree = "<group>"; };
 		68EB00C922D6A54A00738F84 /* EGGNotificationSchedulerSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EGGNotificationSchedulerSpec.swift; sourceTree = "<group>"; };
+		68EB00CB22D6AC4900738F84 /* EGGEggSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EGGEggSpec.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -192,6 +194,7 @@
 				68EB00C922D6A54A00738F84 /* EGGNotificationSchedulerSpec.swift */,
 				688638B922D67D510083E104 /* EGGRandomEggFactGeneratorSpec.swift */,
 				688638B822D67D510083E104 /* EGGSettingsProtocolSpec.swift */,
+				68EB00CB22D6AC4900738F84 /* EGGEggSpec.swift */,
 			);
 			path = Specs;
 			sourceTree = "<group>";
@@ -429,6 +432,7 @@
 				688638BC22D67D510083E104 /* EGGLocalNotificationSpec.swift in Sources */,
 				688638BB22D67D510083E104 /* FakeCMAltimeter.swift in Sources */,
 				688638C022D67D510083E104 /* EGGRandomEggFactGeneratorSpec.swift in Sources */,
+				68EB00CC22D6AC4900738F84 /* EGGEggSpec.swift in Sources */,
 				688638BD22D67D510083E104 /* EGGCookTimeCalculatorSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

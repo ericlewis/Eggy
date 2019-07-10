@@ -35,4 +35,20 @@ class EGGBoilingPointManagerSpec: XCTestCase {
         subject.stopUpdates()
         XCTAssert(fakeAltimeterClient.capturedStopRelativeAltitudeUpdates)
     }
+    
+    func testOneOffUpdates() {
+        let fakeAltimeterClient = FakeCMAltimeter(isRelativeAltitudeAvailable: true)
+        let subject = EGGBoilingPointManager(isContinuous: false, altimeterClient: fakeAltimeterClient)
+        subject.startUpdates()
+        XCTAssert(fakeAltimeterClient.capturedStartRelativeAltitudeUpdates)
+        XCTAssert(fakeAltimeterClient.capturedStopRelativeAltitudeUpdates)
+    }
+    
+    func testContinuousUpdates() {
+        let fakeAltimeterClient = FakeCMAltimeter(isRelativeAltitudeAvailable: true)
+        let subject = EGGBoilingPointManager(isContinuous: true, altimeterClient: fakeAltimeterClient)
+        subject.startUpdates()
+        XCTAssert(fakeAltimeterClient.capturedStartRelativeAltitudeUpdates)
+        XCTAssert(!fakeAltimeterClient.capturedStopRelativeAltitudeUpdates)
+    }
 }

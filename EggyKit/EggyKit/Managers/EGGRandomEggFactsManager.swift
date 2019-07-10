@@ -42,12 +42,16 @@ class EGGRandomEggFactGenerator : EasyBindableObject {
         RunLoop.current.add(timer!, forMode: .common)
     }
     
-    private func generate(timer: Timer) {
+    public func generate(timer: Timer) {
         fact = EGGRandomEggFactGenerator.eggFacts.randomElement()!
     }
     
-    deinit {
+    public func tearDown() {
         timer?.invalidate()
         timer = nil
+    }
+    
+    deinit {
+        tearDown()
     }
 }
