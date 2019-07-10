@@ -553,6 +553,7 @@
 		6886383722D65D320083E104 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
+				6886383922D660720083E104 /* EGGCMAAltimeterProtocol.swift */,
 				688637F822D62A030083E104 /* EGGCookTimeCalculator.swift */,
 				688637F922D62A030083E104 /* EGGEgg.swift */,
 				688637F722D62A030083E104 /* EGGEggProperties.swift */,
@@ -563,7 +564,6 @@
 				6886382922D656120083E104 /* EGGSettingsProtocol+Wrappers.swift */,
 				688637FA22D62A030083E104 /* EGGTimer.swift */,
 				6886381C22D62FBE0083E104 /* EGGUNUserNotificationCenterProtocol.swift */,
-				6886383922D660720083E104 /* EGGCMAAltimeterProtocol.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
