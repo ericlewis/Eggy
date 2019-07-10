@@ -11,15 +11,16 @@ import XCTest
 
 class EGGSettingsProtocolTest: XCTestCase {
     var subject: EGGSettingsContainer!
-    var createdNotificationRequest: UNNotificationRequest!
     
     override func setUp() {
         subject = EGGSettingsContainer()
     }
 
     func testReset() {
-        subject.current.warningNotificationEnabled = !EGGSettingsToggleDefaults.warningNotificationEnabled.boolValue
+        subject.current.warningNotificationEnabled = !EGGSettingsDefaults.Toggles.warningNotificationEnabled.boolValue
+        XCTAssert(subject.current.warningNotificationEnabled != EGGSettingsDefaults.Toggles.warningNotificationEnabled.boolValue)
+        
         subject.reset()
-        XCTAssert(subject.current.warningNotificationEnabled == EGGSettingsToggleDefaults.warningNotificationEnabled.boolValue)
+        XCTAssert(subject.current.warningNotificationEnabled == EGGSettingsDefaults.Toggles.warningNotificationEnabled.boolValue)
     }
 }

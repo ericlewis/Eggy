@@ -1,7 +1,7 @@
 
 import Foundation
 
-public enum EGGPropertyDefaultsKey : String {
+public enum EGGEggPropertyDefaultsKey : String {
     case temperature = "kTemperature"
     case doneness = "kDoneness"
     case size = "kSize"

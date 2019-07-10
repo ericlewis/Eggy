@@ -60,7 +60,7 @@
 		6886380122D62A040083E104 /* EGGCookTimeCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 688637F822D62A030083E104 /* EGGCookTimeCalculator.swift */; };
 		6886380222D62A040083E104 /* EGGEgg.swift in Sources */ = {isa = PBXBuildFile; fileRef = 688637F922D62A030083E104 /* EGGEgg.swift */; };
 		6886380322D62A040083E104 /* EGGTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 688637FA22D62A030083E104 /* EGGTimer.swift */; };
-		6886380422D62A040083E104 /* EGGPropertyDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 688637FB22D62A030083E104 /* EGGPropertyDefaults.swift */; };
+		6886380422D62A040083E104 /* EGGEggPropertyDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 688637FB22D62A030083E104 /* EGGEggPropertyDefaults.swift */; };
 		6886380522D62A040083E104 /* EGGFeedbackManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 688637FC22D62A030083E104 /* EGGFeedbackManager.swift */; };
 		6886380622D62A040083E104 /* EGGLocalNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 688637FD22D62A040083E104 /* EGGLocalNotification.swift */; };
 		6886380722D62A040083E104 /* EGGBoilingPointManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 688637FE22D62A040083E104 /* EGGBoilingPointManager.swift */; };
@@ -70,6 +70,9 @@
 		6886382522D63D610083E104 /* EGGSettingsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6886382422D63D610083E104 /* EGGSettingsProtocol.swift */; };
 		6886382622D645F40083E104 /* Cloud.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68979C4722D1136400FCC4EB /* Cloud.swift */; };
 		6886382822D64DCA0083E104 /* EGGSettingsProtocolSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6886382722D64DCA0083E104 /* EGGSettingsProtocolSpec.swift */; };
+		6886382A22D656120083E104 /* EGGSettingsProtocol+Wrappers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6886382922D656120083E104 /* EGGSettingsProtocol+Wrappers.swift */; };
+		6886382C22D656420083E104 /* EGGEggProperties+Wrappers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6886382B22D656420083E104 /* EGGEggProperties+Wrappers.swift */; };
+		6886382E22D657F60083E104 /* EGGCookTimeCalculatorSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6886382D22D657F60083E104 /* EGGCookTimeCalculatorSpec.swift */; };
 		6887B0D322D28A69002BAB31 /* Defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C57F3B22D26AB300A7E964 /* Defaults.swift */; };
 		6887B0D422D28A69002BAB31 /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C57F3D22D270A500A7E964 /* Enums.swift */; };
 		6887B0D522D28A69002BAB31 /* AnyTransition+Transitions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C57F3422D2669500A7E964 /* AnyTransition+Transitions.swift */; };
@@ -278,7 +281,7 @@
 		688637F822D62A030083E104 /* EGGCookTimeCalculator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EGGCookTimeCalculator.swift; sourceTree = "<group>"; };
 		688637F922D62A030083E104 /* EGGEgg.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EGGEgg.swift; sourceTree = "<group>"; };
 		688637FA22D62A030083E104 /* EGGTimer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EGGTimer.swift; sourceTree = "<group>"; };
-		688637FB22D62A030083E104 /* EGGPropertyDefaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EGGPropertyDefaults.swift; sourceTree = "<group>"; };
+		688637FB22D62A030083E104 /* EGGEggPropertyDefaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EGGEggPropertyDefaults.swift; sourceTree = "<group>"; };
 		688637FC22D62A030083E104 /* EGGFeedbackManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EGGFeedbackManager.swift; sourceTree = "<group>"; };
 		688637FD22D62A040083E104 /* EGGLocalNotification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EGGLocalNotification.swift; sourceTree = "<group>"; };
 		688637FE22D62A040083E104 /* EGGBoilingPointManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EGGBoilingPointManager.swift; sourceTree = "<group>"; };
@@ -287,6 +290,9 @@
 		6886382222D63B800083E104 /* EGGNotificationScheduler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EGGNotificationScheduler.swift; sourceTree = "<group>"; };
 		6886382422D63D610083E104 /* EGGSettingsProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EGGSettingsProtocol.swift; sourceTree = "<group>"; };
 		6886382722D64DCA0083E104 /* EGGSettingsProtocolSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EGGSettingsProtocolSpec.swift; sourceTree = "<group>"; };
+		6886382922D656120083E104 /* EGGSettingsProtocol+Wrappers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EGGSettingsProtocol+Wrappers.swift"; sourceTree = "<group>"; };
+		6886382B22D656420083E104 /* EGGEggProperties+Wrappers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EGGEggProperties+Wrappers.swift"; sourceTree = "<group>"; };
+		6886382D22D657F60083E104 /* EGGCookTimeCalculatorSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EGGCookTimeCalculatorSpec.swift; sourceTree = "<group>"; };
 		6887B0E622D29263002BAB31 /* NewTimerButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTimerButton.swift; sourceTree = "<group>"; };
 		6887B0E822D29375002BAB31 /* EditingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditingView.swift; sourceTree = "<group>"; };
 		6887B0EA22D297D5002BAB31 /* ActionSheets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionSheets.swift; sourceTree = "<group>"; };
@@ -492,11 +498,13 @@
 				688637F822D62A030083E104 /* EGGCookTimeCalculator.swift */,
 				688637F922D62A030083E104 /* EGGEgg.swift */,
 				688637F722D62A030083E104 /* EGGEggProperties.swift */,
+				6886382B22D656420083E104 /* EGGEggProperties+Wrappers.swift */,
+				688637FB22D62A030083E104 /* EGGEggPropertyDefaults.swift */,
 				688637FC22D62A030083E104 /* EGGFeedbackManager.swift */,
 				688637FD22D62A040083E104 /* EGGLocalNotification.swift */,
 				6886382222D63B800083E104 /* EGGNotificationScheduler.swift */,
-				688637FB22D62A030083E104 /* EGGPropertyDefaults.swift */,
 				6886382422D63D610083E104 /* EGGSettingsProtocol.swift */,
+				6886382922D656120083E104 /* EGGSettingsProtocol+Wrappers.swift */,
 				688637FA22D62A030083E104 /* EGGTimer.swift */,
 				688637F622D62A030083E104 /* EGGTimerManager.swift */,
 				6886381C22D62FBE0083E104 /* EGGUNUserNotificationCenterProtocol.swift */,
@@ -527,6 +535,7 @@
 		6886382122D63A360083E104 /* Specs */ = {
 			isa = PBXGroup;
 			children = (
+				6886382D22D657F60083E104 /* EGGCookTimeCalculatorSpec.swift */,
 				688637E722D629E30083E104 /* EGGLocalNotificationSpec.swift */,
 				6886382722D64DCA0083E104 /* EGGSettingsProtocolSpec.swift */,
 			);
@@ -947,6 +956,7 @@
 			files = (
 				6886380122D62A040083E104 /* EGGCookTimeCalculator.swift in Sources */,
 				6886382622D645F40083E104 /* Cloud.swift in Sources */,
+				6886382A22D656120083E104 /* EGGSettingsProtocol+Wrappers.swift in Sources */,
 				6886382322D63B800083E104 /* EGGNotificationScheduler.swift in Sources */,
 				6886380222D62A040083E104 /* EGGEgg.swift in Sources */,
 				6886380622D62A040083E104 /* EGGLocalNotification.swift in Sources */,
@@ -954,8 +964,9 @@
 				6886380322D62A040083E104 /* EGGTimer.swift in Sources */,
 				6886382522D63D610083E104 /* EGGSettingsProtocol.swift in Sources */,
 				6886381E22D62FBE0083E104 /* EGGUNUserNotificationCenterProtocol.swift in Sources */,
-				6886380422D62A040083E104 /* EGGPropertyDefaults.swift in Sources */,
+				6886380422D62A040083E104 /* EGGEggPropertyDefaults.swift in Sources */,
 				6886380722D62A040083E104 /* EGGBoilingPointManager.swift in Sources */,
+				6886382C22D656420083E104 /* EGGEggProperties+Wrappers.swift in Sources */,
 				688637FF22D62A040083E104 /* EGGTimerManager.swift in Sources */,
 				6886380522D62A040083E104 /* EGGFeedbackManager.swift in Sources */,
 			);
@@ -966,6 +977,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6886382822D64DCA0083E104 /* EGGSettingsProtocolSpec.swift in Sources */,
+				6886382E22D657F60083E104 /* EGGCookTimeCalculatorSpec.swift in Sources */,
 				6886381B22D62B4F0083E104 /* FakeUNUserNotificationCenter.swift in Sources */,
 				688637E822D629E30083E104 /* EGGLocalNotificationSpec.swift in Sources */,
 			);

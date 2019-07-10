@@ -17,25 +17,17 @@ enum EGGSettingsKeys : String {
     case warningNotificationEnabled = "warningNotificationEnabled"
 }
 
-public enum EGGSettingsToggleDefaults : Int {
-    case warningNotificationEnabled = 1
-    
-    public var boolValue: Bool {
-        if rawValue == 0 {
-            return false
-        } else {
-            return true
+public struct EGGSettingsDefaults {
+    public enum Toggles : Int {
+        case warningNotificationEnabled = 1
+        
+        public var boolValue: Bool {
+            if rawValue == 0 {
+                return false
+            } else {
+                return true
+            }
         }
-    }
-}
-
-@propertyWrapper
-public struct WarningNotificationEnabled {
-    @Cloud(EGGSettingsKeys.warningNotificationEnabled.rawValue, defaultValue: EGGSettingsToggleDefaults.warningNotificationEnabled.boolValue)
-    public var wrappedValue: Bool
-    
-    public init(_ initialValue: Bool = EGGSettingsToggleDefaults.warningNotificationEnabled.boolValue) {
-        wrappedValue = initialValue
     }
 }
 
@@ -47,7 +39,7 @@ public struct EGGSettings : EGGSettingsProtocol {
     
     // TODO: some sort of way to actually mock this.. maybe we fake it? prop wrappers don't have a great way to grab this stuff
     public init(userDefaults: UserDefaults = UserDefaults.standard,
-                warningNotificationEnabled: Bool = EGGSettingsToggleDefaults.warningNotificationEnabled.boolValue) {
+                warningNotificationEnabled: Bool = EGGSettingsDefaults.Toggles.warningNotificationEnabled.boolValue) {
         self.userDefaults = userDefaults
         self.warningNotificationEnabled = warningNotificationEnabled
     }
@@ -55,9 +47,7 @@ public struct EGGSettings : EGGSettingsProtocol {
 
 public class EGGSettingsContainer {
     public var current: EGGSettings = EGGSettings()
-    
     public func reset() {
-        current.warningNotificationEnabled = EGGSettingsToggleDefaults.warningNotificationEnabled.boolValue
-        // fire a did change event
+        current.warningNotificationEnabled = EGGSettingsDefaults.Toggles.warningNotificationEnabled.boolValue
     }
 }
