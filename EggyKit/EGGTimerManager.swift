@@ -1,12 +1,12 @@
 import Foundation
 
 public protocol EGGTimerManagerProtocolDelegate {
-    func stateChanged(state: EGGTimerState)
+    func stateChanged(state: EGGTimerState, egg: EGGEgg)
 }
 
 public protocol EGGTimerManagerProtocol : EGGTimerProtocol, EGGTimerActions {
     var boilingPointManager: EGGBoilingPointManager {get set}
-    var notification: EGGLocalNotification {get set}
+    var notificationScheduler: EGGNotificationScheduler {get set}
     var egg: EGGEgg {get set}
     var delegate: EGGTimerManagerProtocolDelegate? {get set}
 }
@@ -23,17 +23,18 @@ public class EGGTimerManager : EGGTimerManagerProtocol, EGGBoilingPointManagerDe
         didSet {
             switch state {
             case .running:
-                notification.fire(triggerOffset: egg.cookTime)
+                notificationScheduler.schedule(cookTime: egg.cookTime)
             case .stopped:
-                notification.delete()
+                notificationScheduler.clear()
             case .finished:
                 break
             }
-            delegate?.stateChanged(state: state)
+            
+            delegate?.stateChanged(state: state, egg: egg)
         }
     }
     
-    public var notification: EGGLocalNotification
+    public var notificationScheduler: EGGNotificationScheduler
     
     public var egg: EGGEgg
     
@@ -43,12 +44,13 @@ public class EGGTimerManager : EGGTimerManagerProtocol, EGGBoilingPointManagerDe
     
     public init(egg: EGGEgg = EGGEgg(),
                 state: EGGTimerState = .stopped,
+                notificationScheduler: EGGNotificationScheduler = EGGNotificationScheduler(),
                 boilingPointManager: EGGBoilingPointManager = EGGBoilingPointManager(),
                 notification: EGGLocalNotification? = nil,
                 timer: Timer? = nil) {
         self.state = state
         self.egg = egg
-        self.notification = EGGLocalNotification(title: "Your egg is finished!", message: nil)
+        self.notificationScheduler = notificationScheduler
         self.boilingPointManager = boilingPointManager
         self.timer = timer ?? Timer.init(timeInterval: EGGTimerManager.interval, repeats: true, block: tick)
         

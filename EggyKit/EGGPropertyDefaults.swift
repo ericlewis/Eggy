@@ -1,30 +1,16 @@
 
 import Foundation
 
-public protocol EGGPropertyDefaultsProtocol : class, EGGEggPropertiesProtocol {}
-
-public extension EGGPropertyDefaultsProtocol {
-    var temperature: Temperature {
-        set {}
-        get { return 2}
-    }
-    
-    var doneness: Doneness {
-        set {}
-        get {return 60}
-    }
-    
-    var size: Size {
-        set {}
-        get {return 40}
-    }
-    
-    var boilingPoint: Temperature {
-        set {}
-        get {return 100}
-    }
+public enum EGGPropertyDefaultsKey : String {
+    case temperature = "kTemperature"
+    case doneness = "kDoneness"
+    case size = "kSize"
+    case boilingPoint = "kBoilingPoint"
 }
 
-public class EGGPropertyDefaults : EGGPropertyDefaultsProtocol {
-    public static var current = EGGPropertyDefaults()
+public enum EGGEggPropertyDefaults : Double {
+    case temperature = 2
+    case doneness = 60
+    case size = 40
+    case boilingPoint = 100
 }

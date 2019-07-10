@@ -13,7 +13,7 @@ public class EGGLocalNotification : NSObject {
     
     // MARK: Initializers
     
-    init(title: String?, message: String?, userNotificationCenter: EGGUNUserNotificationCenterProtocol = EGGUNUserNotificationCenterClient()) {
+    public init(title: String?, message: String?, userNotificationCenter: EGGUNUserNotificationCenterProtocol = EGGUNUserNotificationCenterClient()) {
         self.userNotificationCenter = userNotificationCenter
         self.title = title
         self.message = message
@@ -55,13 +55,13 @@ public class EGGLocalNotification : NSObject {
 }
 
 public class EGGEggFinishedNotification : EGGLocalNotification {
-    override init(title: String? = "Your egg is done!", message: String? = nil, userNotificationCenter: EGGUNUserNotificationCenterProtocol = EGGUNUserNotificationCenterClient()) {
+    override public init(title: String? = "Your egg is done!", message: String? = nil, userNotificationCenter: EGGUNUserNotificationCenterProtocol = EGGUNUserNotificationCenterClient()) {
         super.init(title: title, message: message, userNotificationCenter: userNotificationCenter)
     }
 }
 
 public class EGGEggThirtySecondsRemainingNotification : EGGLocalNotification {
-    override init(title: String? = "Your egg will be done in 30 seconds!", message: String? = nil, userNotificationCenter: EGGUNUserNotificationCenterProtocol = EGGUNUserNotificationCenterClient()) {
+    override public init(title: String? = "Your egg will be done in 30 seconds!", message: String? = nil, userNotificationCenter: EGGUNUserNotificationCenterProtocol = EGGUNUserNotificationCenterClient()) {
         super.init(title: title, message: message, userNotificationCenter: userNotificationCenter)
     }
     

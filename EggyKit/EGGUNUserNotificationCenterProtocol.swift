@@ -18,7 +18,7 @@ public struct EGGUNUserNotificationCenterClient: EGGUNUserNotificationCenterProt
     
     // MARK: - Public properties
     
-    public var userNotificationCenter: UNUserNotificationCenter = UNUserNotificationCenter.current()
+    public var userNotificationCenter: UNUserNotificationCenter
     
     // MARK: - Public methods
     
@@ -32,4 +32,7 @@ public struct EGGUNUserNotificationCenterClient: EGGUNUserNotificationCenterProt
         userNotificationCenter.removePendingNotificationRequests(withIdentifiers: [id])
     }
     
+    public init(userNotificationCenter: UNUserNotificationCenter = UNUserNotificationCenter.current()) {
+        self.userNotificationCenter = userNotificationCenter
+    }
 }
