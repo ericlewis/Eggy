@@ -9,18 +9,18 @@ public protocol EGGBoilingPointManagerProtocol : class {
     var isContinuous: Bool {get}
     var delegate: EGGBoilingPointManagerDelegate? {get}
     
-    init(isContinuous: Bool, altimeterClient: EGGCMAAltimeterProtocol)
+    init(isContinuous: Bool, altimeterClient: EGGCMAltimeterProtocol)
     
     func startUpdates()
     func stopUpdates()
 }
 
 public class EGGBoilingPointManager : EGGBoilingPointManagerProtocol {
-    public var altimeterClient: EGGCMAAltimeterProtocol
+    public var altimeterClient: EGGCMAltimeterProtocol
     public var isContinuous: Bool
     public var delegate: EGGBoilingPointManagerDelegate?
     
-    required public init(isContinuous: Bool = false, altimeterClient: EGGCMAAltimeterProtocol = EGGCMAAltimeterClient()) {
+    required public init(isContinuous: Bool = false, altimeterClient: EGGCMAltimeterProtocol = EGGCMAltimeterClient()) {
         self.isContinuous = isContinuous
         self.altimeterClient = altimeterClient
     }

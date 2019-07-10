@@ -8,14 +8,14 @@
 
 import CoreMotion
 
-public protocol EGGCMAAltimeterProtocol {
+public protocol EGGCMAltimeterProtocol {
     var isRelativeAltitudeAvailable: Bool {get}
     
     func startRelativeAltitudeUpdates(to queue: OperationQueue, withHandler handler: @escaping CMAltitudeHandler)
     func stopRelativeAltitudeUpdates()
 }
 
-public struct EGGCMAAltimeterClient : EGGCMAAltimeterProtocol {
+public struct EGGCMAltimeterClient : EGGCMAltimeterProtocol {
     private(set) var altimeter = CMAltimeter()
     
     public init() {}
