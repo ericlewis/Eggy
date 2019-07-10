@@ -50,10 +50,6 @@
 		688637CF22D556A80083E104 /* RandomEggFactCyclerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 688637CE22D556A80083E104 /* RandomEggFactCyclerView.swift */; };
 		688637D122D55D450083E104 /* RandomFactManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 688637D022D55D450083E104 /* RandomFactManager.swift */; };
 		688637D222D55D450083E104 /* RandomFactManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 688637D022D55D450083E104 /* RandomFactManager.swift */; };
-		6886390D22D67E780083E104 /* EggyKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 688638AE22D67D120083E104 /* EggyKit.framework */; };
-		6886390E22D67E780083E104 /* EggyKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 688638AE22D67D120083E104 /* EggyKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		6886390F22D67EA70083E104 /* EggyKit__watchOS_.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6886390C22D67E5A0083E104 /* EggyKit__watchOS_.framework */; };
-		6886391022D67EA70083E104 /* EggyKit__watchOS_.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6886390C22D67E5A0083E104 /* EggyKit__watchOS_.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		6887B0D322D28A69002BAB31 /* Defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C57F3B22D26AB300A7E964 /* Defaults.swift */; };
 		6887B0D422D28A69002BAB31 /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C57F3D22D270A500A7E964 /* Enums.swift */; };
 		6887B0D522D28A69002BAB31 /* AnyTransition+Transitions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C57F3422D2669500A7E964 /* AnyTransition+Transitions.swift */; };
@@ -126,27 +122,6 @@
 			remoteGlobalIDString = 6873BC9A22D1AA160005BCCC;
 			remoteInfo = "Tiny Eggy WatchKit Extension";
 		};
-		688638AD22D67D120083E104 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 688638A822D67D110083E104 /* EggyKit.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 6886388E22D67D100083E104;
-			remoteInfo = EggyKit;
-		};
-		688638AF22D67D120083E104 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 688638A822D67D110083E104 /* EggyKit.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 6886389722D67D110083E104;
-			remoteInfo = EggyKitTests;
-		};
-		6886390B22D67E5A0083E104 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 688638A822D67D110083E104 /* EggyKit.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 688638E922D67DC60083E104;
-			remoteInfo = "EggyKit (watchOS)";
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -198,7 +173,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				6886390E22D67E780083E104 /* EggyKit.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -209,7 +183,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				6886391022D67EA70083E104 /* EggyKit__watchOS_.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -246,13 +219,13 @@
 		6873BCE822D1C7F70005BCCC /* BoilingPointManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoilingPointManager.swift; sourceTree = "<group>"; };
 		6873BCEC22D1CD3E0005BCCC /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		6873BCEF22D2344E0005BCCC /* SettingsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsManager.swift; sourceTree = "<group>"; };
+		687FE65D22D680D5005EBD6B /* EggyKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = EggyKit.xcodeproj; path = ../EggyKit/EggyKit.xcodeproj; sourceTree = "<group>"; };
 		688637C322D54BFE0083E104 /* InfoButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoButton.swift; sourceTree = "<group>"; };
 		688637C522D54E0F0083E104 /* LinkStores.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkStores.swift; sourceTree = "<group>"; };
 		688637C822D5515C0083E104 /* NavigationProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationProtocol.swift; sourceTree = "<group>"; };
 		688637CB22D554D90083E104 /* Modals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Modals.swift; sourceTree = "<group>"; };
 		688637CE22D556A80083E104 /* RandomEggFactCyclerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomEggFactCyclerView.swift; sourceTree = "<group>"; };
 		688637D022D55D450083E104 /* RandomFactManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomFactManager.swift; sourceTree = "<group>"; };
-		688638A822D67D110083E104 /* EggyKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = EggyKit.xcodeproj; path = ../EggyKit/EggyKit.xcodeproj; sourceTree = "<group>"; };
 		6887B0E622D29263002BAB31 /* NewTimerButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTimerButton.swift; sourceTree = "<group>"; };
 		6887B0E822D29375002BAB31 /* EditingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditingView.swift; sourceTree = "<group>"; };
 		6887B0EA22D297D5002BAB31 /* ActionSheets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionSheets.swift; sourceTree = "<group>"; };
@@ -297,7 +270,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6886390F22D67EA70083E104 /* EggyKit__watchOS_.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -305,7 +277,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6886390D22D67E780083E104 /* EggyKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -389,6 +360,7 @@
 		683E4BDE22D246F7001EC738 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				687FE65D22D680D5005EBD6B /* EggyKit.xcodeproj */,
 				68C57F3A22D26A9F00A7E964 /* Data */,
 				683E4BDA22D24696001EC738 /* Helpers */,
 				683E4BD822D2466B001EC738 /* Managers */,
@@ -435,16 +407,6 @@
 				6887B0E522D29251002BAB31 /* Views */,
 			);
 			path = "Tiny Eggy Extension";
-			sourceTree = "<group>";
-		};
-		688638A922D67D110083E104 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				688638AE22D67D120083E104 /* EggyKit.framework */,
-				688638B022D67D120083E104 /* EggyKitTests.xctest */,
-				6886390C22D67E5A0083E104 /* EggyKit__watchOS_.framework */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		6887B0E522D29251002BAB31 /* Views */ = {
@@ -528,7 +490,6 @@
 		68D2041F22D04A530080B937 = {
 			isa = PBXGroup;
 			children = (
-				688638A822D67D110083E104 /* EggyKit.xcodeproj */,
 				68D2042A22D04A530080B937 /* Eggy */,
 				6873BC4222D1A13E0005BCCC /* Frameworks */,
 				68D2042922D04A530080B937 /* Products */,
@@ -679,12 +640,6 @@
 			mainGroup = 68D2041F22D04A530080B937;
 			productRefGroup = 68D2042922D04A530080B937 /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = 688638A922D67D110083E104 /* Products */;
-					ProjectRef = 688638A822D67D110083E104 /* EggyKit.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				68D2042722D04A530080B937 /* Eggy */,
@@ -694,30 +649,6 @@
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		688638AE22D67D120083E104 /* EggyKit.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = EggyKit.framework;
-			remoteRef = 688638AD22D67D120083E104 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		688638B022D67D120083E104 /* EggyKitTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = EggyKitTests.xctest;
-			remoteRef = 688638AF22D67D120083E104 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		6886390C22D67E5A0083E104 /* EggyKit__watchOS_.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = EggyKit__watchOS_.framework;
-			remoteRef = 6886390B22D67E5A0083E104 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		6873BC8722D1AA110005BCCC /* Resources */ = {
