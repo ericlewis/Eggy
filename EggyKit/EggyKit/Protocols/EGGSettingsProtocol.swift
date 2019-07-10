@@ -17,6 +17,7 @@ enum EGGSettingsKeys : String {
     case warningNotificationEnabled = "warningNotificationEnabled"
 }
 
+// this is probably a bad idea, tests don't like it, and i don't think cases can be the same. wont scale
 public struct EGGSettingsDefaults {
     public enum Toggles : Int {
         case warningNotificationEnabled = 1
