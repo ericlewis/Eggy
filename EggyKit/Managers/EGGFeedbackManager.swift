@@ -6,7 +6,7 @@
 //  Copyright © 2019 Eric Lewis, Inc. All rights reserved.
 //
 
-import SwiftUI
+import UIKit
 
 public enum EEGFeedbackType {
     case select

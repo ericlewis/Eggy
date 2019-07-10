@@ -53,14 +53,9 @@ public class EGGTimerManager : EGGTimerManagerProtocol, EGGBoilingPointManagerDe
         self.notificationScheduler = notificationScheduler
         self.boilingPointManager = boilingPointManager
         self.timer = timer ?? Timer.init(timeInterval: EGGTimerManager.interval, repeats: true, block: tick)
-        
-        setupBoilingPointManager()
-    }
-    
-    private func setupBoilingPointManager() {
         boilingPointManager.delegate = self
     }
-    
+
     public func boilingPointUpdated(value: Temperature) {
         egg.boilingPoint = value
     }
