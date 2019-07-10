@@ -122,6 +122,27 @@
 			remoteGlobalIDString = 6873BC9A22D1AA160005BCCC;
 			remoteInfo = "Tiny Eggy WatchKit Extension";
 		};
+		68EB00BF22D698D400738F84 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 687FE65D22D680D5005EBD6B /* EggyKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 6886388E22D67D100083E104;
+			remoteInfo = EggyKit;
+		};
+		68EB00C122D698D400738F84 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 687FE65D22D680D5005EBD6B /* EggyKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 6886389722D67D110083E104;
+			remoteInfo = EggyKitTests;
+		};
+		68EB00C322D698D400738F84 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 687FE65D22D680D5005EBD6B /* EggyKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 688638E922D67DC60083E104;
+			remoteInfo = "EggyKit (watchOS)";
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -530,6 +551,16 @@
 			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		68EB00BA22D698D400738F84 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				68EB00C022D698D400738F84 /* EggyKit.framework */,
+				68EB00C222D698D400738F84 /* EggyKitTests.xctest */,
+				68EB00C422D698D400738F84 /* EggyKit__watchOS_.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -640,6 +671,12 @@
 			mainGroup = 68D2041F22D04A530080B937;
 			productRefGroup = 68D2042922D04A530080B937 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 68EB00BA22D698D400738F84 /* Products */;
+					ProjectRef = 687FE65D22D680D5005EBD6B /* EggyKit.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				68D2042722D04A530080B937 /* Eggy */,
@@ -649,6 +686,30 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		68EB00C022D698D400738F84 /* EggyKit.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = EggyKit.framework;
+			remoteRef = 68EB00BF22D698D400738F84 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		68EB00C222D698D400738F84 /* EggyKitTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = EggyKitTests.xctest;
+			remoteRef = 68EB00C122D698D400738F84 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		68EB00C422D698D400738F84 /* EggyKit__watchOS_.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = EggyKit__watchOS_.framework;
+			remoteRef = 68EB00C322D698D400738F84 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		6873BC8722D1AA110005BCCC /* Resources */ = {

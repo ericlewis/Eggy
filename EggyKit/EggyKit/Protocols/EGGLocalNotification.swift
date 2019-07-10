@@ -1,6 +1,6 @@
 import UserNotifications
 
-public class EGGLocalNotification : NSObject {
+open class EGGLocalNotification : NSObject {
     
     // MARK: Private Props
     
@@ -21,7 +21,7 @@ public class EGGLocalNotification : NSObject {
     
     // MARK: Actions
     
-    public func fire(triggerOffset: TimeInterval) {
+    open func fire(triggerOffset: TimeInterval) {
         guard let title = title else {
             return
         }
@@ -45,7 +45,7 @@ public class EGGLocalNotification : NSObject {
         userNotificationCenter.add(notificationRequest, withCompletionHandler: nil)
     }
     
-    public func delete() {
+    open func delete() {
         guard let title = title else {
             return
         }
