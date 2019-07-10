@@ -490,12 +490,12 @@
 		68D2041F22D04A530080B937 = {
 			isa = PBXGroup;
 			children = (
-				68D2042A22D04A530080B937 /* Eggy */,
-				6873BC4222D1A13E0005BCCC /* Frameworks */,
-				68D2042922D04A530080B937 /* Products */,
 				683E4BDE22D246F7001EC738 /* Shared */,
+				68D2042A22D04A530080B937 /* Eggy */,
 				6873BC9022D1AA120005BCCC /* Tiny Eggy */,
 				6873BC9F22D1AA170005BCCC /* Tiny Eggy Extension */,
+				6873BC4222D1A13E0005BCCC /* Frameworks */,
+				68D2042922D04A530080B937 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
