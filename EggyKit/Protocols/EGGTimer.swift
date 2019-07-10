@@ -5,10 +5,6 @@ public enum EGGTimerState {
     case running
     case stopped
     case finished
-    
-    public var stringValue: String {
-        return ""
-    }
 }
 
 public protocol EGGTimerStateProtocol : class {
