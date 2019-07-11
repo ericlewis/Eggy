@@ -22,23 +22,9 @@ struct Egg : View {
   var body: some View {
     return GeometryReader { geometry in
       ZStack {
-        Circle()
-          .fill(Color.init(white: 0.9))
-          .frame(width: geometry.size.width * self.scale, height: geometry.size.height * self.scale)
-          .shadow(radius: 10)
-        Circle()
-          .fill(Color.white)
-          .frame(width: geometry.size.width * self.scale, height: geometry.size.height * self.scale)
+        Image("eggrock")
+            .frame(width: geometry.size.width * self.scale, height: geometry.size.height * self.scale)
           .mask(CakeView(self.remaining, self.duration))
-        Group {
-            Circle()
-                .fill(Color.yellow)
-                .frame(width: geometry.size.width * self.scale * self.yolkScale, height: geometry.size.height * self.scale * self.yolkScale)
-            Circle()
-                .fill(RadialGradient(gradient: Gradient(colors: [.yellow, .orange]), center: .center, startRadius: 1, endRadius: (geometry.size.width * self.scale * self.yolkScale) / 2))
-                .frame(width: geometry.size.width * self.scale * self.yolkScale, height: geometry.size.height * self.scale * self.yolkScale)
-                .opacity(self.opacity)
-        }
         .animation(self.isDragging ? .spring(mass: 1, stiffness: 55, damping: 10, initialVelocity: 0) : .spring(mass: 1, stiffness: 90, damping: 10, initialVelocity: 0))
       }
       .offset(
