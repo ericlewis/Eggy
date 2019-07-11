@@ -46,6 +46,14 @@ public struct EGGFeedbackManager : EGGFeedbackManagerProtocol, EGGFeedbackManage
     internal var impact = UIImpactFeedbackGenerator(style: .heavy)
     internal var notice = UINotificationFeedbackGenerator()
     
+    public init(select: UISelectionFeedbackGenerator = UISelectionFeedbackGenerator(),
+                impact: UIImpactFeedbackGenerator = UIImpactFeedbackGenerator(),
+                notice: UINotificationFeedbackGenerator = UINotificationFeedbackGenerator()) {
+        self.select = select
+        self.impact = impact
+        self.notice = notice
+    }
+    
     public func buzz(type: EEGFeedbackType) {
         buzz(type: type, action: nil)
     }

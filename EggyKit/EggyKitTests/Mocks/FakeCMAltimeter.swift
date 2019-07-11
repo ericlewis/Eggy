@@ -41,3 +41,11 @@ class FakeCMAltimeter: EGGCMAltimeterProtocol {
     }
     
 }
+
+// MARK: FakeCMAltitudeData
+
+class FakeCMAltitudeData : CMAltitudeData {
+    override var pressure: NSNumber {
+        98.0
+    }
+}

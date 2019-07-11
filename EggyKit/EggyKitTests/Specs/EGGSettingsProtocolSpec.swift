@@ -17,10 +17,10 @@ class EGGSettingsProtocolTest: XCTestCase {
     }
 
     func testReset() {
-        subject.current.warningNotificationEnabled = !EGGSettingsDefaults.Toggles.warningNotificationEnabled.boolValue
-        XCTAssert(subject.current.warningNotificationEnabled != EGGSettingsDefaults.Toggles.warningNotificationEnabled.boolValue)
+        subject.current.warningNotificationEnabled = !EGGSettingsDefaults.Toggles.warningNotificationEnabled
+        XCTAssert(subject.current.warningNotificationEnabled != EGGSettingsDefaults.Toggles.warningNotificationEnabled)
         
         subject.reset()
-        XCTAssert(subject.current.warningNotificationEnabled == EGGSettingsDefaults.Toggles.warningNotificationEnabled.boolValue)
+        XCTAssert(subject.current.warningNotificationEnabled == EGGSettingsDefaults.Toggles.warningNotificationEnabled)
     }
 }

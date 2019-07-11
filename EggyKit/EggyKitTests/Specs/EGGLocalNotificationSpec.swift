@@ -19,7 +19,6 @@ class EGGLocalNotificationTests: XCTestCase {
         fakeUserNotificationCenter = FakeUNUserNotificationCenter()
         subject = EGGLocalNotification(title: "Hello", message: "World", userNotificationCenter: fakeUserNotificationCenter)
         subject.fire(triggerOffset: 100)
-        
         createdNotificationRequest = fakeUserNotificationCenter.capturedAddRequest
     }
 
@@ -35,6 +34,28 @@ class EGGLocalNotificationTests: XCTestCase {
     
     func testDoesntDoAnythingWhenFinished() {
         XCTAssert(fakeUserNotificationCenter.capturedAddCompletionHandler == nil)
+    }
+    
+    func testDoesntFireWithoutTitle() {
+        let fakeUserNotificationCenter = FakeUNUserNotificationCenter()
+        let subject = EGGLocalNotification(title: "Hello", message: "World", userNotificationCenter: fakeUserNotificationCenter)
+        let createdNotificationRequest = fakeUserNotificationCenter.capturedAddRequest
+        
+        subject.title = nil
+        subject.fire(triggerOffset: 100)
+        
+        XCTAssert(createdNotificationRequest == nil)
+    }
+    
+    func testDeleteWithoutTitle() {
+        subject.title = nil
+        subject.delete()
+        XCTAssert(fakeUserNotificationCenter.capturedDeleteId == nil)
+    }
+    
+    func testDelete() {
+        subject.delete()
+        XCTAssert(fakeUserNotificationCenter.capturedDeleteId == subject.title)
     }
 }
 

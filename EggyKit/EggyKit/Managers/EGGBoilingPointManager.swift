@@ -7,6 +7,7 @@ public protocol EGGBoilingPointManagerDelegate {
 
 public protocol EGGBoilingPointManagerProtocol : class {
     var isContinuous: Bool {get}
+    var boilingPoint: Temperature {get set}
     var delegate: EGGBoilingPointManagerDelegate? {get}
     
     init(isContinuous: Bool, altimeterClient: EGGCMAltimeterProtocol)
@@ -19,6 +20,7 @@ public class EGGBoilingPointManager : EGGBoilingPointManagerProtocol {
     public var altimeterClient: EGGCMAltimeterProtocol
     public var isContinuous: Bool
     public var delegate: EGGBoilingPointManagerDelegate?
+    public var boilingPoint: Temperature = 100.0 // default is 100 celcius
     
     required public init(isContinuous: Bool = false, altimeterClient: EGGCMAltimeterProtocol = EGGCMAltimeterClient()) {
         self.isContinuous = isContinuous
@@ -40,6 +42,7 @@ public class EGGBoilingPointManager : EGGBoilingPointManagerProtocol {
             let pressure = Measurement(value: rawPressure.doubleValue, unit: UnitPressure.kilopascals).converted(to: .inchesOfMercury).value
             let res = Measurement(value: 49.161 * log(pressure) + 44, unit: UnitTemperature.fahrenheit).converted(to: .celsius).value
 
+            self.boilingPoint = res
             self.delegate?.boilingPointUpdated(value: res)
         }
         

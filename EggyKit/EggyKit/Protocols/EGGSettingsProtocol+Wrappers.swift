@@ -10,10 +10,10 @@ import Foundation
 
 @propertyWrapper
 public struct WarningNotificationEnabled {
-    @Cloud(EGGSettingsKeys.warningNotificationEnabled.rawValue, defaultValue: EGGSettingsDefaults.Toggles.warningNotificationEnabled.boolValue)
+    @Cloud(EGGSettingsKeys.warningNotificationEnabled.rawValue, defaultValue: EGGSettingsDefaults.Toggles.warningNotificationEnabled)
     public var wrappedValue: Bool
     
-    public init(_ initialValue: Bool = EGGSettingsDefaults.Toggles.warningNotificationEnabled.boolValue) {
+    public init(_ initialValue: Bool = EGGSettingsDefaults.Toggles.warningNotificationEnabled) {
         wrappedValue = initialValue
     }
 }

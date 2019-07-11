@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		682FE72A22D7C18300E9AB86 /* FakeUISelectionFeedbackGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 682FE72922D7C18300E9AB86 /* FakeUISelectionFeedbackGenerator.swift */; };
+		682FE72C22D7C1D500E9AB86 /* EGGFeedbackManagerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 682FE72B22D7C1D500E9AB86 /* EGGFeedbackManagerSpec.swift */; };
+		682FE72E22D7C2B900E9AB86 /* FakeUIImpactFeedbackGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 682FE72D22D7C2B900E9AB86 /* FakeUIImpactFeedbackGenerator.swift */; };
+		682FE73022D7C3E000E9AB86 /* FakeUINotificationFeedbackGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 682FE72F22D7C3E000E9AB86 /* FakeUINotificationFeedbackGenerator.swift */; };
 		6843609422D67FD000766736 /* Cloud.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6843609322D67FD000766736 /* Cloud.swift */; };
 		6843609522D67FD000766736 /* Cloud.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6843609322D67FD000766736 /* Cloud.swift */; };
 		6886389822D67D110083E104 /* EggyKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6886388E22D67D100083E104 /* EggyKit.framework */; };
@@ -69,6 +73,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		682FE72922D7C18300E9AB86 /* FakeUISelectionFeedbackGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeUISelectionFeedbackGenerator.swift; sourceTree = "<group>"; };
+		682FE72B22D7C1D500E9AB86 /* EGGFeedbackManagerSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EGGFeedbackManagerSpec.swift; sourceTree = "<group>"; };
+		682FE72D22D7C2B900E9AB86 /* FakeUIImpactFeedbackGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeUIImpactFeedbackGenerator.swift; sourceTree = "<group>"; };
+		682FE72F22D7C3E000E9AB86 /* FakeUINotificationFeedbackGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeUINotificationFeedbackGenerator.swift; sourceTree = "<group>"; };
 		6843609322D67FD000766736 /* Cloud.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cloud.swift; sourceTree = "<group>"; };
 		6886388E22D67D100083E104 /* EggyKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = EggyKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6886389122D67D100083E104 /* EggyKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EggyKit.h; sourceTree = "<group>"; };
@@ -178,9 +186,12 @@
 		688638B122D67D510083E104 /* Mocks */ = {
 			isa = PBXGroup;
 			children = (
-				688638B222D67D510083E104 /* FakeUNUserNotificationCenter.swift */,
 				688638B322D67D510083E104 /* FakeCMAltimeter.swift */,
 				68EB00C722D6A32000738F84 /* FakeEGGLocalNotification.swift */,
+				682FE72D22D7C2B900E9AB86 /* FakeUIImpactFeedbackGenerator.swift */,
+				682FE72F22D7C3E000E9AB86 /* FakeUINotificationFeedbackGenerator.swift */,
+				682FE72922D7C18300E9AB86 /* FakeUISelectionFeedbackGenerator.swift */,
+				688638B222D67D510083E104 /* FakeUNUserNotificationCenter.swift */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -190,11 +201,12 @@
 			children = (
 				688638B722D67D510083E104 /* EGGBoilingPointManagerSpec.swift */,
 				688638B622D67D510083E104 /* EGGCookTimeCalculatorSpec.swift */,
+				68EB00CB22D6AC4900738F84 /* EGGEggSpec.swift */,
+				682FE72B22D7C1D500E9AB86 /* EGGFeedbackManagerSpec.swift */,
 				688638B522D67D510083E104 /* EGGLocalNotificationSpec.swift */,
 				68EB00C922D6A54A00738F84 /* EGGNotificationSchedulerSpec.swift */,
 				688638B922D67D510083E104 /* EGGRandomEggFactGeneratorSpec.swift */,
 				688638B822D67D510083E104 /* EGGSettingsProtocolSpec.swift */,
-				68EB00CB22D6AC4900738F84 /* EGGEggSpec.swift */,
 			);
 			path = Specs;
 			sourceTree = "<group>";
@@ -427,10 +439,14 @@
 				68EB00C822D6A32000738F84 /* FakeEGGLocalNotification.swift in Sources */,
 				68EB00CA22D6A54A00738F84 /* EGGNotificationSchedulerSpec.swift in Sources */,
 				688638BE22D67D510083E104 /* EGGBoilingPointManagerSpec.swift in Sources */,
+				682FE72A22D7C18300E9AB86 /* FakeUISelectionFeedbackGenerator.swift in Sources */,
 				688638BA22D67D510083E104 /* FakeUNUserNotificationCenter.swift in Sources */,
+				682FE72C22D7C1D500E9AB86 /* EGGFeedbackManagerSpec.swift in Sources */,
+				682FE73022D7C3E000E9AB86 /* FakeUINotificationFeedbackGenerator.swift in Sources */,
 				688638BF22D67D510083E104 /* EGGSettingsProtocolSpec.swift in Sources */,
 				688638BC22D67D510083E104 /* EGGLocalNotificationSpec.swift in Sources */,
 				688638BB22D67D510083E104 /* FakeCMAltimeter.swift in Sources */,
+				682FE72E22D7C2B900E9AB86 /* FakeUIImpactFeedbackGenerator.swift in Sources */,
 				688638C022D67D510083E104 /* EGGRandomEggFactGeneratorSpec.swift in Sources */,
 				68EB00CC22D6AC4900738F84 /* EGGEggSpec.swift in Sources */,
 				688638BD22D67D510083E104 /* EGGCookTimeCalculatorSpec.swift in Sources */,

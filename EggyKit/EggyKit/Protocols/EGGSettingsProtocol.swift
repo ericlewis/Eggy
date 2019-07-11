@@ -19,16 +19,8 @@ enum EGGSettingsKeys : String {
 
 // this is probably a bad idea, tests don't like it, and i don't think cases can be the same. wont scale
 public struct EGGSettingsDefaults {
-    public enum Toggles : Int {
-        case warningNotificationEnabled = 1
-        
-        public var boolValue: Bool {
-            if rawValue == 0 {
-                return false
-            } else {
-                return true
-            }
-        }
+    public struct Toggles {
+        public static var warningNotificationEnabled = true
     }
 }
 
@@ -40,7 +32,7 @@ public struct EGGSettings : EGGSettingsProtocol {
     
     // TODO: some sort of way to actually mock this.. maybe we fake it? prop wrappers don't have a great way to grab this stuff
     public init(userDefaults: UserDefaults = UserDefaults.standard,
-                warningNotificationEnabled: Bool = EGGSettingsDefaults.Toggles.warningNotificationEnabled.boolValue) {
+                warningNotificationEnabled: Bool = EGGSettingsDefaults.Toggles.warningNotificationEnabled) {
         self.userDefaults = userDefaults
         self.warningNotificationEnabled = warningNotificationEnabled
     }
@@ -49,6 +41,6 @@ public struct EGGSettings : EGGSettingsProtocol {
 public class EGGSettingsContainer {
     public var current: EGGSettings = EGGSettings()
     public func reset() {
-        current.warningNotificationEnabled = EGGSettingsDefaults.Toggles.warningNotificationEnabled.boolValue
+        current.warningNotificationEnabled = EGGSettingsDefaults.Toggles.warningNotificationEnabled
     }
 }

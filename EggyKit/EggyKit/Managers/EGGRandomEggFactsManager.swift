@@ -25,6 +25,8 @@ class EGGRandomEggFactGenerator : EasyBindableObject {
         "Brown eggs are typically more expensive than white eggs."
     ]
     
+    public var onDeinitialized: (() -> Void)?
+    
     var timer: Timer?
     var fact = EGGRandomEggFactGenerator.eggFacts.randomElement()! {
         didSet {
@@ -53,5 +55,6 @@ class EGGRandomEggFactGenerator : EasyBindableObject {
     
     deinit {
         tearDown()
+        onDeinitialized?()
     }
 }

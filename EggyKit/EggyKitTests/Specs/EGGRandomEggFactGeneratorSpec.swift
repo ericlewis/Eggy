@@ -11,9 +11,13 @@ import XCTest
 
 class EGGRandomEggFactGeneratorSpec: XCTestCase {
     var subject: EGGRandomEggFactGenerator!
+    var deinitialized = false
     
     override func setUp() {
         subject = EGGRandomEggFactGenerator()
+        subject.onDeinitialized = {
+            self.deinitialized = true
+        }
     }
     
     func testGenerate() {
