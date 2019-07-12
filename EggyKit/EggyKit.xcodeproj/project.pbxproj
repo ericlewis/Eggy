@@ -161,7 +161,7 @@
 			children = (
 				6886389022D67D100083E104 /* EggyKit */,
 				688638EA22D67DC60083E104 /* EggyKit (watchOS) */,
-				6886389B22D67D110083E104 /* Tests */,
+				6886389B22D67D110083E104 /* Specs */,
 				6886388F22D67D100083E104 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -191,14 +191,14 @@
 			path = EggyKit;
 			sourceTree = "<group>";
 		};
-		6886389B22D67D110083E104 /* Tests */ = {
+		6886389B22D67D110083E104 /* Specs */ = {
 			isa = PBXGroup;
 			children = (
 				688638B122D67D510083E104 /* Mocks */,
 				688638B422D67D510083E104 /* Specs */,
 				6886389E22D67D110083E104 /* Info.plist */,
 			);
-			path = Tests;
+			path = Specs;
 			sourceTree = "<group>";
 		};
 		688638B122D67D510083E104 /* Mocks */ = {
