@@ -57,6 +57,8 @@
 		6886390122D67DDF0083E104 /* EggyKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 6886389122D67D100083E104 /* EggyKit.h */; };
 		6886390722D67E2D0083E104 /* BindableObject+Easy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6886390622D67E2C0083E104 /* BindableObject+Easy.swift */; };
 		6886390822D67E2D0083E104 /* BindableObject+Easy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6886390622D67E2C0083E104 /* BindableObject+Easy.swift */; };
+		68B4D21A22D9096C00F37835 /* EGGTimerManagerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68B4D21922D9096C00F37835 /* EGGTimerManagerSpec.swift */; };
+		68B4D21C22D90CE700F37835 /* CloudSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68B4D21B22D90CE700F37835 /* CloudSpec.swift */; };
 		68EB00C822D6A32000738F84 /* FakeEGGLocalNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68EB00C722D6A32000738F84 /* FakeEGGLocalNotification.swift */; };
 		68EB00CA22D6A54A00738F84 /* EGGNotificationSchedulerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68EB00C922D6A54A00738F84 /* EGGNotificationSchedulerSpec.swift */; };
 		68EB00CC22D6AC4900738F84 /* EGGEggSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68EB00CB22D6AC4900738F84 /* EGGEggSpec.swift */; };
@@ -109,6 +111,8 @@
 		688638E922D67DC60083E104 /* EggyKit__watchOS_.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = EggyKit__watchOS_.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		688638EC22D67DC60083E104 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6886390622D67E2C0083E104 /* BindableObject+Easy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "BindableObject+Easy.swift"; sourceTree = "<group>"; };
+		68B4D21922D9096C00F37835 /* EGGTimerManagerSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EGGTimerManagerSpec.swift; sourceTree = "<group>"; };
+		68B4D21B22D90CE700F37835 /* CloudSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudSpec.swift; sourceTree = "<group>"; };
 		68EB00C722D6A32000738F84 /* FakeEGGLocalNotification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeEGGLocalNotification.swift; sourceTree = "<group>"; };
 		68EB00C922D6A54A00738F84 /* EGGNotificationSchedulerSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EGGNotificationSchedulerSpec.swift; sourceTree = "<group>"; };
 		68EB00CB22D6AC4900738F84 /* EGGEggSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EGGEggSpec.swift; sourceTree = "<group>"; };
@@ -145,7 +149,7 @@
 			children = (
 				6886389022D67D100083E104 /* EggyKit */,
 				688638EA22D67DC60083E104 /* EggyKit (watchOS) */,
-				6886389B22D67D110083E104 /* EggyKitTests */,
+				6886389B22D67D110083E104 /* Tests */,
 				6886388F22D67D100083E104 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -173,14 +177,14 @@
 			path = EggyKit;
 			sourceTree = "<group>";
 		};
-		6886389B22D67D110083E104 /* EggyKitTests */ = {
+		6886389B22D67D110083E104 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
 				688638B122D67D510083E104 /* Mocks */,
 				688638B422D67D510083E104 /* Specs */,
 				6886389E22D67D110083E104 /* Info.plist */,
 			);
-			path = EggyKitTests;
+			path = Tests;
 			sourceTree = "<group>";
 		};
 		688638B122D67D510083E104 /* Mocks */ = {
@@ -207,6 +211,8 @@
 				68EB00C922D6A54A00738F84 /* EGGNotificationSchedulerSpec.swift */,
 				688638B922D67D510083E104 /* EGGRandomEggFactGeneratorSpec.swift */,
 				688638B822D67D510083E104 /* EGGSettingsProtocolSpec.swift */,
+				68B4D21922D9096C00F37835 /* EGGTimerManagerSpec.swift */,
+				68B4D21B22D90CE700F37835 /* CloudSpec.swift */,
 			);
 			path = Specs;
 			sourceTree = "<group>";
@@ -439,6 +445,7 @@
 				68EB00C822D6A32000738F84 /* FakeEGGLocalNotification.swift in Sources */,
 				68EB00CA22D6A54A00738F84 /* EGGNotificationSchedulerSpec.swift in Sources */,
 				688638BE22D67D510083E104 /* EGGBoilingPointManagerSpec.swift in Sources */,
+				68B4D21A22D9096C00F37835 /* EGGTimerManagerSpec.swift in Sources */,
 				682FE72A22D7C18300E9AB86 /* FakeUISelectionFeedbackGenerator.swift in Sources */,
 				688638BA22D67D510083E104 /* FakeUNUserNotificationCenter.swift in Sources */,
 				682FE72C22D7C1D500E9AB86 /* EGGFeedbackManagerSpec.swift in Sources */,
@@ -447,6 +454,7 @@
 				688638BC22D67D510083E104 /* EGGLocalNotificationSpec.swift in Sources */,
 				688638BB22D67D510083E104 /* FakeCMAltimeter.swift in Sources */,
 				682FE72E22D7C2B900E9AB86 /* FakeUIImpactFeedbackGenerator.swift in Sources */,
+				68B4D21C22D90CE700F37835 /* CloudSpec.swift in Sources */,
 				688638C022D67D510083E104 /* EGGRandomEggFactGeneratorSpec.swift in Sources */,
 				68EB00CC22D6AC4900738F84 /* EGGEggSpec.swift in Sources */,
 				688638BD22D67D510083E104 /* EGGCookTimeCalculatorSpec.swift in Sources */,
@@ -663,7 +671,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = F9PGNEMEHU;
-				INFOPLIST_FILE = EggyKitTests/Info.plist;
+				INFOPLIST_FILE = Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -682,7 +690,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = F9PGNEMEHU;
-				INFOPLIST_FILE = EggyKitTests/Info.plist;
+				INFOPLIST_FILE = Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

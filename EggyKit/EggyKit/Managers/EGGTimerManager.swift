@@ -16,17 +16,19 @@ public struct TimerState {
     private static var key = "kTimerState"
     
     public var wrappedValue: EGGTimerState
+    public var userDefaults: UserDefaults
     
-    public init(_ initialValue: EGGTimerState = .stopped) {
+    public init(_ initialValue: EGGTimerState = .stopped, userDefaults: UserDefaults = UserDefaults.standard) {
         wrappedValue = initialValue
+        self.userDefaults = userDefaults
     }
     
     public var value: EGGTimerState {
         get {
-            EGGTimerState.init(rawValue: UserDefaults.standard.integer(forKey: TimerState.key)) ?? .stopped
+            EGGTimerState.init(rawValue: userDefaults.integer(forKey: TimerState.key)) ?? .stopped
         }
         set {
-            UserDefaults.standard.set(newValue.rawValue, forKey: TimerState.key)
+            userDefaults.set(newValue.rawValue, forKey: TimerState.key)
         }
     }
 }
