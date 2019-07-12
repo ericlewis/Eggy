@@ -7,6 +7,7 @@
 //
 
 import SwiftUI
+import EggyKit
 
 struct EditingView: View {
     // MARK: Public Properties
@@ -17,7 +18,7 @@ struct EditingView: View {
 
     // MARK: Private Properties
 
-    @EnvironmentObject private var store: EggManager
+    @EnvironmentObject private var store: EGGTimerManager
 
     // MARK: Actions
 

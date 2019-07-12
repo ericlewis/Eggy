@@ -1,11 +1,11 @@
 import Foundation
 import CoreMotion
 
-public protocol EGGBoilingPointManagerDelegate: class {
+public protocol EGGBoilingPointManagerDelegate: AnyObject {
     func boilingPointUpdated(value: Temperature)
 }
 
-public protocol EGGBoilingPointManagerProtocol: class {
+public protocol EGGBoilingPointManagerProtocol: AnyObject {
     var isContinuous: Bool {get}
     var boilingPoint: Temperature {get set}
     var delegate: EGGBoilingPointManagerDelegate? {get}

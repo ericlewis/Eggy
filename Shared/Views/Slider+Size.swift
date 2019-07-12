@@ -7,13 +7,17 @@
 //
 
 import SwiftUI
+import EggyKit
 
 struct SizeSlider: View, SliderProtocol {
     var action: () -> Void
-    @EnvironmentObject var store: EggManager
+    @EnvironmentObject var store: EGGTimerManager
 
     var body: some View {
-        SliderControl(value: $store.size, from: store.eggDefaults.sizeRange.lowerBound, through: store.eggDefaults.sizeRange.upperBound, onEditingChanged: { _ in
+        SliderControl(value: $store.egg.size,
+                      from: EGGEggPropertyRanges.sizeRange.lowerBound,
+                      through: EGGEggPropertyRanges.sizeRange.upperBound,
+                      onEditingChanged: { _ in
             self.action()
         })
     }

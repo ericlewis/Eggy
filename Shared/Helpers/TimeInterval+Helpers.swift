@@ -22,11 +22,10 @@ public extension TimeInterval {
     let minutes = (time / 60) % 60
     let hours = (time / 3600)
 
-    if (hours > 0) {
+    if hours > 0 {
       return String(format: "%0.2d:%0.2d:%0.2d", hours, minutes, seconds)
     }
 
-    // TODO: WE SHOULD DO ROUNDING FOR DISPLAY, round MS up for seconds or some shit
     return String(format: "%0.2d:%0.2d", minutes, seconds)
 
   }

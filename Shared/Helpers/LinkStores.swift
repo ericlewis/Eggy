@@ -7,12 +7,13 @@
 //
 
 import SwiftUI
+import EggyKit
 
 extension View {
     func linkStores() -> some View {
         self
-            .environmentObject(EggManager.shared)
-            .environmentObject(SettingsManager.shared)
+            .environmentObject(EGGTimerManager.shared)
+            .environmentObject(EGGSettingsContainer())
             .environmentObject(NavigationManager.shared)
     }
 }

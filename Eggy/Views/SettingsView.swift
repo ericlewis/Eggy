@@ -7,6 +7,7 @@
 //
 
 import SwiftUI
+import EggyKit
 
 struct SettingsViewContainer: View {
     var body: some View {
@@ -20,8 +21,8 @@ struct SettingsView: View, NavigationProtocol {
 
     // MARK: Private Properties
 
-    @EnvironmentObject private var store: EggManager
-    @EnvironmentObject private var settings: SettingsManager
+    @EnvironmentObject private var store: EGGTimerManager
+    @EnvironmentObject private var settings: EGGSettingsContainer
     @EnvironmentObject internal var navigation: NavigationManager
 
     @State private var idk = false
@@ -37,19 +38,19 @@ struct SettingsView: View, NavigationProtocol {
     var body: some View {
         Form {
             Section {
-                Toggle("Prevent Auto-Lock", isOn: $settings.preventAutoLock)
-                Toggle("30 Second Warning", isOn: $settings.thirtySecondWarning)
-                Toggle("Auto-update Boiling Point", isOn: $settings.enableAltimeter)
-                Picker("Weight Display", selection: $settings.prefersGrams) {
+                Toggle("Prevent Auto-Lock", isOn: $settings.current.preventAutoLock)
+                Toggle("30 Second Warning", isOn: $settings.current.warningNotificationEnabled)
+                Toggle("Auto-update Boiling Point", isOn: $settings.current.enableAltimeter)
+                Picker("Weight Display", selection: $settings.current.prefersGrams) {
                     Text("Ounces (oz)").tag(false)
                     Text("Grams (g)").tag(true)
                 }
-                Picker("Temperature Display", selection: $settings.prefersCelcius) {
+                Picker("Temperature Display", selection: $settings.current.prefersCelcius) {
                     Text("Fahrenheit (°F)").tag(false)
                     Text("Celcius (°C)").tag(true)
                 }
                 if UIApplication.shared.supportsAlternateIcons {
-                    Picker("App Icon", selection: $settings.appIconIsDark) {
+                    Picker("App Icon", selection: $settings.current.appIconIsDark) {
                         Text("Light").tag(false)
                         Text("Dark").tag(true)
                     }
@@ -69,7 +70,7 @@ struct SettingsView: View, NavigationProtocol {
                 }
             }
             Section {
-                Button("Reset Egg", action: store.reset)
+                Button("Reset Egg", action: settings.reset)
             }
             Section {
                 Button("Reset Settings", action: settings.reset)
@@ -84,10 +85,11 @@ struct SettingsView: View, NavigationProtocol {
 // MARK: Previews
 
 #if DEBUG
+// swiftlint:disable type_name
 struct SettingsView_Previews: PreviewProvider {
     static var previews: some View {
         SettingsView()
-            .environmentObject(SettingsManager.shared)
+            .environmentObject(EGGSettingsContainer())
             .environment(\.colorScheme, .dark)
     }
 }

@@ -35,7 +35,11 @@ public struct CakeView: View {
         )
         let rawProgress =  self.remaining/self.duration
         let progress = rawProgress < 0.000 ? 0.0 : (self.remaining/self.duration) * 100.0
-        path.addArc(center: middlePoint, radius: width, startAngle: .degrees(-90), endAngle: .degrees(-90 + (3.6 * progress)), clockwise: false)
+        path.addArc(center: middlePoint,
+                    radius: width,
+                    startAngle: .degrees(-90),
+                    endAngle: .degrees(-90 + (3.6 * progress)),
+                    clockwise: false)
         path.addLine(to: middlePoint)
         path.closeSubpath()
       }

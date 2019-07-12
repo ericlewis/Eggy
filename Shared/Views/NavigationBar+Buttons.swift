@@ -7,16 +7,17 @@
 //
 
 import SwiftUI
+import EggyKit
 
 struct StartStopButton: View {
-    @EnvironmentObject private var store: EggManager
+    @EnvironmentObject private var store: EGGTimerManager
 
     var timerLabel: String {
-        store.isRunning ? "Stop" : "Start"
+        store.state != .stopped ? "Stop" : "Start"
     }
 
     var timerImage: String {
-        store.isRunning ? "stop.fill" : "play.fill"
+        store.state != .finished ? "stop.fill" : "play.fill"
     }
 
     var body: some View {

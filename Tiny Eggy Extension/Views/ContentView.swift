@@ -12,7 +12,7 @@ struct ContentView: View, TimerProtocol {
 
     // MARK: Private Properties
 
-    @EnvironmentObject private var store: EggManager
+    @EnvironmentObject private var store: EGGTimerManager
 
     @State private var editingState = EditingState.temperature
     @State private var editing = false {

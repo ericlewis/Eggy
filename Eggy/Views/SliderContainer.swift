@@ -7,6 +7,7 @@
 //
 
 import SwiftUI
+import EggyKit
 
 extension Text {
     func sliderContainerValueStyle() -> some View {
@@ -42,7 +43,7 @@ struct SliderContainer<SliderView: View>: View {
 
     // MARK: Private Properties
 
-    @EnvironmentObject private var store: EggManager
+    @EnvironmentObject private var store: EGGTimerManager
 
     // MARK: Initializer
 

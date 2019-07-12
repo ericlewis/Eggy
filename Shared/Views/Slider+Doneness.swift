@@ -7,13 +7,17 @@
 //
 
 import SwiftUI
+import EggyKit
 
 struct DonenessSlider: View, SliderProtocol {
     var action: () -> Void
-    @EnvironmentObject var store: EggManager
+    @EnvironmentObject var store: EGGTimerManager
 
     var body: some View {
-        SliderControl(value: $store.doneness, from: store.eggDefaults.donenessRange.lowerBound, through: store.eggDefaults.donenessRange.upperBound, onEditingChanged: { _ in
+        SliderControl(value: $store.egg.doneness,
+                      from: EGGEggPropertyRanges.donenessRange.lowerBound,
+                      through: EGGEggPropertyRanges.donenessRange.upperBound,
+                      onEditingChanged: { _ in
             self.action()
         })
     }

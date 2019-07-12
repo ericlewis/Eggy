@@ -7,27 +7,36 @@
 //
 
 import SwiftUI
+import EggyKit
 
-struct ProjectedEndLabel: View {
-    @EnvironmentObject var store: EggManager
+struct ProjectedEndLabel: View, FormattersProtocol {
+  @EnvironmentObject var store: EGGTimerManager
 
-    var body: some View {
-        HStack {
-            Image(systemName: "bell.fill")
-                .font(.title)
-                .imageScale(.small)
-            Text(store.endDateString)
-                .color(.secondary)
-                .font(.title)
-                .bold()
-        }
+  var endDateString: String {
+    guard let endDate = store.projectedEndDate else {
+      return ""
     }
+
+    return Self.dateFormatter.string(from: endDate)
+  }
+
+  var body: some View {
+    HStack {
+      Image(systemName: "bell.fill")
+        .font(.title)
+        .imageScale(.small)
+      Text(endDateString)
+        .color(.secondary)
+        .font(.title)
+        .bold()
+    }
+  }
 }
 
 #if DEBUG
 struct ProjectedEndLabel_Previews: PreviewProvider {
-    static var previews: some View {
-        ProjectedEndLabel()
-    }
+  static var previews: some View {
+    ProjectedEndLabel()
+  }
 }
 #endif

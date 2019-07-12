@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import EggyKit
 
 struct Rescale<Type: BinaryFloatingPoint> {
   typealias RescaleDomain = (lowerBound: Type, upperBound: Type)
@@ -24,7 +25,9 @@ struct Rescale<Type: BinaryFloatingPoint> {
   }
 
   func uninterpolate(_ x: Type) -> Type {
-    let b = (self.fromDomain.upperBound - self.fromDomain.lowerBound) != 0 ? self.fromDomain.upperBound - self.fromDomain.lowerBound : 1 / self.fromDomain.upperBound
+    let res = (self.fromDomain.upperBound - self.fromDomain.lowerBound)
+    let b = res != 0 ? res : 1 / self.fromDomain.upperBound
+
     return (x - self.fromDomain.lowerBound) / b
   }
 
@@ -54,7 +57,9 @@ extension Double {
     formatter.numberFormatter.maximumFractionDigits = 2
     formatter.unitStyle = .medium
 
-    let s = formatter.string(from: Measurement(value: self, unit: UnitMass.ounces).converted(to: SettingsManager.shared.prefersGrams ? .grams : .ounces))
+    let measurement = Measurement(value: self, unit: UnitMass.ounces)
+    let converted = measurement.converted(to: EGGSettingsContainer().current.prefersGrams ? .grams : .ounces)
+    let s = formatter.string(from: converted)
 
     return String(format: "\(sizeString) (\(s))")
   }

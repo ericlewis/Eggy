@@ -1,6 +1,6 @@
 import Foundation
 
-public protocol EGGTimerManagerProtocolDelegate: class {
+public protocol EGGTimerManagerProtocolDelegate: AnyObject {
     func stateChanged(state: EGGTimerState, egg: EGGEgg)
 }
 
@@ -41,6 +41,8 @@ public class EGGTimerManager: EasyBindableObject, EGGTimerManagerProtocol, EGGBo
 
     public var timer: Timer?
 
+    public var ticked: (() -> Void)?
+
     @TimerState()
     public var state: EGGTimerState {
         didSet {
@@ -60,7 +62,11 @@ public class EGGTimerManager: EasyBindableObject, EGGTimerManagerProtocol, EGGBo
 
     public var notificationScheduler: EGGNotificationScheduler
 
-    public var egg: EGGEgg
+    public var egg: EGGEgg {
+      didSet {
+        changed()
+      }
+    }
 
     public var projectedEndDate: Date?
 
@@ -90,4 +96,6 @@ public class EGGTimerManager: EasyBindableObject, EGGTimerManagerProtocol, EGGBo
     public func start() {
         start(withTriggerDate: egg.endDate)
     }
+
+    public static var shared = EGGTimerManager()
 }

@@ -61,8 +61,34 @@ class EGGTimerManagerSpec: XCTestCase {
     let offset: TimeInterval = 100
     subject.start(withCookTime: offset)
 
+    XCTAssert(subject.state == .running)
     XCTAssert(notification.capturedFire)
     XCTAssert(notification.capturedTriggerOffset == 267.3568112532787)
+  }
+
+  func testSetRunning() {
+    subject.state = .running
+
+    XCTAssert(subject.state == .running)
+    XCTAssert(notification.capturedFire)
+    XCTAssert(notification.capturedTriggerOffset == 267.3568112532787)
+  }
+
+  func testSetStopped() {
+    subject.state = .stopped
+
+    XCTAssert(subject.state == .stopped)
+    XCTAssert(notification.capturedDelete)
+  }
+
+  func testSetFinished() {
+    subject.state = .finished
+    XCTAssert(subject.state == .finished)
+  }
+
+  func testBoilingPointUpdates() {
+    subject.boilingPointUpdated(value: 13)
+    XCTAssert(subject.egg.boilingPoint == 13)
   }
 }
 

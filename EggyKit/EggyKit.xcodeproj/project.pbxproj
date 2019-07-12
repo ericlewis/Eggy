@@ -60,6 +60,7 @@
 		68B4D21A22D9096C00F37835 /* EGGTimerManagerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68B4D21922D9096C00F37835 /* EGGTimerManagerSpec.swift */; };
 		68B4D21C22D90CE700F37835 /* CloudSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68B4D21B22D90CE700F37835 /* CloudSpec.swift */; };
 		68B4D22822D9164D00F37835 /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68B4D22722D9164D00F37835 /* Enums.swift */; };
+		68B4D22C22D9266300F37835 /* EGGSingletonProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68B4D22B22D9266300F37835 /* EGGSingletonProtocol.swift */; };
 		68EB00C822D6A32000738F84 /* FakeEGGLocalNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68EB00C722D6A32000738F84 /* FakeEGGLocalNotification.swift */; };
 		68EB00CA22D6A54A00738F84 /* EGGNotificationSchedulerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68EB00C922D6A54A00738F84 /* EGGNotificationSchedulerSpec.swift */; };
 		68EB00CC22D6AC4900738F84 /* EGGEggSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68EB00CB22D6AC4900738F84 /* EGGEggSpec.swift */; };
@@ -109,12 +110,13 @@
 		688638D122D67DA70083E104 /* EGGCookTimeCalculator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EGGCookTimeCalculator.swift; sourceTree = "<group>"; };
 		688638D222D67DA70083E104 /* EGGTimer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EGGTimer.swift; sourceTree = "<group>"; };
 		688638D322D67DA70083E104 /* EGGLocalNotification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EGGLocalNotification.swift; sourceTree = "<group>"; };
-		688638E922D67DC60083E104 /* EggyKit__watchOS_.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = EggyKit__watchOS_.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		688638E922D67DC60083E104 /* EggyKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = EggyKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		688638EC22D67DC60083E104 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6886390622D67E2C0083E104 /* BindableObject+Easy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "BindableObject+Easy.swift"; sourceTree = "<group>"; };
 		68B4D21922D9096C00F37835 /* EGGTimerManagerSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EGGTimerManagerSpec.swift; sourceTree = "<group>"; };
 		68B4D21B22D90CE700F37835 /* CloudSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudSpec.swift; sourceTree = "<group>"; };
 		68B4D22722D9164D00F37835 /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
+		68B4D22B22D9266300F37835 /* EGGSingletonProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EGGSingletonProtocol.swift; sourceTree = "<group>"; };
 		68EB00C722D6A32000738F84 /* FakeEGGLocalNotification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeEGGLocalNotification.swift; sourceTree = "<group>"; };
 		68EB00C922D6A54A00738F84 /* EGGNotificationSchedulerSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EGGNotificationSchedulerSpec.swift; sourceTree = "<group>"; };
 		68EB00CB22D6AC4900738F84 /* EGGEggSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EGGEggSpec.swift; sourceTree = "<group>"; };
@@ -161,7 +163,7 @@
 			children = (
 				6886388E22D67D100083E104 /* EggyKit.framework */,
 				6886389722D67D110083E104 /* EggyKitTests.xctest */,
-				688638E922D67DC60083E104 /* EggyKit__watchOS_.framework */,
+				688638E922D67DC60083E104 /* EggyKit.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -249,9 +251,10 @@
 				688638C922D67DA70083E104 /* EGGEggProperties.swift */,
 				688638CF22D67DA70083E104 /* EGGEggPropertyDefaults.swift */,
 				688638D322D67DA70083E104 /* EGGLocalNotification.swift */,
-				688638CC22D67DA70083E104 /* EGGSettingsProtocol.swift */,
-				688638D222D67DA70083E104 /* EGGTimer.swift */,
 				688638CD22D67DA70083E104 /* EGGNotificationCenterProtocol.swift */,
+				688638CC22D67DA70083E104 /* EGGSettingsProtocol.swift */,
+				68B4D22B22D9266300F37835 /* EGGSingletonProtocol.swift */,
+				688638D222D67DA70083E104 /* EGGTimer.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -364,7 +367,7 @@
 			);
 			name = "EggyKit (watchOS)";
 			productName = "EggyKit (watchOS)";
-			productReference = 688638E922D67DC60083E104 /* EggyKit__watchOS_.framework */;
+			productReference = 688638E922D67DC60083E104 /* EggyKit.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -461,6 +464,7 @@
 				688638D622D67DA70083E104 /* EGGFeedbackManager.swift in Sources */,
 				688638D422D67DA70083E104 /* EGGNotificationScheduler.swift in Sources */,
 				68B4D22822D9164D00F37835 /* Enums.swift in Sources */,
+				68B4D22C22D9266300F37835 /* EGGSingletonProtocol.swift in Sources */,
 				688638D822D67DA70083E104 /* EGGRandomEggFactsManager.swift in Sources */,
 				688638E222D67DA70083E104 /* EGGTimer.swift in Sources */,
 				688638DC22D67DA70083E104 /* EGGSettingsProtocol.swift in Sources */,
@@ -763,7 +767,7 @@
 					"@loader_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "ericlewis.EggyKit--watchOS-";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = EggyKit;
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
@@ -790,7 +794,7 @@
 					"@loader_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "ericlewis.EggyKit--watchOS-";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = EggyKit;
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;

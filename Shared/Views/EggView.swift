@@ -33,13 +33,24 @@ struct Egg: View {
         Group {
             Circle()
                 .fill(Color.yellow)
-                .frame(width: geometry.size.width * self.scale * self.yolkScale, height: geometry.size.height * self.scale * self.yolkScale)
+                .frame(width: geometry.size.width * self.scale * self.yolkScale,
+                       height: geometry.size.height * self.scale * self.yolkScale)
             Circle()
-                .fill(RadialGradient(gradient: Gradient(colors: [.yellow, .orange]), center: .center, startRadius: 1, endRadius: (geometry.size.width * self.scale * self.yolkScale) / 2))
-                .frame(width: geometry.size.width * self.scale * self.yolkScale, height: geometry.size.height * self.scale * self.yolkScale)
+                .fill(RadialGradient(gradient: Gradient(colors: [.yellow, .orange]),
+                                     center: .center, startRadius: 1,
+                                     endRadius: (geometry.size.width * self.scale * self.yolkScale) / 2))
+                .frame(width: geometry.size.width * self.scale * self.yolkScale,
+                       height: geometry.size.height * self.scale * self.yolkScale)
                 .opacity(self.opacity)
         }
-        .animation(self.isDragging ? .spring(mass: 1, stiffness: 55, damping: 10, initialVelocity: 0) : .spring(mass: 1, stiffness: 90, damping: 10, initialVelocity: 0))
+        .animation(self.isDragging ? .spring(mass: 1,
+                                             stiffness: 55,
+                                             damping: 10,
+                                             initialVelocity: 0)
+                                    : .spring(mass: 1,
+                                              stiffness: 90,
+                                              damping: 10,
+                                              initialVelocity: 0))
       }
       .offset(
         x: self.x,

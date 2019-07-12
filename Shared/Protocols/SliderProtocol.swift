@@ -7,8 +7,9 @@
 //
 
 import Foundation
+import EggyKit
 
 protocol SliderProtocol {
-    var store: EggManager {get}
+    var store: EGGTimerManager {get}
     var action: () -> Void {get}
 }

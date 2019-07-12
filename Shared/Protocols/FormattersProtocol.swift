@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import EggyKit
 
 protocol FormattersProtocol {
     static var dateFormatter: DateFormatter {get}
@@ -46,7 +47,7 @@ extension FormattersProtocol {
         Self.numberFormatter.maximumFractionDigits = digits
         Self.measurementFormatter.numberFormatter = Self.numberFormatter
         Self.measurementFormatter.unitStyle = .medium
-        if SettingsManager.shared.prefersCelcius {
+        if EGGSettingsContainer().current.prefersCelcius {
             Self.measurementFormatter.locale = .init(identifier: "en_GB")
         } else {
             Self.measurementFormatter.locale = .autoupdatingCurrent

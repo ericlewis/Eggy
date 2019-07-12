@@ -12,7 +12,7 @@ protocol NavigationProtocol {
     var navigation: NavigationManager {get}
 }
 
-protocol NavigationManagerProtocol: class {
+protocol NavigationManagerProtocol: AnyObject {
     static var shared: NavigationManager {get}
     var showSettings: Bool {get set}
 }

@@ -7,9 +7,10 @@
 //
 
 import SwiftUI
+import EggyKit
 
 struct RandomEggFactCyclerView: View {
-    @ObjectBinding var randomFactManager = RandomFactManager.shared
+    @ObjectBinding var randomFactManager = EGGRandomEggFactGenerator.shared
 
     var body: some View {
         Text(randomFactManager.fact)

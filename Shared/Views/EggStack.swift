@@ -7,9 +7,10 @@
 //
 
 import SwiftUI
+import EggyKit
 
 protocol EggStackViewModelProtocol {
-    var store: EggManager {get}
+    var store: EGGTimerManager {get}
     var sizePercent: Length {get}
     var timeRemaining: Double {get}
     var donenessPercent: Double {get}
@@ -17,20 +18,23 @@ protocol EggStackViewModelProtocol {
 
 extension EggStackViewModelProtocol {
     var sizePercent: Length {
-        store.isRunning ? 1.0 : Length(Rescale(from: (1.37, 2.8), to: (0.90, 1.0)).rescale(store.size))
+        let from = (EGGEggPropertyRanges.sizeRange.lowerBound, EGGEggPropertyRanges.sizeRange.upperBound)
+        return store.state != .stopped ? 1.0 : Length(Rescale(from: from,
+                                                       to: (0.9, 1)).rescale(store.egg.size))
     }
 
     var timeRemaining: Double {
-        store.isRunning ? store.rawTimeRemaining : store.rawCookTime
+        store.egg.cookTime
     }
 
     var donenessPercent: Double {
-        Rescale(from: (56.0, 85.0), to: (1.0, 0.0)).rescale(store.doneness)
+        let from = (EGGEggPropertyRanges.donenessRange.lowerBound, EGGEggPropertyRanges.donenessRange.upperBound)
+        return Rescale(from: from, to: (1.0, 0.0)).rescale(store.egg.doneness)
     }
 }
 
 struct EggStack: View, EggStackViewModelProtocol {
-    @EnvironmentObject var store: EggManager
+    @EnvironmentObject var store: EGGTimerManager
 
     var x: CGFloat
     var y: CGFloat
@@ -38,7 +42,10 @@ struct EggStack: View, EggStackViewModelProtocol {
 
     var body: some View {
         ZStack {
-            Egg(opacity: donenessPercent, remaining: timeRemaining, duration: store.rawCookTime, x: x, y: y, isDragging: isDragging)
+            Egg(opacity: donenessPercent,
+                remaining: timeRemaining,
+                duration: store.egg.cookTime, x: x, y: y,
+                isDragging: isDragging)
         }
         .scaleEffect(sizePercent)
             .transition(.moveDownAndScale)

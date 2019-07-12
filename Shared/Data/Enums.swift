@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import EggyKit
 
 enum TimerState {
   case running

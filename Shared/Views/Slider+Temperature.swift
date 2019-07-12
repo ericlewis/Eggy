@@ -7,13 +7,17 @@
 //
 
 import SwiftUI
+import EggyKit
 
 struct TemperatureSlider: View, SliderProtocol {
     var action: () -> Void
-    @EnvironmentObject var store: EggManager
+    @EnvironmentObject var store: EGGTimerManager
 
     var body: some View {
-        SliderControl(value: $store.temp, from: store.eggDefaults.tempRange.lowerBound, through: store.eggDefaults.tempRange.upperBound, onEditingChanged: { _ in
+        SliderControl(value: $store.egg.temperature,
+                      from: EGGEggPropertyRanges.temperatureRange.lowerBound,
+                      through: EGGEggPropertyRanges.temperatureRange.upperBound,
+                      onEditingChanged: { _ in
             self.action()
         })
     }

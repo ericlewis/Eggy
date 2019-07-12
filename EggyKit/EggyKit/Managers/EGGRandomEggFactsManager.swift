@@ -8,8 +8,8 @@
 
 import Foundation
 
-class EGGRandomEggFactGenerator: EasyBindableObject {
-    static let shared = EGGRandomEggFactGenerator()
+public class EGGRandomEggFactGenerator: EasyBindableObject {
+    public static let shared = EGGRandomEggFactGenerator()
 
     static let timeInterval = 8.0
 
@@ -28,13 +28,13 @@ class EGGRandomEggFactGenerator: EasyBindableObject {
     public var onDeinitialized: (() -> Void)?
 
     var timer: Timer?
-    var fact = EGGRandomEggFactGenerator.eggFacts.randomElement()! {
+    public var fact = EGGRandomEggFactGenerator.eggFacts.randomElement()! {
         didSet {
             changed()
         }
     }
 
-    override init() {
+    public override init() {
         super.init()
         setup()
     }

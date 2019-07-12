@@ -7,20 +7,13 @@
 //
 
 import SwiftUI
+import EggyKit
 
-struct ContentView: View, TimerProtocol {
+struct ContentView: View {
 
     // MARK: Private Properties
 
-    @EnvironmentObject private var store: EggManager
-
-    // MARK: Private Actions
-
-    private func tick() {
-        if self.store.isRunning {
-            self.store.changed()
-        }
-    }
+    @EnvironmentObject private var store: EGGTimerManager
 
     // MARK: Render
 
@@ -33,13 +26,13 @@ struct ContentView: View, TimerProtocol {
             EggStack(x: dragState.translation.width, y: dragState.translation.height, isDragging: dragState.isActive)
                 .tapAction(store.toggleRunning)
                 .gesture(dragGesture)
-                .presentation($store.confirmResetTimer, actionSheet: ActionSheet.confirmResetTimer(action: store.stop))
-            if !store.isRunning {
+// TODO: fix me.
+//                .presentation($store.confirmResetTimer,
+//                              actionSheet: ActionSheet.confirmResetTimer(action: store.stop))
+            if store.state != .stopped {
                 OptionSliders()
                     .opacity(dragOpacity)
                     .transition(.opacity)
-                    .onReceive(ticker, perform: tick)
-
             } else {
                 RandomEggFactCyclerView()
                     .opacity(dragOpacity)
