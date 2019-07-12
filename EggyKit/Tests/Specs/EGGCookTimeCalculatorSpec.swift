@@ -17,6 +17,6 @@ class EGGCookTimeCalculatorSpec: XCTestCase, EGGCookTimeCalculator {
     }
 
     func testDefault() {
-        XCTAssert(calculateCookTime(withEgg: egg) == 270.2168907625191)
+      XCTAssert(calculateCookTime(withEgg: egg) == 267.3568112532787)
     }
 }

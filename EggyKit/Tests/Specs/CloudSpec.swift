@@ -9,7 +9,7 @@
 import XCTest
 @testable import EggyKit
 
-final class UserDefaultTests: XCTestCase {
+final class CloudSpec: XCTestCase {
 
   // Note: Property delegates are not yet supported on local properties, hence using stored properties.
 

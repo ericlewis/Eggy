@@ -29,10 +29,10 @@ public struct EGGEgg: EGGEggProtocol {
     @EggBoilingPoint()
     public var boilingPoint: Temperature
 
-    public init(temperature: Temperature = EGGEggPropertyDefaults.temperature.rawValue,
-                doneness: Doneness = EGGEggPropertyDefaults.doneness.rawValue,
-                size: Size = EGGEggPropertyDefaults.size.rawValue,
-                boilingPoint: Temperature = EGGEggPropertyDefaults.boilingPoint.rawValue) {
+    public init(temperature: Temperature = EGGEggPropertyDefaults.temperature,
+                doneness: Doneness = EGGEggPropertyDefaults.doneness,
+                size: Size = EGGEggPropertyDefaults.size,
+                boilingPoint: Temperature = EGGEggPropertyDefaults.boilingPoint) {
         self.size = size
         self.boilingPoint = boilingPoint
         self.doneness = doneness

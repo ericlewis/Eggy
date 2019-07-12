@@ -4,7 +4,7 @@ open class EGGLocalNotification: NSObject {
 
     // MARK: Private Props
 
-    private(set) var userNotificationCenter: EGGUNUserNotificationCenterProtocol
+    private(set) var userNotificationCenter: EGGNotificationCenterProtocol
 
     // MARK: Public Props
 
@@ -15,7 +15,7 @@ open class EGGLocalNotification: NSObject {
 
     public init(title: String?,
                 message: String?,
-                userNotificationCenter: EGGUNUserNotificationCenterProtocol = EGGUNUserNotificationCenterClient()) {
+                userNotificationCenter: EGGNotificationCenterProtocol = EGGUNUserNotificationCenterClient()) {
         self.userNotificationCenter = userNotificationCenter
         self.title = title
         self.message = message
@@ -59,7 +59,7 @@ open class EGGLocalNotification: NSObject {
 public class EGGEggFinishedNotification: EGGLocalNotification {
     override public init(title: String? = "Your egg is done!",
                          message: String? = nil,
-                         userNotificationCenter: EGGUNUserNotificationCenterProtocol = EGGUNUserNotificationCenterClient()) {
+                         userNotificationCenter: EGGNotificationCenterProtocol = EGGUNUserNotificationCenterClient()) {
         super.init(title: title, message: message, userNotificationCenter: userNotificationCenter)
     }
 }
@@ -67,7 +67,7 @@ public class EGGEggFinishedNotification: EGGLocalNotification {
 public class EGGEggThirtySecondsRemainingNotification: EGGLocalNotification {
     override public init(title: String? = "Your egg will be done in 30 seconds!",
                          message: String? = nil,
-                         userNotificationCenter: EGGUNUserNotificationCenterProtocol = EGGUNUserNotificationCenterClient()) {
+                         userNotificationCenter: EGGNotificationCenterProtocol = EGGUNUserNotificationCenterClient()) {
         super.init(title: title, message: message, userNotificationCenter: userNotificationCenter)
     }
 

@@ -11,14 +11,14 @@ import XCTest
 
 class EGGTimerManagerSpec: XCTestCase {
   var subject: EGGTimerManager!
+  var notification: FakeEGGEggLocalNotification!
 
   @TimerState()
   var test: EGGTimerState
 
   override func setUp() {
-    let notification = EGGLocalNotification(title: "",
-                                            message: "",
-                                            userNotificationCenter: FakeUNUserNotificationCenter())
+    notification = FakeEGGEggLocalNotification()
+
     let cma = FakeCMAltimeter(isRelativeAltitudeAvailable: true)
     subject = EGGTimerManager(egg: EGGEgg(),
                               state: .stopped,
@@ -55,6 +55,14 @@ class EGGTimerManagerSpec: XCTestCase {
   func testStop() {
     subject.stop()
     XCTAssert(subject.state == .stopped)
+  }
+
+  func testStartWithInterval() {
+    let offset: TimeInterval = 100
+    subject.start(withCookTime: offset)
+
+    XCTAssert(notification.capturedFire)
+    XCTAssert(notification.capturedTriggerOffset == 267.3568112532787)
   }
 }
 

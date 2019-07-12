@@ -9,7 +9,7 @@
 import UserNotifications
 import EggyKit
 
-class FakeUNUserNotificationCenter: EGGUNUserNotificationCenterProtocol {
+class FakeUNUserNotificationCenter: EGGNotificationCenterProtocol {
 
     // MARK: Captured properties
 

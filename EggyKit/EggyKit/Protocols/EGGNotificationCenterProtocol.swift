@@ -8,13 +8,13 @@
 
 import UserNotifications
 
-public protocol EGGUNUserNotificationCenterProtocol {
+public protocol EGGNotificationCenterProtocol {
     func add(_ request: UNNotificationRequest,
              withCompletionHandler completionHandler: ((Error?) -> Void)?)
     func delete(identifier: String)
 }
 
-public struct EGGUNUserNotificationCenterClient: EGGUNUserNotificationCenterProtocol {
+public struct EGGUNUserNotificationCenterClient: EGGNotificationCenterProtocol {
 
     // MARK: - Public properties
 

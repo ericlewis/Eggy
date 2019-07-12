@@ -10,6 +10,7 @@ import EggyKit
 
 public class FakeEGGEggLocalNotification: EGGLocalNotification {
 
+    var capturedTriggerOffset: TimeInterval = -10_123
     var capturedFire: Bool = false
     var capturedDelete: Bool = false
 
@@ -19,6 +20,7 @@ public class FakeEGGEggLocalNotification: EGGLocalNotification {
 
     override public func fire(triggerOffset: TimeInterval) {
         capturedFire = true
+        capturedTriggerOffset = triggerOffset
     }
 
     override public func delete() {
