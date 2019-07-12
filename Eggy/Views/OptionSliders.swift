@@ -72,8 +72,8 @@ struct OptionSliders : View {
                             trailingLabel: "Room",
                             tappedLabel: toggleTempSheet,
                             tappedInfo: nil,
-                            tappedLeadingLabel: { self.store.temp -= 1 },
-                            tappedTrailingLabel: { self.store.temp += 1 }) {
+                            tappedLeadingLabel: { self.store.temp -= 1; self.didSelect() },
+                            tappedTrailingLabel: { self.store.temp += 1; self.didSelect() }) {
                                 TemperatureSlider(action: self.didSelect)
             }
             .presentation($showingTempSheet, actionSheet: ActionSheet.tempSheet(action: setTemp))
@@ -82,8 +82,8 @@ struct OptionSliders : View {
                             trailingLabel: "Large",
                             tappedLabel: toggleSizeSheet,
                             tappedInfo: nil,
-                            tappedLeadingLabel: { self.store.size -= 0.01 },
-                            tappedTrailingLabel: { self.store.size += 0.01 }) {
+                            tappedLeadingLabel: { self.store.size -= 0.01; self.didSelect() },
+                            tappedTrailingLabel: { self.store.size += 0.01; self.didSelect() }) {
                                 SizeSlider(action: self.didSelect)
             }
             .presentation($showingSizePicker, actionSheet: ActionSheet.sizeSheet(action: setSize))
@@ -92,8 +92,8 @@ struct OptionSliders : View {
                             trailingLabel: "Hard",
                             tappedLabel: toggleDonenessSheet,
                             tappedInfo: nil,
-                            tappedLeadingLabel: { self.store.doneness -= 1 },
-                            tappedTrailingLabel: { self.store.doneness += 1 }) {
+                            tappedLeadingLabel: { self.store.doneness -= 1; self.didSelect() },
+                            tappedTrailingLabel: { self.store.doneness += 1; self.didSelect() }) {
                                 DonenessSlider(action: self.didSelect)
             }
             .presentation($showingDonenessPicker, actionSheet: ActionSheet.donenessSheet(action: setDone))
