@@ -52,9 +52,4 @@ public class EGGRandomEggFactGenerator: EasyBindableObject {
         timer?.invalidate()
         timer = nil
     }
-
-    deinit {
-        tearDown()
-        onDeinitialized?()
-    }
 }

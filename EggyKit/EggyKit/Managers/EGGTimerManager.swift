@@ -14,16 +14,14 @@ public protocol EGGTimerManagerProtocol: EGGTimerProtocol, EGGTimerActions {
 @propertyWrapper
 public struct TimerState {
     private static var key = "kTimerState"
-
-    public var wrappedValue: EGGTimerState
     public var userDefaults: UserDefaults
 
     public init(_ initialValue: EGGTimerState = .stopped, userDefaults: UserDefaults = UserDefaults.standard) {
-        wrappedValue = initialValue
         self.userDefaults = userDefaults
+        wrappedValue = initialValue
     }
 
-    public var value: EGGTimerState {
+    public var wrappedValue: EGGTimerState {
         get {
             EGGTimerState.init(rawValue: userDefaults.integer(forKey: TimerState.key)) ?? .stopped
         }
