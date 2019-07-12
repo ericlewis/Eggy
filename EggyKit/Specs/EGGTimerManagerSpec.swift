@@ -46,11 +46,11 @@ class EGGTimerManagerSpec: XCTestCase {
     XCTAssertEqual(test, .stopped)
     XCTAssertEqual(userDefaults.integer(forKey: "kTimerState"), 0)
   }
-  
+
   func testGetter() {
     let userDefaults = UserDefaults.makeClearedInstance()
     $test.userDefaults = userDefaults
-    
+
     XCTAssertEqual(test, .stopped)
     XCTAssertEqual(userDefaults.integer(forKey: "kTimerState"), 0)
   }
@@ -98,11 +98,11 @@ class EGGTimerManagerSpec: XCTestCase {
     subject.boilingPointUpdated(value: 13)
     XCTAssert(subject.egg.boilingPoint == 13)
   }
-  
+
   func testToggle() {
     subject.toggleRunning()
     XCTAssert(subject.state == .running)
-    
+
     subject.toggleRunning()
     XCTAssert(subject.state == .stopped)
   }
