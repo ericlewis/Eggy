@@ -17,16 +17,16 @@ public extension EGGEggProtocol {
 
 public struct EGGEgg: EGGEggProtocol {
 
-    @EggTemperature()
+    @EggTemperatureWrapper()
     public var temperature: Temperature
 
-    @EggDoneness()
+    @EggDonenessWrapper()
     public var doneness: Doneness
 
-    @EggSize()
+    @EggSizeWrapper()
     public var size: Size
 
-    @EggBoilingPoint()
+    @EggBoilingPointWrapper()
     public var boilingPoint: Temperature
 
     public init(temperature: Temperature = EGGEggPropertyDefaults.temperature,

@@ -7,6 +7,7 @@
 //
 
 import SwiftUI
+import EggyKit
 
 extension ActionSheet {
     static func confirmResetTimer(action: @escaping () -> Void) -> () -> ActionSheet { {

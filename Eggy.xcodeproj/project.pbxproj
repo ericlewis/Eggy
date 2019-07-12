@@ -35,14 +35,13 @@
 		6873BCC222D1AEC80005BCCC /* CakeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6873BCC022D1AEC80005BCCC /* CakeView.swift */; };
 		6873BCED22D1CD3E0005BCCC /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6873BCEC22D1CD3E0005BCCC /* SettingsView.swift */; };
 		688637C422D54BFE0083E104 /* InfoButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 688637C322D54BFE0083E104 /* InfoButton.swift */; };
-		688637C622D54E0F0083E104 /* LinkStores.swift in Sources */ = {isa = PBXBuildFile; fileRef = 688637C522D54E0F0083E104 /* LinkStores.swift */; };
-		688637C722D54E0F0083E104 /* LinkStores.swift in Sources */ = {isa = PBXBuildFile; fileRef = 688637C522D54E0F0083E104 /* LinkStores.swift */; };
+		688637C622D54E0F0083E104 /* View+LinkStores.swift in Sources */ = {isa = PBXBuildFile; fileRef = 688637C522D54E0F0083E104 /* View+LinkStores.swift */; };
+		688637C722D54E0F0083E104 /* View+LinkStores.swift in Sources */ = {isa = PBXBuildFile; fileRef = 688637C522D54E0F0083E104 /* View+LinkStores.swift */; };
 		688637C922D5515C0083E104 /* NavigationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 688637C822D5515C0083E104 /* NavigationProtocol.swift */; };
 		688637CA22D5515C0083E104 /* NavigationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 688637C822D5515C0083E104 /* NavigationProtocol.swift */; };
 		688637CC22D554D90083E104 /* Modals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 688637CB22D554D90083E104 /* Modals.swift */; };
 		688637CD22D554D90083E104 /* Modals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 688637CB22D554D90083E104 /* Modals.swift */; };
 		688637CF22D556A80083E104 /* RandomEggFactCyclerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 688637CE22D556A80083E104 /* RandomEggFactCyclerView.swift */; };
-		6887B0D422D28A69002BAB31 /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C57F3D22D270A500A7E964 /* Enums.swift */; };
 		6887B0D522D28A69002BAB31 /* AnyTransition+Transitions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C57F3422D2669500A7E964 /* AnyTransition+Transitions.swift */; };
 		6887B0D622D28A69002BAB31 /* BindableObject+Easy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C57F2822D25C6600A7E964 /* BindableObject+Easy.swift */; };
 		6887B0DC22D28A69002BAB31 /* FormattersProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C57F2422D2593A00A7E964 /* FormattersProtocol.swift */; };
@@ -73,7 +72,6 @@
 		68C57F3522D2669500A7E964 /* AnyTransition+Transitions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C57F3422D2669500A7E964 /* AnyTransition+Transitions.swift */; };
 		68C57F3722D2693E00A7E964 /* Alerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C57F3622D2693E00A7E964 /* Alerts.swift */; };
 		68C57F3922D26A7B00A7E964 /* EggStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C57F3822D26A7B00A7E964 /* EggStack.swift */; };
-		68C57F3E22D270A500A7E964 /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C57F3D22D270A500A7E964 /* Enums.swift */; };
 		68D2042C22D04A530080B937 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68D2042B22D04A530080B937 /* AppDelegate.swift */; };
 		68D2042E22D04A530080B937 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68D2042D22D04A530080B937 /* SceneDelegate.swift */; };
 		68D2043022D04A530080B937 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68D2042F22D04A530080B937 /* RootView.swift */; };
@@ -213,7 +211,7 @@
 		6873BCEC22D1CD3E0005BCCC /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		687FE65D22D680D5005EBD6B /* EggyKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = EggyKit.xcodeproj; path = ../EggyKit/EggyKit.xcodeproj; sourceTree = "<group>"; };
 		688637C322D54BFE0083E104 /* InfoButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoButton.swift; sourceTree = "<group>"; };
-		688637C522D54E0F0083E104 /* LinkStores.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkStores.swift; sourceTree = "<group>"; };
+		688637C522D54E0F0083E104 /* View+LinkStores.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+LinkStores.swift"; sourceTree = "<group>"; };
 		688637C822D5515C0083E104 /* NavigationProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationProtocol.swift; sourceTree = "<group>"; };
 		688637CB22D554D90083E104 /* Modals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Modals.swift; sourceTree = "<group>"; };
 		688637CE22D556A80083E104 /* RandomEggFactCyclerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomEggFactCyclerView.swift; sourceTree = "<group>"; };
@@ -238,7 +236,6 @@
 		68C57F3422D2669500A7E964 /* AnyTransition+Transitions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AnyTransition+Transitions.swift"; sourceTree = "<group>"; };
 		68C57F3622D2693E00A7E964 /* Alerts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alerts.swift; sourceTree = "<group>"; };
 		68C57F3822D26A7B00A7E964 /* EggStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EggStack.swift; sourceTree = "<group>"; };
-		68C57F3D22D270A500A7E964 /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
 		68D2042822D04A530080B937 /* Eggy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Eggy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		68D2042B22D04A530080B937 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		68D2042D22D04A530080B937 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -302,16 +299,16 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
-		683E4BDA22D24696001EC738 /* Helpers */ = {
+		683E4BDA22D24696001EC738 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
 				68C57F3422D2669500A7E964 /* AnyTransition+Transitions.swift */,
 				68C57F2822D25C6600A7E964 /* BindableObject+Easy.swift */,
 				68979C4522D107C800FCC4EB /* Double+Helpers.swift */,
 				68979C4122D1007500FCC4EB /* TimeInterval+Helpers.swift */,
-				688637C522D54E0F0083E104 /* LinkStores.swift */,
+				688637C522D54E0F0083E104 /* View+LinkStores.swift */,
 			);
-			path = Helpers;
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		683E4BDC22D246C7001EC738 /* App Delegates */ = {
@@ -327,8 +324,7 @@
 			isa = PBXGroup;
 			children = (
 				687FE65D22D680D5005EBD6B /* EggyKit.xcodeproj */,
-				68C57F3A22D26A9F00A7E964 /* Data */,
-				683E4BDA22D24696001EC738 /* Helpers */,
+				683E4BDA22D24696001EC738 /* Extensions */,
 				68C57F3F22D274B400A7E964 /* Protocols */,
 				683E4BD722D2465C001EC738 /* Views */,
 			);
@@ -422,14 +418,6 @@
 				68D2043122D04A580080B937 /* Assets.xcassets */,
 			);
 			path = Resources;
-			sourceTree = "<group>";
-		};
-		68C57F3A22D26A9F00A7E964 /* Data */ = {
-			isa = PBXGroup;
-			children = (
-				68C57F3D22D270A500A7E964 /* Enums.swift */,
-			);
-			path = Data;
 			sourceTree = "<group>";
 		};
 		68C57F3F22D274B400A7E964 /* Protocols */ = {
@@ -717,7 +705,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6887B0DC22D28A69002BAB31 /* FormattersProtocol.swift in Sources */,
-				688637C722D54E0F0083E104 /* LinkStores.swift in Sources */,
+				688637C722D54E0F0083E104 /* View+LinkStores.swift in Sources */,
 				6873BCC222D1AEC80005BCCC /* CakeView.swift in Sources */,
 				6887B0EC22D297D5002BAB31 /* ActionSheets.swift in Sources */,
 				6887B0E322D28D27002BAB31 /* EggStack.swift in Sources */,
@@ -736,7 +724,6 @@
 				6887B0E722D29263002BAB31 /* NewTimerButton.swift in Sources */,
 				6873BCBB22D1AB7D0005BCCC /* TimeInterval+Helpers.swift in Sources */,
 				6887B0E122D28CBE002BAB31 /* Slider+Size.swift in Sources */,
-				6887B0D422D28A69002BAB31 /* Enums.swift in Sources */,
 				688637CA22D5515C0083E104 /* NavigationProtocol.swift in Sources */,
 				6887B0E422D28E6B002BAB31 /* Alerts.swift in Sources */,
 				688637CD22D554D90083E104 /* Modals.swift in Sources */,
@@ -758,11 +745,10 @@
 				68C57F2522D2593A00A7E964 /* FormattersProtocol.swift in Sources */,
 				68C57F3122D2651300A7E964 /* ProjectedEndLabel.swift in Sources */,
 				683C527122D2864200CE63C4 /* Slider+Temperature.swift in Sources */,
-				68C57F3E22D270A500A7E964 /* Enums.swift in Sources */,
 				6873BCC122D1AEC80005BCCC /* CakeView.swift in Sources */,
 				68C57F2922D25C6600A7E964 /* BindableObject+Easy.swift in Sources */,
 				688637C922D5515C0083E104 /* NavigationProtocol.swift in Sources */,
-				688637C622D54E0F0083E104 /* LinkStores.swift in Sources */,
+				688637C622D54E0F0083E104 /* View+LinkStores.swift in Sources */,
 				68C57F2D22D2649B00A7E964 /* NavigationBar+Buttons.swift in Sources */,
 				68673CE922D542080015E3A6 /* UIKit+Slider.swift in Sources */,
 				688637CF22D556A80083E104 /* RandomEggFactCyclerView.swift in Sources */,

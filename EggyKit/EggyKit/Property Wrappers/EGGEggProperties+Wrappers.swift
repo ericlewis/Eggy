@@ -9,7 +9,7 @@
 import Foundation
 
 @propertyWrapper
-public struct EggTemperature {
+public struct EggTemperatureWrapper {
   @Cloud(EGGEggPropertyDefaultsKey.temperature.rawValue, defaultValue: EGGEggPropertyDefaults.temperature)
   public var value: Temperature
   public let range = EGGEggPropertyRanges.temperatureRange
@@ -25,7 +25,7 @@ public struct EggTemperature {
 }
 
 @propertyWrapper
-public struct EggDoneness {
+public struct EggDonenessWrapper {
   @Cloud(EGGEggPropertyDefaultsKey.doneness.rawValue, defaultValue: EGGEggPropertyDefaults.doneness)
   public var value: Doneness
   public let range = EGGEggPropertyRanges.donenessRange
@@ -41,7 +41,7 @@ public struct EggDoneness {
 }
 
 @propertyWrapper
-public struct EggSize {
+public struct EggSizeWrapper {
   @Cloud(EGGEggPropertyDefaultsKey.size.rawValue, defaultValue: EGGEggPropertyDefaults.size)
   public var value: Size
   public let range = EGGEggPropertyRanges.sizeRange
@@ -57,7 +57,7 @@ public struct EggSize {
 }
 
 @propertyWrapper
-public struct EggBoilingPoint {
+public struct EggBoilingPointWrapper {
   @Cloud(EGGEggPropertyDefaultsKey.boilingPoint.rawValue, defaultValue: EGGEggPropertyDefaults.boilingPoint)
   public var wrappedValue: Temperature
 

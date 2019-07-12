@@ -21,9 +21,9 @@ class EGGRandomEggFactGeneratorSpec: XCTestCase {
     }
 
     func testGenerate() {
-        let face = subject.fact
+        let fact = subject.fact
         subject.generate(timer: Timer.init(timeInterval: 0.1, repeats: false, block: { _ in }))
-        XCTAssert(face != subject.fact)
+        XCTAssert(fact != subject.fact)
     }
 
     func testFactReturned() {
