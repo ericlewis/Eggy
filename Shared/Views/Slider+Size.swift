@@ -8,10 +8,10 @@
 
 import SwiftUI
 
-struct SizeSlider : View, SliderProtocol {
+struct SizeSlider: View, SliderProtocol {
     var action: () -> Void
     @EnvironmentObject var store: EggManager
-    
+
     var body: some View {
         SliderControl(value: $store.size, from: store.eggDefaults.sizeRange.lowerBound, through: store.eggDefaults.sizeRange.upperBound, onEditingChanged: { _ in
             self.action()

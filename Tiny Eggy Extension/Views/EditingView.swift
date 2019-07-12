@@ -8,25 +8,25 @@
 
 import SwiftUI
 
-struct EditingView : View {
+struct EditingView: View {
     // MARK: Public Properties
-    
+
     @Binding var editingState: EditingState
     @Binding var editing: Bool
     var advance: () -> Void
-    
+
     // MARK: Private Properties
-    
+
     @EnvironmentObject private var store: EggManager
-    
+
     // MARK: Actions
-    
+
     func selectionChanged() {
         // no-op for now
     }
-    
+
     // MARK: Render
-    
+
     var body: some View {
         switch editingState {
         case .size:
@@ -69,7 +69,7 @@ struct EditingView : View {
 // MARK: Previews
 
 #if DEBUG
-struct EditingView_Previews : PreviewProvider {
+struct EditingView_Previews: PreviewProvider {
     static var previews: some View {
         EditingView(editingState: .constant(.doneness), editing: .constant(true), advance: {})
     }

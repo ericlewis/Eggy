@@ -14,23 +14,23 @@ extension Text {
             .color(.primary)
             .animation(.none)
     }
-    
+
     func sliderContainerLabelStyle() -> some View {
         return self.font(.caption)
             .color(.secondary)
     }
 }
 
-struct SliderContainer<SliderView : View> : View {
-    
+struct SliderContainer<SliderView: View>: View {
+
     // MARK: Types
-    
+
     typealias Action = () -> Void
     typealias TappedLabel = Action
     typealias TappedInfo = Action?
-    
+
     // MARK: Public Properties
-    
+
     var label: String
     var leadingLabel: String
     var trailingLabel: String
@@ -39,13 +39,13 @@ struct SliderContainer<SliderView : View> : View {
     var tappedTrailingLabel: TappedInfo
     var tappedInfo: TappedInfo
     var sliderProvider: () -> SliderView
-    
+
     // MARK: Private Properties
-    
+
     @EnvironmentObject private var store: EggManager
-    
+
     // MARK: Initializer
-    
+
     init(_ label: String,
          leadingLabel: String,
          trailingLabel: String,
@@ -63,9 +63,9 @@ struct SliderContainer<SliderView : View> : View {
         self.tappedTrailingLabel = tappedTrailingLabel
         self.sliderProvider = sliderProvider
     }
-    
+
     // MARK: Render
-    
+
     var body: some View {
         VStack(alignment: .trailing) {
             HStack {
@@ -74,7 +74,7 @@ struct SliderContainer<SliderView : View> : View {
                     .tapAction {
                         self.tappedLeadingLabel?()
                 }
-                
+
                 Spacer()
                 Text(trailingLabel)
                     .sliderContainerLabelStyle()

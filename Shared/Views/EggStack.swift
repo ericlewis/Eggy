@@ -19,17 +19,17 @@ extension EggStackViewModelProtocol {
     var sizePercent: Length {
         store.isRunning ? 1.0 : Length(Rescale(from: (1.37, 2.8), to: (0.90, 1.0)).rescale(store.size))
     }
-    
+
     var timeRemaining: Double {
         store.isRunning ? store.rawTimeRemaining : store.rawCookTime
     }
-    
+
     var donenessPercent: Double {
         Rescale(from: (56.0, 85.0), to: (1.0, 0.0)).rescale(store.doneness)
     }
 }
 
-struct EggStack : View, EggStackViewModelProtocol {
+struct EggStack: View, EggStackViewModelProtocol {
     @EnvironmentObject var store: EggManager
 
     var x: CGFloat
@@ -47,7 +47,7 @@ struct EggStack : View, EggStackViewModelProtocol {
 }
 
 #if DEBUG
-struct EggStack_Previews : PreviewProvider {
+struct EggStack_Previews: PreviewProvider {
     static var previews: some View {
         EggStack(x: 1, y: 1, isDragging: false)
     }

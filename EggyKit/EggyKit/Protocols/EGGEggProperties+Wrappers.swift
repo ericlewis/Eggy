@@ -12,7 +12,7 @@ import Foundation
 public struct EggTemperature {
     @Cloud(EGGEggPropertyDefaultsKey.temperature.rawValue, defaultValue: EGGEggPropertyDefaults.temperature.rawValue)
     public var wrappedValue: Temperature
-    
+
     public init(_ defaultValue: Temperature = EGGEggPropertyDefaults.temperature.rawValue) {
         wrappedValue = defaultValue
     }
@@ -22,7 +22,7 @@ public struct EggTemperature {
 public struct EggDoneness {
     @Cloud(EGGEggPropertyDefaultsKey.doneness.rawValue, defaultValue: EGGEggPropertyDefaults.doneness.rawValue)
     public var wrappedValue: Doneness
-    
+
     public init(_ defaultValue: Doneness = EGGEggPropertyDefaults.doneness.rawValue) {
         wrappedValue = defaultValue
     }
@@ -32,7 +32,7 @@ public struct EggDoneness {
 public struct EggSize {
     @Cloud(EGGEggPropertyDefaultsKey.size.rawValue, defaultValue: EGGEggPropertyDefaults.size.rawValue)
     public var wrappedValue: Size
-    
+
     public init(_ defaultValue: Size = EGGEggPropertyDefaults.size.rawValue) {
         wrappedValue = defaultValue
     }
@@ -42,7 +42,7 @@ public struct EggSize {
 public struct EggBoilingPoint {
     @Cloud(EGGEggPropertyDefaultsKey.boilingPoint.rawValue, defaultValue: EGGEggPropertyDefaults.boilingPoint.rawValue)
     public var wrappedValue: Temperature
-    
+
     public init(_ defaultValue: Temperature = EGGEggPropertyDefaults.boilingPoint.rawValue) {
         wrappedValue = defaultValue
     }

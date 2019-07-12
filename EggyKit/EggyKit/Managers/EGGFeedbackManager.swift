@@ -18,17 +18,17 @@ public enum EEGFeedbackType {
 
 public protocol EGGFeedbackManagerActionsProtocol {
     typealias Action = (() -> Void)?
-    
+
     func buzz(type: EEGFeedbackType)
     func buzz(type: EEGFeedbackType, action: Action)
 }
 
 #if os(watchOS)
-public struct EGGFeedbackManager : EGGFeedbackManagerActionsProtocol {
+public struct EGGFeedbackManager: EGGFeedbackManagerActionsProtocol {
     public func buzz(type: FeedbackType, action: Self.Action) {
         action?()
     }
-    
+
     public func buzz(type: FeedbackType) {
         buzz(type: type, action: nil)
     }
@@ -40,12 +40,12 @@ protocol EGGFeedbackManagerProtocol {
     var notice: UINotificationFeedbackGenerator {get}
 }
 
-public struct EGGFeedbackManager : EGGFeedbackManagerProtocol, EGGFeedbackManagerActionsProtocol {
-    
+public struct EGGFeedbackManager: EGGFeedbackManagerProtocol, EGGFeedbackManagerActionsProtocol {
+
     internal var select = UISelectionFeedbackGenerator()
     internal var impact = UIImpactFeedbackGenerator(style: .heavy)
     internal var notice = UINotificationFeedbackGenerator()
-    
+
     public init(select: UISelectionFeedbackGenerator = UISelectionFeedbackGenerator(),
                 impact: UIImpactFeedbackGenerator = UIImpactFeedbackGenerator(),
                 notice: UINotificationFeedbackGenerator = UINotificationFeedbackGenerator()) {
@@ -53,11 +53,11 @@ public struct EGGFeedbackManager : EGGFeedbackManagerProtocol, EGGFeedbackManage
         self.impact = impact
         self.notice = notice
     }
-    
+
     public func buzz(type: EEGFeedbackType) {
         buzz(type: type, action: nil)
     }
-    
+
     public func buzz(type: EEGFeedbackType, action: Self.Action) {
         switch type {
         case .select:
@@ -71,9 +71,9 @@ public struct EGGFeedbackManager : EGGFeedbackManagerProtocol, EGGFeedbackManage
         case .lightImpact:
             impact.impactOccurred(withIntensity: 0.5)
         }
-        
+
         action?()
-        
+
         switch type {
         case .success, .failure:
             notice.prepare()
@@ -82,7 +82,7 @@ public struct EGGFeedbackManager : EGGFeedbackManagerProtocol, EGGFeedbackManage
         case .select:
             select.prepare()
         }
-        
+
     }
 }
 #endif

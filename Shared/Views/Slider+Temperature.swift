@@ -8,10 +8,10 @@
 
 import SwiftUI
 
-struct TemperatureSlider : View, SliderProtocol {
+struct TemperatureSlider: View, SliderProtocol {
     var action: () -> Void
     @EnvironmentObject var store: EggManager
-    
+
     var body: some View {
         SliderControl(value: $store.temp, from: store.eggDefaults.tempRange.lowerBound, through: store.eggDefaults.tempRange.upperBound, onEditingChanged: { _ in
             self.action()

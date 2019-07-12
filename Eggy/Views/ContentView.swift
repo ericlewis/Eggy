@@ -8,14 +8,14 @@
 
 import SwiftUI
 
-struct ContentView : View, TimerProtocol {
+struct ContentView: View, TimerProtocol {
 
     // MARK: Private Properties
-    
+
     @EnvironmentObject private var store: EggManager
 
     // MARK: Private Actions
-    
+
     private func tick() {
         if self.store.isRunning {
             self.store.changed()
@@ -23,10 +23,10 @@ struct ContentView : View, TimerProtocol {
     }
 
     // MARK: Render
-    
+
     var body: some View {
         let dragGesture = DragGesture()
-            .updating($dragState) { (value, state, transaction) in
+            .updating($dragState) { (value, state, _) in
                 state = .dragging(translation: value.translation)
         }
         return VStack {
@@ -39,7 +39,7 @@ struct ContentView : View, TimerProtocol {
                     .opacity(dragOpacity)
                     .transition(.opacity)
                     .onReceive(ticker, perform: tick)
-                
+
             } else {
                 RandomEggFactCyclerView()
                     .opacity(dragOpacity)
@@ -53,14 +53,14 @@ struct ContentView : View, TimerProtocol {
         }
         .animation(.basic())
     }
-    
+
     // MARK: Draggin props
-    
+
     enum DragState {
-        
+
         case inactive
         case dragging(translation: CGSize)
-        
+
         var translation: CGSize {
             switch self {
             case .inactive:
@@ -69,7 +69,7 @@ struct ContentView : View, TimerProtocol {
                 return translation
             }
         }
-        
+
         var isActive: Bool {
             switch self {
             case .inactive:
@@ -79,18 +79,18 @@ struct ContentView : View, TimerProtocol {
             }
         }
     }
-    
+
     var dragOpacity: Double {
         dragState.isActive ? 0.0 : 1.0
     }
-    
+
     @GestureState var dragState = DragState.inactive
 }
 
 // MARK: Previews
 
 #if DEBUG
-struct ContentView_Previews : PreviewProvider {
+struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
     }

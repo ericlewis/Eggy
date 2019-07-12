@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-struct SettingsViewContainer : View {
+struct SettingsViewContainer: View {
     var body: some View {
         NavigationView {
             SettingsView()
@@ -16,24 +16,24 @@ struct SettingsViewContainer : View {
     }
 }
 
-struct SettingsView : View, NavigationProtocol {
-    
-    //MARK: Private Properties
-    
+struct SettingsView: View, NavigationProtocol {
+
+    // MARK: Private Properties
+
     @EnvironmentObject private var store: EggManager
     @EnvironmentObject private var settings: SettingsManager
     @EnvironmentObject internal var navigation: NavigationManager
-    
+
     @State private var idk = false
-    
+
     // MARK: Actions
-    
+
     func dismiss() {
         navigation.showSettings = false
     }
-    
+
     // MARK: Render
-    
+
     var body: some View {
         Form {
             Section {
@@ -54,7 +54,7 @@ struct SettingsView : View, NavigationProtocol {
                         Text("Dark").tag(true)
                     }
                 }
-                
+
             }
             Section {
                 Button("Help & FAQ", action: {})
@@ -84,7 +84,7 @@ struct SettingsView : View, NavigationProtocol {
 // MARK: Previews
 
 #if DEBUG
-struct SettingsView_Previews : PreviewProvider {
+struct SettingsView_Previews: PreviewProvider {
     static var previews: some View {
         SettingsView()
             .environmentObject(SettingsManager.shared)

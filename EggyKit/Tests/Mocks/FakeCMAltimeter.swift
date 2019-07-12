@@ -10,9 +10,9 @@ import CoreMotion
 import EggyKit
 
 class FakeCMAltimeter: EGGCMAltimeterProtocol {
-    
+
     // MARK: Captured properties
-    
+
     var capturedStartRelativeAltitudeUpdates: Bool
     var capturedStopRelativeAltitudeUpdates: Bool
     var firedEvent: Bool
@@ -23,28 +23,27 @@ class FakeCMAltimeter: EGGCMAltimeterProtocol {
         capturedStartRelativeAltitudeUpdates = false
         firedEvent = false
     }
-    
-    
+
     // MARK: EGGCMAltimeterProtocol
-    
+
     var isRelativeAltitudeAvailable: Bool
-    
+
     func startRelativeAltitudeUpdates(to queue: OperationQueue, withHandler handler: @escaping CMAltitudeHandler) {
         capturedStartRelativeAltitudeUpdates = true
         if isRelativeAltitudeAvailable {
             handler(nil, nil)
         }
     }
-    
+
     func stopRelativeAltitudeUpdates() {
         capturedStopRelativeAltitudeUpdates = true
     }
-    
+
 }
 
 // MARK: FakeCMAltitudeData
 
-class FakeCMAltitudeData : CMAltitudeData {
+class FakeCMAltitudeData: CMAltitudeData {
     override var pressure: NSNumber {
         98.0
     }

@@ -8,9 +8,9 @@
 
 import UIKit
 
-class FakeUISelectionFeedbackGenerator : UISelectionFeedbackGenerator {
+class FakeUISelectionFeedbackGenerator: UISelectionFeedbackGenerator {
     var didCaptureSelectionChanged = false
-    
+
     override func selectionChanged() {
         didCaptureSelectionChanged = true
     }

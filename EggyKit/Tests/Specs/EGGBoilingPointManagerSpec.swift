@@ -15,28 +15,28 @@ class EGGBoilingPointManagerSpec: XCTestCase {
         let fakeAltimeterClient = FakeCMAltimeter(isRelativeAltitudeAvailable: true)
         let subject = EGGBoilingPointManager(isContinuous: true, altimeterClient: fakeAltimeterClient)
         subject.startUpdates()
-        
+
         XCTAssert(fakeAltimeterClient.capturedStartRelativeAltitudeUpdates)
     }
-    
+
     func testStartUpdatesAltitudeUnavailable() {
         let fakeAltimeterClient = FakeCMAltimeter(isRelativeAltitudeAvailable: false)
         let subject = EGGBoilingPointManager(isContinuous: true, altimeterClient: fakeAltimeterClient)
         subject.startUpdates()
-        
+
         XCTAssert(!fakeAltimeterClient.capturedStartRelativeAltitudeUpdates)
     }
-    
+
     func testStopUpdates() {
         let fakeAltimeterClient = FakeCMAltimeter(isRelativeAltitudeAvailable: true)
         let subject = EGGBoilingPointManager(isContinuous: true, altimeterClient: fakeAltimeterClient)
         subject.startUpdates()
         XCTAssert(fakeAltimeterClient.capturedStartRelativeAltitudeUpdates)
-        
+
         subject.stopUpdates()
         XCTAssert(fakeAltimeterClient.capturedStopRelativeAltitudeUpdates)
     }
-    
+
     func testOneOffUpdates() {
         let fakeAltimeterClient = FakeCMAltimeter(isRelativeAltitudeAvailable: true)
         let subject = EGGBoilingPointManager(isContinuous: false, altimeterClient: fakeAltimeterClient)
@@ -44,7 +44,7 @@ class EGGBoilingPointManagerSpec: XCTestCase {
         XCTAssert(fakeAltimeterClient.capturedStartRelativeAltitudeUpdates)
         XCTAssert(fakeAltimeterClient.capturedStopRelativeAltitudeUpdates)
     }
-    
+
     func testContinuousUpdates() {
         let fakeAltimeterClient = FakeCMAltimeter(isRelativeAltitudeAvailable: true)
         let subject = EGGBoilingPointManager(isContinuous: true, altimeterClient: fakeAltimeterClient)
@@ -52,13 +52,13 @@ class EGGBoilingPointManagerSpec: XCTestCase {
         XCTAssert(fakeAltimeterClient.capturedStartRelativeAltitudeUpdates)
         XCTAssert(!fakeAltimeterClient.capturedStopRelativeAltitudeUpdates)
     }
-    
+
     func testBoilingPointCorrect() {
         let fakeAltimeterClient = FakeCMAltimeter(isRelativeAltitudeAvailable: true)
         let subject = EGGBoilingPointManager(isContinuous: false, altimeterClient: fakeAltimeterClient)
-        
+
         let data = FakeCMAltitudeData()
         subject.update(data, nil)
         XCTAssert(subject.boilingPoint == 98.57596985386516)
     }
-} 
+}

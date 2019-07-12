@@ -9,14 +9,14 @@
 import SwiftUI
 
 public struct CakeView: View {
-  var remaining: TimeInterval;
-  let duration: TimeInterval;
-  
+  var remaining: TimeInterval
+  let duration: TimeInterval
+
   public init(_ remaining: TimeInterval, _ duration: TimeInterval) {
     self.remaining = remaining
     self.duration = duration
   }
-  
+
   public var body: some View {
     GeometryReader { geometry in
       Path { path in
@@ -33,7 +33,7 @@ public struct CakeView: View {
           x: middle,
           y: height * 0.5
         )
-        let rawProgress =  self.remaining/self.duration;
+        let rawProgress =  self.remaining/self.duration
         let progress = rawProgress < 0.000 ? 0.0 : (self.remaining/self.duration) * 100.0
         path.addArc(center: middlePoint, radius: width, startAngle: .degrees(-90), endAngle: .degrees(-90 + (3.6 * progress)), clockwise: false)
         path.addLine(to: middlePoint)
@@ -46,7 +46,7 @@ public struct CakeView: View {
 }
 
 #if DEBUG
-struct CakeView_Previews : PreviewProvider {
+struct CakeView_Previews: PreviewProvider {
     static var previews: some View {
         CakeView(1.0, 2.0)
     }

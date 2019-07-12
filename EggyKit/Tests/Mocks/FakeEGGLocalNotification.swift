@@ -8,19 +8,19 @@
 
 import EggyKit
 
-public class FakeEGGEggLocalNotification : EGGLocalNotification {
-    
+public class FakeEGGEggLocalNotification: EGGLocalNotification {
+
     var capturedFire: Bool = false
     var capturedDelete: Bool = false
 
     public init() {
         super.init(title: "testing", message: nil, userNotificationCenter: FakeUNUserNotificationCenter())
     }
-    
+
     override public func fire(triggerOffset: TimeInterval) {
         capturedFire = true
     }
-    
+
     override public func delete() {
         capturedDelete = true
     }

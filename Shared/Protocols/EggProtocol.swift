@@ -19,7 +19,7 @@ protocol EggProtocol {
     var size: Size {get set}
     var boilingPoint: BoilingPoint {get set}
     var rawCookTime: TimeInterval {get}
-    
+
     func reset()
 }
 

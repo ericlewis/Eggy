@@ -8,10 +8,10 @@
 
 import SwiftUI
 
-struct RootView : View {
-    
+struct RootView: View {
+
     // MARK: Render
-    
+
     var body: some View {
         ContentView().linkStores()
     }
@@ -20,7 +20,7 @@ struct RootView : View {
 // MARK: Previews
 
 #if DEBUG
-struct RootView_Previews : PreviewProvider {
+struct RootView_Previews: PreviewProvider {
     static var previews: some View {
         RootView()
     }

@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-struct RandomEggFactCyclerView : View {
+struct RandomEggFactCyclerView: View {
     @ObjectBinding var randomFactManager = RandomFactManager.shared
 
     var body: some View {
@@ -22,7 +22,7 @@ struct RandomEggFactCyclerView : View {
 }
 
 #if DEBUG
-struct RandomEggFactCyclerView_Previews : PreviewProvider {
+struct RandomEggFactCyclerView_Previews: PreviewProvider {
     static var previews: some View {
         RandomEggFactCyclerView()
     }

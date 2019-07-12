@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol ViewModelProtocol : EggStateProtocol, FormattersProtocol {
+protocol ViewModelProtocol: EggStateProtocol, FormattersProtocol {
     var navBarTitleString: String {get}
     var endDateString: String {get}
     var cookTimeString: String {get}
@@ -20,14 +20,14 @@ extension ViewModelProtocol {
         if isFinished && isRunning {
           return "Egg Finished"
         }
-      
+
         return isRunning ? "\(cookTimeString) remaining" : "Cook for \(cookTimeString)"
     }
-    
+
     var endDateString: String {
         Self.dateFormatter.string(from: endDate)
     }
-    
+
     var cookTimeString: String {
         if isRunning {
             return rawTimeRemaining.stringFromTimeInterval()
@@ -35,7 +35,7 @@ extension ViewModelProtocol {
             return rawCookTime.stringFromTimeInterval()
         }
     }
-    
+
     var temperatureString: String {
         let x = Measurement(value: temp, unit: UnitTemperature.fahrenheit)
         return formatMeasurement(measurement: x, digits: 0)

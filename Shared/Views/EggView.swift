@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-struct Egg : View {
+struct Egg: View {
   var opacity: Double = 1
   var remaining: Double = 1
   var duration: Double = 1
@@ -18,7 +18,7 @@ struct Egg : View {
   var showShadow = true
   private let scale = CGFloat(0.90)
   private let yolkScale = CGFloat(0.7)
-  
+
   var body: some View {
     return GeometryReader { geometry in
       ZStack {

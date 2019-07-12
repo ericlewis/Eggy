@@ -11,16 +11,18 @@ import XCTest
 
 class EGGEggSpec: XCTestCase {
     var subject: EGGEgg!
-    
+
     override func setUp() {
         subject = EGGEgg()
     }
-    
+
     func testCookTime() {
         XCTAssert(subject.cookTime != 0)
     }
-    
+
     func testEndDate() {
-        XCTAssert(subject.endDate.timeIntervalSinceReferenceDate.rounded() == Date().addingTimeInterval(subject.cookTime).timeIntervalSinceReferenceDate.rounded())
+        let endTime = Date().addingTimeInterval(subject.cookTime)
+        let endTimeSeconds = endTime.timeIntervalSinceReferenceDate
+        XCTAssert(subject.endDate.timeIntervalSinceReferenceDate.rounded() == endTimeSeconds.rounded())
     }
 }

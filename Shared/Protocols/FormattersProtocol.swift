@@ -17,7 +17,7 @@ protocol FormattersProtocol {
     func formatMeasurement(measurement: Measurement<Unit>, digits: Int) -> String
 }
 
-struct Formatters : FormattersProtocol {
+struct Formatters: FormattersProtocol {
     static var measurementFormatter = MeasurementFormatter()
     static var dateFormatter = DateFormatter()
     static var numberFormatter = NumberFormatter()
@@ -28,21 +28,20 @@ extension FormattersProtocol {
     static var measurementFormatter: MeasurementFormatter {
         Formatters.measurementFormatter
     }
-    
+
     static var dateFormatter: DateFormatter {
         Formatters.dateFormatter
     }
-    
+
     static var numberFormatter: NumberFormatter {
         Formatters.numberFormatter
     }
 
-    
     func setupFormatters() {
         Self.dateFormatter.dateStyle = .none
         Self.dateFormatter.timeStyle = .short
     }
-    
+
     func formatMeasurement<T: Unit>(measurement: Measurement<T>, digits: Int) -> String {
         Self.numberFormatter.maximumFractionDigits = digits
         Self.measurementFormatter.numberFormatter = Self.numberFormatter

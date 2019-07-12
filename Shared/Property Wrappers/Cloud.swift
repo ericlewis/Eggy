@@ -50,16 +50,16 @@ import Foundation
 /// [Apple documentation on NSUbiquitousKeyValueStore](https://developer.apple.com/documentation/foundation/NSUbiquitousKeyValueStore)
 @available(iOS 5.0, OSX 10.7, tvOS 9.0, *)
 @propertyWrapper
-public struct Cloud<Value : PropertyListValue> {
+public struct Cloud<Value: PropertyListValue> {
   let key: String
   let defaultValue: Value
-  
+
 //  #if os(watchOS)
   var userDefaults: UserDefaults
 //  #else
 //  var userDefaults: NSUbiquitousKeyValueStore
 //  #endif
-  
+
 //  #if os(watchOS)
   public init(_ key: String, defaultValue: Value, userDefaults: UserDefaults = .standard) {
     self.key = key
@@ -73,7 +73,7 @@ public struct Cloud<Value : PropertyListValue> {
 //    self.userDefaults = userDefaults
 //  }
 //  #endif
-  
+
   public var wrappedValue: Value {
     get {
       return userDefaults.object(forKey: key) as? Value ?? defaultValue

@@ -12,24 +12,24 @@ import XCTest
 class EGGRandomEggFactGeneratorSpec: XCTestCase {
     var subject: EGGRandomEggFactGenerator!
     var deinitialized = false
-    
+
     override func setUp() {
         subject = EGGRandomEggFactGenerator()
         subject.onDeinitialized = {
             self.deinitialized = true
         }
     }
-    
+
     func testGenerate() {
         let face = subject.fact
         subject.generate(timer: Timer.init(timeInterval: 0.1, repeats: false, block: { _ in }))
         XCTAssert(face != subject.fact)
     }
-    
+
     func testFactReturned() {
         XCTAssert(subject.fact.count > 0)
     }
-    
+
     func testTearDown() {
         subject.tearDown()
         XCTAssert(subject.timer == nil)

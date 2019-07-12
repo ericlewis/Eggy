@@ -8,11 +8,11 @@
 
 import Foundation
 
-class EGGRandomEggFactGenerator : EasyBindableObject {
+class EGGRandomEggFactGenerator: EasyBindableObject {
     static let shared = EGGRandomEggFactGenerator()
-    
+
     static let timeInterval = 8.0
-    
+
     static var eggFacts = [
         "Eggs last 4-5 weeks from the packing date\n",
         "The average chicken lays 250-300 eggs per year",
@@ -24,35 +24,35 @@ class EGGRandomEggFactGenerator : EasyBindableObject {
         "Egg yolks are one of the few foods that are a naturally good source of Vitamin D",
         "Brown eggs are typically more expensive than white eggs."
     ]
-    
+
     public var onDeinitialized: (() -> Void)?
-    
+
     var timer: Timer?
     var fact = EGGRandomEggFactGenerator.eggFacts.randomElement()! {
         didSet {
             changed()
         }
     }
-    
+
     override init() {
         super.init()
         setup()
     }
-    
+
     private func setup() {
         timer = Timer.init(timeInterval: EGGRandomEggFactGenerator.timeInterval, repeats: true, block: generate)
         RunLoop.current.add(timer!, forMode: .common)
     }
-    
+
     public func generate(timer: Timer) {
         fact = EGGRandomEggFactGenerator.eggFacts.randomElement()!
     }
-    
+
     public func tearDown() {
         timer?.invalidate()
         timer = nil
     }
-    
+
     deinit {
         tearDown()
         onDeinitialized?()

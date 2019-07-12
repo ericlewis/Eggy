@@ -12,12 +12,12 @@ protocol NavigationProtocol {
     var navigation: NavigationManager {get}
 }
 
-protocol NavigationManagerProtocol : class {
+protocol NavigationManagerProtocol: class {
     static var shared: NavigationManager {get}
     var showSettings: Bool {get set}
 }
 
-class NavigationManager : EasyBindableObject, NavigationManagerProtocol {
+class NavigationManager: EasyBindableObject, NavigationManagerProtocol {
     static var shared = NavigationManager()
 
     var showSettings: Bool = false {

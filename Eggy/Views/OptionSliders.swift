@@ -8,13 +8,13 @@
 
 import SwiftUI
 
-struct OptionSliders : View {
-    
+struct OptionSliders: View {
+
     // MARK: Private Properties
 
     @EnvironmentObject private var store: EggManager
     @EnvironmentObject private var settings: SettingsManager
-    
+
     @State private var showingSizePicker = false
     @State private var showingDonenessPicker = false
     @State private var showingTempSheet = false
@@ -26,19 +26,19 @@ struct OptionSliders : View {
             self.store.size = size.rawValue
         }
     }
-    
+
     func setDone(_ done: EggDoneness) {
         self.store.feedback.buzz(type: .select) {
             self.store.doneness = done.rawValue
         }
     }
-    
+
     func setTemp(_ prefersCelcius: Bool) {
         self.store.feedback.buzz(type: .select) {
             self.settings.prefersCelcius = prefersCelcius
         }
     }
-    
+
     // MARK: Actions
 
     func toggleTempSheet() {
@@ -46,25 +46,25 @@ struct OptionSliders : View {
             self.$showingTempSheet.value.toggle()
         }
     }
-    
+
     func toggleSizeSheet() {
         store.feedback.buzz(type: .select) {
             self.$showingSizePicker.value.toggle()
         }
     }
-    
+
     func toggleDonenessSheet() {
         store.feedback.buzz(type: .select) {
             self.$showingDonenessPicker.value.toggle()
         }
     }
-    
+
     func didSelect() {
         store.feedback.buzz(type: .select)
     }
-    
+
     // MARK: Render
-    
+
     var body: some View {
         VStack {
             SliderContainer(store.temperatureString,
@@ -104,7 +104,7 @@ struct OptionSliders : View {
 // MARK: Previews
 
 #if DEBUG
-struct OptionSliders_Previews : PreviewProvider {
+struct OptionSliders_Previews: PreviewProvider {
     static var previews: some View {
         OptionSliders()
     }

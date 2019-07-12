@@ -8,17 +8,17 @@
 
 import SwiftUI
 
-struct StartStopButton : View {
+struct StartStopButton: View {
     @EnvironmentObject private var store: EggManager
-    
+
     var timerLabel: String {
         store.isRunning ? "Stop" : "Start"
     }
-    
+
     var timerImage: String {
         store.isRunning ? "stop.fill" : "play.fill"
     }
-    
+
     var body: some View {
         Button(action: store.toggleRunning) {
             HStack {
@@ -30,9 +30,9 @@ struct StartStopButton : View {
     }
 }
 
-struct SettingsButton : View, NavigationProtocol {
+struct SettingsButton: View, NavigationProtocol {
     @EnvironmentObject internal var navigation: NavigationManager
-    
+
     private func toggleSettings() {
         navigation.showSettings.toggle()
     }
@@ -45,7 +45,7 @@ struct SettingsButton : View, NavigationProtocol {
     }
 }
 
-struct DoneButton : View {
+struct DoneButton: View {
     var action: () -> Void
     var body: some View {
         Button(action: action) {
@@ -57,7 +57,7 @@ struct DoneButton : View {
 }
 
 #if DEBUG
-struct NavigationBar_Buttons_Previews : PreviewProvider {
+struct NavigationBar_Buttons_Previews: PreviewProvider {
     static var previews: some View {
         StartStopButton()
     }

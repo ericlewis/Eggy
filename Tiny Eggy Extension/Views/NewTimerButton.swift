@@ -8,12 +8,12 @@
 
 import SwiftUI
 
-struct NewTimerButton : View {
-    
+struct NewTimerButton: View {
+
     // MARK: Public Properties
-    
+
     @Binding var editing: Bool
-    
+
     // MARK: Render
 
     var body: some View {
@@ -27,7 +27,7 @@ struct NewTimerButton : View {
 // MARK: Preview
 
 #if DEBUG
-struct NewTimerButton_Previews : PreviewProvider {
+struct NewTimerButton_Previews: PreviewProvider {
     static var previews: some View {
         NewTimerButton(editing: .constant(true))
     }

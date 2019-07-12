@@ -46,20 +46,18 @@ import Foundation
 /// static var hasSeenAppIntroduction: Bool
 /// ```
 ///
-/// [Apple documentation on NSUbiquitousKeyValueStore](https://developer.apple.com/documentation/foundation/NSUbiquitousKeyValueStore)
-/// [Apple documentation on NSUbiquitousKeyValueStore](https://developer.apple.com/documentation/foundation/NSUbiquitousKeyValueStore)
-@available(iOS 5.0, OSX 10.7, tvOS 9.0, *)
+
 @propertyWrapper
-public struct Cloud<Value : PropertyListValue> {
+public struct Cloud<Value: PropertyListValue> {
   let key: String
   let defaultValue: Value
-  
+
 //  #if os(watchOS)
   var userDefaults: UserDefaults
 //  #else
 //  var userDefaults: NSUbiquitousKeyValueStore
 //  #endif
-  
+
 //  #if os(watchOS)
   public init(_ key: String, defaultValue: Value, userDefaults: UserDefaults = .standard) {
     self.key = key
@@ -73,7 +71,7 @@ public struct Cloud<Value : PropertyListValue> {
 //    self.userDefaults = userDefaults
 //  }
 //  #endif
-  
+
   public var wrappedValue: Value {
     get {
       return userDefaults.object(forKey: key) as? Value ?? defaultValue
@@ -88,8 +86,8 @@ public struct Cloud<Value : PropertyListValue> {
 ///
 /// - From UserDefaults;
 /// The value parameter can be only property list objects: NSData, NSString, NSNumber, NSDate, NSArray, or NSDictionary.
-/// For NSArray and NSDictionary objects, their contents must be property list objects. For more information, see What is a
-/// Property List? in Property List Programming Guide.
+/// For NSArray and NSDictionary objects, their contents must be property list objects.
+/// For more information, see What is a Property List? in Property List Programming Guide.
 public protocol PropertyListValue {}
 
 extension Data: PropertyListValue {}

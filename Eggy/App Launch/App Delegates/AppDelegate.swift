@@ -16,10 +16,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
 
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
     // Override point for customization after application launch.
-    
+
     let center = UNUserNotificationCenter.current()
     center.delegate = self
-    
+
     let startItem = UIApplicationShortcutItem(type: "idk.whocares",
                                             localizedTitle: "Start Timer",
                                             localizedSubtitle: nil,
@@ -52,9 +52,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
   func application(_ application: UIApplication, performActionFor shortcutItem: UIApplicationShortcutItem, completionHandler: @escaping (Bool) -> Void) {
     completionHandler(true)
   }
-  
+
   func application(_ application: UIApplication, continue userActivity: NSUserActivity, restorationHandler: @escaping ([UIUserActivityRestoring]?) -> Void) -> Bool {
     return true
   }
 }
-

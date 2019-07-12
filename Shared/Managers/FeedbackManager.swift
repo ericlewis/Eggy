@@ -18,17 +18,17 @@ enum FeedbackType {
 
 protocol FeedbackManagerActionsProtocol {
     typealias Action = (() -> Void)?
-    
+
     func buzz(type: FeedbackType)
     func buzz(type: FeedbackType, action: Action)
 }
 
 #if os(watchOS)
-struct FeedbackManager : FeedbackManagerActionsProtocol {
+struct FeedbackManager: FeedbackManagerActionsProtocol {
     func buzz(type: FeedbackType, action: Self.Action) {
         action?()
     }
-    
+
     func buzz(type: FeedbackType) {
         buzz(type: type, action: nil)
     }
@@ -40,17 +40,16 @@ protocol FeedbackManagerProtocol {
     var notice: UINotificationFeedbackGenerator {get}
 }
 
-struct FeedbackManager : FeedbackManagerProtocol, FeedbackManagerActionsProtocol {
-    
+struct FeedbackManager: FeedbackManagerProtocol, FeedbackManagerActionsProtocol {
+
     var select = UISelectionFeedbackGenerator()
     var impact = UIImpactFeedbackGenerator(style: .heavy)
     var notice = UINotificationFeedbackGenerator()
-    
-    
+
     func buzz(type: FeedbackType) {
         buzz(type: type, action: nil)
     }
-    
+
     func buzz(type: FeedbackType, action: Self.Action) {
         switch type {
         case .select:
@@ -64,9 +63,9 @@ struct FeedbackManager : FeedbackManagerProtocol, FeedbackManagerActionsProtocol
         case .lightImpact:
             impact.impactOccurred(withIntensity: 0.5)
         }
-        
+
         action?()
-        
+
         switch type {
         case .success, .failure:
             notice.prepare()
@@ -75,7 +74,7 @@ struct FeedbackManager : FeedbackManagerProtocol, FeedbackManagerActionsProtocol
         case .select:
             select.prepare()
         }
-        
+
     }
 }
 #endif

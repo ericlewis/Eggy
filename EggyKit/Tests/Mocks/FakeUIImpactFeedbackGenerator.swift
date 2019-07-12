@@ -8,14 +8,14 @@
 
 import UIKit
 
-class FakeUIImpactFeedbackGenerator : UIImpactFeedbackGenerator {
+class FakeUIImpactFeedbackGenerator: UIImpactFeedbackGenerator {
     var didCaptureImpactOccurred = false
     var capturedImpactIntensity: CGFloat = -10_000
 
     override func impactOccurred() {
         didCaptureImpactOccurred = true
     }
-    
+
     override func impactOccurred(withIntensity intensity: CGFloat) {
         didCaptureImpactOccurred = true
         capturedImpactIntensity = intensity

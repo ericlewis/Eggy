@@ -8,9 +8,9 @@
 
 import SwiftUI
 
-struct InfoButton : View {
+struct InfoButton: View {
     var action: () -> Void
-    
+
     var body: some View {
         Button(action: action, label: {
             Image(systemName: "questionmark.circle")
@@ -19,7 +19,7 @@ struct InfoButton : View {
 }
 
 #if DEBUG
-struct InfoButton_Previews : PreviewProvider {
+struct InfoButton_Previews: PreviewProvider {
     static var previews: some View {
         InfoButton(action: {})
     }

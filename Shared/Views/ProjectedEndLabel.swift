@@ -8,9 +8,9 @@
 
 import SwiftUI
 
-struct ProjectedEndLabel : View {
+struct ProjectedEndLabel: View {
     @EnvironmentObject var store: EggManager
-    
+
     var body: some View {
         HStack {
             Image(systemName: "bell.fill")
@@ -25,7 +25,7 @@ struct ProjectedEndLabel : View {
 }
 
 #if DEBUG
-struct ProjectedEndLabel_Previews : PreviewProvider {
+struct ProjectedEndLabel_Previews: PreviewProvider {
     static var previews: some View {
         ProjectedEndLabel()
     }

@@ -13,8 +13,8 @@ public protocol EGGSettingsProtocol {
     var warningNotificationEnabled: Bool {get set}
 }
 
-enum EGGSettingsKeys : String {
-    case warningNotificationEnabled = "warningNotificationEnabled"
+enum EGGSettingsKeys: String {
+    case warningNotificationEnabled
 }
 
 // this is probably a bad idea, tests don't like it, and i don't think cases can be the same. wont scale
@@ -24,13 +24,12 @@ public struct EGGSettingsDefaults {
     }
 }
 
-public struct EGGSettings : EGGSettingsProtocol {
+public struct EGGSettings: EGGSettingsProtocol {
     public var userDefaults: UserDefaults
-    
+
     @WarningNotificationEnabled()
     public var warningNotificationEnabled: Bool
-    
-    // TODO: some sort of way to actually mock this.. maybe we fake it? prop wrappers don't have a great way to grab this stuff
+
     public init(userDefaults: UserDefaults = UserDefaults.standard,
                 warningNotificationEnabled: Bool = EGGSettingsDefaults.Toggles.warningNotificationEnabled) {
         self.userDefaults = userDefaults

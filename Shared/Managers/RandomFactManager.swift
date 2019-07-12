@@ -8,11 +8,11 @@
 
 import Foundation
 
-class RandomFactManager : EasyBindableObject {
+class RandomFactManager: EasyBindableObject {
     static let shared = RandomFactManager()
-    
+
     static let timeInterval = 8.0
-    
+
     static var eggFacts = [
         "Eggs last 4-5 weeks from the packing date\n",
         "The average chicken lays 250-300 eggs per year",
@@ -24,28 +24,28 @@ class RandomFactManager : EasyBindableObject {
         "Egg yolks are one of the few foods that are a naturally good source of Vitamin D",
         "Brown eggs are typically more expensive than white eggs."
     ]
-    
+
     var timer: Timer?
     var fact = RandomFactManager.eggFacts.randomElement()! {
         didSet {
             changed()
         }
     }
-    
+
     override init() {
         super.init()
         setup()
     }
-    
+
     private func setup() {
         timer = Timer.init(timeInterval: RandomFactManager.timeInterval, repeats: true, block: generate)
         RunLoop.current.add(timer!, forMode: .common)
     }
-    
+
     private func generate(timer: Timer) {
         fact = RandomFactManager.eggFacts.randomElement()!
     }
-    
+
     deinit {
         timer?.invalidate()
         timer = nil

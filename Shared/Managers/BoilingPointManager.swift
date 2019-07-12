@@ -20,24 +20,24 @@ protocol BoilingPointManagerProtocol: class {
     var delegate: BoilingPointManagerProtocolDelegate? {get set}
 }
 
-class BoilingPointManager : BoilingPointManagerProtocol {
+class BoilingPointManager: BoilingPointManagerProtocol {
     internal lazy var altimeter = CMAltimeter()
-    
+
     var delegate: BoilingPointManagerProtocolDelegate?
 
     func startUpdates() {
         if CMAltimeter.isRelativeAltitudeAvailable() {
-            altimeter.startRelativeAltitudeUpdates(to: .main) { data, err in
+            altimeter.startRelativeAltitudeUpdates(to: .main) { data, _ in
                 if let rawPressure = data?.pressure.doubleValue {
                     let pressure = Measurement(value: rawPressure, unit: UnitPressure.kilopascals).converted(to: .inchesOfMercury).value
-                    
+
                     let res = Measurement(value: 49.161 * log(pressure) + 44, unit: UnitTemperature.fahrenheit).converted(to: .celsius).value
                     self.delegate?.changed(boilingPoint: res)
                 }
             }
         }
     }
-    
+
     func stopUpdates() {
         altimeter.stopRelativeAltitudeUpdates()
     }

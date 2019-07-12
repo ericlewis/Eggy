@@ -8,10 +8,10 @@
 
 import UserNotifications
 
-protocol LocalNotificationsProtocol : EggProtocol {
+protocol LocalNotificationsProtocol: EggProtocol {
     func createNotifications()
     func deleteNotifications()
-    
+
     func createWarningNotification()
     func createDoneNotification()
 }
@@ -21,13 +21,13 @@ extension LocalNotificationsProtocol {
         // TODO: offset the permission time
         UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge]) { _, _ in
             self.createDoneNotification()
-            
+
             if self.rawCookTime > 60 && SettingsManager.shared.thirtySecondWarning {
                 self.createWarningNotification()
             }
         }
     }
-    
+
     func createWarningNotification() {
         let content = UNMutableNotificationContent()
         // TODO: localize me
@@ -36,11 +36,11 @@ extension LocalNotificationsProtocol {
         content.sound = .default
         content.badge = 1
         content.userInfo = ["identifier": "timer2"]
-        
+
         let trigger = UNTimeIntervalNotificationTrigger(timeInterval: self.rawCookTime - 30, repeats: false)
-        
+
         let request = UNNotificationRequest(identifier: "timer2", content: content, trigger: trigger)
-        
+
         UNUserNotificationCenter.current().add(request, withCompletionHandler: { (error) in
             if let error = error {
                 print("Unable to Create Notice")
@@ -48,7 +48,7 @@ extension LocalNotificationsProtocol {
             }
         })
     }
-    
+
     func createDoneNotification() {
         let content = UNMutableNotificationContent()
         // TODO: localize me
@@ -57,11 +57,11 @@ extension LocalNotificationsProtocol {
         content.sound = .default
         content.badge = 1
         content.userInfo = ["identifier": "timer"]
-        
+
         let trigger = UNTimeIntervalNotificationTrigger(timeInterval: self.rawCookTime, repeats: false)
-        
+
         let request = UNNotificationRequest(identifier: "timer", content: content, trigger: trigger)
-        
+
         UNUserNotificationCenter.current().add(request, withCompletionHandler: { (error) in
             if let error = error {
                 print("Unable to Create Notice")
@@ -69,7 +69,7 @@ extension LocalNotificationsProtocol {
             }
         })
     }
-    
+
     func deleteNotifications() {
         UNUserNotificationCenter.current().removePendingNotificationRequests(withIdentifiers: ["timer", "timer2"])
     }

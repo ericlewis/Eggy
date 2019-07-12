@@ -8,9 +8,9 @@
 
 import UIKit
 
-class FakeUINotificationFeedbackGenerator : UINotificationFeedbackGenerator {
+class FakeUINotificationFeedbackGenerator: UINotificationFeedbackGenerator {
     var capturedFeedbackType: UINotificationFeedbackGenerator.FeedbackType!
-    
+
     override func notificationOccurred(_ notificationType: UINotificationFeedbackGenerator.FeedbackType) {
         capturedFeedbackType = notificationType
     }

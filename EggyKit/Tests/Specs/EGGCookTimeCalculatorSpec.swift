@@ -11,11 +11,11 @@ import XCTest
 
 class EGGCookTimeCalculatorSpec: XCTestCase, EGGCookTimeCalculator {
     var egg: EGGEgg!
-    
+
     override func setUp() {
         egg = EGGEgg()
     }
-    
+
     func testDefault() {
         XCTAssert(calculateCookTime(withEgg: egg) == 270.2168907625191)
     }
