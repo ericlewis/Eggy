@@ -14,9 +14,9 @@ protocol EasyBindableObjectProtocol {
     func changed()
 }
 
-class EasyBindableObject : BindableObject, EasyBindableObjectProtocol {
-    lazy var didChange = PassthroughSubject<Void, Never>()
-    func changed() {
+public class EasyBindableObject : BindableObject, EasyBindableObjectProtocol {
+    public lazy var didChange = PassthroughSubject<Void, Never>()
+    public func changed() {
         didChange.send()
     }
 }

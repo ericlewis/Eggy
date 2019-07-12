@@ -34,8 +34,10 @@ struct SliderContainer<SliderView : View> : View {
     var label: String
     var leadingLabel: String
     var trailingLabel: String
-    var tappedLabel: () -> Void
-    var tappedInfo: (() -> Void)?
+    var tappedLabel: Action
+    var tappedLeadingLabel: TappedInfo
+    var tappedTrailingLabel: TappedInfo
+    var tappedInfo: TappedInfo
     var sliderProvider: () -> SliderView
     
     // MARK: Private Properties
@@ -49,12 +51,16 @@ struct SliderContainer<SliderView : View> : View {
          trailingLabel: String,
          tappedLabel: @escaping TappedLabel,
          tappedInfo: TappedInfo,
+         tappedLeadingLabel: TappedInfo,
+         tappedTrailingLabel: TappedInfo,
          sliderProvider: @escaping () -> SliderView) {
         self.label = label
         self.leadingLabel = leadingLabel
         self.trailingLabel = trailingLabel
         self.tappedLabel = tappedLabel
         self.tappedInfo = tappedInfo
+        self.tappedLeadingLabel = tappedLeadingLabel
+        self.tappedTrailingLabel = tappedTrailingLabel
         self.sliderProvider = sliderProvider
     }
     
@@ -65,9 +71,16 @@ struct SliderContainer<SliderView : View> : View {
             HStack {
                 Text(leadingLabel)
                     .sliderContainerLabelStyle()
+                    .tapAction {
+                        self.tappedLeadingLabel?()
+                }
+                
                 Spacer()
                 Text(trailingLabel)
                     .sliderContainerLabelStyle()
+                    .tapAction {
+                        self.tappedTrailingLabel?()
+                }
             }
             .padding(.vertical, 0)
             sliderProvider()
@@ -82,6 +95,6 @@ struct SliderContainer<SliderView : View> : View {
             .padding(.top, 0)
         }
         .padding(.horizontal)
-        .padding(.bottom)
+            .padding(.bottom)
     }
 }

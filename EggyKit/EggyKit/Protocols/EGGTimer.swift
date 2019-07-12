@@ -44,10 +44,9 @@ public extension EGGTimerActionStop {
 
 public protocol EGGTimerActions : EGGTimerActionStop, EGGTimerActionResume {}
 
-public protocol EGGTimerProtocol {
+public protocol EGGTimerProtocol : EasyBindableObject {
     static var interval: TimeInterval {get} 
     var timer: Timer? { get }
-    // Placeholder for SwiftUI's BindableObject
     func tick(_ timer: Timer)
 }
 
@@ -57,6 +56,6 @@ public extension EGGTimerProtocol {
     }
     
     func tick(_ timer: Timer) {
-        // do ticky things, like emit events
+        changed()
     }
 }

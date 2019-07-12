@@ -71,7 +71,9 @@ struct OptionSliders : View {
                             leadingLabel: "Fridge",
                             trailingLabel: "Room",
                             tappedLabel: toggleTempSheet,
-                            tappedInfo: nil) {
+                            tappedInfo: nil,
+                            tappedLeadingLabel: { self.store.temp -= 1 },
+                            tappedTrailingLabel: { self.store.temp += 1 }) {
                                 TemperatureSlider(action: self.didSelect)
             }
             .presentation($showingTempSheet, actionSheet: ActionSheet.tempSheet(action: setTemp))
@@ -79,7 +81,9 @@ struct OptionSliders : View {
                             leadingLabel: "Small",
                             trailingLabel: "Large",
                             tappedLabel: toggleSizeSheet,
-                            tappedInfo: nil) {
+                            tappedInfo: nil,
+                            tappedLeadingLabel: { self.store.size -= 0.01 },
+                            tappedTrailingLabel: { self.store.size += 0.01 }) {
                                 SizeSlider(action: self.didSelect)
             }
             .presentation($showingSizePicker, actionSheet: ActionSheet.sizeSheet(action: setSize))
@@ -87,7 +91,9 @@ struct OptionSliders : View {
                             leadingLabel: "Runny",
                             trailingLabel: "Hard",
                             tappedLabel: toggleDonenessSheet,
-                            tappedInfo: nil) {
+                            tappedInfo: nil,
+                            tappedLeadingLabel: { self.store.doneness -= 1 },
+                            tappedTrailingLabel: { self.store.doneness += 1 }) {
                                 DonenessSlider(action: self.didSelect)
             }
             .presentation($showingDonenessPicker, actionSheet: ActionSheet.donenessSheet(action: setDone))

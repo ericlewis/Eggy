@@ -31,7 +31,7 @@ public struct TimerState {
     }
 }
 
-public class EGGTimerManager : EGGTimerManagerProtocol, EGGBoilingPointManagerDelegate {
+public class EGGTimerManager : EasyBindableObject, EGGTimerManagerProtocol, EGGBoilingPointManagerDelegate {
     
     // MARK: Public Properties
     
@@ -51,6 +51,7 @@ public class EGGTimerManager : EGGTimerManagerProtocol, EGGBoilingPointManagerDe
                 break
             }
             
+            changed()
             delegate?.stateChanged(state: state, egg: egg)
         }
     }
@@ -69,9 +70,12 @@ public class EGGTimerManager : EGGTimerManagerProtocol, EGGBoilingPointManagerDe
                 boilingPointManager: EGGBoilingPointManager = EGGBoilingPointManager(),
                 notification: EGGLocalNotification? = nil,
                 timer: Timer? = nil) {
-        self.egg = egg
         self.notificationScheduler = notificationScheduler
         self.boilingPointManager = boilingPointManager
+        self.egg = egg
+        
+        super.init()
+        
         self.timer = timer ?? Timer.init(timeInterval: EGGTimerManager.interval, repeats: true, block: tick)
         self.state = state
         boilingPointManager.delegate = self
