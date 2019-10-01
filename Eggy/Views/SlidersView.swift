@@ -98,7 +98,7 @@ struct SlidersView: View {
             Slider(value: $store.size, onEditingChanged: self.selectionChanged)
             footer(sizeSymbol, store.sizeDetail)
             
-            header("Soft", "Hard", increment: {
+            header("Runny", "Hard", increment: {
                 self.store.doneness += Self.stride
                 self.egg.saveContext()
             }) {
