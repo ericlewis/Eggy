@@ -39,7 +39,7 @@ struct RootView: View {
             return timeRemaining >= 0 ? runningFormatter.string(from: timeRemaining) ?? String(timeRemaining) : "Egg is done"
         }
         
-        return "No Egg Currently Cooking"
+        return "No egg currently cooking"
     }
     
     @State var flicker = false
