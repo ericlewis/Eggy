@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "68D2042722D04A530080B937"
+               BlueprintIdentifier = "683B52C02329AA9F0053B213"
                BuildableName = "Eggy.app"
                BlueprintName = "Eggy"
                ReferencedContainer = "container:Eggy.xcodeproj">
@@ -28,16 +28,6 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "688637DF22D629E30083E104"
-               BuildableName = "EggyKitTests.xctest"
-               BlueprintName = "EggyKitTests"
-               ReferencedContainer = "container:Eggy.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction
@@ -54,7 +44,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "68D2042722D04A530080B937"
+            BlueprintIdentifier = "683B52C02329AA9F0053B213"
             BuildableName = "Eggy.app"
             BlueprintName = "Eggy"
             ReferencedContainer = "container:Eggy.xcodeproj">
@@ -71,7 +61,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "68D2042722D04A530080B937"
+            BlueprintIdentifier = "683B52C02329AA9F0053B213"
             BuildableName = "Eggy.app"
             BlueprintName = "Eggy"
             ReferencedContainer = "container:Eggy.xcodeproj">

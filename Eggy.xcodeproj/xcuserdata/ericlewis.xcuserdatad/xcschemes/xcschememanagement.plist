@@ -4,32 +4,17 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>Eggy Release.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 		<key>Eggy.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
-		<key>Rotten Eggy.xcscheme_^#shared#^_</key>
-		<dict>
-			<key>orderHint</key>
-			<integer>4</integer>
-		</dict>
-		<key>Tiny Eggy App.xcscheme_^#shared#^_</key>
-		<dict>
-			<key>orderHint</key>
-			<integer>1</integer>
-		</dict>
 		<key>Tiny Eggy.xcscheme_^#shared#^_</key>
-		<dict>
-			<key>orderHint</key>
-			<integer>0</integer>
-		</dict>
-		<key>Today.xcscheme_^#shared#^_</key>
-		<dict>
-			<key>orderHint</key>
-			<integer>0</integer>
-		</dict>
-		<key>Watch.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>2</integer>
@@ -37,27 +22,7 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>6873BC8822D1AA110005BCCC</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>6873BC8B22D1AA110005BCCC</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>688637D722D629E30083E104</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>688637DF22D629E30083E104</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>68D2042722D04A530080B937</key>
+		<key>683B52C02329AA9F0053B213</key>
 		<dict>
 			<key>primary</key>
 			<true/>

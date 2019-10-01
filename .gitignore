@@ -80,3 +80,7 @@ fastlane/test_output
 # https://github.com/johnno1962/injectionforxcode
 
 iOSInjectionProject/
+Assets/.DS_Store
+Eggy.xcodeproj/project.xcworkspace/xcshareddata/swiftpm/Package.resolved
+Eggy.xcodeproj/project.xcworkspace/xcuserdata
+.DS_Store

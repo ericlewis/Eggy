@@ -1,94 +1,195 @@
-//
-//  SettingsView.swift
-//  Eggy
-//
-//  Created by Eric Lewis on 7/7/19.
-//  Copyright © 2019 Eric Lewis, Inc. All rights reserved.
-//
-
 import SwiftUI
 
-struct SettingsViewContainer: View {
-    var body: some View {
-        NavigationView {
-            SettingsView()
-        }
+extension Text {
+    func titleStyle() -> some View {
+        self.font(.bodyRounded)
+    }
+    
+    func headerStyle() -> some View {
+        self.font(.captionRounded).bold()
     }
 }
 
-struct SettingsView: View, NavigationProtocol {
-
-    // MARK: Private Properties
-
-    @EnvironmentObject private var store: EggManager
-    @EnvironmentObject private var settings: SettingsManager
-    @EnvironmentObject internal var navigation: NavigationManager
-
-    @State private var idk = false
-
-    // MARK: Actions
-
-    func dismiss() {
-        navigation.showSettings = false
+struct SettingsView: View {
+    @ObservedObject var store = SettingsStore.shared
+    @EnvironmentObject var mainStore: Store
+    @ObservedObject var notices = NotificationStore.shared
+    
+    private func tappedFAQ() {
+        
     }
-
-    // MARK: Render
-
-    var body: some View {
-        Form {
-            Section {
-                Toggle("Prevent Auto-Lock", isOn: $settings.preventAutoLock)
-                Toggle("30 Second Warning", isOn: $settings.thirtySecondWarning)
-                Toggle("Auto-update Boiling Point", isOn: $settings.enableAltimeter)
-                Picker("Weight Display", selection: $settings.prefersGrams) {
-                    Text("Ounces (oz)").tag(false)
-                    Text("Grams (g)").tag(true)
-                }
-                Picker("Temperature Display", selection: $settings.prefersCelcius) {
-                    Text("Fahrenheit (°F)").tag(false)
-                    Text("Celcius (°C)").tag(true)
-                }
-                if UIApplication.shared.supportsAlternateIcons {
-                    Picker("App Icon", selection: $settings.appIconIsDark) {
-                        Text("Light").tag(false)
-                        Text("Dark").tag(true)
+    
+    private func tappedShare() {
+        
+    }
+    
+    private func tappedRate() {
+        
+    }
+    
+    var General: some View {
+        Section(header: Text("General").headerStyle()) {
+            Toggle(isOn: $store.forceDarkMode) {
+                Text("Always Dark Mode")
+                    .titleStyle()
+            }
+        }
+    }
+    
+    var Sensors: some View {
+        Section(header: Text("Sensors").headerStyle()) {
+            Toggle(isOn: $store.autoUpdateBoilingPoint) {
+                Text("Auto-Update Boiling Point")
+                    .titleStyle()
+            }
+            HStack {
+                Text("Current Boiling Point")
+                    .titleStyle()
+                Spacer()
+                Text(MeasurementFormatter.tempFormatter.string(from: Measurement(value: mainStore.boilingPoint, unit: UnitTemperature.celsius)))
+                    .titleStyle().foregroundColor(.secondary)
+            }
+        }
+    }
+    
+    var AutoLock: some View {
+        Section(header: Text("Prevent Screen Dimming").headerStyle()) {
+            Picker(selection: $store.preventAutoLock, label: Text("Prevent Auto-Lock")) {
+                Text(AutoLockState.always.title)
+                    .titleStyle()
+                    .tag(AutoLockState.always)
+                
+                Text(AutoLockState.active.title)
+                    .titleStyle()
+                    .tag(AutoLockState.active)
+                
+                Text(AutoLockState.never.title)
+                    .titleStyle()
+                    .tag(AutoLockState.never)
+            }
+            .pickerStyle(SegmentedPickerStyle())
+        }
+    }
+    
+    @State var showingTemperatureDisplayPicker = false
+    @State var showingWeightDisplayPicker = false
+    
+    var Measurements: some View {
+        Section(header: Text("Measurements").headerStyle()) {
+            NavigationLink(destination: Form {
+                HStack {
+                    Text(WeightDisplay.grams.title)
+                        .titleStyle()
+                        .foregroundColor(.primary)
+                    Spacer()
+                    if store.weightDisplay == .grams {
+                        Image(systemSymbol: .checkmark)
+                            .foregroundColor(.accentColor)
                     }
                 }
-
-            }
-            Section {
-                Button("Help & FAQ", action: {})
-                Button("Share Eggy", action: {})
-                Button("Rate Eggy", action: {})
-            }
-            Section {
+                .tappableWithFeedback {
+                    self.store.weightDisplay = .grams
+                    self.showingWeightDisplayPicker = false
+                }
                 HStack {
-                    Text("Version")
+                    Text(WeightDisplay.ounces.title)
+                        .titleStyle()
+                        .foregroundColor(.primary)
                     Spacer()
-                    Text(Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String ?? "None")
+                    if store.weightDisplay == .ounces {
+                        Image(systemSymbol: .checkmark)
+                            .foregroundColor(.accentColor)
+                    }
+                }
+                .tappableWithFeedback {
+                    self.store.weightDisplay = .ounces
+                    self.showingWeightDisplayPicker = false
+                }
+            }.navigationBarTitle("Weight Display"), isActive: $showingWeightDisplayPicker) {
+                HStack {
+                    Text("Weight Display")
+                        .titleStyle()
+                    Spacer()
+                    Text(store.weightDisplay.title)
+                        .titleStyle()
+                        .foregroundColor(.secondary)
                 }
             }
-            Section {
-                Button("Reset Egg", action: store.reset)
+            NavigationLink(destination: Form {
+                HStack {
+                    Text(TemperatureDisplay.celcius.title)
+                        .titleStyle()
+                        .foregroundColor(.primary)
+                    Spacer()
+                    if store.temperatureDisplay == TemperatureDisplay.celcius {
+                        Image(systemSymbol: .checkmark)
+                            .foregroundColor(.accentColor)
+                    }
+                }
+                .tappableWithFeedback {
+                    self.store.temperatureDisplay = .celcius
+                    self.showingTemperatureDisplayPicker = false
+                }
+                HStack {
+                    Text(TemperatureDisplay.fahrenheit.title)
+                        .titleStyle()
+                        .foregroundColor(.primary)
+                    Spacer()
+                    if store.temperatureDisplay == TemperatureDisplay.fahrenheit {
+                        Image(systemSymbol: .checkmark)
+                            .foregroundColor(.accentColor)
+                    }
+                }
+                .tappableWithFeedback {
+                    self.store.temperatureDisplay = .fahrenheit
+                    self.showingTemperatureDisplayPicker = false
+                }
+            }.navigationBarTitle("Temperature Display"), isActive: $showingTemperatureDisplayPicker) {
+                HStack {
+                    Text("Temperature Display")
+                        .titleStyle()
+                    Spacer()
+                    Text(store.temperatureDisplay.title)
+                        .titleStyle()
+                        .foregroundColor(.secondary)
+                }
             }
-            Section {
-                Button("Reset Settings", action: settings.reset)
-            }
-            .listStyle(.grouped)
-                .navigationBarTitle("Settings")
-                .navigationBarItems(trailing: DoneButton(action: dismiss))
         }
     }
-}
-
-// MARK: Previews
-
-#if DEBUG
-struct SettingsView_Previews: PreviewProvider {
-    static var previews: some View {
-        SettingsView()
-            .environmentObject(SettingsManager.shared)
-            .environment(\.colorScheme, .dark)
+    
+    var Notifications: some View {
+        Section(header: Text("Notifications").headerStyle()) {
+            Toggle(isOn: $notices.warning) {
+                Text("30 Second Warning")
+                    .titleStyle()
+            }
+        }
+        .disabled(!notices.enabled)
+    }
+    
+    var Misc: some View {
+        Section(header: Text("More Information").headerStyle(), footer: Text("Version \(SettingsStore.version)").font(.footnoteRounded)) {
+            Text("Help & FAQs")
+                .titleStyle()
+                .tappable(action: tappedFAQ)
+            Text("Share Eggy")
+                .titleStyle()
+                .tappable(action: tappedShare)
+            Text("Rate Egg")
+                .titleStyle()
+                .tappable(action: tappedRate)
+        }
+    }
+    
+    var body: some View {
+        Form {
+            General
+            AutoLock
+            Measurements
+            Notifications
+            Sensors
+            Misc
+        }
+        .navigationBarTitle("Settings", displayMode: .inline)
     }
 }
-#endif

@@ -3,665 +3,305 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		683C526522D27B3E00CE63C4 /* LocalNotificationsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 683C526422D27B3E00CE63C4 /* LocalNotificationsProtocol.swift */; };
-		683C526722D27B6500CE63C4 /* TimerActionsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 683C526622D27B6500CE63C4 /* TimerActionsProtocol.swift */; };
-		683C526922D27CC600CE63C4 /* EggStateProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 683C526822D27CC600CE63C4 /* EggStateProtocol.swift */; };
-		683C526B22D27CE500CE63C4 /* EggProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 683C526A22D27CE500CE63C4 /* EggProtocol.swift */; };
-		683C526D22D2845C00CE63C4 /* Slider+Doneness.swift in Sources */ = {isa = PBXBuildFile; fileRef = 683C526C22D2845C00CE63C4 /* Slider+Doneness.swift */; };
-		683C526F22D2860E00CE63C4 /* Slider+Size.swift in Sources */ = {isa = PBXBuildFile; fileRef = 683C526E22D2860E00CE63C4 /* Slider+Size.swift */; };
-		683C527122D2864200CE63C4 /* Slider+Temperature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 683C527022D2864200CE63C4 /* Slider+Temperature.swift */; };
-		68673CE322D53C8F0015E3A6 /* TimerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68673CE222D53C8F0015E3A6 /* TimerProtocol.swift */; };
-		68673CE422D53C8F0015E3A6 /* TimerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68673CE222D53C8F0015E3A6 /* TimerProtocol.swift */; };
-		68673CE622D53FCE0015E3A6 /* SliderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68673CE522D53FCE0015E3A6 /* SliderProtocol.swift */; };
-		68673CE722D53FCE0015E3A6 /* SliderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68673CE522D53FCE0015E3A6 /* SliderProtocol.swift */; };
-		68673CE922D542080015E3A6 /* UIKit+Slider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68673CE822D542080015E3A6 /* UIKit+Slider.swift */; };
-		68673CEA22D542080015E3A6 /* UIKit+Slider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68673CE822D542080015E3A6 /* UIKit+Slider.swift */; };
-		6873BC8D22D1AA120005BCCC /* Tiny Eggy App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 6873BC8C22D1AA110005BCCC /* Tiny Eggy App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		6873BC9322D1AA120005BCCC /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6873BC9122D1AA120005BCCC /* Interface.storyboard */; };
-		6873BC9522D1AA160005BCCC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6873BC9422D1AA160005BCCC /* Assets.xcassets */; };
-		6873BC9C22D1AA170005BCCC /* Tiny Eggy Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 6873BC9B22D1AA160005BCCC /* Tiny Eggy Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		6873BCA122D1AA170005BCCC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6873BCA022D1AA170005BCCC /* ContentView.swift */; };
-		6873BCA322D1AA170005BCCC /* HostingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6873BCA222D1AA170005BCCC /* HostingController.swift */; };
-		6873BCA522D1AA170005BCCC /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6873BCA422D1AA170005BCCC /* ExtensionDelegate.swift */; };
-		6873BCA722D1AA190005BCCC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6873BCA622D1AA190005BCCC /* Assets.xcassets */; };
-		6873BCAA22D1AA190005BCCC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6873BCA922D1AA190005BCCC /* Preview Assets.xcassets */; };
-		6873BCB722D1AA330005BCCC /* EggView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68979C3F22D1004F00FCC4EB /* EggView.swift */; };
-		6873BCB922D1AB680005BCCC /* Cloud.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68979C4722D1136400FCC4EB /* Cloud.swift */; };
-		6873BCBA22D1AB730005BCCC /* Double+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68979C4522D107C800FCC4EB /* Double+Helpers.swift */; };
-		6873BCBB22D1AB7D0005BCCC /* TimeInterval+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68979C4122D1007500FCC4EB /* TimeInterval+Helpers.swift */; };
-		6873BCC122D1AEC80005BCCC /* CakeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6873BCC022D1AEC80005BCCC /* CakeView.swift */; };
-		6873BCC222D1AEC80005BCCC /* CakeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6873BCC022D1AEC80005BCCC /* CakeView.swift */; };
-		6873BCE922D1C7F70005BCCC /* BoilingPointManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6873BCE822D1C7F70005BCCC /* BoilingPointManager.swift */; };
-		6873BCEA22D1C7F70005BCCC /* BoilingPointManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6873BCE822D1C7F70005BCCC /* BoilingPointManager.swift */; };
-		6873BCED22D1CD3E0005BCCC /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6873BCEC22D1CD3E0005BCCC /* SettingsView.swift */; };
-		6873BCF022D2344E0005BCCC /* SettingsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6873BCEF22D2344E0005BCCC /* SettingsManager.swift */; };
-		6873BCF122D2344E0005BCCC /* SettingsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6873BCEF22D2344E0005BCCC /* SettingsManager.swift */; };
-		688637C422D54BFE0083E104 /* InfoButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 688637C322D54BFE0083E104 /* InfoButton.swift */; };
-		688637C622D54E0F0083E104 /* LinkStores.swift in Sources */ = {isa = PBXBuildFile; fileRef = 688637C522D54E0F0083E104 /* LinkStores.swift */; };
-		688637C722D54E0F0083E104 /* LinkStores.swift in Sources */ = {isa = PBXBuildFile; fileRef = 688637C522D54E0F0083E104 /* LinkStores.swift */; };
-		688637C922D5515C0083E104 /* NavigationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 688637C822D5515C0083E104 /* NavigationProtocol.swift */; };
-		688637CA22D5515C0083E104 /* NavigationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 688637C822D5515C0083E104 /* NavigationProtocol.swift */; };
-		688637CC22D554D90083E104 /* Modals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 688637CB22D554D90083E104 /* Modals.swift */; };
-		688637CD22D554D90083E104 /* Modals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 688637CB22D554D90083E104 /* Modals.swift */; };
-		688637CF22D556A80083E104 /* RandomEggFactCyclerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 688637CE22D556A80083E104 /* RandomEggFactCyclerView.swift */; };
-		688637D122D55D450083E104 /* RandomFactManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 688637D022D55D450083E104 /* RandomFactManager.swift */; };
-		688637D222D55D450083E104 /* RandomFactManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 688637D022D55D450083E104 /* RandomFactManager.swift */; };
-		6887B0D322D28A69002BAB31 /* Defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C57F3B22D26AB300A7E964 /* Defaults.swift */; };
-		6887B0D422D28A69002BAB31 /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C57F3D22D270A500A7E964 /* Enums.swift */; };
-		6887B0D522D28A69002BAB31 /* AnyTransition+Transitions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C57F3422D2669500A7E964 /* AnyTransition+Transitions.swift */; };
-		6887B0D622D28A69002BAB31 /* BindableObject+Easy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C57F2822D25C6600A7E964 /* BindableObject+Easy.swift */; };
-		6887B0D722D28A69002BAB31 /* EggManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68979C4322D101E600FCC4EB /* EggManager.swift */; };
-		6887B0D822D28A69002BAB31 /* FeedbackManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C57F1E22D2502600A7E964 /* FeedbackManager.swift */; };
-		6887B0D922D28A69002BAB31 /* CookTimeProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C57F1C22D24ABF00A7E964 /* CookTimeProtocol.swift */; };
-		6887B0DA22D28A69002BAB31 /* EggProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 683C526A22D27CE500CE63C4 /* EggProtocol.swift */; };
-		6887B0DB22D28A69002BAB31 /* EggStateProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 683C526822D27CC600CE63C4 /* EggStateProtocol.swift */; };
-		6887B0DC22D28A69002BAB31 /* FormattersProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C57F2422D2593A00A7E964 /* FormattersProtocol.swift */; };
-		6887B0DD22D28A69002BAB31 /* LocalNotificationsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 683C526422D27B3E00CE63C4 /* LocalNotificationsProtocol.swift */; };
-		6887B0DE22D28A69002BAB31 /* TimerActionsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 683C526622D27B6500CE63C4 /* TimerActionsProtocol.swift */; };
-		6887B0DF22D28A69002BAB31 /* ViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C57F2022D254DD00A7E964 /* ViewModelProtocol.swift */; };
-		6887B0E022D28CBE002BAB31 /* Slider+Doneness.swift in Sources */ = {isa = PBXBuildFile; fileRef = 683C526C22D2845C00CE63C4 /* Slider+Doneness.swift */; };
-		6887B0E122D28CBE002BAB31 /* Slider+Size.swift in Sources */ = {isa = PBXBuildFile; fileRef = 683C526E22D2860E00CE63C4 /* Slider+Size.swift */; };
-		6887B0E222D28CBE002BAB31 /* Slider+Temperature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 683C527022D2864200CE63C4 /* Slider+Temperature.swift */; };
-		6887B0E322D28D27002BAB31 /* EggStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C57F3822D26A7B00A7E964 /* EggStack.swift */; };
-		6887B0E422D28E6B002BAB31 /* Alerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C57F3622D2693E00A7E964 /* Alerts.swift */; };
-		6887B0E722D29263002BAB31 /* NewTimerButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6887B0E622D29263002BAB31 /* NewTimerButton.swift */; };
-		6887B0E922D29375002BAB31 /* EditingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6887B0E822D29375002BAB31 /* EditingView.swift */; };
-		6887B0EB22D297D5002BAB31 /* ActionSheets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6887B0EA22D297D5002BAB31 /* ActionSheets.swift */; };
-		6887B0EC22D297D5002BAB31 /* ActionSheets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6887B0EA22D297D5002BAB31 /* ActionSheets.swift */; };
-		6887B0EE22D29CAE002BAB31 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6887B0ED22D29CAE002BAB31 /* RootView.swift */; };
-		6887B10922D3A3F8002BAB31 /* Icon-60@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6887B10722D3A3F8002BAB31 /* Icon-60@2x.png */; };
-		6887B10A22D3A3F8002BAB31 /* Icon-60@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6887B10822D3A3F8002BAB31 /* Icon-60@3x.png */; };
-		6887B10D22D3A411002BAB31 /* Icon-60-Dark@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6887B10B22D3A411002BAB31 /* Icon-60-Dark@2x.png */; };
-		6887B10E22D3A411002BAB31 /* Icon-60-Dark@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6887B10C22D3A411002BAB31 /* Icon-60-Dark@3x.png */; };
-		68979C4022D1004F00FCC4EB /* EggView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68979C3F22D1004F00FCC4EB /* EggView.swift */; };
-		68979C4222D1007500FCC4EB /* TimeInterval+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68979C4122D1007500FCC4EB /* TimeInterval+Helpers.swift */; };
-		68979C4422D101E600FCC4EB /* EggManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68979C4322D101E600FCC4EB /* EggManager.swift */; };
-		68979C4622D107C800FCC4EB /* Double+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68979C4522D107C800FCC4EB /* Double+Helpers.swift */; };
-		68979C4822D1136400FCC4EB /* Cloud.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68979C4722D1136400FCC4EB /* Cloud.swift */; };
-		689B1E0622D30A6400A768C2 /* SettingsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 689B1E0522D30A6400A768C2 /* SettingsProtocol.swift */; };
-		689B1E0722D30A6400A768C2 /* SettingsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 689B1E0522D30A6400A768C2 /* SettingsProtocol.swift */; };
-		68C57F1D22D24ABF00A7E964 /* CookTimeProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C57F1C22D24ABF00A7E964 /* CookTimeProtocol.swift */; };
-		68C57F1F22D2502600A7E964 /* FeedbackManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C57F1E22D2502600A7E964 /* FeedbackManager.swift */; };
-		68C57F2122D254DD00A7E964 /* ViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C57F2022D254DD00A7E964 /* ViewModelProtocol.swift */; };
-		68C57F2522D2593A00A7E964 /* FormattersProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C57F2422D2593A00A7E964 /* FormattersProtocol.swift */; };
-		68C57F2922D25C6600A7E964 /* BindableObject+Easy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C57F2822D25C6600A7E964 /* BindableObject+Easy.swift */; };
-		68C57F2B22D2642A00A7E964 /* OptionSliders.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C57F2A22D2642A00A7E964 /* OptionSliders.swift */; };
-		68C57F2D22D2649B00A7E964 /* NavigationBar+Buttons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C57F2C22D2649B00A7E964 /* NavigationBar+Buttons.swift */; };
-		68C57F2F22D264E300A7E964 /* SliderContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C57F2E22D264E300A7E964 /* SliderContainer.swift */; };
-		68C57F3122D2651300A7E964 /* ProjectedEndLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C57F3022D2651300A7E964 /* ProjectedEndLabel.swift */; };
-		68C57F3322D2664400A7E964 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C57F3222D2664400A7E964 /* ContentView.swift */; };
-		68C57F3522D2669500A7E964 /* AnyTransition+Transitions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C57F3422D2669500A7E964 /* AnyTransition+Transitions.swift */; };
-		68C57F3722D2693E00A7E964 /* Alerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C57F3622D2693E00A7E964 /* Alerts.swift */; };
-		68C57F3922D26A7B00A7E964 /* EggStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C57F3822D26A7B00A7E964 /* EggStack.swift */; };
-		68C57F3C22D26AB300A7E964 /* Defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C57F3B22D26AB300A7E964 /* Defaults.swift */; };
-		68C57F3E22D270A500A7E964 /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C57F3D22D270A500A7E964 /* Enums.swift */; };
-		68D2042C22D04A530080B937 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68D2042B22D04A530080B937 /* AppDelegate.swift */; };
-		68D2042E22D04A530080B937 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68D2042D22D04A530080B937 /* SceneDelegate.swift */; };
-		68D2043022D04A530080B937 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68D2042F22D04A530080B937 /* RootView.swift */; };
-		68D2043222D04A580080B937 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 68D2043122D04A580080B937 /* Assets.xcassets */; };
-		68D2043522D04A580080B937 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 68D2043422D04A580080B937 /* Preview Assets.xcassets */; };
-		68D2043822D04A580080B937 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68D2043622D04A580080B937 /* LaunchScreen.storyboard */; };
+		68106BE82341AF0000DA61D9 /* DoneButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68106BE72341AF0000DA61D9 /* DoneButton.swift */; };
+		68106BEB234298F000DA61D9 /* HomeActionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68106BEA234298F000DA61D9 /* HomeActionManager.swift */; };
+		68106C232342B2B600DA61D9 /* Settings.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 68106C212342B2B600DA61D9 /* Settings.xcdatamodeld */; };
+		68106C242342B34500DA61D9 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68B4AB742335396600847AB9 /* CloudKit.framework */; };
+		68106C262342B38E00DA61D9 /* EggStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68106C252342B38E00DA61D9 /* EggStore.swift */; };
+		68106C4B2342F6D500DA61D9 /* TimerStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68106C4A2342F6D500DA61D9 /* TimerStore.swift */; };
+		68106C4D2342F7D400DA61D9 /* UserDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68106C4C2342F7D400DA61D9 /* UserDefault.swift */; };
+		68106C4F234300C100DA61D9 /* EggTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68106C4E234300C100DA61D9 /* EggTimer.swift */; };
+		681D4BA9232AB0A300F483D3 /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 681D4BA8232AB0A300F483D3 /* Font.swift */; };
+		681D4BAB232AD85200F483D3 /* NotificationStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 681D4BAA232AD85200F483D3 /* NotificationStore.swift */; };
+		681D4BBF232C37ED00F483D3 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 681D4BBE232C37ED00F483D3 /* Color.swift */; };
+		683B52C52329AA9F0053B213 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 683B52C42329AA9F0053B213 /* AppDelegate.swift */; };
+		683B52C72329AA9F0053B213 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 683B52C62329AA9F0053B213 /* SceneDelegate.swift */; };
+		683B52C92329AA9F0053B213 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 683B52C82329AA9F0053B213 /* RootView.swift */; };
+		683B52CB2329AAA70053B213 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 683B52CA2329AAA70053B213 /* Assets.xcassets */; };
+		683B52CE2329AAA70053B213 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 683B52CD2329AAA70053B213 /* Preview Assets.xcassets */; };
+		683B52D12329AAA70053B213 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 683B52CF2329AAA70053B213 /* LaunchScreen.storyboard */; };
+		683B52DA2329E0E10053B213 /* Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = 683B52D92329E0E10053B213 /* Double.swift */; };
+		683B52DC2329E0FF0053B213 /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 683B52DB2329E0FF0053B213 /* UserDefaults.swift */; };
+		683B52DF2329E12D0053B213 /* Enum+EggKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 683B52DE2329E12D0053B213 /* Enum+EggKey.swift */; };
+		683B52E12329E2AD0053B213 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 683B52E02329E2AD0053B213 /* Constants.swift */; };
+		683B52E42329E2E30053B213 /* AltimeterProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 683B52E32329E2E30053B213 /* AltimeterProxy.swift */; };
+		683B52E72329E3150053B213 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 683B52E62329E3150053B213 /* Store.swift */; };
+		683B52EC2329E9F20053B213 /* Enum+TimerState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 683B52EB2329E9F20053B213 /* Enum+TimerState.swift */; };
+		683B52EF2329F4790053B213 /* SFSafeSymbols in Frameworks */ = {isa = PBXBuildFile; productRef = 683B52EE2329F4790053B213 /* SFSafeSymbols */; };
+		683B52F1232A19C30053B213 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 683B52F0232A19C30053B213 /* View.swift */; };
+		683B52F3232A2F0D0053B213 /* AnyTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 683B52F2232A2F0D0053B213 /* AnyTransition.swift */; };
+		68465A91232A9A8600F934BA /* SlidersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68465A90232A9A8600F934BA /* SlidersView.swift */; };
+		68465A93232A9AC900F934BA /* EggView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68465A92232A9AC900F934BA /* EggView.swift */; };
+		68465A95232A9B0D00F934BA /* SettingsButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68465A94232A9B0D00F934BA /* SettingsButton.swift */; };
+		68465A97232A9B2700F934BA /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68465A96232A9B2700F934BA /* SettingsView.swift */; };
+		68465A99232A9B4600F934BA /* StartButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68465A98232A9B4600F934BA /* StartButton.swift */; };
+		68465A9B232A9B6300F934BA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68465A9A232A9B6300F934BA /* ContentView.swift */; };
+		68465A9D232A9BB200F934BA /* EndDateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68465A9C232A9BB200F934BA /* EndDateView.swift */; };
+		68465AA8232A9E7800F934BA /* Enum+SettingsKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68465AA7232A9E7800F934BA /* Enum+SettingsKey.swift */; };
+		68465AAA232AA4B500F934BA /* SettingsStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68465AA9232AA4B500F934BA /* SettingsStore.swift */; };
+		68B4AB8523353E7C00847AB9 /* EggSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68B4AB8423353E7C00847AB9 /* EggSettings.swift */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		6873BC8E22D1AA120005BCCC /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 68D2042022D04A530080B937 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 6873BC8B22D1AA110005BCCC;
-			remoteInfo = "Tiny Eggy WatchKit App";
-		};
-		6873BC9D22D1AA170005BCCC /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 68D2042022D04A530080B937 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 6873BC9A22D1AA160005BCCC;
-			remoteInfo = "Tiny Eggy WatchKit Extension";
-		};
-		68EB00BF22D698D400738F84 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 687FE65D22D680D5005EBD6B /* EggyKit.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 6886388E22D67D100083E104;
-			remoteInfo = EggyKit;
-		};
-		68EB00C122D698D400738F84 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 687FE65D22D680D5005EBD6B /* EggyKit.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 6886389722D67D110083E104;
-			remoteInfo = EggyKitTests;
-		};
-		68EB00C322D698D400738F84 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 687FE65D22D680D5005EBD6B /* EggyKit.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 688638E922D67DC60083E104;
-			remoteInfo = "EggyKit (watchOS)";
-		};
-/* End PBXContainerItemProxy section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		6873BC4F22D1A13E0005BCCC /* Embed App Extensions */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 13;
-			files = (
-			);
-			name = "Embed App Extensions";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		6873BC8522D1A8E90005BCCC /* Embed Watch Content */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
-			dstSubfolderSpec = 16;
-			files = (
-			);
-			name = "Embed Watch Content";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		6873BCAF22D1AA190005BCCC /* Embed App Extensions */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 13;
-			files = (
-				6873BC9C22D1AA170005BCCC /* Tiny Eggy Extension.appex in Embed App Extensions */,
-			);
-			name = "Embed App Extensions";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		6873BCB322D1AA190005BCCC /* Embed Watch Content */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
-			dstSubfolderSpec = 16;
-			files = (
-				6873BC8D22D1AA120005BCCC /* Tiny Eggy App.app in Embed Watch Content */,
-			);
-			name = "Embed Watch Content";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		688637F222D629E30083E104 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		6886381922D62A840083E104 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
-
 /* Begin PBXFileReference section */
-		683C526422D27B3E00CE63C4 /* LocalNotificationsProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalNotificationsProtocol.swift; sourceTree = "<group>"; };
-		683C526622D27B6500CE63C4 /* TimerActionsProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerActionsProtocol.swift; sourceTree = "<group>"; };
-		683C526822D27CC600CE63C4 /* EggStateProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EggStateProtocol.swift; sourceTree = "<group>"; };
-		683C526A22D27CE500CE63C4 /* EggProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EggProtocol.swift; sourceTree = "<group>"; };
-		683C526C22D2845C00CE63C4 /* Slider+Doneness.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Slider+Doneness.swift"; sourceTree = "<group>"; };
-		683C526E22D2860E00CE63C4 /* Slider+Size.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Slider+Size.swift"; sourceTree = "<group>"; };
-		683C527022D2864200CE63C4 /* Slider+Temperature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Slider+Temperature.swift"; sourceTree = "<group>"; };
-		68673CE222D53C8F0015E3A6 /* TimerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerProtocol.swift; sourceTree = "<group>"; };
-		68673CE522D53FCE0015E3A6 /* SliderProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderProtocol.swift; sourceTree = "<group>"; };
-		68673CE822D542080015E3A6 /* UIKit+Slider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIKit+Slider.swift"; sourceTree = "<group>"; };
-		6873BC4322D1A13E0005BCCC /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
-		6873BC5A22D1A6460005BCCC /* Eggy.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Eggy.entitlements; sourceTree = "<group>"; };
-		6873BC8922D1AA110005BCCC /* Tiny Eggy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tiny Eggy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		6873BC8C22D1AA110005BCCC /* Tiny Eggy App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tiny Eggy App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		6873BC9222D1AA120005BCCC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
-		6873BC9422D1AA160005BCCC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		6873BC9622D1AA160005BCCC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		6873BC9B22D1AA160005BCCC /* Tiny Eggy Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Tiny Eggy Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
-		6873BCA022D1AA170005BCCC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		6873BCA222D1AA170005BCCC /* HostingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostingController.swift; sourceTree = "<group>"; };
-		6873BCA422D1AA170005BCCC /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
-		6873BCA622D1AA190005BCCC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		6873BCA922D1AA190005BCCC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		6873BCAB22D1AA190005BCCC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		6873BCBC22D1ABB40005BCCC /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS6.0.sdk/System/Library/Frameworks/UserNotifications.framework; sourceTree = DEVELOPER_DIR; };
-		6873BCC022D1AEC80005BCCC /* CakeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CakeView.swift; sourceTree = "<group>"; };
-		6873BCE822D1C7F70005BCCC /* BoilingPointManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoilingPointManager.swift; sourceTree = "<group>"; };
-		6873BCEC22D1CD3E0005BCCC /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
-		6873BCEF22D2344E0005BCCC /* SettingsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsManager.swift; sourceTree = "<group>"; };
-		687FE65D22D680D5005EBD6B /* EggyKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = EggyKit.xcodeproj; path = ../EggyKit/EggyKit.xcodeproj; sourceTree = "<group>"; };
-		688637C322D54BFE0083E104 /* InfoButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoButton.swift; sourceTree = "<group>"; };
-		688637C522D54E0F0083E104 /* LinkStores.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkStores.swift; sourceTree = "<group>"; };
-		688637C822D5515C0083E104 /* NavigationProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationProtocol.swift; sourceTree = "<group>"; };
-		688637CB22D554D90083E104 /* Modals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Modals.swift; sourceTree = "<group>"; };
-		688637CE22D556A80083E104 /* RandomEggFactCyclerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomEggFactCyclerView.swift; sourceTree = "<group>"; };
-		688637D022D55D450083E104 /* RandomFactManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomFactManager.swift; sourceTree = "<group>"; };
-		6887B0E622D29263002BAB31 /* NewTimerButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTimerButton.swift; sourceTree = "<group>"; };
-		6887B0E822D29375002BAB31 /* EditingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditingView.swift; sourceTree = "<group>"; };
-		6887B0EA22D297D5002BAB31 /* ActionSheets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionSheets.swift; sourceTree = "<group>"; };
-		6887B0ED22D29CAE002BAB31 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
-		6887B10722D3A3F8002BAB31 /* Icon-60@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-60@2x.png"; sourceTree = "<group>"; };
-		6887B10822D3A3F8002BAB31 /* Icon-60@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-60@3x.png"; sourceTree = "<group>"; };
-		6887B10B22D3A411002BAB31 /* Icon-60-Dark@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-60-Dark@2x.png"; sourceTree = "<group>"; };
-		6887B10C22D3A411002BAB31 /* Icon-60-Dark@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-60-Dark@3x.png"; sourceTree = "<group>"; };
-		68979C3F22D1004F00FCC4EB /* EggView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EggView.swift; sourceTree = "<group>"; };
-		68979C4122D1007500FCC4EB /* TimeInterval+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TimeInterval+Helpers.swift"; sourceTree = "<group>"; };
-		68979C4322D101E600FCC4EB /* EggManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EggManager.swift; sourceTree = "<group>"; };
-		68979C4522D107C800FCC4EB /* Double+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Helpers.swift"; sourceTree = "<group>"; };
-		68979C4722D1136400FCC4EB /* Cloud.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cloud.swift; sourceTree = "<group>"; };
-		689B1E0522D30A6400A768C2 /* SettingsProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsProtocol.swift; sourceTree = "<group>"; };
-		68C57F1C22D24ABF00A7E964 /* CookTimeProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CookTimeProtocol.swift; sourceTree = "<group>"; };
-		68C57F1E22D2502600A7E964 /* FeedbackManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackManager.swift; sourceTree = "<group>"; };
-		68C57F2022D254DD00A7E964 /* ViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelProtocol.swift; sourceTree = "<group>"; };
-		68C57F2422D2593A00A7E964 /* FormattersProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormattersProtocol.swift; sourceTree = "<group>"; };
-		68C57F2822D25C6600A7E964 /* BindableObject+Easy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BindableObject+Easy.swift"; sourceTree = "<group>"; };
-		68C57F2A22D2642A00A7E964 /* OptionSliders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionSliders.swift; sourceTree = "<group>"; };
-		68C57F2C22D2649B00A7E964 /* NavigationBar+Buttons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NavigationBar+Buttons.swift"; sourceTree = "<group>"; };
-		68C57F2E22D264E300A7E964 /* SliderContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderContainer.swift; sourceTree = "<group>"; };
-		68C57F3022D2651300A7E964 /* ProjectedEndLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectedEndLabel.swift; sourceTree = "<group>"; };
-		68C57F3222D2664400A7E964 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		68C57F3422D2669500A7E964 /* AnyTransition+Transitions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AnyTransition+Transitions.swift"; sourceTree = "<group>"; };
-		68C57F3622D2693E00A7E964 /* Alerts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alerts.swift; sourceTree = "<group>"; };
-		68C57F3822D26A7B00A7E964 /* EggStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EggStack.swift; sourceTree = "<group>"; };
-		68C57F3B22D26AB300A7E964 /* Defaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Defaults.swift; sourceTree = "<group>"; };
-		68C57F3D22D270A500A7E964 /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
-		68D2042822D04A530080B937 /* Eggy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Eggy.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		68D2042B22D04A530080B937 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		68D2042D22D04A530080B937 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		68D2042F22D04A530080B937 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
-		68D2043122D04A580080B937 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		68D2043422D04A580080B937 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		68D2043722D04A580080B937 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		68D2043922D04A580080B937 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		68106BE72341AF0000DA61D9 /* DoneButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoneButton.swift; sourceTree = "<group>"; };
+		68106BEA234298F000DA61D9 /* HomeActionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeActionManager.swift; sourceTree = "<group>"; };
+		68106C222342B2B600DA61D9 /* Settings.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Settings.xcdatamodel; sourceTree = "<group>"; };
+		68106C252342B38E00DA61D9 /* EggStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EggStore.swift; sourceTree = "<group>"; };
+		68106C4A2342F6D500DA61D9 /* TimerStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerStore.swift; sourceTree = "<group>"; };
+		68106C4C2342F7D400DA61D9 /* UserDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefault.swift; sourceTree = "<group>"; };
+		68106C4E234300C100DA61D9 /* EggTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EggTimer.swift; sourceTree = "<group>"; };
+		681D4BA8232AB0A300F483D3 /* Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
+		681D4BAA232AD85200F483D3 /* NotificationStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationStore.swift; sourceTree = "<group>"; };
+		681D4BBE232C37ED00F483D3 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		683B52C12329AA9F0053B213 /* Eggy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Eggy.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		683B52C42329AA9F0053B213 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		683B52C62329AA9F0053B213 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		683B52C82329AA9F0053B213 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
+		683B52CA2329AAA70053B213 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		683B52CD2329AAA70053B213 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		683B52D02329AAA70053B213 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		683B52D22329AAA70053B213 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		683B52D92329E0E10053B213 /* Double.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Double.swift; sourceTree = "<group>"; };
+		683B52DB2329E0FF0053B213 /* UserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
+		683B52DE2329E12D0053B213 /* Enum+EggKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Enum+EggKey.swift"; sourceTree = "<group>"; };
+		683B52E02329E2AD0053B213 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		683B52E32329E2E30053B213 /* AltimeterProxy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AltimeterProxy.swift; sourceTree = "<group>"; };
+		683B52E62329E3150053B213 /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
+		683B52EB2329E9F20053B213 /* Enum+TimerState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Enum+TimerState.swift"; sourceTree = "<group>"; };
+		683B52F0232A19C30053B213 /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
+		683B52F2232A2F0D0053B213 /* AnyTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyTransition.swift; sourceTree = "<group>"; };
+		683F7B02234004630091B97B /* Tiny Eggy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = "Tiny Eggy.app"; path = "/Users/ericlewis/Work/EggyGM/Eggy/build/Debug-watchos/Tiny Eggy.app"; sourceTree = "<absolute>"; };
+		68465A90232A9A8600F934BA /* SlidersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlidersView.swift; sourceTree = "<group>"; };
+		68465A92232A9AC900F934BA /* EggView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EggView.swift; sourceTree = "<group>"; };
+		68465A94232A9B0D00F934BA /* SettingsButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsButton.swift; sourceTree = "<group>"; };
+		68465A96232A9B2700F934BA /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		68465A98232A9B4600F934BA /* StartButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartButton.swift; sourceTree = "<group>"; };
+		68465A9A232A9B6300F934BA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		68465A9C232A9BB200F934BA /* EndDateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndDateView.swift; sourceTree = "<group>"; };
+		68465AA7232A9E7800F934BA /* Enum+SettingsKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Enum+SettingsKey.swift"; sourceTree = "<group>"; };
+		68465AA9232AA4B500F934BA /* SettingsStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsStore.swift; sourceTree = "<group>"; };
+		688348CC23408B71002345A5 /* CHANGELOG.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = CHANGELOG.md; sourceTree = "<group>"; };
+		68B4AB6A233524DD00847AB9 /* Eggy.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Eggy.entitlements; sourceTree = "<group>"; };
+		68B4AB742335396600847AB9 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
+		68B4AB8423353E7C00847AB9 /* EggSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EggSettings.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		6873BC9822D1AA160005BCCC /* Frameworks */ = {
+		683B52BE2329AA9F0053B213 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		68D2042522D04A530080B937 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				68106C242342B34500DA61D9 /* CloudKit.framework in Frameworks */,
+				683B52EF2329F4790053B213 /* SFSafeSymbols in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		683E4BD722D2465C001EC738 /* Views */ = {
+		68106BE9234298B200DA61D9 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
-				6887B0EA22D297D5002BAB31 /* ActionSheets.swift */,
-				68C57F3622D2693E00A7E964 /* Alerts.swift */,
-				6873BCC022D1AEC80005BCCC /* CakeView.swift */,
-				68C57F3822D26A7B00A7E964 /* EggStack.swift */,
-				68979C3F22D1004F00FCC4EB /* EggView.swift */,
-				68C57F2C22D2649B00A7E964 /* NavigationBar+Buttons.swift */,
-				68C57F3022D2651300A7E964 /* ProjectedEndLabel.swift */,
-				683C526C22D2845C00CE63C4 /* Slider+Doneness.swift */,
-				683C526E22D2860E00CE63C4 /* Slider+Size.swift */,
-				683C527022D2864200CE63C4 /* Slider+Temperature.swift */,
-				688637CE22D556A80083E104 /* RandomEggFactCyclerView.swift */,
-				68673CE822D542080015E3A6 /* UIKit+Slider.swift */,
-				688637C322D54BFE0083E104 /* InfoButton.swift */,
-				688637CB22D554D90083E104 /* Modals.swift */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
-		683E4BD822D2466B001EC738 /* Managers */ = {
-			isa = PBXGroup;
-			children = (
-				6873BCE822D1C7F70005BCCC /* BoilingPointManager.swift */,
-				68979C4322D101E600FCC4EB /* EggManager.swift */,
-				68C57F1E22D2502600A7E964 /* FeedbackManager.swift */,
-				6873BCEF22D2344E0005BCCC /* SettingsManager.swift */,
-				688637D022D55D450083E104 /* RandomFactManager.swift */,
+				68106BEA234298F000DA61D9 /* HomeActionManager.swift */,
+				68106C4E234300C100DA61D9 /* EggTimer.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
 		};
-		683E4BD922D2468C001EC738 /* Views */ = {
+		683B52B82329AA9F0053B213 = {
 			isa = PBXGroup;
 			children = (
-				68C57F3222D2664400A7E964 /* ContentView.swift */,
-				68C57F2A22D2642A00A7E964 /* OptionSliders.swift */,
-				68D2042F22D04A530080B937 /* RootView.swift */,
-				6873BCEC22D1CD3E0005BCCC /* SettingsView.swift */,
-				68C57F2E22D264E300A7E964 /* SliderContainer.swift */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
-		683E4BDA22D24696001EC738 /* Helpers */ = {
-			isa = PBXGroup;
-			children = (
-				68C57F3422D2669500A7E964 /* AnyTransition+Transitions.swift */,
-				68C57F2822D25C6600A7E964 /* BindableObject+Easy.swift */,
-				68979C4522D107C800FCC4EB /* Double+Helpers.swift */,
-				68979C4122D1007500FCC4EB /* TimeInterval+Helpers.swift */,
-				688637C522D54E0F0083E104 /* LinkStores.swift */,
-			);
-			path = Helpers;
-			sourceTree = "<group>";
-		};
-		683E4BDB22D246A7001EC738 /* Property Wrappers */ = {
-			isa = PBXGroup;
-			children = (
-				68979C4722D1136400FCC4EB /* Cloud.swift */,
-			);
-			path = "Property Wrappers";
-			sourceTree = "<group>";
-		};
-		683E4BDC22D246C7001EC738 /* App Delegates */ = {
-			isa = PBXGroup;
-			children = (
-				68D2042B22D04A530080B937 /* AppDelegate.swift */,
-				68D2042D22D04A530080B937 /* SceneDelegate.swift */,
-			);
-			path = "App Delegates";
-			sourceTree = "<group>";
-		};
-		683E4BDE22D246F7001EC738 /* Shared */ = {
-			isa = PBXGroup;
-			children = (
-				687FE65D22D680D5005EBD6B /* EggyKit.xcodeproj */,
-				68C57F3A22D26A9F00A7E964 /* Data */,
-				683E4BDA22D24696001EC738 /* Helpers */,
-				683E4BD822D2466B001EC738 /* Managers */,
-				683E4BDB22D246A7001EC738 /* Property Wrappers */,
-				68C57F3F22D274B400A7E964 /* Protocols */,
-				683E4BD722D2465C001EC738 /* Views */,
-			);
-			path = Shared;
-			sourceTree = "<group>";
-		};
-		683E4BDF22D24742001EC738 /* App Launch */ = {
-			isa = PBXGroup;
-			children = (
-				683E4BDC22D246C7001EC738 /* App Delegates */,
-				68D2043622D04A580080B937 /* LaunchScreen.storyboard */,
-			);
-			path = "App Launch";
-			sourceTree = "<group>";
-		};
-		6873BC4222D1A13E0005BCCC /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				6873BCBC22D1ABB40005BCCC /* UserNotifications.framework */,
-				6873BC4322D1A13E0005BCCC /* NotificationCenter.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		6873BC9022D1AA120005BCCC /* Tiny Eggy */ = {
-			isa = PBXGroup;
-			children = (
-				6873BC9122D1AA120005BCCC /* Interface.storyboard */,
-				6873BC9422D1AA160005BCCC /* Assets.xcassets */,
-				6873BC9622D1AA160005BCCC /* Info.plist */,
-			);
-			path = "Tiny Eggy";
-			sourceTree = "<group>";
-		};
-		6873BC9F22D1AA170005BCCC /* Tiny Eggy Extension */ = {
-			isa = PBXGroup;
-			children = (
-				6887B0F022D29D31002BAB31 /* App Launch */,
-				6887B0EF22D29D15002BAB31 /* Resources */,
-				6887B0E522D29251002BAB31 /* Views */,
-			);
-			path = "Tiny Eggy Extension";
-			sourceTree = "<group>";
-		};
-		6887B0E522D29251002BAB31 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				6873BCA022D1AA170005BCCC /* ContentView.swift */,
-				6887B0E822D29375002BAB31 /* EditingView.swift */,
-				6887B0E622D29263002BAB31 /* NewTimerButton.swift */,
-				6887B0ED22D29CAE002BAB31 /* RootView.swift */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
-		6887B0EF22D29D15002BAB31 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				6873BCA922D1AA190005BCCC /* Preview Assets.xcassets */,
-				6873BCA622D1AA190005BCCC /* Assets.xcassets */,
-			);
-			path = Resources;
-			sourceTree = "<group>";
-		};
-		6887B0F022D29D31002BAB31 /* App Launch */ = {
-			isa = PBXGroup;
-			children = (
-				6873BCA222D1AA170005BCCC /* HostingController.swift */,
-				6873BCA422D1AA170005BCCC /* ExtensionDelegate.swift */,
-				6873BCAB22D1AA190005BCCC /* Info.plist */,
-			);
-			path = "App Launch";
-			sourceTree = "<group>";
-		};
-		6887B10F22D3A4F7002BAB31 /* Icons */ = {
-			isa = PBXGroup;
-			children = (
-				6887B10722D3A3F8002BAB31 /* Icon-60@2x.png */,
-				6887B10822D3A3F8002BAB31 /* Icon-60@3x.png */,
-				6887B10B22D3A411002BAB31 /* Icon-60-Dark@2x.png */,
-				6887B10C22D3A411002BAB31 /* Icon-60-Dark@3x.png */,
-			);
-			path = Icons;
-			sourceTree = "<group>";
-		};
-		68C57F1922D2477200A7E964 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				6887B10F22D3A4F7002BAB31 /* Icons */,
-				68D2043422D04A580080B937 /* Preview Assets.xcassets */,
-				68D2043122D04A580080B937 /* Assets.xcassets */,
-			);
-			path = Resources;
-			sourceTree = "<group>";
-		};
-		68C57F3A22D26A9F00A7E964 /* Data */ = {
-			isa = PBXGroup;
-			children = (
-				68C57F3B22D26AB300A7E964 /* Defaults.swift */,
-				68C57F3D22D270A500A7E964 /* Enums.swift */,
-			);
-			path = Data;
-			sourceTree = "<group>";
-		};
-		68C57F3F22D274B400A7E964 /* Protocols */ = {
-			isa = PBXGroup;
-			children = (
-				68C57F1C22D24ABF00A7E964 /* CookTimeProtocol.swift */,
-				683C526A22D27CE500CE63C4 /* EggProtocol.swift */,
-				683C526822D27CC600CE63C4 /* EggStateProtocol.swift */,
-				68C57F2422D2593A00A7E964 /* FormattersProtocol.swift */,
-				683C526422D27B3E00CE63C4 /* LocalNotificationsProtocol.swift */,
-				689B1E0522D30A6400A768C2 /* SettingsProtocol.swift */,
-				68673CE522D53FCE0015E3A6 /* SliderProtocol.swift */,
-				683C526622D27B6500CE63C4 /* TimerActionsProtocol.swift */,
-				68673CE222D53C8F0015E3A6 /* TimerProtocol.swift */,
-				68C57F2022D254DD00A7E964 /* ViewModelProtocol.swift */,
-				688637C822D5515C0083E104 /* NavigationProtocol.swift */,
-			);
-			path = Protocols;
-			sourceTree = "<group>";
-		};
-		68D2041F22D04A530080B937 = {
-			isa = PBXGroup;
-			children = (
-				683E4BDE22D246F7001EC738 /* Shared */,
-				68D2042A22D04A530080B937 /* Eggy */,
-				6873BC9022D1AA120005BCCC /* Tiny Eggy */,
-				6873BC9F22D1AA170005BCCC /* Tiny Eggy Extension */,
-				6873BC4222D1A13E0005BCCC /* Frameworks */,
-				68D2042922D04A530080B937 /* Products */,
+				688348CC23408B71002345A5 /* CHANGELOG.md */,
+				683B52C32329AA9F0053B213 /* Eggy */,
+				683B52C22329AA9F0053B213 /* Products */,
+				68B4AB732335396600847AB9 /* Frameworks */,
+				688348C923408064002345A5 /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
-		68D2042922D04A530080B937 /* Products */ = {
+		683B52C22329AA9F0053B213 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				68D2042822D04A530080B937 /* Eggy.app */,
-				6873BC8922D1AA110005BCCC /* Tiny Eggy.app */,
-				6873BC8C22D1AA110005BCCC /* Tiny Eggy App.app */,
-				6873BC9B22D1AA160005BCCC /* Tiny Eggy Extension.appex */,
+				683B52C12329AA9F0053B213 /* Eggy.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		68D2042A22D04A530080B937 /* Eggy */ = {
+		683B52C32329AA9F0053B213 /* Eggy */ = {
 			isa = PBXGroup;
 			children = (
-				683E4BDF22D24742001EC738 /* App Launch */,
-				68C57F1922D2477200A7E964 /* Resources */,
-				68D6EE8E22D2480900B67DB5 /* Supporting Files */,
-				683E4BD922D2468C001EC738 /* Views */,
+				683B52E92329E33B0053B213 /* App Launch */,
+				683B52D82329E0CB0053B213 /* Extensions */,
+				68106BE9234298B200DA61D9 /* Managers */,
+				683B52DD2329E1200053B213 /* Models */,
+				68465A9E232A9CA100F934BA /* Property Wrappers */,
+				683B52E22329E2C90053B213 /* Proxies */,
+				683B52E52329E30B0053B213 /* Stores */,
+				683B52EA2329E3450053B213 /* Supporting Files */,
+				683B52E82329E3320053B213 /* Views */,
+				68106C212342B2B600DA61D9 /* Settings.xcdatamodeld */,
 			);
 			path = Eggy;
 			sourceTree = "<group>";
 		};
-		68D6EE8E22D2480900B67DB5 /* Supporting Files */ = {
+		683B52CC2329AAA70053B213 /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
-				6873BC5A22D1A6460005BCCC /* Eggy.entitlements */,
-				68D2043922D04A580080B937 /* Info.plist */,
+				683B52CD2329AAA70053B213 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		683B52D82329E0CB0053B213 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				683B52D92329E0E10053B213 /* Double.swift */,
+				683B52DB2329E0FF0053B213 /* UserDefaults.swift */,
+				683B52F0232A19C30053B213 /* View.swift */,
+				683B52F2232A2F0D0053B213 /* AnyTransition.swift */,
+				681D4BA8232AB0A300F483D3 /* Font.swift */,
+				681D4BBE232C37ED00F483D3 /* Color.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		683B52DD2329E1200053B213 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				683B52E02329E2AD0053B213 /* Constants.swift */,
+				683B52DE2329E12D0053B213 /* Enum+EggKey.swift */,
+				68465AA7232A9E7800F934BA /* Enum+SettingsKey.swift */,
+				683B52EB2329E9F20053B213 /* Enum+TimerState.swift */,
+				68B4AB8423353E7C00847AB9 /* EggSettings.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		683B52E22329E2C90053B213 /* Proxies */ = {
+			isa = PBXGroup;
+			children = (
+				683B52E32329E2E30053B213 /* AltimeterProxy.swift */,
+			);
+			path = Proxies;
+			sourceTree = "<group>";
+		};
+		683B52E52329E30B0053B213 /* Stores */ = {
+			isa = PBXGroup;
+			children = (
+				683B52E62329E3150053B213 /* Store.swift */,
+				68465AA9232AA4B500F934BA /* SettingsStore.swift */,
+				681D4BAA232AD85200F483D3 /* NotificationStore.swift */,
+				68106C252342B38E00DA61D9 /* EggStore.swift */,
+				68106C4A2342F6D500DA61D9 /* TimerStore.swift */,
+			);
+			path = Stores;
+			sourceTree = "<group>";
+		};
+		683B52E82329E3320053B213 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				683B52C82329AA9F0053B213 /* RootView.swift */,
+				68465A90232A9A8600F934BA /* SlidersView.swift */,
+				68465A92232A9AC900F934BA /* EggView.swift */,
+				68465A94232A9B0D00F934BA /* SettingsButton.swift */,
+				68465A96232A9B2700F934BA /* SettingsView.swift */,
+				68465A98232A9B4600F934BA /* StartButton.swift */,
+				68465A9A232A9B6300F934BA /* ContentView.swift */,
+				68465A9C232A9BB200F934BA /* EndDateView.swift */,
+				68106BE72341AF0000DA61D9 /* DoneButton.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		683B52E92329E33B0053B213 /* App Launch */ = {
+			isa = PBXGroup;
+			children = (
+				683B52C42329AA9F0053B213 /* AppDelegate.swift */,
+				683B52C62329AA9F0053B213 /* SceneDelegate.swift */,
+			);
+			path = "App Launch";
+			sourceTree = "<group>";
+		};
+		683B52EA2329E3450053B213 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				68B4AB6A233524DD00847AB9 /* Eggy.entitlements */,
+				683B52CC2329AAA70053B213 /* Preview Content */,
+				683B52D22329AAA70053B213 /* Info.plist */,
+				683B52CF2329AAA70053B213 /* LaunchScreen.storyboard */,
+				683B52CA2329AAA70053B213 /* Assets.xcassets */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		68EB00BA22D698D400738F84 /* Products */ = {
+		68465A9E232A9CA100F934BA /* Property Wrappers */ = {
 			isa = PBXGroup;
 			children = (
-				68EB00C022D698D400738F84 /* EggyKit.framework */,
-				68EB00C222D698D400738F84 /* EggyKitTests.xctest */,
-				68EB00C422D698D400738F84 /* EggyKit__watchOS_.framework */,
+				68106C4C2342F7D400DA61D9 /* UserDefault.swift */,
 			);
-			name = Products;
+			path = "Property Wrappers";
+			sourceTree = "<group>";
+		};
+		688348C923408064002345A5 /* Recovered References */ = {
+			isa = PBXGroup;
+			children = (
+				683F7B02234004630091B97B /* Tiny Eggy.app */,
+			);
+			name = "Recovered References";
+			sourceTree = "<group>";
+		};
+		68B4AB732335396600847AB9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				68B4AB742335396600847AB9 /* CloudKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		6873BC8822D1AA110005BCCC /* Tiny Eggy */ = {
+		683B52C02329AA9F0053B213 /* Eggy */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 6873BCB422D1AA190005BCCC /* Build configuration list for PBXNativeTarget "Tiny Eggy" */;
+			buildConfigurationList = 683B52D52329AAA70053B213 /* Build configuration list for PBXNativeTarget "Eggy" */;
 			buildPhases = (
-				6873BC8722D1AA110005BCCC /* Resources */,
-				6873BCB322D1AA190005BCCC /* Embed Watch Content */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				6873BC8F22D1AA120005BCCC /* PBXTargetDependency */,
-			);
-			name = "Tiny Eggy";
-			productName = "Tiny Eggy";
-			productReference = 6873BC8922D1AA110005BCCC /* Tiny Eggy.app */;
-			productType = "com.apple.product-type.application.watchapp2-container";
-		};
-		6873BC8B22D1AA110005BCCC /* Tiny Eggy App */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 6873BCB022D1AA190005BCCC /* Build configuration list for PBXNativeTarget "Tiny Eggy App" */;
-			buildPhases = (
-				6873BC8A22D1AA110005BCCC /* Resources */,
-				6873BCAF22D1AA190005BCCC /* Embed App Extensions */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				6873BC9E22D1AA170005BCCC /* PBXTargetDependency */,
-			);
-			name = "Tiny Eggy App";
-			productName = "Tiny Eggy WatchKit App";
-			productReference = 6873BC8C22D1AA110005BCCC /* Tiny Eggy App.app */;
-			productType = "com.apple.product-type.application.watchapp2";
-		};
-		6873BC9A22D1AA160005BCCC /* Tiny Eggy Extension */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 6873BCAC22D1AA190005BCCC /* Build configuration list for PBXNativeTarget "Tiny Eggy Extension" */;
-			buildPhases = (
-				6873BC9722D1AA160005BCCC /* Sources */,
-				6873BC9822D1AA160005BCCC /* Frameworks */,
-				6873BC9922D1AA160005BCCC /* Resources */,
-				6886381922D62A840083E104 /* Embed Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "Tiny Eggy Extension";
-			productName = "Tiny Eggy WatchKit Extension";
-			productReference = 6873BC9B22D1AA160005BCCC /* Tiny Eggy Extension.appex */;
-			productType = "com.apple.product-type.watchkit2-extension";
-		};
-		68D2042722D04A530080B937 /* Eggy */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 68D2045222D04A580080B937 /* Build configuration list for PBXNativeTarget "Eggy" */;
-			buildPhases = (
-				68D2042422D04A530080B937 /* Sources */,
-				68D2042522D04A530080B937 /* Frameworks */,
-				68D2042622D04A530080B937 /* Resources */,
-				6873BC4F22D1A13E0005BCCC /* Embed App Extensions */,
-				6873BC8522D1A8E90005BCCC /* Embed Watch Content */,
-				688637F222D629E30083E104 /* Embed Frameworks */,
-				68B4D21D22D90EA200F37835 /* Lint */,
+				683B52BD2329AA9F0053B213 /* Sources */,
+				683B52BE2329AA9F0053B213 /* Frameworks */,
+				683B52BF2329AA9F0053B213 /* Resources */,
+				683F7AFF2340009E0091B97B /* ShellScript */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = Eggy;
+			packageProductDependencies = (
+				683B52EE2329F4790053B213 /* SFSafeSymbols */,
+			);
 			productName = Eggy;
-			productReference = 68D2042822D04A530080B937 /* Eggy.app */;
+			productReference = 683B52C12329AA9F0053B213 /* Eggy.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		68D2042022D04A530080B937 /* Project object */ = {
+		683B52B92329AA9F0053B213 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1100;
 				LastUpgradeCheck = 1100;
 				ORGANIZATIONNAME = "Eric Lewis, Inc.";
 				TargetAttributes = {
-					6873BC8822D1AA110005BCCC = {
-						CreatedOnToolsVersion = 11.0;
-					};
-					6873BC8B22D1AA110005BCCC = {
-						CreatedOnToolsVersion = 11.0;
-					};
-					6873BC9A22D1AA160005BCCC = {
-						CreatedOnToolsVersion = 11.0;
-					};
-					68D2042722D04A530080B937 = {
+					683B52C02329AA9F0053B213 = {
 						CreatedOnToolsVersion = 11.0;
 					};
 				};
 			};
-			buildConfigurationList = 68D2042322D04A530080B937 /* Build configuration list for PBXProject "Eggy" */;
+			buildConfigurationList = 683B52BC2329AA9F0053B213 /* Build configuration list for PBXProject "Eggy" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -669,93 +309,34 @@
 				en,
 				Base,
 			);
-			mainGroup = 68D2041F22D04A530080B937;
-			productRefGroup = 68D2042922D04A530080B937 /* Products */;
-			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = 68EB00BA22D698D400738F84 /* Products */;
-					ProjectRef = 687FE65D22D680D5005EBD6B /* EggyKit.xcodeproj */;
-				},
+			mainGroup = 683B52B82329AA9F0053B213;
+			packageReferences = (
+				683B52ED2329F4790053B213 /* XCRemoteSwiftPackageReference "SFSafeSymbols" */,
 			);
+			productRefGroup = 683B52C22329AA9F0053B213 /* Products */;
+			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				68D2042722D04A530080B937 /* Eggy */,
-				6873BC8822D1AA110005BCCC /* Tiny Eggy */,
-				6873BC8B22D1AA110005BCCC /* Tiny Eggy App */,
-				6873BC9A22D1AA160005BCCC /* Tiny Eggy Extension */,
+				683B52C02329AA9F0053B213 /* Eggy */,
 			);
 		};
 /* End PBXProject section */
 
-/* Begin PBXReferenceProxy section */
-		68EB00C022D698D400738F84 /* EggyKit.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = EggyKit.framework;
-			remoteRef = 68EB00BF22D698D400738F84 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		68EB00C222D698D400738F84 /* EggyKitTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = EggyKitTests.xctest;
-			remoteRef = 68EB00C122D698D400738F84 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		68EB00C422D698D400738F84 /* EggyKit__watchOS_.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = EggyKit__watchOS_.framework;
-			remoteRef = 68EB00C322D698D400738F84 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
-
 /* Begin PBXResourcesBuildPhase section */
-		6873BC8722D1AA110005BCCC /* Resources */ = {
+		683B52BF2329AA9F0053B213 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		6873BC8A22D1AA110005BCCC /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				6873BC9522D1AA160005BCCC /* Assets.xcassets in Resources */,
-				6873BC9322D1AA120005BCCC /* Interface.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		6873BC9922D1AA160005BCCC /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				6873BCAA22D1AA190005BCCC /* Preview Assets.xcassets in Resources */,
-				6873BCA722D1AA190005BCCC /* Assets.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		68D2042622D04A530080B937 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				68D2043822D04A580080B937 /* LaunchScreen.storyboard in Resources */,
-				6887B10D22D3A411002BAB31 /* Icon-60-Dark@2x.png in Resources */,
-				6887B10E22D3A411002BAB31 /* Icon-60-Dark@3x.png in Resources */,
-				6887B10A22D3A3F8002BAB31 /* Icon-60@3x.png in Resources */,
-				68D2043522D04A580080B937 /* Preview Assets.xcassets in Resources */,
-				68D2043222D04A580080B937 /* Assets.xcassets in Resources */,
-				6887B10922D3A3F8002BAB31 /* Icon-60@2x.png in Resources */,
+				683B52D12329AAA70053B213 /* LaunchScreen.storyboard in Resources */,
+				683B52CE2329AAA70053B213 /* Preview Assets.xcassets in Resources */,
+				683B52CB2329AAA70053B213 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		68B4D21D22D90EA200F37835 /* Lint */ = {
+		683F7AFF2340009E0091B97B /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -764,145 +345,63 @@
 			);
 			inputPaths = (
 			);
-			name = Lint;
 			outputFileListPaths = (
 			);
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+			shellScript = "xcrun agvtool next-version -all\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		6873BC9722D1AA160005BCCC /* Sources */ = {
+		683B52BD2329AA9F0053B213 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6887B0DC22D28A69002BAB31 /* FormattersProtocol.swift in Sources */,
-				688637C722D54E0F0083E104 /* LinkStores.swift in Sources */,
-				6887B0D822D28A69002BAB31 /* FeedbackManager.swift in Sources */,
-				6873BCC222D1AEC80005BCCC /* CakeView.swift in Sources */,
-				6887B0EC22D297D5002BAB31 /* ActionSheets.swift in Sources */,
-				6887B0E322D28D27002BAB31 /* EggStack.swift in Sources */,
-				6873BCA322D1AA170005BCCC /* HostingController.swift in Sources */,
-				6887B0DF22D28A69002BAB31 /* ViewModelProtocol.swift in Sources */,
-				6873BCB922D1AB680005BCCC /* Cloud.swift in Sources */,
-				6887B0EE22D29CAE002BAB31 /* RootView.swift in Sources */,
-				6887B0D522D28A69002BAB31 /* AnyTransition+Transitions.swift in Sources */,
-				6887B0DA22D28A69002BAB31 /* EggProtocol.swift in Sources */,
-				688637D222D55D450083E104 /* RandomFactManager.swift in Sources */,
-				6873BCA122D1AA170005BCCC /* ContentView.swift in Sources */,
-				6873BCBA22D1AB730005BCCC /* Double+Helpers.swift in Sources */,
-				6887B0DE22D28A69002BAB31 /* TimerActionsProtocol.swift in Sources */,
-				6887B0D722D28A69002BAB31 /* EggManager.swift in Sources */,
-				6873BCB722D1AA330005BCCC /* EggView.swift in Sources */,
-				68673CE722D53FCE0015E3A6 /* SliderProtocol.swift in Sources */,
-				68673CEA22D542080015E3A6 /* UIKit+Slider.swift in Sources */,
-				6887B0E222D28CBE002BAB31 /* Slider+Temperature.swift in Sources */,
-				6887B0E922D29375002BAB31 /* EditingView.swift in Sources */,
-				6887B0E022D28CBE002BAB31 /* Slider+Doneness.swift in Sources */,
-				68673CE422D53C8F0015E3A6 /* TimerProtocol.swift in Sources */,
-				6873BCEA22D1C7F70005BCCC /* BoilingPointManager.swift in Sources */,
-				6873BCA522D1AA170005BCCC /* ExtensionDelegate.swift in Sources */,
-				689B1E0722D30A6400A768C2 /* SettingsProtocol.swift in Sources */,
-				6887B0E722D29263002BAB31 /* NewTimerButton.swift in Sources */,
-				6873BCF122D2344E0005BCCC /* SettingsManager.swift in Sources */,
-				6873BCBB22D1AB7D0005BCCC /* TimeInterval+Helpers.swift in Sources */,
-				6887B0E122D28CBE002BAB31 /* Slider+Size.swift in Sources */,
-				6887B0D422D28A69002BAB31 /* Enums.swift in Sources */,
-				6887B0DB22D28A69002BAB31 /* EggStateProtocol.swift in Sources */,
-				6887B0DD22D28A69002BAB31 /* LocalNotificationsProtocol.swift in Sources */,
-				6887B0D922D28A69002BAB31 /* CookTimeProtocol.swift in Sources */,
-				6887B0D322D28A69002BAB31 /* Defaults.swift in Sources */,
-				688637CA22D5515C0083E104 /* NavigationProtocol.swift in Sources */,
-				6887B0E422D28E6B002BAB31 /* Alerts.swift in Sources */,
-				688637CD22D554D90083E104 /* Modals.swift in Sources */,
-				6887B0D622D28A69002BAB31 /* BindableObject+Easy.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		68D2042422D04A530080B937 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				68C57F1F22D2502600A7E964 /* FeedbackManager.swift in Sources */,
-				68C57F1D22D24ABF00A7E964 /* CookTimeProtocol.swift in Sources */,
-				683C526722D27B6500CE63C4 /* TimerActionsProtocol.swift in Sources */,
-				683C526522D27B3E00CE63C4 /* LocalNotificationsProtocol.swift in Sources */,
-				68979C4822D1136400FCC4EB /* Cloud.swift in Sources */,
-				6873BCF022D2344E0005BCCC /* SettingsManager.swift in Sources */,
-				68673CE622D53FCE0015E3A6 /* SliderProtocol.swift in Sources */,
-				68D2042C22D04A530080B937 /* AppDelegate.swift in Sources */,
-				683C526B22D27CE500CE63C4 /* EggProtocol.swift in Sources */,
-				68D2042E22D04A530080B937 /* SceneDelegate.swift in Sources */,
-				68979C4222D1007500FCC4EB /* TimeInterval+Helpers.swift in Sources */,
-				68673CE322D53C8F0015E3A6 /* TimerProtocol.swift in Sources */,
-				6873BCE922D1C7F70005BCCC /* BoilingPointManager.swift in Sources */,
-				688637CC22D554D90083E104 /* Modals.swift in Sources */,
-				68C57F3322D2664400A7E964 /* ContentView.swift in Sources */,
-				68C57F2F22D264E300A7E964 /* SliderContainer.swift in Sources */,
-				68C57F2522D2593A00A7E964 /* FormattersProtocol.swift in Sources */,
-				68C57F3122D2651300A7E964 /* ProjectedEndLabel.swift in Sources */,
-				683C527122D2864200CE63C4 /* Slider+Temperature.swift in Sources */,
-				68C57F3E22D270A500A7E964 /* Enums.swift in Sources */,
-				6873BCC122D1AEC80005BCCC /* CakeView.swift in Sources */,
-				68C57F2922D25C6600A7E964 /* BindableObject+Easy.swift in Sources */,
-				688637C922D5515C0083E104 /* NavigationProtocol.swift in Sources */,
-				688637C622D54E0F0083E104 /* LinkStores.swift in Sources */,
-				68C57F2D22D2649B00A7E964 /* NavigationBar+Buttons.swift in Sources */,
-				68C57F2122D254DD00A7E964 /* ViewModelProtocol.swift in Sources */,
-				68673CE922D542080015E3A6 /* UIKit+Slider.swift in Sources */,
-				688637CF22D556A80083E104 /* RandomEggFactCyclerView.swift in Sources */,
-				68C57F3522D2669500A7E964 /* AnyTransition+Transitions.swift in Sources */,
-				68979C4422D101E600FCC4EB /* EggManager.swift in Sources */,
-				68979C4622D107C800FCC4EB /* Double+Helpers.swift in Sources */,
-				689B1E0622D30A6400A768C2 /* SettingsProtocol.swift in Sources */,
-				688637D122D55D450083E104 /* RandomFactManager.swift in Sources */,
-				6873BCED22D1CD3E0005BCCC /* SettingsView.swift in Sources */,
-				683C526922D27CC600CE63C4 /* EggStateProtocol.swift in Sources */,
-				6887B0EB22D297D5002BAB31 /* ActionSheets.swift in Sources */,
-				68D2043022D04A530080B937 /* RootView.swift in Sources */,
-				68979C4022D1004F00FCC4EB /* EggView.swift in Sources */,
-				68C57F3722D2693E00A7E964 /* Alerts.swift in Sources */,
-				68C57F3C22D26AB300A7E964 /* Defaults.swift in Sources */,
-				688637C422D54BFE0083E104 /* InfoButton.swift in Sources */,
-				683C526D22D2845C00CE63C4 /* Slider+Doneness.swift in Sources */,
-				68C57F3922D26A7B00A7E964 /* EggStack.swift in Sources */,
-				683C526F22D2860E00CE63C4 /* Slider+Size.swift in Sources */,
-				68C57F2B22D2642A00A7E964 /* OptionSliders.swift in Sources */,
+				68B4AB8523353E7C00847AB9 /* EggSettings.swift in Sources */,
+				683B52E42329E2E30053B213 /* AltimeterProxy.swift in Sources */,
+				683B52DA2329E0E10053B213 /* Double.swift in Sources */,
+				683B52DC2329E0FF0053B213 /* UserDefaults.swift in Sources */,
+				68106BEB234298F000DA61D9 /* HomeActionManager.swift in Sources */,
+				681D4BA9232AB0A300F483D3 /* Font.swift in Sources */,
+				683B52E72329E3150053B213 /* Store.swift in Sources */,
+				68465A93232A9AC900F934BA /* EggView.swift in Sources */,
+				681D4BAB232AD85200F483D3 /* NotificationStore.swift in Sources */,
+				68106C262342B38E00DA61D9 /* EggStore.swift in Sources */,
+				683B52EC2329E9F20053B213 /* Enum+TimerState.swift in Sources */,
+				68106C4D2342F7D400DA61D9 /* UserDefault.swift in Sources */,
+				68465A99232A9B4600F934BA /* StartButton.swift in Sources */,
+				683B52F3232A2F0D0053B213 /* AnyTransition.swift in Sources */,
+				68106BE82341AF0000DA61D9 /* DoneButton.swift in Sources */,
+				68465A95232A9B0D00F934BA /* SettingsButton.swift in Sources */,
+				68465AAA232AA4B500F934BA /* SettingsStore.swift in Sources */,
+				683B52C52329AA9F0053B213 /* AppDelegate.swift in Sources */,
+				68465A9D232A9BB200F934BA /* EndDateView.swift in Sources */,
+				68106C232342B2B600DA61D9 /* Settings.xcdatamodeld in Sources */,
+				68106C4B2342F6D500DA61D9 /* TimerStore.swift in Sources */,
+				68465A97232A9B2700F934BA /* SettingsView.swift in Sources */,
+				683B52C72329AA9F0053B213 /* SceneDelegate.swift in Sources */,
+				683B52E12329E2AD0053B213 /* Constants.swift in Sources */,
+				681D4BBF232C37ED00F483D3 /* Color.swift in Sources */,
+				683B52DF2329E12D0053B213 /* Enum+EggKey.swift in Sources */,
+				68465A9B232A9B6300F934BA /* ContentView.swift in Sources */,
+				68465AA8232A9E7800F934BA /* Enum+SettingsKey.swift in Sources */,
+				68465A91232A9A8600F934BA /* SlidersView.swift in Sources */,
+				68106C4F234300C100DA61D9 /* EggTimer.swift in Sources */,
+				683B52F1232A19C30053B213 /* View.swift in Sources */,
+				683B52C92329AA9F0053B213 /* RootView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXTargetDependency section */
-		6873BC8F22D1AA120005BCCC /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 6873BC8B22D1AA110005BCCC /* Tiny Eggy App */;
-			targetProxy = 6873BC8E22D1AA120005BCCC /* PBXContainerItemProxy */;
-		};
-		6873BC9E22D1AA170005BCCC /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 6873BC9A22D1AA160005BCCC /* Tiny Eggy Extension */;
-			targetProxy = 6873BC9D22D1AA170005BCCC /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
 /* Begin PBXVariantGroup section */
-		6873BC9122D1AA120005BCCC /* Interface.storyboard */ = {
+		683B52CF2329AAA70053B213 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				6873BC9222D1AA120005BCCC /* Base */,
-			);
-			name = Interface.storyboard;
-			sourceTree = "<group>";
-		};
-		68D2043622D04A580080B937 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				68D2043722D04A580080B937 /* Base */,
+				683B52D02329AAA70053B213 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -910,119 +409,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		6873BCAD22D1AA190005BCCC /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"Tiny Eggy Extension\"/Resources";
-				DEVELOPMENT_TEAM = F9PGNEMEHU;
-				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = "Tiny Eggy Extension/App Launch/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@executable_path/../../Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "ericlewis.Tiny-Eggy.watchkitapp.watchkitextension";
-				PRODUCT_NAME = "${TARGET_NAME}";
-				SDKROOT = watchos;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 6.0;
-			};
-			name = Debug;
-		};
-		6873BCAE22D1AA190005BCCC /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"Tiny Eggy Extension\"/Resources";
-				DEVELOPMENT_TEAM = F9PGNEMEHU;
-				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = "Tiny Eggy Extension/App Launch/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@executable_path/../../Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "ericlewis.Tiny-Eggy.watchkitapp.watchkitextension";
-				PRODUCT_NAME = "${TARGET_NAME}";
-				SDKROOT = watchos;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 6.0;
-			};
-			name = Release;
-		};
-		6873BCB122D1AA190005BCCC /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = F9PGNEMEHU;
-				IBSC_MODULE = Tiny_Eggy_WatchKit_Extension;
-				INFOPLIST_FILE = "Tiny Eggy/Info.plist";
-				PRODUCT_BUNDLE_IDENTIFIER = "ericlewis.Tiny-Eggy.watchkitapp";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = watchos;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 6.0;
-			};
-			name = Debug;
-		};
-		6873BCB222D1AA190005BCCC /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = F9PGNEMEHU;
-				IBSC_MODULE = Tiny_Eggy_WatchKit_Extension;
-				INFOPLIST_FILE = "Tiny Eggy/Info.plist";
-				PRODUCT_BUNDLE_IDENTIFIER = "ericlewis.Tiny-Eggy.watchkitapp";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = watchos;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 6.0;
-			};
-			name = Release;
-		};
-		6873BCB522D1AA190005BCCC /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = F9PGNEMEHU;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "ericlewis.Tiny-Eggy";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-			};
-			name = Debug;
-		};
-		6873BCB622D1AA190005BCCC /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = F9PGNEMEHU;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "ericlewis.Tiny-Eggy";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-			};
-			name = Release;
-		};
-		68D2045022D04A580080B937 /* Debug */ = {
+		683B52D32329AAA70053B213 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -1082,7 +469,7 @@
 			};
 			name = Debug;
 		};
-		68D2045122D04A580080B937 /* Release */ = {
+		683B52D42329AAA70053B213 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -1136,14 +523,15 @@
 			};
 			name = Release;
 		};
-		68D2045322D04A580080B937 /* Debug */ = {
+		683B52D62329AAA70053B213 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "Eggy/Supporting Files/Eggy.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = Eggy/Resources;
+				CURRENT_PROJECT_VERSION = 248;
+				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
+				DEVELOPMENT_ASSET_PATHS = "\"Eggy/Supporting Files/Preview Content\"";
 				DEVELOPMENT_TEAM = F9PGNEMEHU;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "Eggy/Supporting Files/Info.plist";
@@ -1153,20 +541,21 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = ericlewis.Eggy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SUPPORTS_UIKITFORMAC = NO;
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		68D2045422D04A580080B937 /* Release */ = {
+		683B52D72329AAA70053B213 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "Eggy/Supporting Files/Eggy.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = Eggy/Resources;
+				CURRENT_PROJECT_VERSION = 248;
+				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
+				DEVELOPMENT_ASSET_PATHS = "\"Eggy/Supporting Files/Preview Content\"";
 				DEVELOPMENT_TEAM = F9PGNEMEHU;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "Eggy/Supporting Files/Info.plist";
@@ -1176,7 +565,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = ericlewis.Eggy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SUPPORTS_UIKITFORMAC = NO;
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1185,52 +574,57 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		6873BCAC22D1AA190005BCCC /* Build configuration list for PBXNativeTarget "Tiny Eggy Extension" */ = {
+		683B52BC2329AA9F0053B213 /* Build configuration list for PBXProject "Eggy" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				6873BCAD22D1AA190005BCCC /* Debug */,
-				6873BCAE22D1AA190005BCCC /* Release */,
+				683B52D32329AAA70053B213 /* Debug */,
+				683B52D42329AAA70053B213 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		6873BCB022D1AA190005BCCC /* Build configuration list for PBXNativeTarget "Tiny Eggy App" */ = {
+		683B52D52329AAA70053B213 /* Build configuration list for PBXNativeTarget "Eggy" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				6873BCB122D1AA190005BCCC /* Debug */,
-				6873BCB222D1AA190005BCCC /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		6873BCB422D1AA190005BCCC /* Build configuration list for PBXNativeTarget "Tiny Eggy" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				6873BCB522D1AA190005BCCC /* Debug */,
-				6873BCB622D1AA190005BCCC /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		68D2042322D04A530080B937 /* Build configuration list for PBXProject "Eggy" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				68D2045022D04A580080B937 /* Debug */,
-				68D2045122D04A580080B937 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		68D2045222D04A580080B937 /* Build configuration list for PBXNativeTarget "Eggy" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				68D2045322D04A580080B937 /* Debug */,
-				68D2045422D04A580080B937 /* Release */,
+				683B52D62329AAA70053B213 /* Debug */,
+				683B52D72329AAA70053B213 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		683B52ED2329F4790053B213 /* XCRemoteSwiftPackageReference "SFSafeSymbols" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/piknotech/SFSafeSymbols";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.4.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		683B52EE2329F4790053B213 /* SFSafeSymbols */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 683B52ED2329F4790053B213 /* XCRemoteSwiftPackageReference "SFSafeSymbols" */;
+			productName = SFSafeSymbols;
+		};
+/* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		68106C212342B2B600DA61D9 /* Settings.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				68106C222342B2B600DA61D9 /* Settings.xcdatamodel */,
+			);
+			currentVersion = 68106C222342B2B600DA61D9 /* Settings.xcdatamodel */;
+			path = Settings.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
-	rootObject = 68D2042022D04A530080B937 /* Project object */;
+	rootObject = 683B52B92329AA9F0053B213 /* Project object */;
 }

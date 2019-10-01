@@ -1,98 +1,96 @@
-//
-//  ContentView.swift
-//  Eggy
-//
-//  Created by Eric Lewis on 7/7/19.
-//  Copyright © 2019 Eric Lewis, Inc. All rights reserved.
-//
-
 import SwiftUI
+import SFSafeSymbols
 
-struct ContentView: View, TimerProtocol {
+struct ContentView: View {
+    @EnvironmentObject var store: Store
+    @EnvironmentObject var timer: TimerStore
+    @State var offset: CGSize = .zero
+    @State var reactorToggle = false
+    
+    let formatter: DateComponentsFormatter = {
+        let formatter = DateComponentsFormatter()
+        formatter.unitsStyle = .short
+        formatter.allowedUnits = [.minute, .second]
+        formatter.includesApproximationPhrase = true
+        var calendar = Calendar.current
+        calendar.locale = Locale.current
+        formatter.calendar = calendar
 
-    // MARK: Private Properties
-
-    @EnvironmentObject private var store: EggManager
-
-    // MARK: Private Actions
-
-    private func tick() {
-        if self.store.isRunning {
-            self.store.changed()
+        return formatter
+    }()
+    
+    let runningFormatter: DateComponentsFormatter = {
+        let formatter = DateComponentsFormatter()
+        formatter.unitsStyle = .abbreviated
+        formatter.allowedUnits = [.minute, .second]
+        formatter.includesTimeRemainingPhrase = true
+        var calendar = Calendar.current
+        calendar.locale = Locale.current
+        formatter.calendar = calendar
+        
+        return formatter
+    }()
+    
+    var title: String {
+        if timer.state == .running {
+            return timer.timeRemaining >= 0 ? runningFormatter.string(from: timer.timeRemaining) ?? String(timer.timeRemaining) : "Egg is done"
         }
+        
+        return formatter.string(from: store.estimatedTime) ?? String(store.estimatedTime)
     }
-
-    // MARK: Render
-
+    
+    
+    var animation: Animation {
+        Animation.spring()
+    }
+    
     var body: some View {
-        let dragGesture = DragGesture()
-            .updating($dragState) { (value, state, _) in
-                state = .dragging(translation: value.translation)
-        }
-        return VStack {
-            EggStack(x: dragState.translation.width, y: dragState.translation.height, isDragging: dragState.isActive)
-                .tapAction(store.toggleRunning)
-                .gesture(dragGesture)
-                .presentation($store.confirmResetTimer, actionSheet: ActionSheet.confirmResetTimer(action: store.stop))
-            if !store.isRunning {
-                OptionSliders()
-                    .opacity(dragOpacity)
-                    .transition(.opacity)
-                    .onReceive(ticker, perform: tick)
-
-            } else {
-                RandomEggFactCyclerView()
-                    .opacity(dragOpacity)
-                    .transition(.slide)
-                    .padding(.bottom)
-                    .padding(.horizontal)
-                ProjectedEndLabel()
-                    .opacity(dragOpacity)
-                    .transition(.moveAndFade)
+        VStack {
+            if timer.state == .running && offset == .zero {
+                Text(timer.donenessDetail)
+                .font(.titleRounded)
+                .bold()
+                .foregroundColor(.secondary)
+                .transition(AnyTransition.moveBottomAndFade)
+                .animation(.spring())
+            }
+            ZStack {
+                EggView(offset: $offset)
+                .touchableWithImpactFeedback(action: store.toggleTimer)
+                .animation(.spring())
+            }
+            .animation(.spring())
+            .zIndex(2)
+            if timer.state != .running && offset == .zero {
+                Group {
+                    SlidersView()
+                        .animation(self.animation)
+                    StartButton()
+                        .animation(self.animation)
+                }
+                .transition(AnyTransition.moveBottomAndFade)
+                .zIndex(1)
+            } else if timer.state == .running && offset == .zero {
+                EndDateView()
+                .tappableWithImpactFeedback(action: store.toggleTimer)
+                .padding()
+                .transition(AnyTransition.moveTopAndFade)
+                .animation(.spring())
             }
         }
-        .animation(.basic())
-    }
-
-    // MARK: Draggin props
-
-    enum DragState {
-
-        case inactive
-        case dragging(translation: CGSize)
-
-        var translation: CGSize {
-            switch self {
-            case .inactive:
-                return .zero
-            case .dragging(let translation):
-                return translation
+        .overlay(Text(String(reactorToggle ? "t" : "f")).hidden())
+        .padding()
+        .navigationBarTitle(title)
+        .navigationBarItems(trailing: timer.state == .running ? nil : SettingsButton())
+        .onReceive(timer.timer) { _ in
+            if self.timer.state == .running {
+                self.reactorToggle.toggle()
             }
         }
-
-        var isActive: Bool {
-            switch self {
-            case .inactive:
-                return false
-            case .dragging:
-                return true
+        .onAppear {
+            if self.timer.state == .running {
+                self.reactorToggle.toggle()
             }
         }
-    }
-
-    var dragOpacity: Double {
-        dragState.isActive ? 0.0 : 1.0
-    }
-
-    @GestureState var dragState = DragState.inactive
-}
-
-// MARK: Previews
-
-#if DEBUG
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
     }
 }
-#endif
