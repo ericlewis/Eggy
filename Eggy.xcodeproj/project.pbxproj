@@ -143,7 +143,6 @@
 				683B52E52329E30B0053B213 /* Stores */,
 				683B52EA2329E3450053B213 /* Supporting Files */,
 				683B52E82329E3320053B213 /* Views */,
-				68106C212342B2B600DA61D9 /* Settings.xcdatamodeld */,
 			);
 			path = Eggy;
 			sourceTree = "<group>";
@@ -172,6 +171,7 @@
 		683B52DD2329E1200053B213 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				68106C212342B2B600DA61D9 /* Settings.xcdatamodeld */,
 				683B52E02329E2AD0053B213 /* Constants.swift */,
 				683B52DE2329E12D0053B213 /* Enum+EggKey.swift */,
 				68465AA7232A9E7800F934BA /* Enum+SettingsKey.swift */,
