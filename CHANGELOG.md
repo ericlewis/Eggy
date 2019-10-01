@@ -1,2 +1,5 @@
+New Features
+- Simple today widget to quickly view progress of current timers
+
 Resolved Issues
-- Device will now sync egg settings when opened, if the timer was not currently running.
+- Fixed label type where doneness said soft instead of runny
