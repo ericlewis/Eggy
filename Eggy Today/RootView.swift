@@ -14,8 +14,6 @@ struct RootView: View {
     @UserDefault(EggKey.size, defaultValue: 0) var size: Double
     @UserDefault(EggKey.temp, defaultValue: 0) var temp: Double
 
-    let timer = Timer.publish(every: Constants.timeInterval, on: .main, in: .common).autoconnect()
-
     var state: TimerState {
         UserDefaults.shared.value(forKey: EggKey.state, defaultValue: TimerState.idle)
     }
@@ -43,9 +41,7 @@ struct RootView: View {
         
         return "No eggs cooking"
     }
-    
-    @State var flicker = false
-    
+        
     var body: some View {
         VStack {
             Text(title).font(.titleRounded).bold()
@@ -68,12 +64,6 @@ struct RootView: View {
                     Text(doneness.donenessDetail).font(.titleRounded).bold()
                     Spacer()
                 }
-                Text(String(flicker)).hidden()
-            }
-        }
-        .onReceive(timer) { _ in
-            if self.state == .running {
-                self.flicker.toggle()
             }
         }
     }

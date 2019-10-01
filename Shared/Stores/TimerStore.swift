@@ -10,8 +10,6 @@ class TimerStore: ObservableObject {
     private var persistentCancellable: AnyCancellable?
     private var timerCancellable: AnyCancellable?
 
-    let timer = Timer.publish(every: Constants.timeInterval, on: .main, in: .common).autoconnect()
-
     @Published var state: TimerState = .idle
     var estimatedTime: TimeInterval = 0
     
@@ -70,7 +68,6 @@ class TimerStore: ObservableObject {
     }
     
     private func bind() {
-        bindTimer()
         bindStateSideEffects()
         bindPersistence()
     }
@@ -91,18 +88,6 @@ class TimerStore: ObservableObject {
             .receive(on: RunLoop.main)
             .removeDuplicates()
             .sink(receiveValue: persistState)
-    }
-    
-    private func bindTimer() {
-        timerCancellable = timer
-            .receive(on: RunLoop.main)
-            .sink(receiveValue: tick)
-    }
-    
-    private func tick(_ date: Date) {
-        if state == .running {
-            objectWillChange.send()
-        }
     }
     
     private func handleStateChange(_ state: TimerState) {
