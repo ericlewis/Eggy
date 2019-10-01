@@ -20,7 +20,9 @@ struct SettingsView: View {
     }
     
     private func tappedShare() {
-        
+        DispatchQueue.main.async {
+            UIApplication.shared.keyWindow?.rootViewController?.presentedViewController?.present(UIActivityViewController(activityItems: [URL(string: "https://twitter.com/ericlewis")!], applicationActivities: nil), animated: true, completion: nil)
+        }
     }
     
     private func tappedRate() {
@@ -169,15 +171,34 @@ struct SettingsView: View {
     
     var Misc: some View {
         Section(header: Text("More Information").headerStyle(), footer: Text("Version \(SettingsStore.version)").font(.footnoteRounded)) {
-            Text("Help & FAQs")
+            HStack {
+                Text("Help & FAQs")
                 .titleStyle()
-                .tappable(action: tappedFAQ)
-            Text("Share Eggy")
+                .foregroundColor(.primary)
+                Spacer()
+                Image(systemSymbol: .questionmarkCircle)
+                .foregroundColor(.accentColor)
+            }
+            .tappable(action: tappedFAQ)
+            HStack {
+              Text("Share Eggy")
                 .titleStyle()
-                .tappable(action: tappedShare)
+                .foregroundColor(.primary)
+                Spacer()
+                Image(systemSymbol: .squareAndArrowUp)
+                .foregroundColor(.accentColor)
+                .padding(.trailing, 1)
+            }
+            .tappable(action: tappedShare)
+            HStack {
             Text("Rate Egg")
                 .titleStyle()
-                .tappable(action: tappedRate)
+                .foregroundColor(.primary)
+                Spacer()
+                Image(systemSymbol: .heart)
+                .foregroundColor(.accentColor)
+            }
+            .tappable(action: tappedRate)
         }
     }
     

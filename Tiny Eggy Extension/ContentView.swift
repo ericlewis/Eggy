@@ -1,14 +1,163 @@
 import SwiftUI
+import WatchKit
 
-struct ContentView: View {
+extension View {
+    func detailContainer() -> some View {
+        self
+            .allowsTightening(true)
+            .padding(5)
+            .background(RoundedRectangle(cornerRadius: 10, style: .continuous).fill(Color.accentColor.opacity(0.20)))
+    }
+    
+    func tappableWithFeedback(action: () -> Void) -> some View {
+        self.onTapGesture {
+            WKInterfaceDevice.current().play(.click)
+        }
+    }
+}
+
+enum Selectables {
+    case none, temp, size, doneness
+}
+
+struct InnerView: View {
     @State var offset: CGSize = .zero
     
-    let timer = TimerStore()
+    @EnvironmentObject var timer: TimerStore
+    @EnvironmentObject var store: Store
+    
+    let runningFormatter: DateComponentsFormatter = {
+        let formatter = DateComponentsFormatter()
+        formatter.unitsStyle = .abbreviated
+        formatter.allowedUnits = [.minute, .second]
+        formatter.includesTimeRemainingPhrase = false
+        var calendar = Calendar.current
+        calendar.locale = Locale.current
+        formatter.calendar = calendar
+        
+        return formatter
+    }()
+    
+    var title: String {
+        timer.timeRemaining >= 0 ? runningFormatter.string(from: timer.timeRemaining) ?? String(timer.timeRemaining) : "Egg is done"
+    }
+    
+    func selectedTemp() {
+        if selected == .temp {
+            return selected = .none
+        }
+        
+        selected = .temp
+    }
+    
+    func selectedSize() {
+        if selected == .size {
+            return selected = .none
+        }
+        
+        selected = .size
+    }
+    
+    func selectedDoneness() {
+        if selected == .doneness {
+            return selected = .none
+        }
+        
+        selected = .doneness
+    }
+    
+    @State var selected: Selectables = .none
+    @State var amount: Double = 0
+    
+    var rotational: Binding<Double> {
+        switch selected {
+        case .size:
+            return $store.size
+        case .doneness:
+            return $store.doneness
+        case .temp:
+            return $store.temp
+        case .none:
+            return .constant(0)
+        }
+    }
+    
+    @State var flipper = false
     
     var body: some View {
-        EggView(offset: $offset)
-        .environmentObject(Store(timer: timer, egg: EggStore()))
+        VStack {
+            EggView(offset: $offset)
+            .onTapGesture(perform: store.toggleTimer)
+            .layoutPriority(1)
+            if timer.state == .running && offset == .zero {
+                GeometryReader { geo in
+                    Text(self.title)
+                    .font(.titleRounded)
+                    .bold()
+                    .frame(width: geo.frame(in: .local).width)
+                    
+                }
+                .transition(.moveBottomAndFade)
+                .animation(.spring())
+            }
+            if timer.state == .idle && offset == .zero {
+                HStack {
+                    Text(store.tempDetail.trimmingCharacters(in: .whitespacesAndNewlines)).bold()
+                    .foregroundColor(selected == .temp ? .green : nil)
+                    .onTapGesture(perform: selectedTemp)
+                    Divider()
+                    Text(store.sizeDetail.trimmingCharacters(in: .whitespacesAndNewlines)).bold()
+                    .foregroundColor(selected == .size ? .green : nil)
+                    .onTapGesture(perform: selectedSize)
+                    Divider()
+                    Text(store.doneness.donenessDetail).bold()
+                    .foregroundColor(selected == .doneness ? .green : nil)
+                    .onTapGesture(perform: selectedDoneness)
+                }
+                .padding(.vertical, 5)
+                .font(.bodyRounded)
+                .transition(.moveBottomAndFade)
+                .animation(.spring())
+                Button(action: store.toggleTimer) {
+                    Text("Start").font(.headlineRounded)
+                }
+                .padding([.horizontal, .bottom])
+                .transition(.moveBottomAndFade)
+                .animation(.spring())
+                Text(String(flipper)).hidden()
+            }
+        }
+        .onReceive(timer.timer, perform: { _ in
+            if self.timer.state == .running {
+                self.flipper.toggle()
+            }
+        })
+        .edgesIgnoringSafeArea(.vertical)
+    }
+}
+
+struct ContentView: View {
+    
+    @ObservedObject var timer: TimerStore
+    @ObservedObject var store: Store
+    @ObservedObject var egg: EggStore
+    
+    init() {
+        let t = TimerStore()
+        let e = EggStore()
+        timer = t
+        egg = e
+        store = Store(timer: t, egg: e)
+    }
+    
+    var body: some View {
+        InnerView()
+        .environmentObject(store)
         .environmentObject(timer)
+        .actionSheet(isPresented: $store.showCancelTimer, content: {
+            ActionSheet(title: Text("Are you sure you want to stop this running timer?"), message: nil, buttons: [.destructive(Text("Stop Timer"), action: store.stopTimer), .cancel()])
+        })
+        .accentColor(.mixer(.orange, .yellow, CGFloat(store.doneness)))
     }
 }
 

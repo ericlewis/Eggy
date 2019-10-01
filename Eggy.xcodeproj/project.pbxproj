@@ -88,6 +88,12 @@
 		68B147AC2343AE2D007D5EDF /* EggTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68106C4E234300C100DA61D9 /* EggTimer.swift */; };
 		68B147AD2343AE4C007D5EDF /* AltimeterProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 683B52E32329E2E30053B213 /* AltimeterProxy.swift */; };
 		68B147AF2343AF88007D5EDF /* EggView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68465A92232A9AC900F934BA /* EggView.swift */; };
+		68B147B22343C6F7007D5EDF /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68B147B12343C6F7007D5EDF /* CloudKit.framework */; };
+		68B147B42343D499007D5EDF /* StartButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68465A98232A9B4600F934BA /* StartButton.swift */; };
+		68B147B52343FE56007D5EDF /* SettingsStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68465AA9232AA4B500F934BA /* SettingsStore.swift */; };
+		68B147B72343FE9A007D5EDF /* MeasurementFormatters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68B147B62343FE9A007D5EDF /* MeasurementFormatters.swift */; };
+		68B147B82343FE9A007D5EDF /* MeasurementFormatters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68B147B62343FE9A007D5EDF /* MeasurementFormatters.swift */; };
+		68B147B92343FE9A007D5EDF /* MeasurementFormatters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68B147B62343FE9A007D5EDF /* MeasurementFormatters.swift */; };
 		68B4AB8523353E7C00847AB9 /* EggSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68B4AB8423353E7C00847AB9 /* EggSettings.swift */; };
 /* End PBXBuildFile section */
 
@@ -201,6 +207,10 @@
 		68B147882343AD89007D5EDF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		68B1478B2343AD89007D5EDF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		68B1478D2343AD89007D5EDF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		68B147B02343C6F5007D5EDF /* Tiny Eggy Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Tiny Eggy Extension.entitlements"; sourceTree = "<group>"; };
+		68B147B12343C6F7007D5EDF /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS6.0.sdk/System/Library/Frameworks/CloudKit.framework; sourceTree = DEVELOPER_DIR; };
+		68B147B32343D3F2007D5EDF /* Tiny Eggy.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Tiny Eggy.entitlements"; sourceTree = "<group>"; };
+		68B147B62343FE9A007D5EDF /* MeasurementFormatters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasurementFormatters.swift; sourceTree = "<group>"; };
 		68B4AB6A233524DD00847AB9 /* Eggy.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Eggy.entitlements; sourceTree = "<group>"; };
 		68B4AB742335396600847AB9 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		68B4AB8423353E7C00847AB9 /* EggSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EggSettings.swift; sourceTree = "<group>"; };
@@ -228,6 +238,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				68B147B22343C6F7007D5EDF /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -296,6 +307,7 @@
 				683B52F2232A2F0D0053B213 /* AnyTransition.swift */,
 				681D4BA8232AB0A300F483D3 /* Font.swift */,
 				681D4BBE232C37ED00F483D3 /* Color.swift */,
+				68B147B62343FE9A007D5EDF /* MeasurementFormatters.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -327,7 +339,6 @@
 				68465A90232A9A8600F934BA /* SlidersView.swift */,
 				68465A94232A9B0D00F934BA /* SettingsButton.swift */,
 				68465A96232A9B2700F934BA /* SettingsView.swift */,
-				68465A98232A9B4600F934BA /* StartButton.swift */,
 				68465A9A232A9B6300F934BA /* ContentView.swift */,
 				68465A9C232A9BB200F934BA /* EndDateView.swift */,
 				68106BE72341AF0000DA61D9 /* DoneButton.swift */,
@@ -414,6 +425,7 @@
 		68B147722343AD86007D5EDF /* Tiny Eggy */ = {
 			isa = PBXGroup;
 			children = (
+				68B147B32343D3F2007D5EDF /* Tiny Eggy.entitlements */,
 				68B147732343AD86007D5EDF /* Interface.storyboard */,
 				68B147762343AD88007D5EDF /* Assets.xcassets */,
 				68B147782343AD88007D5EDF /* Info.plist */,
@@ -424,6 +436,7 @@
 		68B147812343AD88007D5EDF /* Tiny Eggy Extension */ = {
 			isa = PBXGroup;
 			children = (
+				68B147B02343C6F5007D5EDF /* Tiny Eggy Extension.entitlements */,
 				68B147822343AD88007D5EDF /* ContentView.swift */,
 				68B147842343AD88007D5EDF /* HostingController.swift */,
 				68B147862343AD88007D5EDF /* ExtensionDelegate.swift */,
@@ -454,6 +467,7 @@
 			isa = PBXGroup;
 			children = (
 				68465A92232A9AC900F934BA /* EggView.swift */,
+				68465A98232A9B4600F934BA /* StartButton.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -461,6 +475,7 @@
 		68B4AB732335396600847AB9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				68B147B12343C6F7007D5EDF /* CloudKit.framework */,
 				68B4AB742335396600847AB9 /* CloudKit.framework */,
 				68B1474C23439B7D007D5EDF /* NotificationCenter.framework */,
 			);
@@ -685,6 +700,7 @@
 				683B52DF2329E12D0053B213 /* Enum+EggKey.swift in Sources */,
 				68465A9B232A9B6300F934BA /* ContentView.swift in Sources */,
 				68465AA8232A9E7800F934BA /* Enum+SettingsKey.swift in Sources */,
+				68B147B72343FE9A007D5EDF /* MeasurementFormatters.swift in Sources */,
 				68465A91232A9A8600F934BA /* SlidersView.swift in Sources */,
 				68106C4F234300C100DA61D9 /* EggTimer.swift in Sources */,
 				683B52F1232A19C30053B213 /* View.swift in Sources */,
@@ -700,12 +716,14 @@
 				68B147652343A2A8007D5EDF /* UserDefault.swift in Sources */,
 				68B147682343A2B7007D5EDF /* View.swift in Sources */,
 				68B147662343A2B7007D5EDF /* Double.swift in Sources */,
+				68B147B82343FE9A007D5EDF /* MeasurementFormatters.swift in Sources */,
 				68B1476B2343A2B7007D5EDF /* Color.swift in Sources */,
 				68B147632343A26D007D5EDF /* Enum+SettingsKey.swift in Sources */,
 				68B147642343A26D007D5EDF /* Enum+TimerState.swift in Sources */,
 				68B147692343A2B7007D5EDF /* AnyTransition.swift in Sources */,
 				68B147672343A2B7007D5EDF /* UserDefaults.swift in Sources */,
 				68B1476A2343A2B7007D5EDF /* Font.swift in Sources */,
+				68B147B52343FE56007D5EDF /* SettingsStore.swift in Sources */,
 				68B1475D23439CD6007D5EDF /* RootView.swift in Sources */,
 				68B1475023439B7D007D5EDF /* TodayViewController.swift in Sources */,
 				68B147612343A26D007D5EDF /* Constants.swift in Sources */,
@@ -722,6 +740,7 @@
 				68B147A82343ADF2007D5EDF /* TimerStore.swift in Sources */,
 				68B147852343AD88007D5EDF /* HostingController.swift in Sources */,
 				68B147A02343ADB0007D5EDF /* Constants.swift in Sources */,
+				68B147B42343D499007D5EDF /* StartButton.swift in Sources */,
 				68B1479C2343ADA6007D5EDF /* AnyTransition.swift in Sources */,
 				68B1479F2343ADAB007D5EDF /* UserDefault.swift in Sources */,
 				68B147A72343ADF2007D5EDF /* EggStore.swift in Sources */,
@@ -734,6 +753,7 @@
 				68B147AF2343AF88007D5EDF /* EggView.swift in Sources */,
 				68B147832343AD88007D5EDF /* ContentView.swift in Sources */,
 				68B147A22343ADB0007D5EDF /* Enum+SettingsKey.swift in Sources */,
+				68B147B92343FE9A007D5EDF /* MeasurementFormatters.swift in Sources */,
 				68B147992343ADA6007D5EDF /* Double.swift in Sources */,
 				68B147AA2343AE0E007D5EDF /* EggSettings.swift in Sources */,
 				68B147872343AD88007D5EDF /* ExtensionDelegate.swift in Sources */,
@@ -907,7 +927,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "Eggy/Supporting Files/Eggy.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 352;
+				CURRENT_PROJECT_VERSION = 485;
 				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"Eggy/Supporting Files/Preview Content\"";
 				DEVELOPMENT_TEAM = F9PGNEMEHU;
@@ -932,7 +952,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "Eggy/Supporting Files/Eggy.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 352;
+				CURRENT_PROJECT_VERSION = 485;
 				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"Eggy/Supporting Files/Preview Content\"";
 				DEVELOPMENT_TEAM = F9PGNEMEHU;
@@ -1001,6 +1021,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Tiny Eggy/Tiny Eggy.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = F9PGNEMEHU;
 				IBSC_MODULE = Tiny_Eggy_Extension;
@@ -1020,6 +1041,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Tiny Eggy/Tiny Eggy.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = F9PGNEMEHU;
 				IBSC_MODULE = Tiny_Eggy_Extension;
@@ -1039,6 +1061,7 @@
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_ENTITLEMENTS = "Tiny Eggy Extension/Tiny Eggy Extension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Tiny Eggy Extension/Preview Content\"";
 				DEVELOPMENT_TEAM = F9PGNEMEHU;
@@ -1064,6 +1087,7 @@
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_ENTITLEMENTS = "Tiny Eggy Extension/Tiny Eggy Extension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Tiny Eggy Extension/Preview Content\"";
 				DEVELOPMENT_TEAM = F9PGNEMEHU;

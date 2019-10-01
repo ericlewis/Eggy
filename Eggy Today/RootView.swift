@@ -11,7 +11,9 @@ import SwiftUI
 struct RootView: View {
     @UserDefault(EggKey.endDate, defaultValue: .distantFuture) var endDate: Date
     @UserDefault(EggKey.doneness, defaultValue: 0) var doneness: Double
-    
+    @UserDefault(EggKey.size, defaultValue: 0) var size: Double
+    @UserDefault(EggKey.temp, defaultValue: 0) var temp: Double
+
     let timer = Timer.publish(every: Constants.timeInterval, on: .main, in: .common).autoconnect()
 
     var state: TimerState {
@@ -39,16 +41,33 @@ struct RootView: View {
             return timeRemaining >= 0 ? runningFormatter.string(from: timeRemaining) ?? String(timeRemaining) : "Egg is done"
         }
         
-        return "No egg currently cooking"
+        return "No eggs cooking"
     }
     
     @State var flicker = false
     
     var body: some View {
         VStack {
-            Text(title).font(.largeTitleRounded)
+            Text(title).font(.titleRounded).bold()
             if state == .running {
-                Text(doneness.donenessDetail).font(.titleRounded)
+                Divider()
+                HStack {
+                    Spacer()
+                    Text(temp.tempDetail).font(.titleRounded).bold()
+                    Group {
+                        Spacer()
+                        Divider()
+                        Spacer()
+                    }
+                    Text(size.sizeDetail).font(.titleRounded).bold()
+                    Group {
+                        Spacer()
+                        Divider()
+                        Spacer()
+                    }
+                    Text(doneness.donenessDetail).font(.titleRounded).bold()
+                    Spacer()
+                }
                 Text(String(flicker)).hidden()
             }
         }

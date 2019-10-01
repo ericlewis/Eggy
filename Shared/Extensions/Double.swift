@@ -47,6 +47,14 @@ extension Double {
         rescale(from: 0...1, to: Constants.EggRange.doneness)
     }
     
+    var tempDetail: String {
+        MeasurementFormatter.tempFormatter.string(from: Measurement(value: self.scaledTemp(), unit: UnitTemperature.celsius).converted(to: SettingsStore.shared.temperatureDisplay == .celcius ? .celsius : .fahrenheit))
+    }
+    
+    var sizeDetail: String {
+        MeasurementFormatter.formatter.string(from: Measurement(value: self.scaledSize(), unit: UnitMass.grams).converted(to: SettingsStore.shared.weightDisplay == .grams ? .grams : .ounces))
+    }
+    
     var donenessDetail: String {
         if self > 0.7 {
             return "Hard"

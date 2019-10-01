@@ -66,6 +66,7 @@ struct ContentView: View {
                     SlidersView()
                         .animation(self.animation)
                     StartButton()
+                        .tappableWithImpactFeedback(action: store.toggleTimer)
                         .animation(self.animation)
                 }
                 .transition(AnyTransition.moveBottomAndFade)

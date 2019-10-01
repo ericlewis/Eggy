@@ -1,5 +1,12 @@
 New Features
-- Simple today widget to quickly view progress of current timers
+- Improved Today widget
+- Early Stage Watch App
 
 Resolved Issues
-- Fixed label type where doneness said soft instead of runny
+- UI consistency fixes 'erwhere 
+- Share sheet button works :P
+- Probably more stuff
+
+Known Issues
+- Help & FAQ doesn't work
+- Rate doesn't work

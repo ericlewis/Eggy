@@ -10,7 +10,7 @@ import SwiftUI
 
 struct DoneButton: View {
     var body: some View {
-        Text("Done").bold().padding([.leading, .vertical])
+        Text("Done").font(.bodyRounded).bold().padding([.leading, .vertical])
     }
 }
 

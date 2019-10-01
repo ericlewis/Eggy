@@ -1,8 +1,6 @@
 import SwiftUI
 
-struct StartButton: View {
-    @EnvironmentObject var store: Store
-    
+struct StartButton: View {    
     var body: some View {
             HStack {
                 Spacer()
@@ -14,7 +12,6 @@ struct StartButton: View {
                 Spacer()
             }
             .padding()
-            .background(RoundedRectangle(cornerRadius: 10, style: .continuous))
-            .tappableWithImpactFeedback(action: store.toggleTimer)
+            .background(RoundedRectangle(cornerRadius: 10, style: .continuous).fill(Color.accentColor))
     }
 }
