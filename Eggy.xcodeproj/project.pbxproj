@@ -43,8 +43,38 @@
 		68465A9D232A9BB200F934BA /* EndDateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68465A9C232A9BB200F934BA /* EndDateView.swift */; };
 		68465AA8232A9E7800F934BA /* Enum+SettingsKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68465AA7232A9E7800F934BA /* Enum+SettingsKey.swift */; };
 		68465AAA232AA4B500F934BA /* SettingsStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68465AA9232AA4B500F934BA /* SettingsStore.swift */; };
+		68B1474D23439B7D007D5EDF /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68B1474C23439B7D007D5EDF /* NotificationCenter.framework */; };
+		68B1475023439B7D007D5EDF /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68B1474F23439B7D007D5EDF /* TodayViewController.swift */; };
+		68B1475323439B7D007D5EDF /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68B1475123439B7D007D5EDF /* MainInterface.storyboard */; };
+		68B1475D23439CD6007D5EDF /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68B1475C23439CD6007D5EDF /* RootView.swift */; };
+		68B147612343A26D007D5EDF /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 683B52E02329E2AD0053B213 /* Constants.swift */; };
+		68B147622343A26D007D5EDF /* Enum+EggKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 683B52DE2329E12D0053B213 /* Enum+EggKey.swift */; };
+		68B147632343A26D007D5EDF /* Enum+SettingsKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68465AA7232A9E7800F934BA /* Enum+SettingsKey.swift */; };
+		68B147642343A26D007D5EDF /* Enum+TimerState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 683B52EB2329E9F20053B213 /* Enum+TimerState.swift */; };
+		68B147652343A2A8007D5EDF /* UserDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68106C4C2342F7D400DA61D9 /* UserDefault.swift */; };
+		68B147662343A2B7007D5EDF /* Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = 683B52D92329E0E10053B213 /* Double.swift */; };
+		68B147672343A2B7007D5EDF /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 683B52DB2329E0FF0053B213 /* UserDefaults.swift */; };
+		68B147682343A2B7007D5EDF /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 683B52F0232A19C30053B213 /* View.swift */; };
+		68B147692343A2B7007D5EDF /* AnyTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 683B52F2232A2F0D0053B213 /* AnyTransition.swift */; };
+		68B1476A2343A2B7007D5EDF /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 681D4BA8232AB0A300F483D3 /* Font.swift */; };
+		68B1476B2343A2B7007D5EDF /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 681D4BBE232C37ED00F483D3 /* Color.swift */; };
+		68B1476C2343A321007D5EDF /* Eggy Today.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 68B1474B23439B7C007D5EDF /* Eggy Today.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		68B4AB8523353E7C00847AB9 /* EggSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68B4AB8423353E7C00847AB9 /* EggSettings.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		68B1475B23439B7D007D5EDF /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				68B1476C2343A321007D5EDF /* Eggy Today.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		68106BE72341AF0000DA61D9 /* DoneButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoneButton.swift; sourceTree = "<group>"; };
@@ -85,6 +115,13 @@
 		68465AA7232A9E7800F934BA /* Enum+SettingsKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Enum+SettingsKey.swift"; sourceTree = "<group>"; };
 		68465AA9232AA4B500F934BA /* SettingsStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsStore.swift; sourceTree = "<group>"; };
 		688348CC23408B71002345A5 /* CHANGELOG.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = CHANGELOG.md; sourceTree = "<group>"; };
+		68B1474B23439B7C007D5EDF /* Eggy Today.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Eggy Today.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		68B1474C23439B7D007D5EDF /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
+		68B1474F23439B7D007D5EDF /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
+		68B1475223439B7D007D5EDF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		68B1475423439B7D007D5EDF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		68B1475C23439CD6007D5EDF /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
+		68B1475E2343A09F007D5EDF /* Eggy Today.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Eggy Today.entitlements"; sourceTree = "<group>"; };
 		68B4AB6A233524DD00847AB9 /* Eggy.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Eggy.entitlements; sourceTree = "<group>"; };
 		68B4AB742335396600847AB9 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		68B4AB8423353E7C00847AB9 /* EggSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EggSettings.swift; sourceTree = "<group>"; };
@@ -97,6 +134,14 @@
 			files = (
 				68106C242342B34500DA61D9 /* CloudKit.framework in Frameworks */,
 				683B52EF2329F4790053B213 /* SFSafeSymbols in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		68B1474823439B7C007D5EDF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				68B1474D23439B7D007D5EDF /* NotificationCenter.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -116,7 +161,9 @@
 			isa = PBXGroup;
 			children = (
 				688348CC23408B71002345A5 /* CHANGELOG.md */,
+				68B1475F2343A240007D5EDF /* Shared */,
 				683B52C32329AA9F0053B213 /* Eggy */,
+				68B1474E23439B7D007D5EDF /* Eggy Today */,
 				683B52C22329AA9F0053B213 /* Products */,
 				68B4AB732335396600847AB9 /* Frameworks */,
 				688348C923408064002345A5 /* Recovered References */,
@@ -127,6 +174,7 @@
 			isa = PBXGroup;
 			children = (
 				683B52C12329AA9F0053B213 /* Eggy.app */,
+				68B1474B23439B7C007D5EDF /* Eggy Today.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -135,10 +183,8 @@
 			isa = PBXGroup;
 			children = (
 				683B52E92329E33B0053B213 /* App Launch */,
-				683B52D82329E0CB0053B213 /* Extensions */,
 				68106BE9234298B200DA61D9 /* Managers */,
 				683B52DD2329E1200053B213 /* Models */,
-				68465A9E232A9CA100F934BA /* Property Wrappers */,
 				683B52E22329E2C90053B213 /* Proxies */,
 				683B52E52329E30B0053B213 /* Stores */,
 				683B52EA2329E3450053B213 /* Supporting Files */,
@@ -172,10 +218,6 @@
 			isa = PBXGroup;
 			children = (
 				68106C212342B2B600DA61D9 /* Settings.xcdatamodeld */,
-				683B52E02329E2AD0053B213 /* Constants.swift */,
-				683B52DE2329E12D0053B213 /* Enum+EggKey.swift */,
-				68465AA7232A9E7800F934BA /* Enum+SettingsKey.swift */,
-				683B52EB2329E9F20053B213 /* Enum+TimerState.swift */,
 				68B4AB8423353E7C00847AB9 /* EggSettings.swift */,
 			);
 			path = Models;
@@ -254,10 +296,44 @@
 			name = "Recovered References";
 			sourceTree = "<group>";
 		};
+		68B1474E23439B7D007D5EDF /* Eggy Today */ = {
+			isa = PBXGroup;
+			children = (
+				68B1475E2343A09F007D5EDF /* Eggy Today.entitlements */,
+				68B1474F23439B7D007D5EDF /* TodayViewController.swift */,
+				68B1475123439B7D007D5EDF /* MainInterface.storyboard */,
+				68B1475423439B7D007D5EDF /* Info.plist */,
+				68B1475C23439CD6007D5EDF /* RootView.swift */,
+			);
+			path = "Eggy Today";
+			sourceTree = "<group>";
+		};
+		68B1475F2343A240007D5EDF /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				683B52D82329E0CB0053B213 /* Extensions */,
+				68465A9E232A9CA100F934BA /* Property Wrappers */,
+				68B147602343A261007D5EDF /* Models */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		68B147602343A261007D5EDF /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				683B52E02329E2AD0053B213 /* Constants.swift */,
+				683B52DE2329E12D0053B213 /* Enum+EggKey.swift */,
+				68465AA7232A9E7800F934BA /* Enum+SettingsKey.swift */,
+				683B52EB2329E9F20053B213 /* Enum+TimerState.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		68B4AB732335396600847AB9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				68B4AB742335396600847AB9 /* CloudKit.framework */,
+				68B1474C23439B7D007D5EDF /* NotificationCenter.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -272,6 +348,7 @@
 				683B52BD2329AA9F0053B213 /* Sources */,
 				683B52BE2329AA9F0053B213 /* Frameworks */,
 				683B52BF2329AA9F0053B213 /* Resources */,
+				68B1475B23439B7D007D5EDF /* Embed App Extensions */,
 				683F7AFF2340009E0091B97B /* ShellScript */,
 			);
 			buildRules = (
@@ -286,18 +363,38 @@
 			productReference = 683B52C12329AA9F0053B213 /* Eggy.app */;
 			productType = "com.apple.product-type.application";
 		};
+		68B1474A23439B7C007D5EDF /* Eggy Today */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 68B1475823439B7D007D5EDF /* Build configuration list for PBXNativeTarget "Eggy Today" */;
+			buildPhases = (
+				68B1474723439B7C007D5EDF /* Sources */,
+				68B1474823439B7C007D5EDF /* Frameworks */,
+				68B1474923439B7C007D5EDF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Eggy Today";
+			productName = "Eggy Today";
+			productReference = 68B1474B23439B7C007D5EDF /* Eggy Today.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		683B52B92329AA9F0053B213 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1100;
+				LastSwiftUpdateCheck = 1110;
 				LastUpgradeCheck = 1100;
 				ORGANIZATIONNAME = "Eric Lewis, Inc.";
 				TargetAttributes = {
 					683B52C02329AA9F0053B213 = {
 						CreatedOnToolsVersion = 11.0;
+					};
+					68B1474A23439B7C007D5EDF = {
+						CreatedOnToolsVersion = 11.1;
 					};
 				};
 			};
@@ -318,6 +415,7 @@
 			projectRoot = "";
 			targets = (
 				683B52C02329AA9F0053B213 /* Eggy */,
+				68B1474A23439B7C007D5EDF /* Eggy Today */,
 			);
 		};
 /* End PBXProject section */
@@ -330,6 +428,14 @@
 				683B52D12329AAA70053B213 /* LaunchScreen.storyboard in Resources */,
 				683B52CE2329AAA70053B213 /* Preview Assets.xcassets in Resources */,
 				683B52CB2329AAA70053B213 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		68B1474923439B7C007D5EDF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				68B1475323439B7D007D5EDF /* MainInterface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -395,6 +501,26 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		68B1474723439B7C007D5EDF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				68B147622343A26D007D5EDF /* Enum+EggKey.swift in Sources */,
+				68B147652343A2A8007D5EDF /* UserDefault.swift in Sources */,
+				68B147682343A2B7007D5EDF /* View.swift in Sources */,
+				68B147662343A2B7007D5EDF /* Double.swift in Sources */,
+				68B1476B2343A2B7007D5EDF /* Color.swift in Sources */,
+				68B147632343A26D007D5EDF /* Enum+SettingsKey.swift in Sources */,
+				68B147642343A26D007D5EDF /* Enum+TimerState.swift in Sources */,
+				68B147692343A2B7007D5EDF /* AnyTransition.swift in Sources */,
+				68B147672343A2B7007D5EDF /* UserDefaults.swift in Sources */,
+				68B1476A2343A2B7007D5EDF /* Font.swift in Sources */,
+				68B1475D23439CD6007D5EDF /* RootView.swift in Sources */,
+				68B1475023439B7D007D5EDF /* TodayViewController.swift in Sources */,
+				68B147612343A26D007D5EDF /* Constants.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
@@ -404,6 +530,14 @@
 				683B52D02329AAA70053B213 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		68B1475123439B7D007D5EDF /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				68B1475223439B7D007D5EDF /* Base */,
+			);
+			name = MainInterface.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -526,10 +660,11 @@
 		683B52D62329AAA70053B213 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "Eggy/Supporting Files/Eggy.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 295;
+				CURRENT_PROJECT_VERSION = 334;
 				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"Eggy/Supporting Files/Preview Content\"";
 				DEVELOPMENT_TEAM = F9PGNEMEHU;
@@ -550,10 +685,11 @@
 		683B52D72329AAA70053B213 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "Eggy/Supporting Files/Eggy.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 295;
+				CURRENT_PROJECT_VERSION = 334;
 				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"Eggy/Supporting Files/Preview Content\"";
 				DEVELOPMENT_TEAM = F9PGNEMEHU;
@@ -566,6 +702,52 @@
 				PRODUCT_BUNDLE_IDENTIFIER = ericlewis.Eggy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTS_MACCATALYST = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		68B1475923439B7D007D5EDF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "Eggy Today/Eggy Today.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = NO;
+				DEVELOPMENT_TEAM = F9PGNEMEHU;
+				INFOPLIST_FILE = "Eggy Today/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "ericlewis.Eggy.Eggy-Today";
+				PRODUCT_NAME = "Eggy Today";
+				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		68B1475A23439B7D007D5EDF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "Eggy Today/Eggy Today.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = NO;
+				DEVELOPMENT_TEAM = F9PGNEMEHU;
+				INFOPLIST_FILE = "Eggy Today/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "ericlewis.Eggy.Eggy-Today";
+				PRODUCT_NAME = "Eggy Today";
+				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -588,6 +770,15 @@
 			buildConfigurations = (
 				683B52D62329AAA70053B213 /* Debug */,
 				683B52D72329AAA70053B213 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		68B1475823439B7D007D5EDF /* Build configuration list for PBXNativeTarget "Eggy Today" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				68B1475923439B7D007D5EDF /* Debug */,
+				68B1475A23439B7D007D5EDF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

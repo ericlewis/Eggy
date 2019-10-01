@@ -46,4 +46,16 @@ extension Double {
     func scaledDoneness() -> Double {
         rescale(from: 0...1, to: Constants.EggRange.doneness)
     }
+    
+    var donenessDetail: String {
+        if self > 0.7 {
+            return "Hard"
+        }
+        
+        if self > 0.3 {
+            return "Soft"
+        }
+        
+        return "Runny"
+    }
 }

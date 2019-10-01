@@ -2,7 +2,11 @@ import Foundation
 
 // TODO: generic
 
-extension UserDefaults {
+public extension UserDefaults {
+    static var shared: UserDefaults {
+        UserDefaults(suiteName: "group.eel.eggy")!
+    }
+    
     func set<Value, Key>(_ value: Value?, forKey key: Key) where Value: RawRepresentable, Key: RawRepresentable, Key.RawValue == String {
         self.set(value?.rawValue, forKey: key.rawValue)
     }

@@ -42,7 +42,7 @@ class SettingsStore: ObservableObject {
     @Published var temperatureDisplay: TemperatureDisplay
     @Published var weightDisplay: WeightDisplay
 
-    init(userDefaults: UserDefaults = .standard) {
+    init(userDefaults: UserDefaults = .shared) {
         self.userDefaults = userDefaults
         
         // TODO: do some notification thinking

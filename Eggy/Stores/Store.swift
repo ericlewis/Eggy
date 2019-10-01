@@ -75,7 +75,7 @@ class Store: ObservableObject {
         timer.stop()
     }
     
-    init(timer: TimerStore, egg: EggStore, userDefaults: UserDefaults = .standard) {
+    init(timer: TimerStore, egg: EggStore, userDefaults: UserDefaults = .shared) {
         self.timer = timer
         self.egg = egg
         self.userDefaults = userDefaults

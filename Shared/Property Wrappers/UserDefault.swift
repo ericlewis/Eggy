@@ -23,7 +23,7 @@ public struct UserDefault<Value: PropertyListValue, Key: RawRepresentable> where
     let defaultValue: Value
     var userDefaults: UserDefaults
     
-    public init(_ key: Key, defaultValue: Value, userDefaults: UserDefaults = .standard) {
+    public init(_ key: Key, defaultValue: Value, userDefaults: UserDefaults = .shared) {
         self.key = key
         self.defaultValue = defaultValue
         self.userDefaults = userDefaults

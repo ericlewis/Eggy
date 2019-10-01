@@ -18,7 +18,7 @@ class NotificationStore: ObservableObject {
     func scheduleNotifications(endDate: Date) {
         center.requestAuthorization(options: [.alert, .sound]) { granted, _ in
             let timeRemaining = endDate.timeIntervalSinceReferenceDate - Date().timeIntervalSinceReferenceDate
-            if timeRemaining > 0, granted {
+            if timeRemaining > 1, granted {
                 self.scheduleNormie(timeRemaining)
                 
                 if self.warning {

@@ -37,7 +37,7 @@ class TimerStore: ObservableObject {
     @UserDefault(EggKey.doneness, defaultValue: 0) var doneness: Double
     @UserDefault(EggKey.boilingPoint, defaultValue: 100) var boilingPoint: Double
     
-    init(userDefaults: UserDefaults = .standard, notifications: NotificationStore = .shared, settings: SettingsStore = .shared) {
+    init(userDefaults: UserDefaults = .shared, notifications: NotificationStore = .shared, settings: SettingsStore = .shared) {
         self.userDefaults = userDefaults
         self.notifications = notifications
         self.settings = settings
