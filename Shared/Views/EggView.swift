@@ -59,6 +59,22 @@ struct EggView: View {
             }
         }
         
+        var orangeColor: UIColor {
+            #if os(watchOS)
+            return .orange
+            #else
+            return .systemOrange
+            #endif
+        }
+        
+        var yellowColor: UIColor {
+            #if os(watchOS)
+            return .yellow
+            #else
+            return .systemYellow
+            #endif
+        }
+        
         return GeometryReader { geo in
             ZStack {
                 Circle()
@@ -70,9 +86,9 @@ struct EggView: View {
                                 
                 Group {
                     Circle()
-                        .fill(Color.mixer(.systemOrange, .systemYellow, CGFloat(self.timer.state == .running ? self.timer.doneness : self.store.doneness)))
+                        .fill(Color.mixer(orangeColor, yellowColor, CGFloat(self.timer.state == .running ? self.timer.doneness : self.store.doneness)))
                         .background(ArcShape(pct: 1).foregroundColor(.secondary).opacity(self.timer.state == .running ? 1 : 0).scaleEffect(self.timer.state == .running ? 1 : 0.9))
-                        .overlay(ArcShape(pct: pct).foregroundColor(Color.mixer(.systemOrange, .systemYellow, CGFloat(self.timer.state == .running ? self.timer.doneness : self.store.doneness))).opacity(self.timer.state == .running ? 1 : 0).scaleEffect(self.timer.state == .running ? 1 : 0.9))
+                        .overlay(ArcShape(pct: pct).foregroundColor(Color.mixer(orangeColor, yellowColor, CGFloat(self.timer.state == .running ? self.timer.doneness : self.store.doneness))).opacity(self.timer.state == .running ? 1 : 0).scaleEffect(self.timer.state == .running ? 1 : 0.9))
                     Text(self.timer.state == .running ? " " + self.formatter.string(for: pct >= 1 ? 1 : Double(pct))! + " " : "     ")
                     .foregroundColor(.black)
                     .font(.largeTitleRounded)

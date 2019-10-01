@@ -117,9 +117,12 @@ class TimerStore: ObservableObject {
     }
     
     private func handleAutoLock(_ disabled: Bool) {
+        #if os(watchOS)
+        #else
         if settings.preventAutoLock == .active {
             UIApplication.shared.isIdleTimerDisabled = disabled
         }
+        #endif
     }
     
     private func persistState(_ state: TimerState) {

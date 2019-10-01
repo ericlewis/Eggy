@@ -88,11 +88,14 @@ class Store: ObservableObject {
 
         showCancelTimer = false
         
+        #if os(watchOS)
+        #else
         if SettingsStore.shared.preventAutoLock == .always {
             UIApplication.shared.isIdleTimerDisabled = true
         } else {
             UIApplication.shared.isIdleTimerDisabled = false
         }
+        #endif
 
         bind()
     }
