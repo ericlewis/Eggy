@@ -9,7 +9,7 @@ extension View {
             .background(RoundedRectangle(cornerRadius: 10, style: .continuous).fill(Color.accentColor.opacity(0.20)))
     }
     
-    func tappableWithFeedback(action: () -> Void) {
+    func tappableWithFeedback(action: () -> Void) -> some View {
         self.onTapGesture {
             WKInterfaceDevice.current().play(.click)
         }
@@ -82,6 +82,8 @@ struct InnerView: View {
         }
     }
     
+    @State var flipper = false
+    
     var body: some View {
         VStack {
             EggView(offset: $offset)
@@ -112,6 +114,7 @@ struct InnerView: View {
                     .foregroundColor(selected == .doneness ? .green : nil)
                     .onTapGesture(perform: selectedDoneness)
                 }
+                .padding(.vertical, 5)
                 .font(.bodyRounded)
                 .transition(.moveBottomAndFade)
                 .animation(.spring())
@@ -121,22 +124,30 @@ struct InnerView: View {
                 .padding([.horizontal, .bottom])
                 .transition(.moveBottomAndFade)
                 .animation(.spring())
+                Text(String(flipper)).hidden()
             }
         }
+        .onReceive(timer.timer, perform: { _ in
+            if self.timer.state == .running {
+                self.flipper.toggle()
+            }
+        })
         .edgesIgnoringSafeArea(.vertical)
-        .digitalCrownRotation(rotational, from: 0, through: 1)
     }
 }
 
 struct ContentView: View {
     
-    var timer: TimerStore
+    @ObservedObject var timer: TimerStore
     @ObservedObject var store: Store
+    @ObservedObject var egg: EggStore
     
     init() {
         let t = TimerStore()
+        let e = EggStore()
         timer = t
-        store = Store(timer: t, egg: EggStore())
+        egg = e
+        store = Store(timer: t, egg: e)
     }
     
     var body: some View {

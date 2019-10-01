@@ -83,5 +83,15 @@ struct ContentView: View {
         .padding()
         .navigationBarTitle(title)
         .navigationBarItems(trailing: timer.state == .running ? nil : SettingsButton())
+        .onReceive(timer.timer) { _ in
+            if self.timer.state == .running {
+                self.reactorToggle.toggle()
+            }
+        }
+        .onAppear {
+            if self.timer.state == .running {
+                self.reactorToggle.toggle()
+            }
+        }
     }
 }
