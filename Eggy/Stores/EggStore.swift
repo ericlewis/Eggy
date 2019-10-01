@@ -21,8 +21,9 @@ class EggStore: NSObject, ObservableObject, NSFetchedResultsControllerDelegate {
     
     lazy var frc: NSFetchedResultsController<Settings> = {
         let fr: NSFetchRequest<Settings> = Settings.fetchRequest()
-        fr.sortDescriptors = []
-        
+        fr.sortDescriptors = [NSSortDescriptor(key: "createdAt", ascending: true)]
+        fr.predicate = NSPredicate(format: "createdAt != nil")
+        fr.fetchLimit = 1
         return NSFetchedResultsController(fetchRequest: fr, managedObjectContext: persistentContainer.viewContext, sectionNameKeyPath: nil, cacheName: nil)
     }()
 
@@ -34,16 +35,22 @@ class EggStore: NSObject, ObservableObject, NSFetchedResultsControllerDelegate {
     }
     
     func initialize() {
+        try? persistentContainer.viewContext.setQueryGenerationFrom(.current)
         persistentContainer.viewContext.automaticallyMergesChangesFromParent = true
         frc.delegate = self
     }
     
     func fetch() {
         try? frc.performFetch()
-        settings = frc.fetchedObjects?.last ?? Settings(context: persistentContainer.viewContext)
+        settings = frc.fetchedObjects?.first ?? {
+            let settings = Settings(context: persistentContainer.viewContext)
+            settings.createdAt = Date()
+            return settings
+        }()
     }
     
     func controllerDidChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
+        settings = controller.fetchedObjects?.first as? Settings
         update()
     }
     
