@@ -58,7 +58,7 @@
 		68B147692343A2B7007D5EDF /* AnyTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 683B52F2232A2F0D0053B213 /* AnyTransition.swift */; };
 		68B1476A2343A2B7007D5EDF /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 681D4BA8232AB0A300F483D3 /* Font.swift */; };
 		68B1476B2343A2B7007D5EDF /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 681D4BBE232C37ED00F483D3 /* Color.swift */; };
-		68B1476C2343A321007D5EDF /* Eggy Today.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 68B1474B23439B7C007D5EDF /* Eggy Today.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		68B1476C2343A321007D5EDF /* Eggy Today.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 68B1474B23439B7C007D5EDF /* Eggy Today.appex */; platformFilter = ios; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		68B147752343AD86007D5EDF /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68B147732343AD86007D5EDF /* Interface.storyboard */; };
 		68B147772343AD88007D5EDF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 68B147762343AD88007D5EDF /* Assets.xcassets */; };
 		68B1477E2343AD88007D5EDF /* Tiny Eggy Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 68B1477D2343AD88007D5EDF /* Tiny Eggy Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -927,7 +927,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "Eggy/Supporting Files/Eggy.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 485;
+				CURRENT_PROJECT_VERSION = 540;
 				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"Eggy/Supporting Files/Preview Content\"";
 				DEVELOPMENT_TEAM = F9PGNEMEHU;
@@ -952,7 +952,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "Eggy/Supporting Files/Eggy.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 485;
+				CURRENT_PROJECT_VERSION = 540;
 				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"Eggy/Supporting Files/Preview Content\"";
 				DEVELOPMENT_TEAM = F9PGNEMEHU;

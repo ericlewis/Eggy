@@ -31,6 +31,7 @@ class Store: ObservableObject {
             }
         }
     }
+    
     @Published var boilingPoint: Double
     
     @Published var showCancelTimer: Bool
@@ -114,6 +115,7 @@ extension Store {
             .map { temp, size, doneness, boilingPoint in
                 pow(size.scaledSize(), 2/3) * Constants.heatCoefficient * log(Constants.yolkToWhiteRatio * (temp.scaledTemp() - boilingPoint) / (doneness.scaledDoneness() - boilingPoint))
         }
+        .removeDuplicates()
         .assign(to: \.estimatedTime, on: self)
     }
 }
@@ -132,6 +134,7 @@ extension Store {
         .catch { _ in
             Just(Constants.boilingPoint)
         }
+        .removeDuplicates()
         .assign(to: \.boilingPoint, on: self)
     }
 }
@@ -140,18 +143,21 @@ extension Store {
     private func bindCoreDataBridge() {
         let _ = $temp
             .receive(on: RunLoop.main)
+            .removeDuplicates()
             .sink {
                 self.setEggStoreValue($0, .temp)
         }
         
         let _ = $size
             .receive(on: RunLoop.main)
+            .removeDuplicates()
             .sink {
                 self.setEggStoreValue($0, .size)
         }
         
         let _ = $doneness
             .receive(on: RunLoop.main)
+            .removeDuplicates()
             .sink {
                 self.setEggStoreValue($0, .doneness)
         }
@@ -160,6 +166,7 @@ extension Store {
         // should remain local to the device itself if possible.
         let _ = $boilingPoint
             .receive(on: RunLoop.main)
+            .removeDuplicates()
             .sink { bp in
                 DispatchQueue.global(qos: .background).async {
                     UserDefaults.standard.set(bp, forKey: EggKey.boilingPoint)

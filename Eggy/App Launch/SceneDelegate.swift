@@ -15,9 +15,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate, EggStoreDelegate {
         store = Store(timer: timer, egg: egg)
         egg.delegate = self
         
+        #if !targetEnvironment(macCatalyst)
         if let shortcutItem = connectionOptions.shortcutItem {
             shortcutToProcess = shortcutItem
         }
+        #endif
         
         shortcuts = HomeActionManager(store: store)
 

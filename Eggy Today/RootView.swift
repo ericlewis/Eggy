@@ -49,6 +49,7 @@ struct RootView: View {
     var body: some View {
         VStack {
             Text(title).font(.titleRounded).bold()
+            .padding(state == .running ? .top : .vertical)
             if state == .running {
                 Divider()
                 HStack {

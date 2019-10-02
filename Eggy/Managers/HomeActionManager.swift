@@ -10,7 +10,7 @@ class HomeActionManager {
     var start: UIApplicationShortcutItem {
         UIApplicationShortcutItem(type: "start",
         localizedTitle: "Start Timer",
-        localizedSubtitle: store.donenessDetail,
+        localizedSubtitle: "\(store.temp.tempDetail) | \(store.size.sizeDetail) | \(store.doneness.donenessDetail)",
         icon: UIApplicationShortcutIcon(systemImageName: "play.fill"), userInfo: nil)
     }
     

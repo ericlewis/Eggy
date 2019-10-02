@@ -9,9 +9,10 @@ extension View {
             .background(RoundedRectangle(cornerRadius: 10, style: .continuous).fill(Color.accentColor.opacity(0.20)))
     }
     
-    func tappableWithFeedback(action: () -> Void) {
+    func onTapFeedback(perform action: @escaping () -> Void) -> some View {
         self.onTapGesture {
             WKInterfaceDevice.current().play(.click)
+            action()
         }
     }
 }
@@ -67,7 +68,6 @@ struct InnerView: View {
     }
     
     @State var selected: Selectables = .none
-    @State var amount: Double = 0
     
     var rotational: Binding<Double> {
         switch selected {
@@ -85,14 +85,18 @@ struct InnerView: View {
     var body: some View {
         VStack {
             EggView(offset: $offset)
-            .onTapGesture(perform: store.toggleTimer)
+            .onTapFeedback(perform: {
+                self.selected = .none
+                self.store.toggleTimer()
+            })
+            .scaleEffect(0.95)
             .layoutPriority(1)
             if timer.state == .running && offset == .zero {
                 GeometryReader { geo in
                     Text(self.title)
                     .font(.titleRounded)
                     .bold()
-                    .frame(width: geo.frame(in: .local).width)
+                    .frame(width: geo.frame(in: .local).width + 10)
                     
                 }
                 .transition(.moveBottomAndFade)
@@ -102,20 +106,26 @@ struct InnerView: View {
                 HStack {
                     Text(store.tempDetail.trimmingCharacters(in: .whitespacesAndNewlines)).bold()
                     .foregroundColor(selected == .temp ? .green : nil)
-                    .onTapGesture(perform: selectedTemp)
+                    .onTapFeedback(perform: selectedTemp)
                     Divider()
                     Text(store.sizeDetail.trimmingCharacters(in: .whitespacesAndNewlines)).bold()
                     .foregroundColor(selected == .size ? .green : nil)
-                    .onTapGesture(perform: selectedSize)
+                    .onTapFeedback(perform: selectedSize)
                     Divider()
                     Text(store.doneness.donenessDetail).bold()
+                    .focusable()
+                        .digitalCrownRotation(rotational, from: 0.0, through: 1.0, by: 0.001, sensitivity: .low, isContinuous: false, isHapticFeedbackEnabled: false)
                     .foregroundColor(selected == .doneness ? .green : nil)
-                    .onTapGesture(perform: selectedDoneness)
+                    .onTapFeedback(perform: selectedDoneness)
                 }
                 .font(.bodyRounded)
                 .transition(.moveBottomAndFade)
                 .animation(.spring())
-                Button(action: store.toggleTimer) {
+                Button(action: {
+                    WKInterfaceDevice.current().play(.click)
+                    self.selected = .none
+                    self.store.toggleTimer()
+                }) {
                     Text("Start").font(.headlineRounded)
                 }
                 .padding([.horizontal, .bottom])
@@ -124,7 +134,6 @@ struct InnerView: View {
             }
         }
         .edgesIgnoringSafeArea(.vertical)
-        .digitalCrownRotation(rotational, from: 0, through: 1)
     }
 }
 
