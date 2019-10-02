@@ -82,6 +82,17 @@ struct InnerView: View {
         }
     }
     
+    let formatter: DateComponentsFormatter = {
+        let formatter = DateComponentsFormatter()
+        formatter.unitsStyle = .short
+        formatter.allowedUnits = [.minute, .second]
+        var calendar = Calendar.current
+        calendar.locale = Locale.current
+        formatter.calendar = calendar
+
+        return formatter
+    }()
+    
     var body: some View {
         VStack {
             EggView(offset: $offset)
@@ -89,16 +100,16 @@ struct InnerView: View {
                 self.selected = .none
                 self.store.toggleTimer()
             })
-            .scaleEffect(0.95)
             .layoutPriority(1)
             if timer.state == .running && offset == .zero {
                 GeometryReader { geo in
                     Text(self.title)
                     .font(.titleRounded)
                     .bold()
-                    .frame(width: geo.frame(in: .local).width + 10)
-                    
+                    .frame(width: geo.frame(in: .global).width + 30)
                 }
+                .padding(.bottom, 20)
+                .padding(.top, 10)
                 .transition(.moveBottomAndFade)
                 .animation(.spring())
             }
@@ -133,7 +144,8 @@ struct InnerView: View {
                 .animation(.spring())
             }
         }
-        .edgesIgnoringSafeArea(.vertical)
+        .edgesIgnoringSafeArea(.bottom)
+        .navigationBarTitle(timer.state == .running ? "Eggy" : formatter.string(from: store.estimatedTime) ?? "Eggy")
     }
 }
 
@@ -141,11 +153,17 @@ struct ContentView: View {
     
     var timer: TimerStore
     @ObservedObject var store: Store
+    @ObservedObject var egg = EggStore.shared
+    
+    let coordinator: Coordinator
     
     init() {
         let t = TimerStore()
         timer = t
-        store = Store(timer: t, egg: EggStore())
+        let s = Store(timer: t, egg: EggStore.shared)
+        store = s
+        coordinator = Coordinator(EggStore.shared, s)
+        egg.delegate = coordinator
     }
     
     var body: some View {
@@ -156,6 +174,35 @@ struct ContentView: View {
             ActionSheet(title: Text("Are you sure you want to stop this running timer?"), message: nil, buttons: [.destructive(Text("Stop Timer"), action: store.stopTimer), .cancel()])
         })
         .accentColor(.mixer(.orange, .yellow, CGFloat(store.doneness)))
+    }
+    
+    class Coordinator: EggStoreDelegate {
+        
+        var egg: EggStore
+        var store: Store
+
+        init(_ egg: EggStore, _ store: Store) {
+            self.egg = egg
+            self.store = store
+        }
+        
+        func updated() {
+            guard let size = egg.settings?.size, let doneness = egg.settings?.doneness, let temp = egg.settings?.temp else {
+                return
+            }
+            
+            if size != store.size {
+                store.size = size
+            }
+            
+            if doneness != store.doneness {
+                store.doneness = doneness
+            }
+            
+            if temp != store.temp {
+                store.temp = temp
+            }
+        }
     }
 }
 

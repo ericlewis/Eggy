@@ -5,7 +5,9 @@ protocol EggStoreDelegate: AnyObject {
     func updated()
 }
 
-class EggStore: NSObject, ObservableObject, NSFetchedResultsControllerDelegate {    
+class EggStore: NSObject, ObservableObject, NSFetchedResultsControllerDelegate {
+    static var shared = EggStore()
+    
     var settings: Settings?
     weak var delegate: EggStoreDelegate?
 
@@ -58,7 +60,7 @@ class EggStore: NSObject, ObservableObject, NSFetchedResultsControllerDelegate {
         delegate?.updated()
     }
     
-    func saveContext () {
+    func saveContext() {
         let context = persistentContainer.viewContext
         if context.hasChanges {
             do {

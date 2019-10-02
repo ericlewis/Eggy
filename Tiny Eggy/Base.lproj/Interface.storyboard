@@ -9,7 +9,7 @@
         <!--Hosting Controller-->
         <scene sceneID="aou-V4-d1y">
             <objects>
-                <hostingController fullBounds="YES" fullScreen="YES" id="3mp-fW-waa" customClass="HostingController" customModule="Tiny_Eggy" customModuleProvider="target"/>
+                <hostingController id="3mp-fW-waa" customClass="HostingController" customModule="Tiny_Eggy" customModuleProvider="target"/>
             </objects>
             <point key="canvasLocation" x="34" y="31"/>
         </scene>
