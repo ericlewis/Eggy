@@ -1,12 +1,16 @@
+Notices
+- This version is considered GM
+
 New Features
-- Improved Today widget
-- Early Stage Watch App
+- "How to use eggy" screen replaces Help & FAQ
+- First user primer based on the above
 
 Resolved Issues
-- UI consistency fixes 'erwhere 
-- Share sheet button works :P
-- Probably more stuff
+- Rate us is functioning
+- Improved watch experience
+- Improved notification experience in settings
+- Share link is fixed
+- Boiling Point reflects chosen temperature display settings
 
-Known Issues
-- Help & FAQ doesn't work
-- Rate doesn't work
+Know Issues
+- Share link doesn't *technically* link to anything yet since we aren't launched
