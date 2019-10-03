@@ -1,4 +1,5 @@
 import SwiftUI
+import StoreKit
 
 extension Text {
     func titleStyle() -> some View {
@@ -21,18 +22,18 @@ struct SettingsView: View {
     
     private func tappedShare() {
         DispatchQueue.main.async {
-            UIApplication.shared.keyWindow?.rootViewController?.presentedViewController?.present(UIActivityViewController(activityItems: [URL(string: "https://twitter.com/ericlewis")!], applicationActivities: nil), animated: true, completion: nil)
+            UIApplication.shared.keyWindow?.rootViewController?.presentedViewController?.present(UIActivityViewController(activityItems: ["I know you love eggs, lets make it official.", URL(string: "https://itunes.apple.com/app/id1472807966")!], applicationActivities: nil), animated: true, completion: nil)
         }
     }
     
     private func tappedRate() {
-        
+        SKStoreReviewController.requestReview()
     }
     
     var General: some View {
-        Section(header: Text("General").headerStyle()) {
+        Section(header: Text("Dark Mode").headerStyle()) {
             Toggle(isOn: $store.forceDarkMode) {
-                Text("Always Dark Mode")
+                Text("Override Device Settings")
                     .titleStyle()
             }
         }
@@ -176,7 +177,7 @@ struct SettingsView: View {
                 .titleStyle()
                 .foregroundColor(.primary)
                 Spacer()
-                Image(systemSymbol: .questionmarkCircle)
+                Image(systemSymbol: .infoCircle)
                 .foregroundColor(.accentColor)
             }
             .tappable(action: tappedFAQ)
@@ -187,7 +188,7 @@ struct SettingsView: View {
                 Spacer()
                 Image(systemSymbol: .squareAndArrowUp)
                 .foregroundColor(.accentColor)
-                .padding(.trailing, 1)
+                    .padding(.trailing, 1.5)
             }
             .tappable(action: tappedShare)
             HStack {
@@ -195,7 +196,7 @@ struct SettingsView: View {
                 .titleStyle()
                 .foregroundColor(.primary)
                 Spacer()
-                Image(systemSymbol: .heart)
+                Image(systemSymbol: .star)
                 .foregroundColor(.accentColor)
             }
             .tappable(action: tappedRate)

@@ -26,6 +26,7 @@ struct PrimerPerfectEggView: View {
                 .padding()
                 VStack(alignment: .leading) {
                     Text(title).font(.headlineRounded)
+                    .padding(.bottom, 2)
                     Text(detail).font(.subheadlineRounded).foregroundColor(.secondary)
                 }
                 Spacer()
@@ -54,7 +55,7 @@ struct PrimerPerfectEggView: View {
                      symbol: .playCircle)
                 
                 Item(title: "Enjoy your perfect egg",
-                     detail: "Eggy will notify you when it is finished. Transfer the eggs to a cold water bath. Time to enjoy!",
+                     detail: "Eggy will notify you when it is finished. Transfer the eggs to a cold water bath. Bon Appétit.",
                      symbol: .heart)
             }
             .padding(.bottom)
