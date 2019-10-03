@@ -16,7 +16,7 @@ struct SettingsView: View {
     @ObservedObject var notices = NotificationStore.shared
     
     private func tappedFAQ() {
-        
+        mainStore.showPrimer.toggle()
     }
     
     private func tappedShare() {
@@ -172,7 +172,7 @@ struct SettingsView: View {
     var Misc: some View {
         Section(header: Text("More Information").headerStyle(), footer: Text("Version \(SettingsStore.version)").font(.footnoteRounded)) {
             HStack {
-                Text("Help & FAQs")
+                Text("How to use Eggy")
                 .titleStyle()
                 .foregroundColor(.primary)
                 Spacer()
@@ -212,5 +212,13 @@ struct SettingsView: View {
             Misc
         }
         .navigationBarTitle("Settings", displayMode: .inline)
+        .sheet(isPresented: $mainStore.showPrimer) {
+            NavigationView {
+                PrimerPerfectEggView()
+                .environmentObject(self.mainStore)
+            }
+            .navigationViewStyle(StackNavigationViewStyle())
+            .accentColor(.mixer(.systemOrange, .systemYellow, CGFloat(self.mainStore.doneness)))
+        }
     }
 }

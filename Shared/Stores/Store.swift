@@ -35,6 +35,9 @@ class Store: ObservableObject {
     @Published var boilingPoint: Double
     
     @Published var showCancelTimer: Bool
+    @Published var showPrimer = false
+    
+    @UserDefault(SettingsKey.initialVisit, defaultValue: true) var firstVisit: Bool
 
     private lazy var altimeter = AltimeterProxy()
     private let userDefaults: UserDefaults
@@ -97,6 +100,8 @@ class Store: ObservableObject {
             UIApplication.shared.isIdleTimerDisabled = false
         }
         #endif
+        
+        self.showPrimer = firstVisit
 
         bind()
     }

@@ -3,7 +3,7 @@ struct Constants {
     static let boilingPoint: Double = 100
     static let heatCoefficient: Double = 31
     static let yolkToWhiteRatio: Double = 0.86
-    
+
     struct EggRange {
         static let temp: ClosedRange<Double> = 1...23
         static let size: ClosedRange<Double> = 38...80

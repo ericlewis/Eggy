@@ -43,6 +43,8 @@
 		68465A9D232A9BB200F934BA /* EndDateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68465A9C232A9BB200F934BA /* EndDateView.swift */; };
 		68465AA8232A9E7800F934BA /* Enum+SettingsKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68465AA7232A9E7800F934BA /* Enum+SettingsKey.swift */; };
 		68465AAA232AA4B500F934BA /* SettingsStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68465AA9232AA4B500F934BA /* SettingsStore.swift */; };
+		689B07B223456601003FBDFD /* PrimerPerfectEggView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 689B07B123456601003FBDFD /* PrimerPerfectEggView.swift */; };
+		689B07B423456BCD003FBDFD /* NiceButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 689B07B323456BCD003FBDFD /* NiceButton.swift */; };
 		68B1474D23439B7D007D5EDF /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68B1474C23439B7D007D5EDF /* NotificationCenter.framework */; };
 		68B1475023439B7D007D5EDF /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68B1474F23439B7D007D5EDF /* TodayViewController.swift */; };
 		68B1475323439B7D007D5EDF /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68B1475123439B7D007D5EDF /* MainInterface.storyboard */; };
@@ -189,6 +191,8 @@
 		68465AA7232A9E7800F934BA /* Enum+SettingsKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Enum+SettingsKey.swift"; sourceTree = "<group>"; };
 		68465AA9232AA4B500F934BA /* SettingsStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsStore.swift; sourceTree = "<group>"; };
 		688348CC23408B71002345A5 /* CHANGELOG.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = CHANGELOG.md; sourceTree = "<group>"; };
+		689B07B123456601003FBDFD /* PrimerPerfectEggView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimerPerfectEggView.swift; sourceTree = "<group>"; };
+		689B07B323456BCD003FBDFD /* NiceButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NiceButton.swift; sourceTree = "<group>"; };
 		68B1474B23439B7C007D5EDF /* Eggy Today.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Eggy Today.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		68B1474C23439B7D007D5EDF /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
 		68B1474F23439B7D007D5EDF /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
@@ -342,6 +346,7 @@
 				68465A9A232A9B6300F934BA /* ContentView.swift */,
 				68465A9C232A9BB200F934BA /* EndDateView.swift */,
 				68106BE72341AF0000DA61D9 /* DoneButton.swift */,
+				689B07B123456601003FBDFD /* PrimerPerfectEggView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -468,6 +473,7 @@
 			children = (
 				68465A92232A9AC900F934BA /* EggView.swift */,
 				68465A98232A9B4600F934BA /* StartButton.swift */,
+				689B07B323456BCD003FBDFD /* NiceButton.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -687,6 +693,7 @@
 				68465A99232A9B4600F934BA /* StartButton.swift in Sources */,
 				683B52F3232A2F0D0053B213 /* AnyTransition.swift in Sources */,
 				68106BE82341AF0000DA61D9 /* DoneButton.swift in Sources */,
+				689B07B223456601003FBDFD /* PrimerPerfectEggView.swift in Sources */,
 				68465A95232A9B0D00F934BA /* SettingsButton.swift in Sources */,
 				68465AAA232AA4B500F934BA /* SettingsStore.swift in Sources */,
 				683B52C52329AA9F0053B213 /* AppDelegate.swift in Sources */,
@@ -701,6 +708,7 @@
 				68465A9B232A9B6300F934BA /* ContentView.swift in Sources */,
 				68465AA8232A9E7800F934BA /* Enum+SettingsKey.swift in Sources */,
 				68B147B72343FE9A007D5EDF /* MeasurementFormatters.swift in Sources */,
+				689B07B423456BCD003FBDFD /* NiceButton.swift in Sources */,
 				68465A91232A9A8600F934BA /* SlidersView.swift in Sources */,
 				68106C4F234300C100DA61D9 /* EggTimer.swift in Sources */,
 				683B52F1232A19C30053B213 /* View.swift in Sources */,
@@ -927,7 +935,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "Eggy/Supporting Files/Eggy.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 574;
+				CURRENT_PROJECT_VERSION = 641;
 				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"Eggy/Supporting Files/Preview Content\"";
 				DEVELOPMENT_TEAM = F9PGNEMEHU;
@@ -952,7 +960,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "Eggy/Supporting Files/Eggy.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 574;
+				CURRENT_PROJECT_VERSION = 641;
 				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"Eggy/Supporting Files/Preview Content\"";
 				DEVELOPMENT_TEAM = F9PGNEMEHU;

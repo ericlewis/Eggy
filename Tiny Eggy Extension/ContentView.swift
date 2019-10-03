@@ -84,7 +84,7 @@ struct InnerView: View {
     
     let formatter: DateComponentsFormatter = {
         let formatter = DateComponentsFormatter()
-        formatter.unitsStyle = .short
+        formatter.unitsStyle = .abbreviated
         formatter.allowedUnits = [.minute, .second]
         var calendar = Calendar.current
         calendar.locale = Locale.current
@@ -165,15 +165,17 @@ struct ContentView: View {
         coordinator = Coordinator(EggStore.shared, s)
         egg.delegate = coordinator
     }
-    
+            
     var body: some View {
         InnerView()
         .environmentObject(store)
         .environmentObject(timer)
         .actionSheet(isPresented: $store.showCancelTimer, content: {
-            ActionSheet(title: Text("Are you sure you want to stop this running timer?"), message: nil, buttons: [.destructive(Text("Stop Timer"), action: store.stopTimer), .cancel()])
+            ActionSheet(title: Text("Are you sure you want to stop this running timer?"), message: nil, buttons: [.destructive(Text("Stop Timer"), action: store.stopTimer), .cancel({
+                self.store.showCancelTimer = false
+            })])
         })
-        .accentColor(.mixer(.orange, .yellow, CGFloat(store.doneness)))
+        .accentColor(.mixer(UIColor(red:0.97, green:0.62, blue:0.04, alpha:1.0), UIColor(red:0.90, green:0.73, blue:0.00, alpha:1.0), CGFloat(store.doneness)))
     }
     
     class Coordinator: EggStoreDelegate {

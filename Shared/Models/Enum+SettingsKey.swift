@@ -5,5 +5,6 @@ enum SettingsKey: String {
     notificationsEnabled,
     weight,
     temperature,
-    forceDarkMode
+    forceDarkMode,
+    initialVisit
 }
