@@ -60,7 +60,7 @@ struct PrimerPerfectEggView: View {
             }
             .padding(.bottom)
             
-            Spacer()
+            Spacer(minLength: 0)
             NiceButton(text: "Continue")
             .tappableWithFeedback {
                 self.store.showPrimer = false

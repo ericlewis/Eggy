@@ -30,6 +30,17 @@ struct SettingsView: View {
         SKStoreReviewController.requestReview()
     }
     
+    private func tappedOpenSettings() {
+        guard
+            let settingsURL = URL(string: UIApplication.openSettingsURLString),
+            UIApplication.shared.canOpenURL(settingsURL)
+            else {
+                return
+        }
+
+        UIApplication.shared.open(settingsURL)
+    }
+    
     var General: some View {
         Section(header: Text("Dark Mode").headerStyle()) {
             Toggle(isOn: $store.forceDarkMode) {
@@ -160,14 +171,48 @@ struct SettingsView: View {
         }
     }
     
+    var footer: some View {
+        switch notices.enabled {
+        case .denied:
+            return Text("Notifications should be enabled for the optimal Eggy experience").font(.footnoteRounded)
+        case .notDetermined:
+            return Text("Eggy uses notifications to tell you when your egg is complete or about to be complete").font(.footnoteRounded)
+        default:
+            return Text("Get a heads up early when your egg is about to finish").font(.footnoteRounded)
+        }
+    }
+    
     var Notifications: some View {
-        Section(header: Text("Notifications").headerStyle()) {
-            Toggle(isOn: $notices.warning) {
-                Text("30 Second Warning")
+        Section(header: Text("Notifications").headerStyle(), footer: footer) {
+            if notices.enabled == .authorized {
+                Toggle(isOn: $notices.warning) {
+                    Text("30 Second Warning")
+                        .titleStyle()
+                }
+            }
+            if notices.enabled == .notDetermined {
+                HStack {
+                    Text("Enable Notifications")
                     .titleStyle()
+                    .foregroundColor(.primary)
+                    Spacer()
+                    Image(systemSymbol: .timer)
+                    .foregroundColor(.accentColor)
+                }
+                .tappable(action: notices.requestAuth)
+            }
+            if notices.enabled == .denied {
+                HStack {
+                    Text("Open Settings App")
+                    .titleStyle()
+                    .foregroundColor(.primary)
+                    Spacer()
+                    Image(systemSymbol: .gear)
+                    .foregroundColor(.accentColor)
+                }
+                .tappable(action: tappedOpenSettings)
             }
         }
-        .disabled(!notices.enabled)
     }
     
     var Misc: some View {
@@ -221,5 +266,6 @@ struct SettingsView: View {
             .navigationViewStyle(StackNavigationViewStyle())
             .accentColor(.mixer(.systemOrange, .systemYellow, CGFloat(self.mainStore.doneness)))
         }
+        .onAppear(perform: notices.refresh)
     }
 }

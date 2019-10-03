@@ -59,6 +59,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate, EggStoreDelegate {
             shortcuts.handleAction(shortcutItem)
             shortcutToProcess = nil
         }
+        
+        NotificationStore.shared.refresh()
     }
 
     func sceneDidEnterBackground(_ scene: UIScene) {

@@ -4,14 +4,32 @@ import UserNotifications
 class NotificationStore: ObservableObject {
     static let shared = NotificationStore()
     
-    @Published var enabled = false
+    @Published var enabled: UNAuthorizationStatus = .notDetermined
     @Published var warning = true
 
     var center: UNUserNotificationCenter = .current()
 
     init() {
         center.getNotificationSettings {
-            self.enabled = $0.authorizationStatus == .authorized
+            self.enabled = $0.authorizationStatus
+        }
+    }
+    
+    func refresh() {
+        center.getNotificationSettings { setting in
+            DispatchQueue.main.async {
+                self.enabled = setting.authorizationStatus
+            }
+        }
+    }
+    
+    func requestAuth() {
+        center.requestAuthorization(options: [.alert, .sound]) { granted, _ in
+            if granted {
+                self.enabled = .authorized
+            } else {
+                self.enabled = .denied
+            }
         }
     }
     
