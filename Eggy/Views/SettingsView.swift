@@ -60,7 +60,7 @@ struct SettingsView: View {
                 Text("Current Boiling Point")
                     .titleStyle()
                 Spacer()
-                Text(MeasurementFormatter.tempFormatter.string(from: Measurement(value: mainStore.boilingPoint, unit: UnitTemperature.celsius)))
+                Text(MeasurementFormatter.tempFormatter.string(from: Measurement(value: mainStore.boilingPoint, unit: UnitTemperature.celsius).converted(to: store.temperatureDisplay == .celcius ? .celsius : .fahrenheit)))
                     .titleStyle().foregroundColor(.secondary)
             }
         }
