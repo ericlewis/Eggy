@@ -35,40 +35,43 @@ struct PrimerPerfectEggView: View {
     }
     
     var body: some View {
-        VStack {
-            Group {
-                Item(title: "Find your perfect egg",
-                     detail: "Using the 3 dedicated sliders for temperature, size, and the preferred doneness we calculate the cooking time.",
-                     symbol: .sliderHorizontal3)
-                .padding(.top)
-                
-                Item(title: "Prepare your station",
-                     detail: "After choosing your egg settings, bring water to a rolling boil.",
-                     symbol: .speedometer)
-                
-                Item(title: "Transfer eggs to water",
-                     detail: "With the utmost care transfer your precious eggs to the boiling water.",
-                     symbol: .exclamationmarkTriangle)
-                
-                Item(title: "Press start and relax",
-                     detail: "Tap on the Egg or tap on the Start button to begin your timer.",
-                     symbol: .playCircle)
-                
-                Item(title: "Enjoy your perfect egg",
-                     detail: "Eggy will notify you when it is finished. Transfer the eggs to a cold water bath. Bon Appétit.",
-                     symbol: .heart)
+        ZStack(alignment: .bottom) {
+            ScrollView {
+                VStack {
+                    Text("")
+                    .padding(.top)
+                    Item(title: "Find your perfect egg",
+                         detail: "Using the 3 dedicated sliders for temperature, size, and the preferred doneness we calculate the cooking time.",
+                         symbol: .sliderHorizontal3)
+                    
+                    Item(title: "Prepare your station",
+                         detail: "After choosing your egg settings, bring water to a rolling boil.",
+                         symbol: .speedometer)
+                    
+                    Item(title: "Transfer eggs to water",
+                         detail: "With the utmost care transfer your precious eggs to the boiling water.",
+                         symbol: .exclamationmarkTriangle)
+                    
+                    Item(title: "Press start and relax",
+                         detail: "Tap on the Egg or tap on the Start button to begin your timer.",
+                         symbol: .playCircle)
+                    
+                    Item(title: "Enjoy your perfect egg",
+                         detail: "Eggy will notify you when it is finished. Transfer the eggs to a cold water bath. Bon Appétit.",
+                         symbol: .heart)
+                    Text(" ")
+                        .padding(.vertical)
+                }
+                .padding()
+                .padding(.trailing)
             }
-            .padding(.bottom)
-            
-            Spacer(minLength: 0)
             NiceButton(text: "Continue")
             .tappableWithFeedback {
                 self.store.showPrimer = false
                 self.store.firstVisit = false
             }
+            .padding()
         }
-        .padding()
-        .padding(.trailing)
         .navigationBarTitle("How to use Eggy")
     }
 }

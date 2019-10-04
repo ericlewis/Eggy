@@ -40,7 +40,7 @@ struct InnerView: View {
     }()
     
     var title: String {
-        timer.timeRemaining >= 0 ? runningFormatter.string(from: timer.timeRemaining) ?? String(timer.timeRemaining) : "Egg is done"
+        timer.timeRemaining >= 0 ? runningFormatter.string(from: timer.timeRemaining) ?? String(timer.timeRemaining) : "Done"
     }
     
     func selectedTemp() {
@@ -136,6 +136,7 @@ struct InnerView: View {
                     WKInterfaceDevice.current().play(.click)
                     self.selected = .none
                     self.store.toggleTimer()
+                    EggStore.shared.saveContext()
                 }) {
                     Text("Start").font(.headlineRounded)
                 }

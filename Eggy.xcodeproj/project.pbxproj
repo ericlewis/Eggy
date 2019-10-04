@@ -45,6 +45,9 @@
 		68465AAA232AA4B500F934BA /* SettingsStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68465AA9232AA4B500F934BA /* SettingsStore.swift */; };
 		689B07B223456601003FBDFD /* PrimerPerfectEggView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 689B07B123456601003FBDFD /* PrimerPerfectEggView.swift */; };
 		689B07B423456BCD003FBDFD /* NiceButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 689B07B323456BCD003FBDFD /* NiceButton.swift */; };
+		689B07D52346711A003FBDFD /* Stickers.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 689B07D42346711A003FBDFD /* Stickers.xcassets */; };
+		689B07D92346711A003FBDFD /* Eggy Stickers.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 689B07D223467118003FBDFD /* Eggy Stickers.appex */; platformFilter = ios; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		689B083E2347B6A3003FBDFD /* AcknowledgmentsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 689B083D2347B6A3003FBDFD /* AcknowledgmentsView.swift */; };
 		68B1474D23439B7D007D5EDF /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68B1474C23439B7D007D5EDF /* NotificationCenter.framework */; };
 		68B1475023439B7D007D5EDF /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68B1474F23439B7D007D5EDF /* TodayViewController.swift */; };
 		68B1475323439B7D007D5EDF /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68B1475123439B7D007D5EDF /* MainInterface.storyboard */; };
@@ -100,6 +103,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		689B07D72346711A003FBDFD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 683B52B92329AA9F0053B213 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 689B07D123467118003FBDFD;
+			remoteInfo = "Eggy Stickers";
+		};
 		68B1477F2343AD88007D5EDF /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 683B52B92329AA9F0053B213 /* Project object */;
@@ -124,6 +134,7 @@
 			dstSubfolderSpec = 13;
 			files = (
 				68B1476C2343A321007D5EDF /* Eggy Today.appex in Embed App Extensions */,
+				689B07D92346711A003FBDFD /* Eggy Stickers.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -193,6 +204,10 @@
 		688348CC23408B71002345A5 /* CHANGELOG.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = CHANGELOG.md; sourceTree = "<group>"; };
 		689B07B123456601003FBDFD /* PrimerPerfectEggView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimerPerfectEggView.swift; sourceTree = "<group>"; };
 		689B07B323456BCD003FBDFD /* NiceButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NiceButton.swift; sourceTree = "<group>"; };
+		689B07D223467118003FBDFD /* Eggy Stickers.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Eggy Stickers.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		689B07D42346711A003FBDFD /* Stickers.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Stickers.xcassets; sourceTree = "<group>"; };
+		689B07D62346711A003FBDFD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		689B083D2347B6A3003FBDFD /* AcknowledgmentsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcknowledgmentsView.swift; sourceTree = "<group>"; };
 		68B1474B23439B7C007D5EDF /* Eggy Today.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Eggy Today.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		68B1474C23439B7D007D5EDF /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
 		68B1474F23439B7D007D5EDF /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
@@ -266,6 +281,7 @@
 				68B1474E23439B7D007D5EDF /* Eggy Today */,
 				68B147722343AD86007D5EDF /* Tiny Eggy */,
 				68B147812343AD88007D5EDF /* Tiny Eggy Extension */,
+				689B07D323467118003FBDFD /* Eggy Stickers */,
 				683B52C22329AA9F0053B213 /* Products */,
 				68B4AB732335396600847AB9 /* Frameworks */,
 				688348C923408064002345A5 /* Recovered References */,
@@ -279,6 +295,7 @@
 				68B1474B23439B7C007D5EDF /* Eggy Today.appex */,
 				68B147712343AD86007D5EDF /* Tiny Eggy.app */,
 				68B1477D2343AD88007D5EDF /* Tiny Eggy Extension.appex */,
+				689B07D223467118003FBDFD /* Eggy Stickers.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -347,6 +364,7 @@
 				68465A9C232A9BB200F934BA /* EndDateView.swift */,
 				68106BE72341AF0000DA61D9 /* DoneButton.swift */,
 				689B07B123456601003FBDFD /* PrimerPerfectEggView.swift */,
+				689B083D2347B6A3003FBDFD /* AcknowledgmentsView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -386,6 +404,15 @@
 				683F7B02234004630091B97B /* Tiny Eggy.app */,
 			);
 			name = "Recovered References";
+			sourceTree = "<group>";
+		};
+		689B07D323467118003FBDFD /* Eggy Stickers */ = {
+			isa = PBXGroup;
+			children = (
+				689B07D42346711A003FBDFD /* Stickers.xcassets */,
+				689B07D62346711A003FBDFD /* Info.plist */,
+			);
+			path = "Eggy Stickers";
 			sourceTree = "<group>";
 		};
 		68B1474E23439B7D007D5EDF /* Eggy Today */ = {
@@ -506,6 +533,7 @@
 			);
 			dependencies = (
 				68B1478F2343AD89007D5EDF /* PBXTargetDependency */,
+				689B07D82346711A003FBDFD /* PBXTargetDependency */,
 			);
 			name = Eggy;
 			packageProductDependencies = (
@@ -514,6 +542,21 @@
 			productName = Eggy;
 			productReference = 683B52C12329AA9F0053B213 /* Eggy.app */;
 			productType = "com.apple.product-type.application";
+		};
+		689B07D123467118003FBDFD /* Eggy Stickers */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 689B07DC2346711A003FBDFD /* Build configuration list for PBXNativeTarget "Eggy Stickers" */;
+			buildPhases = (
+				689B07D023467118003FBDFD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Eggy Stickers";
+			productName = "Eggy Stickers";
+			productReference = 689B07D223467118003FBDFD /* Eggy Stickers.appex */;
+			productType = "com.apple.product-type.app-extension.messages-sticker-pack";
 		};
 		68B1474A23439B7C007D5EDF /* Eggy Today */ = {
 			isa = PBXNativeTarget;
@@ -579,6 +622,9 @@
 					683B52C02329AA9F0053B213 = {
 						CreatedOnToolsVersion = 11.0;
 					};
+					689B07D123467118003FBDFD = {
+						CreatedOnToolsVersion = 11.1;
+					};
 					68B1474A23439B7C007D5EDF = {
 						CreatedOnToolsVersion = 11.1;
 					};
@@ -610,6 +656,7 @@
 				68B1474A23439B7C007D5EDF /* Eggy Today */,
 				68B147702343AD86007D5EDF /* Tiny Eggy */,
 				68B1477C2343AD88007D5EDF /* Tiny Eggy Extension */,
+				689B07D123467118003FBDFD /* Eggy Stickers */,
 			);
 		};
 /* End PBXProject section */
@@ -622,6 +669,14 @@
 				683B52D12329AAA70053B213 /* LaunchScreen.storyboard in Resources */,
 				683B52CE2329AAA70053B213 /* Preview Assets.xcassets in Resources */,
 				683B52CB2329AAA70053B213 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		689B07D023467118003FBDFD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				689B07D52346711A003FBDFD /* Stickers.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -691,6 +746,7 @@
 				683B52EC2329E9F20053B213 /* Enum+TimerState.swift in Sources */,
 				68106C4D2342F7D400DA61D9 /* UserDefault.swift in Sources */,
 				68465A99232A9B4600F934BA /* StartButton.swift in Sources */,
+				689B083E2347B6A3003FBDFD /* AcknowledgmentsView.swift in Sources */,
 				683B52F3232A2F0D0053B213 /* AnyTransition.swift in Sources */,
 				68106BE82341AF0000DA61D9 /* DoneButton.swift in Sources */,
 				689B07B223456601003FBDFD /* PrimerPerfectEggView.swift in Sources */,
@@ -773,6 +829,12 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		689B07D82346711A003FBDFD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			platformFilter = ios;
+			target = 689B07D123467118003FBDFD /* Eggy Stickers */;
+			targetProxy = 689B07D72346711A003FBDFD /* PBXContainerItemProxy */;
+		};
 		68B147802343AD88007D5EDF /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 68B1477C2343AD88007D5EDF /* Tiny Eggy Extension */;
@@ -935,7 +997,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "Eggy/Supporting Files/Eggy.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 685;
+				CURRENT_PROJECT_VERSION = 778;
 				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"Eggy/Supporting Files/Preview Content\"";
 				DEVELOPMENT_TEAM = F9PGNEMEHU;
@@ -960,7 +1022,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "Eggy/Supporting Files/Eggy.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 685;
+				CURRENT_PROJECT_VERSION = 778;
 				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"Eggy/Supporting Files/Preview Content\"";
 				DEVELOPMENT_TEAM = F9PGNEMEHU;
@@ -978,6 +1040,36 @@
 			};
 			name = Release;
 		};
+		689B07DA2346711A003FBDFD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = F9PGNEMEHU;
+				INFOPLIST_FILE = "Eggy Stickers/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "ericlewis.Eggy.Eggy-Stickers";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		689B07DB2346711A003FBDFD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = F9PGNEMEHU;
+				INFOPLIST_FILE = "Eggy Stickers/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "ericlewis.Eggy.Eggy-Stickers";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		68B1475923439B7D007D5EDF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -986,7 +1078,7 @@
 				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = NO;
 				DEVELOPMENT_TEAM = F9PGNEMEHU;
 				INFOPLIST_FILE = "Eggy Today/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1009,7 +1101,7 @@
 				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = NO;
 				DEVELOPMENT_TEAM = F9PGNEMEHU;
 				INFOPLIST_FILE = "Eggy Today/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1133,6 +1225,15 @@
 			buildConfigurations = (
 				683B52D62329AAA70053B213 /* Debug */,
 				683B52D72329AAA70053B213 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		689B07DC2346711A003FBDFD /* Build configuration list for PBXNativeTarget "Eggy Stickers" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				689B07DA2346711A003FBDFD /* Debug */,
+				689B07DB2346711A003FBDFD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

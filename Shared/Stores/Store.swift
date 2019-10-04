@@ -102,7 +102,7 @@ class Store: ObservableObject {
         #endif
         
         self.showPrimer = firstVisit
-
+        
         bind()
     }
 
@@ -111,6 +111,10 @@ class Store: ObservableObject {
         bindCoreDataBridge()
         bindAltimeter()
     }
+    
+    private func calculate(_ temp: Double, _ size: Double, _ doneness: Double, _ boilingPoint: Double) -> Double {
+        pow(size.scaledSize(), 2/3) * Constants.heatCoefficient * log(Constants.yolkToWhiteRatio * (temp.scaledTemp() - boilingPoint) / (doneness.scaledDoneness() - boilingPoint))
+    }
 }
 
 extension Store {
@@ -118,7 +122,7 @@ extension Store {
         let _ = Publishers.CombineLatest4($temp, $size, $doneness, $boilingPoint)
             .receive(on: RunLoop.main)
             .map { temp, size, doneness, boilingPoint in
-                pow(size.scaledSize(), 2/3) * Constants.heatCoefficient * log(Constants.yolkToWhiteRatio * (temp.scaledTemp() - boilingPoint) / (doneness.scaledDoneness() - boilingPoint))
+                self.calculate(temp, size, doneness, boilingPoint)
         }
         .removeDuplicates()
         .assign(to: \.estimatedTime, on: self)
@@ -174,7 +178,7 @@ extension Store {
             .removeDuplicates()
             .sink { bp in
                 DispatchQueue.global(qos: .background).async {
-                    UserDefaults.standard.set(bp, forKey: EggKey.boilingPoint)
+                    self.userDefaults.set(bp, forKey: EggKey.boilingPoint)
                 }
         }
     }

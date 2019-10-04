@@ -94,7 +94,6 @@ struct EggView: View {
                     .font(.largeTitleRounded)
                     .bold()
                     .transition(.opacity)
-                    .frame(width: geo.frame(in: .local).width * Self.ratio, height: geo.frame(in: .local).height * Self.ratio)
                     .opacity(self.timer.state == .running ? 1 : 0)
                 }
                 .frame(width: geo.frame(in: .local).width * Self.ratio, height: geo.frame(in: .local).height * Self.ratio)

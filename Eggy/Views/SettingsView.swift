@@ -37,7 +37,7 @@ struct SettingsView: View {
             else {
                 return
         }
-
+        
         UIApplication.shared.open(settingsURL)
     }
     
@@ -193,22 +193,22 @@ struct SettingsView: View {
             if notices.enabled == .notDetermined {
                 HStack {
                     Text("Enable Notifications")
-                    .titleStyle()
-                    .foregroundColor(.primary)
+                        .titleStyle()
+                        .foregroundColor(.primary)
                     Spacer()
                     Image(systemSymbol: .timer)
-                    .foregroundColor(.accentColor)
+                        .foregroundColor(.accentColor)
                 }
                 .tappable(action: notices.requestAuth)
             }
             if notices.enabled == .denied {
                 HStack {
                     Text("Open Settings App")
-                    .titleStyle()
-                    .foregroundColor(.primary)
+                        .titleStyle()
+                        .foregroundColor(.primary)
                     Spacer()
                     Image(systemSymbol: .gear)
-                    .foregroundColor(.accentColor)
+                        .foregroundColor(.accentColor)
                 }
                 .tappable(action: tappedOpenSettings)
             }
@@ -219,32 +219,39 @@ struct SettingsView: View {
         Section(header: Text("More Information").headerStyle(), footer: Text("Version \(SettingsStore.version)").font(.footnoteRounded)) {
             HStack {
                 Text("How to use Eggy")
-                .titleStyle()
-                .foregroundColor(.primary)
+                    .titleStyle()
+                    .foregroundColor(.primary)
                 Spacer()
                 Image(systemSymbol: .infoCircle)
-                .foregroundColor(.accentColor)
+                    .foregroundColor(.accentColor)
             }
             .tappable(action: tappedFAQ)
             HStack {
-              Text("Share Eggy")
-                .titleStyle()
-                .foregroundColor(.primary)
+                Text("Share Eggy")
+                    .titleStyle()
+                    .foregroundColor(.primary)
                 Spacer()
                 Image(systemSymbol: .squareAndArrowUp)
-                .foregroundColor(.accentColor)
+                    .foregroundColor(.accentColor)
                     .padding(.trailing, 1.5)
             }
             .tappable(action: tappedShare)
             HStack {
-            Text("Rate Egg")
-                .titleStyle()
-                .foregroundColor(.primary)
+                Text("Rate Egg")
+                    .titleStyle()
+                    .foregroundColor(.primary)
                 Spacer()
                 Image(systemSymbol: .star)
-                .foregroundColor(.accentColor)
+                    .foregroundColor(.accentColor)
             }
             .tappable(action: tappedRate)
+            HStack {
+                NavigationLink(destination: AcknowledgmentsView()) {
+                    Text("Acknowledgments")
+                        .titleStyle()
+                        .foregroundColor(.primary)
+                }
+            }
         }
     }
     
@@ -261,7 +268,7 @@ struct SettingsView: View {
         .sheet(isPresented: $mainStore.showPrimer) {
             NavigationView {
                 PrimerPerfectEggView()
-                .environmentObject(self.mainStore)
+                    .environmentObject(self.mainStore)
             }
             .navigationViewStyle(StackNavigationViewStyle())
             .accentColor(.mixer(.systemOrange, .systemYellow, CGFloat(self.mainStore.doneness)))

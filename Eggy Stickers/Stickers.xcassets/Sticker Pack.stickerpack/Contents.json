@@ -1,0 +1,38 @@
+{
+  "stickers" : [
+    {
+      "filename" : "Blue.sticker"
+    },
+    {
+      "filename" : "Lime.sticker"
+    },
+    {
+      "filename" : "Orange.sticker"
+    },
+    {
+      "filename" : "Pink.sticker"
+    },
+    {
+      "filename" : "Plain.sticker"
+    },
+    {
+      "filename" : "Plorange.sticker"
+    },
+    {
+      "filename" : "Purple.sticker"
+    },
+    {
+      "filename" : "Red.sticker"
+    },
+    {
+      "filename" : "Teal.sticker"
+    }
+  ],
+  "info" : {
+    "version" : 1,
+    "author" : "xcode"
+  },
+  "properties" : {
+    "grid-size" : "regular"
+  }
+}
