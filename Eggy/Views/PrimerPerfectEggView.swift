@@ -10,8 +10,8 @@ import SwiftUI
 import SFSafeSymbols
 
 struct PrimerPerfectEggView: View {
-    @EnvironmentObject var store: Store
-
+    var action: () -> Void
+    
     struct Item: View {
         var title: LocalizedStringKey
         var detail: LocalizedStringKey
@@ -66,18 +66,9 @@ struct PrimerPerfectEggView: View {
                 .padding(.trailing)
             }
             NiceButton(text: "Continue")
-            .tappableWithFeedback {
-                self.store.showPrimer = false
-                self.store.firstVisit = false
-            }
+            .tappableWithFeedback(action: action)
             .padding()
         }
         .navigationBarTitle("How to use Eggy")
-    }
-}
-
-struct PrimerPerfectEggView_Previews: PreviewProvider {
-    static var previews: some View {
-        PrimerPerfectEggView()
     }
 }

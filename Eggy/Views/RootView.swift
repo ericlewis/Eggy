@@ -41,7 +41,10 @@ struct RootView: View {
                     self.store.firstVisit = false
                 }) {
                     NavigationView {
-                        PrimerPerfectEggView()
+                        PrimerPerfectEggView {
+                            self.store.showPrimer = false
+                            self.store.firstVisit = false
+                        }
                         .environmentObject(self.store)
                     }
                     .navigationViewStyle(StackNavigationViewStyle())

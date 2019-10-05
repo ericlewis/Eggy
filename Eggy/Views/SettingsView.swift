@@ -16,8 +16,10 @@ struct SettingsView: View {
     @EnvironmentObject var mainStore: Store
     @ObservedObject var notices = NotificationStore.shared
     
+    @State var showPrimer = false
+    
     private func tappedFAQ() {
-        mainStore.showPrimer.toggle()
+        showPrimer.toggle()
     }
     
     private func tappedShare() {
@@ -224,6 +226,15 @@ struct SettingsView: View {
                 Spacer()
                 Image(systemSymbol: .infoCircle)
                     .foregroundColor(.accentColor)
+                    .sheet(isPresented: $showPrimer) {
+                        NavigationView {
+                            PrimerPerfectEggView {
+                                self.showPrimer = false
+                            }
+                        }
+                        .navigationViewStyle(StackNavigationViewStyle())
+                        .accentColor(.mixer(.systemOrange, .systemYellow, CGFloat(self.mainStore.doneness)))
+                }
             }
             .tappable(action: tappedFAQ)
             HStack {
@@ -267,8 +278,10 @@ struct SettingsView: View {
         .navigationBarTitle("Settings", displayMode: .inline)
         .sheet(isPresented: $mainStore.showPrimer) {
             NavigationView {
-                PrimerPerfectEggView()
-                    .environmentObject(self.mainStore)
+                PrimerPerfectEggView {
+                    self.showPrimer = false
+                }
+                .environmentObject(self.mainStore)
             }
             .navigationViewStyle(StackNavigationViewStyle())
             .accentColor(.mixer(.systemOrange, .systemYellow, CGFloat(self.mainStore.doneness)))
