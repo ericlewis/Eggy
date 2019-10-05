@@ -5,7 +5,7 @@ struct Constants {
     static let yolkToWhiteRatio: Double = 0.86
 
     struct EggRange {
-        static let temp: ClosedRange<Double> = 1...23
+        static let temp: ClosedRange<Double> = 0.5...24
         static let size: ClosedRange<Double> = 38...80
         static let doneness: ClosedRange<Double> = 56...85
     }
