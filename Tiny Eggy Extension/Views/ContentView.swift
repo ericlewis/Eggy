@@ -104,7 +104,7 @@ struct InnerView: View {
             if timer.state == .running && offset == .zero {
                 GeometryReader { geo in
                     Text(self.title)
-                    .font(.titleRounded)
+                    .font(.system(size: 30, weight: .bold, design: .rounded))
                     .bold()
                     .frame(width: geo.frame(in: .global).width + 30)
                 }

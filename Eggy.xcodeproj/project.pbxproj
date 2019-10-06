@@ -15,6 +15,7 @@
 		68106C4B2342F6D500DA61D9 /* TimerStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68106C4A2342F6D500DA61D9 /* TimerStore.swift */; };
 		68106C4D2342F7D400DA61D9 /* UserDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68106C4C2342F7D400DA61D9 /* UserDefault.swift */; };
 		68106C4F234300C100DA61D9 /* EggTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68106C4E234300C100DA61D9 /* EggTimer.swift */; };
+		681CCF0E234A7D180011520B /* WKInterfaceDevice+Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 681CCF0D234A7D180011520B /* WKInterfaceDevice+Model.swift */; };
 		681D4BA9232AB0A300F483D3 /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 681D4BA8232AB0A300F483D3 /* Font.swift */; };
 		681D4BAB232AD85200F483D3 /* NotificationStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 681D4BAA232AD85200F483D3 /* NotificationStore.swift */; };
 		681D4BBF232C37ED00F483D3 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 681D4BBE232C37ED00F483D3 /* Color.swift */; };
@@ -171,6 +172,7 @@
 		68106C4A2342F6D500DA61D9 /* TimerStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerStore.swift; sourceTree = "<group>"; };
 		68106C4C2342F7D400DA61D9 /* UserDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefault.swift; sourceTree = "<group>"; };
 		68106C4E234300C100DA61D9 /* EggTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EggTimer.swift; sourceTree = "<group>"; };
+		681CCF0D234A7D180011520B /* WKInterfaceDevice+Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WKInterfaceDevice+Model.swift"; sourceTree = "<group>"; };
 		681D4BA8232AB0A300F483D3 /* Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
 		681D4BAA232AD85200F483D3 /* NotificationStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationStore.swift; sourceTree = "<group>"; };
 		681D4BBE232C37ED00F483D3 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
@@ -270,6 +272,49 @@
 				68106BEA234298F000DA61D9 /* HomeActionManager.swift */,
 			);
 			path = Managers;
+			sourceTree = "<group>";
+		};
+		681CCF0F234A7D260011520B /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				68B147842343AD88007D5EDF /* HostingController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		681CCF10234A7D2E0011520B /* App Launch */ = {
+			isa = PBXGroup;
+			children = (
+				68B147862343AD88007D5EDF /* ExtensionDelegate.swift */,
+			);
+			path = "App Launch";
+			sourceTree = "<group>";
+		};
+		681CCF11234A7D360011520B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				68B147822343AD88007D5EDF /* ContentView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		681CCF12234A7D3D0011520B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				68B147B02343C6F5007D5EDF /* Tiny Eggy Extension.entitlements */,
+				68B1478A2343AD89007D5EDF /* Preview Content */,
+				68B147882343AD89007D5EDF /* Assets.xcassets */,
+				68B1478D2343AD89007D5EDF /* Info.plist */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		681CCF13234A7D4C0011520B /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				681CCF0D234A7D180011520B /* WKInterfaceDevice+Model.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		683B52B82329AA9F0053B213 = {
@@ -468,13 +513,11 @@
 		68B147812343AD88007D5EDF /* Tiny Eggy Extension */ = {
 			isa = PBXGroup;
 			children = (
-				68B147B02343C6F5007D5EDF /* Tiny Eggy Extension.entitlements */,
-				68B147822343AD88007D5EDF /* ContentView.swift */,
-				68B147842343AD88007D5EDF /* HostingController.swift */,
-				68B147862343AD88007D5EDF /* ExtensionDelegate.swift */,
-				68B147882343AD89007D5EDF /* Assets.xcassets */,
-				68B1478D2343AD89007D5EDF /* Info.plist */,
-				68B1478A2343AD89007D5EDF /* Preview Content */,
+				681CCF10234A7D2E0011520B /* App Launch */,
+				681CCF0F234A7D260011520B /* Controllers */,
+				681CCF13234A7D4C0011520B /* Extensions */,
+				681CCF12234A7D3D0011520B /* Supporting Files */,
+				681CCF11234A7D360011520B /* Views */,
 			);
 			path = "Tiny Eggy Extension";
 			sourceTree = "<group>";
@@ -811,6 +854,7 @@
 				68B1479A2343ADA6007D5EDF /* UserDefaults.swift in Sources */,
 				68B147A62343ADF2007D5EDF /* NotificationStore.swift in Sources */,
 				68B147A32343ADB0007D5EDF /* Enum+TimerState.swift in Sources */,
+				681CCF0E234A7D180011520B /* WKInterfaceDevice+Model.swift in Sources */,
 				68B147AD2343AE4C007D5EDF /* AltimeterProxy.swift in Sources */,
 				68B147A42343ADF2007D5EDF /* Store.swift in Sources */,
 				68B1479D2343ADA6007D5EDF /* Font.swift in Sources */,
@@ -997,7 +1041,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "Eggy/Supporting Files/Eggy.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 13;
 				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"Eggy/Supporting Files/Preview Content\"";
 				DEVELOPMENT_TEAM = F9PGNEMEHU;
@@ -1023,7 +1067,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "Eggy/Supporting Files/Eggy.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 13;
 				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"Eggy/Supporting Files/Preview Content\"";
 				DEVELOPMENT_TEAM = F9PGNEMEHU;
@@ -1047,7 +1091,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 13;
 				DEVELOPMENT_TEAM = F9PGNEMEHU;
 				INFOPLIST_FILE = "Eggy Stickers/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -1064,7 +1108,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 13;
 				DEVELOPMENT_TEAM = F9PGNEMEHU;
 				INFOPLIST_FILE = "Eggy Stickers/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -1081,7 +1125,7 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = "Eggy Today/Eggy Today.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 13;
 				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = NO;
 				DEVELOPMENT_TEAM = F9PGNEMEHU;
 				INFOPLIST_FILE = "Eggy Today/Info.plist";
@@ -1106,7 +1150,7 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = "Eggy Today/Eggy Today.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 13;
 				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = NO;
 				DEVELOPMENT_TEAM = F9PGNEMEHU;
 				INFOPLIST_FILE = "Eggy Today/Info.plist";
@@ -1133,7 +1177,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "Tiny Eggy/Tiny Eggy.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 13;
 				DEVELOPMENT_TEAM = F9PGNEMEHU;
 				IBSC_MODULE = Tiny_Eggy_Extension;
 				INFOPLIST_FILE = "Tiny Eggy/Info.plist";
@@ -1155,7 +1199,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "Tiny Eggy/Tiny Eggy.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 13;
 				DEVELOPMENT_TEAM = F9PGNEMEHU;
 				IBSC_MODULE = Tiny_Eggy_Extension;
 				INFOPLIST_FILE = "Tiny Eggy/Info.plist";
@@ -1175,13 +1219,13 @@
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
-				CODE_SIGN_ENTITLEMENTS = "Tiny Eggy Extension/Tiny Eggy Extension.entitlements";
+				CODE_SIGN_ENTITLEMENTS = "Tiny Eggy Extension/Supporting Files/Tiny Eggy Extension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
-				DEVELOPMENT_ASSET_PATHS = "\"Tiny Eggy Extension/Preview Content\"";
+				CURRENT_PROJECT_VERSION = 13;
+				DEVELOPMENT_ASSET_PATHS = "\"Tiny Eggy Extension/Supporting Files/Preview Content\"";
 				DEVELOPMENT_TEAM = F9PGNEMEHU;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = "Tiny Eggy Extension/Info.plist";
+				INFOPLIST_FILE = "Tiny Eggy Extension/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1203,13 +1247,13 @@
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
-				CODE_SIGN_ENTITLEMENTS = "Tiny Eggy Extension/Tiny Eggy Extension.entitlements";
+				CODE_SIGN_ENTITLEMENTS = "Tiny Eggy Extension/Supporting Files/Tiny Eggy Extension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
-				DEVELOPMENT_ASSET_PATHS = "\"Tiny Eggy Extension/Preview Content\"";
+				CURRENT_PROJECT_VERSION = 13;
+				DEVELOPMENT_ASSET_PATHS = "\"Tiny Eggy Extension/Supporting Files/Preview Content\"";
 				DEVELOPMENT_TEAM = F9PGNEMEHU;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = "Tiny Eggy Extension/Info.plist";
+				INFOPLIST_FILE = "Tiny Eggy Extension/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
