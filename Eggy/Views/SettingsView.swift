@@ -11,10 +11,30 @@ extension Text {
     }
 }
 
-struct SettingsView: View {
+struct SensorSection: View {
     @ObservedObject var store = SettingsStore.shared
     @EnvironmentObject var mainStore: Store
-    @ObservedObject var notices = NotificationStore.shared
+
+    var body: some View {
+        Section(header: Text("Sensors").headerStyle()) {
+            Toggle(isOn: $store.autoUpdateBoilingPoint) {
+                Text("Auto-Update Boiling Point")
+                    .titleStyle()
+            }
+            HStack {
+                Text("Current Boiling Point")
+                    .titleStyle()
+                Spacer()
+                Text(MeasurementFormatter.tempFormatter.string(from: Measurement(value: mainStore.boilingPoint, unit: UnitTemperature.celsius).converted(to: store.temperatureDisplay == .celcius ? .celsius : .fahrenheit)))
+                    .titleStyle().foregroundColor(.secondary)
+            }
+        }
+    }
+}
+
+struct MiscSection: View {
+    @EnvironmentObject var mainStore: Store
+
     
     @State var showPrimer = false
     
@@ -32,7 +52,7 @@ struct SettingsView: View {
         SKStoreReviewController.requestReview()
     }
     
-    private func tappedOpenSettings() {
+    static func tappedOpenSettings() {
         guard
             let settingsURL = URL(string: UIApplication.openSettingsURLString),
             UIApplication.shared.canOpenURL(settingsURL)
@@ -42,6 +62,60 @@ struct SettingsView: View {
         
         UIApplication.shared.open(settingsURL)
     }
+    
+    var body: some View {
+        Section(header: Text("More Information").headerStyle(), footer: Text("Version \(SettingsStore.version)").font(.footnoteRounded)) {
+            HStack {
+                Text("How to use Eggy")
+                    .titleStyle()
+                    .foregroundColor(.primary)
+                Spacer()
+                Image(systemSymbol: .infoCircle)
+                    .foregroundColor(.accentColor)
+                    .sheet(isPresented: $showPrimer) {
+                        NavigationView {
+                            PrimerPerfectEggView {
+                                self.showPrimer = false
+                            }
+                        }
+                        .navigationViewStyle(StackNavigationViewStyle())
+                        .accentColor(.mixer(.systemOrange, .systemYellow, CGFloat(self.mainStore.doneness)))
+                }
+            }
+            .tappable(action: tappedFAQ)
+            HStack {
+                Text("Share Eggy")
+                    .titleStyle()
+                    .foregroundColor(.primary)
+                Spacer()
+                Image(systemSymbol: .squareAndArrowUp)
+                    .foregroundColor(.accentColor)
+                    .padding(.trailing, 1.5)
+            }
+            .tappable(action: tappedShare)
+            HStack {
+                Text("Rate Egg")
+                    .titleStyle()
+                    .foregroundColor(.primary)
+                Spacer()
+                Image(systemSymbol: .star)
+                    .foregroundColor(.accentColor)
+            }
+            .tappable(action: tappedRate)
+            HStack {
+                NavigationLink(destination: AcknowledgmentsView()) {
+                    Text("Acknowledgments")
+                        .titleStyle()
+                        .foregroundColor(.primary)
+                }
+            }
+        }
+    }
+}
+
+struct SettingsView: View {
+    @ObservedObject var store = SettingsStore.shared
+    @ObservedObject var notices = NotificationStore.shared
     
     var General: some View {
         Section(header: Text("Dark Mode").headerStyle()) {
@@ -53,19 +127,7 @@ struct SettingsView: View {
     }
     
     var Sensors: some View {
-        Section(header: Text("Sensors").headerStyle()) {
-            Toggle(isOn: $store.autoUpdateBoilingPoint) {
-                Text("Auto-Update Boiling Point")
-                    .titleStyle()
-            }
-            HStack {
-                Text("Current Boiling Point")
-                    .titleStyle()
-                Spacer()
-                Text(MeasurementFormatter.tempFormatter.string(from: Measurement(value: mainStore.boilingPoint, unit: UnitTemperature.celsius).converted(to: store.temperatureDisplay == .celcius ? .celsius : .fahrenheit)))
-                    .titleStyle().foregroundColor(.secondary)
-            }
-        }
+        SensorSection()
     }
     
     var AutoLock: some View {
@@ -212,58 +274,13 @@ struct SettingsView: View {
                     Image(systemSymbol: .gear)
                         .foregroundColor(.accentColor)
                 }
-                .tappable(action: tappedOpenSettings)
+                .tappable(action: MiscSection.tappedOpenSettings)
             }
         }
     }
     
     var Misc: some View {
-        Section(header: Text("More Information").headerStyle(), footer: Text("Version \(SettingsStore.version)").font(.footnoteRounded)) {
-            HStack {
-                Text("How to use Eggy")
-                    .titleStyle()
-                    .foregroundColor(.primary)
-                Spacer()
-                Image(systemSymbol: .infoCircle)
-                    .foregroundColor(.accentColor)
-                    .sheet(isPresented: $showPrimer) {
-                        NavigationView {
-                            PrimerPerfectEggView {
-                                self.showPrimer = false
-                            }
-                        }
-                        .navigationViewStyle(StackNavigationViewStyle())
-                        .accentColor(.mixer(.systemOrange, .systemYellow, CGFloat(self.mainStore.doneness)))
-                }
-            }
-            .tappable(action: tappedFAQ)
-            HStack {
-                Text("Share Eggy")
-                    .titleStyle()
-                    .foregroundColor(.primary)
-                Spacer()
-                Image(systemSymbol: .squareAndArrowUp)
-                    .foregroundColor(.accentColor)
-                    .padding(.trailing, 1.5)
-            }
-            .tappable(action: tappedShare)
-            HStack {
-                Text("Rate Egg")
-                    .titleStyle()
-                    .foregroundColor(.primary)
-                Spacer()
-                Image(systemSymbol: .star)
-                    .foregroundColor(.accentColor)
-            }
-            .tappable(action: tappedRate)
-            HStack {
-                NavigationLink(destination: AcknowledgmentsView()) {
-                    Text("Acknowledgments")
-                        .titleStyle()
-                        .foregroundColor(.primary)
-                }
-            }
-        }
+        MiscSection()
     }
     
     var body: some View {
@@ -276,16 +293,6 @@ struct SettingsView: View {
             Misc
         }
         .navigationBarTitle("Settings", displayMode: .inline)
-        .sheet(isPresented: $mainStore.showPrimer) {
-            NavigationView {
-                PrimerPerfectEggView {
-                    self.showPrimer = false
-                }
-                .environmentObject(self.mainStore)
-            }
-            .navigationViewStyle(StackNavigationViewStyle())
-            .accentColor(.mixer(.systemOrange, .systemYellow, CGFloat(self.mainStore.doneness)))
-        }
         .onAppear(perform: notices.refresh)
     }
 }
