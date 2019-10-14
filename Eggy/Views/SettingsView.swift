@@ -48,7 +48,7 @@ struct MiscSection: View {
         }
     }
     
-    private func tappedRate() {
+    static func tappedRate() {
         SKStoreReviewController.requestReview()
     }
     

@@ -51,6 +51,7 @@ class Store: ObservableObject {
                 requestStopTimer()
             } else {
                 timer.stop()
+                MiscSection.tappedRate()
             }
         }
     }
